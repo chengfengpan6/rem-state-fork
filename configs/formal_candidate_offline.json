@@ -1,0 +1,83 @@
+{
+  "protocol_version": "rem-prototype-0.1-iid-initialized-median90",
+  "purpose": "formal_candidate_offline",
+  "seeds": [
+    20261019
+  ],
+  "formation_rounds": 24,
+  "post_rounds": 84,
+  "truth_design": "iid_bernoulli_0.5",
+  "context_block": 3,
+  "lifecycle": "initialized_update",
+  "map_update_interval": 12,
+  "max_message_chars": 600,
+  "branches": [
+    {
+      "id": "team_H",
+      "architecture": "team",
+      "condition": "H"
+    },
+    {
+      "id": "team_R0",
+      "architecture": "team",
+      "condition": "R0"
+    },
+    {
+      "id": "team_E",
+      "architecture": "team",
+      "condition": "E"
+    },
+    {
+      "id": "team_RU",
+      "architecture": "team",
+      "condition": "RU"
+    },
+    {
+      "id": "solo_H",
+      "architecture": "solo",
+      "condition": "H"
+    },
+    {
+      "id": "solo_R0",
+      "architecture": "solo",
+      "condition": "R0"
+    },
+    {
+      "id": "nomessage_H",
+      "architecture": "nomessage",
+      "condition": "H"
+    },
+    {
+      "id": "nomessage_R0",
+      "architecture": "nomessage",
+      "condition": "R0"
+    },
+    {
+      "id": "nominal_H",
+      "architecture": "nominal",
+      "condition": "H"
+    },
+    {
+      "id": "nominal_R0",
+      "architecture": "nominal",
+      "condition": "R0"
+    }
+  ],
+  "audit": {
+    "at_fork": true,
+    "interval": 12
+  },
+  "probes": {
+    "enabled": true,
+    "at_fork": true,
+    "interval": 12,
+    "mode": "single",
+    "contexts": [
+      "X",
+      "Y",
+      "Z"
+    ]
+  },
+  "max_calls": 50000,
+  "live_allowed": false
+}

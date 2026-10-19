@@ -1,0 +1,685 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "urn:rem-harness:state-slots-v1",
+  "title": "Persisted state slots (not researcher outcomes)",
+  "description": "H is actor-indexed; shared team values are equal copies, nominal maps evolve independently. LE contains already revealed evidence only. Past messages never appear in these slots. Interval semantics are specified in protocol manifest.",
+  "type": "object",
+  "properties": {
+    "LE": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "round_index": {
+            "type": "integer",
+            "minimum": 1
+          },
+          "context": {
+            "type": "string",
+            "enum": [
+              "X",
+              "Y",
+              "Z"
+            ]
+          },
+          "signals": {
+            "type": "object",
+            "properties": {
+              "A": {
+                "type": "integer",
+                "enum": [
+                  0,
+                  1
+                ]
+              },
+              "B": {
+                "type": "integer",
+                "enum": [
+                  0,
+                  1
+                ]
+              },
+              "C": {
+                "type": "integer",
+                "enum": [
+                  0,
+                  1
+                ]
+              }
+            },
+            "required": [
+              "A",
+              "B",
+              "C"
+            ],
+            "additionalProperties": false
+          },
+          "truth": {
+            "type": "integer",
+            "enum": [
+              0,
+              1
+            ]
+          }
+        },
+        "required": [
+          "round_index",
+          "context",
+          "signals",
+          "truth"
+        ],
+        "additionalProperties": false
+      }
+    },
+    "LB": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "round_index": {
+            "type": "integer",
+            "minimum": 1
+          },
+          "origin": {
+            "type": "string",
+            "enum": [
+              "formation",
+              "postfork"
+            ]
+          },
+          "forecasts": {
+            "type": "object",
+            "additionalProperties": {
+              "type": "number",
+              "minimum": 0,
+              "maximum": 1
+            }
+          },
+          "scores": {
+            "type": "object",
+            "additionalProperties": {
+              "type": "number",
+              "minimum": 0,
+              "maximum": 1
+            }
+          },
+          "aggregate_probability": {
+            "type": "number",
+            "minimum": 0,
+            "maximum": 1
+          },
+          "aggregate_brier": {
+            "type": "number",
+            "minimum": 0,
+            "maximum": 1
+          }
+        },
+        "required": [
+          "round_index",
+          "origin",
+          "forecasts",
+          "scores",
+          "aggregate_probability",
+          "aggregate_brier"
+        ],
+        "additionalProperties": false
+      }
+    },
+    "Pi": {
+      "type": "object",
+      "minProperties": 1,
+      "additionalProperties": {
+        "type": "object",
+        "properties": {
+          "founder_records": {
+            "type": "object",
+            "properties": {
+              "A": {
+                "type": "array",
+                "items": {
+                  "type": "object",
+                  "properties": {
+                    "round_index": {
+                      "type": "integer",
+                      "minimum": 1
+                    },
+                    "context": {
+                      "type": "string",
+                      "enum": [
+                        "X",
+                        "Y",
+                        "Z"
+                      ]
+                    },
+                    "initial_probability": {
+                      "type": "number",
+                      "minimum": 0,
+                      "maximum": 1
+                    },
+                    "probability": {
+                      "type": "number",
+                      "minimum": 0,
+                      "maximum": 1
+                    },
+                    "truth": {
+                      "type": "integer",
+                      "enum": [
+                        0,
+                        1
+                      ]
+                    },
+                    "brier": {
+                      "type": "number",
+                      "minimum": 0,
+                      "maximum": 1
+                    },
+                    "private_signal": {
+                      "type": "integer",
+                      "enum": [
+                        0,
+                        1
+                      ]
+                    },
+                    "signals": {
+                      "type": "object",
+                      "properties": {
+                        "A": {
+                          "type": "integer",
+                          "enum": [
+                            0,
+                            1
+                          ]
+                        },
+                        "B": {
+                          "type": "integer",
+                          "enum": [
+                            0,
+                            1
+                          ]
+                        },
+                        "C": {
+                          "type": "integer",
+                          "enum": [
+                            0,
+                            1
+                          ]
+                        }
+                      },
+                      "required": [
+                        "A",
+                        "B",
+                        "C"
+                      ],
+                      "additionalProperties": false
+                    }
+                  },
+                  "required": [
+                    "round_index",
+                    "context",
+                    "initial_probability",
+                    "probability",
+                    "truth",
+                    "brier"
+                  ],
+                  "additionalProperties": false,
+                  "oneOf": [
+                    {
+                      "required": [
+                        "private_signal"
+                      ]
+                    },
+                    {
+                      "required": [
+                        "signals"
+                      ]
+                    }
+                  ]
+                }
+              },
+              "B": {
+                "type": "array",
+                "items": {
+                  "type": "object",
+                  "properties": {
+                    "round_index": {
+                      "type": "integer",
+                      "minimum": 1
+                    },
+                    "context": {
+                      "type": "string",
+                      "enum": [
+                        "X",
+                        "Y",
+                        "Z"
+                      ]
+                    },
+                    "initial_probability": {
+                      "type": "number",
+                      "minimum": 0,
+                      "maximum": 1
+                    },
+                    "probability": {
+                      "type": "number",
+                      "minimum": 0,
+                      "maximum": 1
+                    },
+                    "truth": {
+                      "type": "integer",
+                      "enum": [
+                        0,
+                        1
+                      ]
+                    },
+                    "brier": {
+                      "type": "number",
+                      "minimum": 0,
+                      "maximum": 1
+                    },
+                    "private_signal": {
+                      "type": "integer",
+                      "enum": [
+                        0,
+                        1
+                      ]
+                    },
+                    "signals": {
+                      "type": "object",
+                      "properties": {
+                        "A": {
+                          "type": "integer",
+                          "enum": [
+                            0,
+                            1
+                          ]
+                        },
+                        "B": {
+                          "type": "integer",
+                          "enum": [
+                            0,
+                            1
+                          ]
+                        },
+                        "C": {
+                          "type": "integer",
+                          "enum": [
+                            0,
+                            1
+                          ]
+                        }
+                      },
+                      "required": [
+                        "A",
+                        "B",
+                        "C"
+                      ],
+                      "additionalProperties": false
+                    }
+                  },
+                  "required": [
+                    "round_index",
+                    "context",
+                    "initial_probability",
+                    "probability",
+                    "truth",
+                    "brier"
+                  ],
+                  "additionalProperties": false,
+                  "oneOf": [
+                    {
+                      "required": [
+                        "private_signal"
+                      ]
+                    },
+                    {
+                      "required": [
+                        "signals"
+                      ]
+                    }
+                  ]
+                }
+              },
+              "C": {
+                "type": "array",
+                "items": {
+                  "type": "object",
+                  "properties": {
+                    "round_index": {
+                      "type": "integer",
+                      "minimum": 1
+                    },
+                    "context": {
+                      "type": "string",
+                      "enum": [
+                        "X",
+                        "Y",
+                        "Z"
+                      ]
+                    },
+                    "initial_probability": {
+                      "type": "number",
+                      "minimum": 0,
+                      "maximum": 1
+                    },
+                    "probability": {
+                      "type": "number",
+                      "minimum": 0,
+                      "maximum": 1
+                    },
+                    "truth": {
+                      "type": "integer",
+                      "enum": [
+                        0,
+                        1
+                      ]
+                    },
+                    "brier": {
+                      "type": "number",
+                      "minimum": 0,
+                      "maximum": 1
+                    },
+                    "private_signal": {
+                      "type": "integer",
+                      "enum": [
+                        0,
+                        1
+                      ]
+                    },
+                    "signals": {
+                      "type": "object",
+                      "properties": {
+                        "A": {
+                          "type": "integer",
+                          "enum": [
+                            0,
+                            1
+                          ]
+                        },
+                        "B": {
+                          "type": "integer",
+                          "enum": [
+                            0,
+                            1
+                          ]
+                        },
+                        "C": {
+                          "type": "integer",
+                          "enum": [
+                            0,
+                            1
+                          ]
+                        }
+                      },
+                      "required": [
+                        "A",
+                        "B",
+                        "C"
+                      ],
+                      "additionalProperties": false
+                    }
+                  },
+                  "required": [
+                    "round_index",
+                    "context",
+                    "initial_probability",
+                    "probability",
+                    "truth",
+                    "brier"
+                  ],
+                  "additionalProperties": false,
+                  "oneOf": [
+                    {
+                      "required": [
+                        "private_signal"
+                      ]
+                    },
+                    {
+                      "required": [
+                        "signals"
+                      ]
+                    }
+                  ]
+                }
+              }
+            },
+            "additionalProperties": false
+          },
+          "own_records": {
+            "type": "array",
+            "items": {
+              "type": "object",
+              "properties": {
+                "round_index": {
+                  "type": "integer",
+                  "minimum": 1
+                },
+                "context": {
+                  "type": "string",
+                  "enum": [
+                    "X",
+                    "Y",
+                    "Z"
+                  ]
+                },
+                "initial_probability": {
+                  "type": "number",
+                  "minimum": 0,
+                  "maximum": 1
+                },
+                "probability": {
+                  "type": "number",
+                  "minimum": 0,
+                  "maximum": 1
+                },
+                "truth": {
+                  "type": "integer",
+                  "enum": [
+                    0,
+                    1
+                  ]
+                },
+                "brier": {
+                  "type": "number",
+                  "minimum": 0,
+                  "maximum": 1
+                },
+                "private_signal": {
+                  "type": "integer",
+                  "enum": [
+                    0,
+                    1
+                  ]
+                },
+                "signals": {
+                  "type": "object",
+                  "properties": {
+                    "A": {
+                      "type": "integer",
+                      "enum": [
+                        0,
+                        1
+                      ]
+                    },
+                    "B": {
+                      "type": "integer",
+                      "enum": [
+                        0,
+                        1
+                      ]
+                    },
+                    "C": {
+                      "type": "integer",
+                      "enum": [
+                        0,
+                        1
+                      ]
+                    }
+                  },
+                  "required": [
+                    "A",
+                    "B",
+                    "C"
+                  ],
+                  "additionalProperties": false
+                }
+              },
+              "required": [
+                "round_index",
+                "context",
+                "initial_probability",
+                "probability",
+                "truth",
+                "brier"
+              ],
+              "additionalProperties": false,
+              "oneOf": [
+                {
+                  "required": [
+                    "private_signal"
+                  ]
+                },
+                {
+                  "required": [
+                    "signals"
+                  ]
+                }
+              ]
+            }
+          }
+        },
+        "required": [
+          "founder_records",
+          "own_records"
+        ],
+        "additionalProperties": false
+      }
+    },
+    "H": {
+      "type": "object",
+      "minProperties": 1,
+      "additionalProperties": {
+        "oneOf": [
+          {
+            "type": "null"
+          },
+          {
+            "type": "object",
+            "properties": {
+              "cells": {
+                "type": "array",
+                "items": {
+                  "type": "object",
+                  "properties": {
+                    "context": {
+                      "type": "string",
+                      "enum": [
+                        "X",
+                        "Y",
+                        "Z"
+                      ]
+                    },
+                    "source": {
+                      "type": "string",
+                      "enum": [
+                        "A",
+                        "B",
+                        "C"
+                      ]
+                    },
+                    "estimate": {
+                      "type": "number",
+                      "minimum": 0,
+                      "maximum": 1
+                    },
+                    "lower": {
+                      "type": "number",
+                      "minimum": 0,
+                      "maximum": 1
+                    },
+                    "upper": {
+                      "type": "number",
+                      "minimum": 0,
+                      "maximum": 1
+                    }
+                  },
+                  "required": [
+                    "context",
+                    "source",
+                    "estimate",
+                    "lower",
+                    "upper"
+                  ],
+                  "additionalProperties": false
+                },
+                "minItems": 9,
+                "maxItems": 9
+              }
+            },
+            "required": [
+              "cells"
+            ],
+            "additionalProperties": false
+          },
+          {
+            "type": "object",
+            "properties": {
+              "cells": {
+                "type": "array",
+                "items": {
+                  "type": "object",
+                  "properties": {
+                    "context": {
+                      "type": "string",
+                      "enum": [
+                        "X",
+                        "Y",
+                        "Z"
+                      ]
+                    },
+                    "source": {
+                      "type": "string",
+                      "enum": [
+                        "A",
+                        "B",
+                        "C"
+                      ]
+                    },
+                    "estimate": {
+                      "type": "null"
+                    },
+                    "lower": {
+                      "type": "null"
+                    },
+                    "upper": {
+                      "type": "null"
+                    }
+                  },
+                  "required": [
+                    "context",
+                    "source",
+                    "estimate",
+                    "lower",
+                    "upper"
+                  ],
+                  "additionalProperties": false
+                },
+                "minItems": 9,
+                "maxItems": 9
+              }
+            },
+            "required": [
+              "cells"
+            ],
+            "additionalProperties": false
+          }
+        ]
+      }
+    }
+  },
+  "required": [
+    "LE",
+    "LB",
+    "Pi",
+    "H"
+  ],
+  "additionalProperties": false
+}
