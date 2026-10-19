@@ -1,0 +1,25 @@
+{
+  "attempt": "local-recorded-replay-01",
+  "status": "error",
+  "consumed_recorded_responses": 252,
+  "new_model_calls": 0,
+  "error": {
+    "type": "PermissionError",
+    "message": "[WinError 5] Access is denied: 'runs\\\\replay-live-verification\\\\checkpoint.json.tmp' -> 'runs\\\\replay-live-verification\\\\checkpoint.json'"
+  },
+  "terminal_event": {
+    "branch": "nomessage_R0",
+    "error": {
+      "message": "[WinError 5] Access is denied: 'runs\\\\replay-live-verification\\\\checkpoint.json.tmp' -> 'runs\\\\replay-live-verification\\\\checkpoint.json'",
+      "type": "PermissionError"
+    },
+    "event": "run_stopped",
+    "event_index": 568,
+    "seed": 20261019,
+    "status": "error",
+    "timestamp_utc": "2026-10-19T01:24:01.531098+00:00"
+  },
+  "summary_sha256": "228b5d6d40e044dda6ebfe9401e67b4b26cb495d5013510aec4d9b04eb794a05",
+  "events_sha256": "34ef0e686981846fefe8db8d891dc7b643f41c79293049333d562d6432e8dbd6",
+  "disposition": "Failed offline replay retained locally; original successful live evidence was not changed. A bounded file-I/O fix and a new replay are required."
+}

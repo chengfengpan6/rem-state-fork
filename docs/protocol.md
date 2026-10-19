@@ -169,6 +169,13 @@ The offline candidate requests fork and 12-round checkpoints and separate calls 
 
 Source-list, actor-call, and message ordering use a seed-linked role permutation. This does not guarantee all occurrences of role labels are position-balanced: canonical JSON keys and map-cell ordering can remain fixed. A full positional-bias control needs additional prompt-level inspection and validation.
 
+Branches run sequentially in configuration order in the archived smoke. They are
+not interleaved or randomized in execution time. The explicit actor payloads are
+controlled, but this does not control backend drift over wall-clock time. A later
+study should predefine branch-order counterbalancing or interleaving, record
+timing, and retain matched histories. This is a proposed implementation control,
+not a manipulation already performed by the smoke [13].
+
 ## 9. Outcomes and recommended analysis
 
 The implementation stores realized Brier score `(p-y)^2` and conditional Brier regret:
@@ -191,7 +198,7 @@ Behavioral analyses should preserve raw profile probabilities and separate overa
 
 ## 10. Failure and reproducibility rules
 
-Responses are strictly validated. The current implementation does not coerce malformed JSON, clip invalid probabilities, repair intervals, substitute .50, or silently retry failed model calls. The first error stops the run and must be represented as failure or partial completion. Researchers should not discard failures merely because they occur in a theoretically inconvenient condition.
+Responses are strictly validated. The current implementation does not coerce malformed JSON, clip invalid probabilities, repair intervals, substitute .50, or silently retry failed model calls. The first provider, validation or budget failure stops the run and must be represented as failure or partial completion. Exhausted file-I/O recovery also stops dispatch. Researchers should not discard failures merely because they occur in a theoretically inconvenient condition.
 
 Successful-path call counts exclude failures and any later policy changes. The same stage count does not establish equal realized tokens, cost, or reasoning effort. Runtime limits, actual model identity, backend metadata available to the adapter, raw responses, state hashes, and completion status should be reported from artifacts rather than inferred from a model name or configuration.
 

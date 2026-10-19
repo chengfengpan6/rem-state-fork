@@ -99,3 +99,23 @@ Recorded replay feeds archived responses back to the engine and requires exact r
 JSON hashes use sorted keys, compact separators and UTF-8 SHA256. Output directories must be new or empty; completed artifacts are not silently overwritten. Checkpoints are inspection artifacts, not a claim of resumable execution after interruption. An unsuccessful run must remain unsuccessful in the manifest even if some calls returned valid outputs.
 
 The expected successful-path call count is computed from the selected horizon, architectures, measurements and updates. The provided ten-branch short configuration initially totals 342 responses, below its 500-attempt cap; `expected_calls(config)` and the saved manifest are authoritative if configuration changes. Counts are not monetary cost estimates or a power calculation. Public release should retain only synthetic-task research content and the metadata needed to audit it, excluding credentials, unrelated local context and private correspondence.
+
+## 8. Post-smoke file-I/O correction
+
+The 342-response live run completed before a Windows checkpoint-replacement
+issue appeared during fast offline replay. That first replay stopped after
+consuming 252 archived responses; it made no model calls. Its failure is retained
+in `evidence/verification_attempts/local_replay_01_failure.json`.
+
+The release adds at most five atomic-file replacement attempts when that specific
+operation raises `PermissionError`, separated by 0.05, 0.10, 0.15 and 0.20 seconds.
+Serialization, other exception types and model calls are not retried. Exhausted
+checkpoint recovery stops further dispatch and preserves the original error when
+failure reporting can still be written. The CLI reports the primary run error
+instead of masking it with an unused-replay-response check.
+
+This is an engineering correction after data collection. It changes file-failure
+handling, not prompts, state transitions, outcomes or the experiment's scoring.
+The provenance file distinguishes the actual live-run code commit from the
+subsequent replay/release commit. Archived evidence bytes are exempt from Git line
+ending conversion, so their saved SHA256 values remain portable.

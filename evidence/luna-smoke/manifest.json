@@ -1,0 +1,127 @@
+{
+  "schema_version": "manifest-v1",
+  "protocol_version": "rem-prototype-0.1-iid-initialized-median90",
+  "config": {
+    "protocol_version": "rem-prototype-0.1-iid-initialized-median90",
+    "purpose": "smoke_noninferential",
+    "seeds": [
+      20261019
+    ],
+    "formation_rounds": 3,
+    "post_rounds": 3,
+    "truth_design": "iid_bernoulli_0.5",
+    "context_block": 3,
+    "lifecycle": "initialized_update",
+    "map_update_interval": 3,
+    "max_message_chars": 600,
+    "branches": [
+      {
+        "id": "team_H",
+        "architecture": "team",
+        "condition": "H"
+      },
+      {
+        "id": "team_R0",
+        "architecture": "team",
+        "condition": "R0"
+      },
+      {
+        "id": "team_E",
+        "architecture": "team",
+        "condition": "E"
+      },
+      {
+        "id": "team_RU",
+        "architecture": "team",
+        "condition": "RU"
+      },
+      {
+        "id": "solo_H",
+        "architecture": "solo",
+        "condition": "H"
+      },
+      {
+        "id": "solo_R0",
+        "architecture": "solo",
+        "condition": "R0"
+      },
+      {
+        "id": "nomessage_H",
+        "architecture": "nomessage",
+        "condition": "H"
+      },
+      {
+        "id": "nomessage_R0",
+        "architecture": "nomessage",
+        "condition": "R0"
+      },
+      {
+        "id": "nominal_H",
+        "architecture": "nominal",
+        "condition": "H"
+      },
+      {
+        "id": "nominal_R0",
+        "architecture": "nominal",
+        "condition": "R0"
+      }
+    ],
+    "audit": {
+      "at_fork": false,
+      "interval": 3
+    },
+    "probes": {
+      "enabled": true,
+      "at_fork": false,
+      "interval": 3,
+      "mode": "batch",
+      "contexts": [
+        "X"
+      ]
+    },
+    "max_calls": 500,
+    "live_allowed": true
+  },
+  "config_hash": "d2cf89331cd4ba94f9683df95bdbdb43531e22a20901f6d7c86d712503fbafd5",
+  "status": "completed",
+  "started_utc": "2026-10-19T00:51:09.436236+00:00",
+  "provider": {
+    "name": "codex_chatgpt_subscription",
+    "requested_model": "gpt-5.6-luna",
+    "is_live": true
+  },
+  "python": "3.12.4",
+  "dgp_version": "context3-iidtruth-v1",
+  "tape_hashes": {
+    "20261019": "8b3c9394019965d0e5322ce8d9d8547b1812d88d475bbc7322ce3dc72c23e130"
+  },
+  "expected_successful_calls": 342,
+  "global_call_cap": 500,
+  "retry_policy": "none; first provider/schema failure stops the run",
+  "scope": "Executable prototype choices; not a frozen or preregistered confirmatory study",
+  "deviations_and_choices": [
+    "IID truth instead of the manuscript's exact truth balancing",
+    "Context-balanced blocks of 3; horizons and interval are configuration-specific",
+    "H0 and shared map updates use coordinatewise median of three independent actor maps",
+    "90% subjective map intervals; E uses equal-tail Beta credible intervals",
+    "Initialized-update is mutable block memory: inherited H remains until first update",
+    "Standing mode retains each fork map unchanged and performs no map updates",
+    "Checkpoint measurements occur post-feedback and before map update",
+    "No-message/solo/nominal use private memos for three-stage compute opportunity",
+    "Nominal members have no access to one another's post-fork behavior or maps",
+    "Solo/nominal founder records are provenance-labeled, not claimed as personal history",
+    "Batch probes are diagnostic and not independent profile interventions",
+    "No fitted w/lambda or confirmatory inference in this implementation"
+  ],
+  "files": [
+    "manifest.json",
+    "tapes.json",
+    "events.jsonl",
+    "calls.jsonl",
+    "checkpoint.json",
+    "summary.json"
+  ],
+  "ended_utc": "2026-10-19T01:23:29.844507+00:00",
+  "calls_attempted": 342,
+  "error": null
+}

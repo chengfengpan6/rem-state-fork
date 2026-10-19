@@ -1,0 +1,56 @@
+{
+  "recorded_utc": "2026-10-19T01:27:09.434572+00:00",
+  "operational_code_commit": "577026a4556178863697f20e11eb6f3b9b225d4e",
+  "live_run_preceded_file_io_fix": true,
+  "replay_code_commit": "c355af56790a87c316773afe95b06439ff49eda1",
+  "post_live_changes": "Bounded atomic-file replacement retries on PermissionError, preserving write-failure summaries, and reporting primary replay errors. No model retry or experimental payload change.",
+  "source_git_blob_ids": {
+    "configs/smoke.json": "e6cfed485c77b0bb36a6b67178da6b40e7126151",
+    "rem_harness/__init__.py": "2dd88dc322dd3f52e046c14a65ed00da3f487a7d",
+    "rem_harness/__main__.py": "f8a6e7c9e296b20f7baad79b223806a311aac60b",
+    "rem_harness/data.py": "79113de53a5325f12452e26fef116c23566a88cc",
+    "rem_harness/engine.py": "e258d54ea16c97fecc64c806c99c67737eec58ea",
+    "rem_harness/models.py": "f04b150758cd4370fe17bdbee4791c5b506a0eb7",
+    "rem_harness/providers.py": "4ffb550f2237a371917e1d93244079f2ada0fd83",
+    "rem_harness/schemas.py": "6013db755758efc1b5ecf00be0425629e9d8cbbe",
+    "schemas/state-slots-v1.json": "d01da372db98d39e18a388a69d1cf619e3335d9d"
+  },
+  "record_sha256": {
+    "manifest.json": "135979aa0304f75ab1a7bcb7283924966c3a628f083d899f9fafb54473d91d3b",
+    "tapes.json": "53e1da84d1047f02bfecd7139c12f29be8d555b29a53a62f0bd1d63ca0e44823",
+    "events.jsonl": "89c820681721429363d21ca02037313466ea8290ff1d483c2d35d23297e4d93d",
+    "calls.jsonl": "6d5b8877892cfde42712c4410eaf81450e1c01682b1634d43b7fb59c946fe896",
+    "checkpoint.json": "22b84c7729c4c4012f93bb0a4127be29aad3d2641142baaee8d8466bf8debbcf",
+    "summary.json": "949b52ee5ea52c76f069286478059dda0df0c344251780da1c7888a6235a18f1"
+  },
+  "model_requested": "gpt-5.6-luna",
+  "cli_versions": [
+    "codex-cli 0.162.0-alpha.17.2"
+  ],
+  "experimental_calls": {
+    "attempted": 342,
+    "successful": 342,
+    "errors": 0,
+    "harness_retries": 0
+  },
+  "outside_experiment_setup": {
+    "successful_handshakes": 2,
+    "obsolete_cli_rejected_requests": 1,
+    "pre_request_configuration_failures": 1,
+    "raw_setup_transcript_in_this_release": false
+  },
+  "independent_verifier": {
+    "status": "verified_complete",
+    "checks": 5018,
+    "failed": 0
+  },
+  "recorded_response_replay": {
+    "earlier_failed_attempt": "evidence/verification_attempts/local_replay_01_failure.json",
+    "complete_consumption": true,
+    "summary_equal": true,
+    "checkpoint_equal": true,
+    "tapes_equal": true,
+    "new_model_calls": 0
+  },
+  "scope": "Execution and saved-record verification. No scientific effect, model-weight identity, or hidden-provider-context validation is claimed."
+}

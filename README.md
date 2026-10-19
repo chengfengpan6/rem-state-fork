@@ -1,5 +1,12 @@
 # REM state-fork prototype
 
+The archived GPT-5.6 Luna smoke completed on 19 October 2026: **342 successful
+experimental responses**, one shared history and ten branches of three future
+rounds. All 5,018 recording checks passed, and strict replay reproduced the
+summary, checkpoint and event tape exactly. This is execution evidence, not a
+confirmatory result. See the [run provenance](evidence/luna-smoke/provenance.json)
+and [recorded replay failure and correction](docs/technical_appendix.md#8-post-smoke-file-io-correction).
+
 An executable instrument for comparing inherited reliability summaries while
 holding an agent system's observed history and future signal stream fixed.
 This repository contains newly implemented code, synthetic tasks, and small
@@ -90,10 +97,13 @@ controls do **not** expose all host/server-added context. A successful request
 establishes access to the requested model alias, not an immutable model-weight
 snapshot. Provider seeds and temperature are not set by this transport.
 
-There is no harness retry or silent JSON repair. The first provider, schema, or
+There is no model-call retry or silent JSON repair. The first provider, schema, or
 budget failure stops the run, preserving the completed trace. Codex itself is a
 separate transport layer; its internal network handling is not fully controlled
 or observed. A fresh run must not be mistaken for a continuation of a failed one.
+Atomic file replacement has separate bounded recovery for transient Windows
+`PermissionError`; it never redispatches a model request. See the technical
+appendix for the recorded post-smoke correction.
 
 ## Files and interpretation
 
@@ -116,6 +126,12 @@ claims should be inferred from one seed. Full independent probes, correction
 opportunities over two checkpoints, measurement validation, model recovery,
 sample-size planning, and author-approved confirmatory analysis remain separate
 research work. A longer offline configuration is not evidence of a live pilot.
+
+The [proposed next measurement pilot](docs/pilot_plan.md) has an explicit
+7,314-response plan. It uses six 24+24 histories, with H/R0 throughout and E/RU
+on two histories. Its configurations are offline-only and it has not been run.
+The full ten-branch 24+84 configuration would require 12,153 calls **per seed**;
+it cannot be treated as a 6,000–8,000-call total pilot.
 
 ## Sharing and provenance
 

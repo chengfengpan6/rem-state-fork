@@ -1,0 +1,46 @@
+{
+  "protocol_version": "rem-prototype-0.1-iid-initialized-median90",
+  "purpose": "formal_candidate_offline",
+  "seeds": [
+    20261101,
+    20261102,
+    20261103,
+    20261104
+  ],
+  "formation_rounds": 24,
+  "post_rounds": 24,
+  "truth_design": "iid_bernoulli_0.5",
+  "context_block": 3,
+  "lifecycle": "initialized_update",
+  "map_update_interval": 12,
+  "max_message_chars": 600,
+  "branches": [
+    {
+      "id": "team_H",
+      "architecture": "team",
+      "condition": "H"
+    },
+    {
+      "id": "team_R0",
+      "architecture": "team",
+      "condition": "R0"
+    }
+  ],
+  "audit": {
+    "at_fork": true,
+    "interval": 12
+  },
+  "probes": {
+    "enabled": true,
+    "at_fork": true,
+    "interval": 24,
+    "mode": "single",
+    "contexts": [
+      "X",
+      "Y",
+      "Z"
+    ]
+  },
+  "max_calls": 3876,
+  "live_allowed": false
+}

@@ -1,0 +1,632 @@
+{
+  "status": "completed",
+  "purpose": "smoke_noninferential",
+  "calls_attempted": 342,
+  "expected_successful_calls": 342,
+  "max_calls": 500,
+  "seed_results": {
+    "20261019": {
+      "branches": {
+        "team_H": {
+          "architecture": "team",
+          "condition": "H",
+          "rounds": [
+            {
+              "round_index": 4,
+              "post_round": 1,
+              "context": "Z",
+              "probability": 0.8776666666666667,
+              "truth": 1,
+              "brier": 0.014965444444444434,
+              "oracle_probability": 0.9132231404958678,
+              "cBR": 0.0012642628311666647,
+              "actor_forecasts": {
+                "B": 0.893,
+                "C": 0.89,
+                "A": 0.85
+              }
+            },
+            {
+              "round_index": 5,
+              "post_round": 2,
+              "context": "Y",
+              "probability": 0.67,
+              "truth": 1,
+              "brier": 0.10889999999999997,
+              "oracle_probability": 0.7531645569620252,
+              "cBR": 0.006916343534689931,
+              "actor_forecasts": {
+                "B": 0.67,
+                "C": 0.67,
+                "A": 0.67
+              }
+            },
+            {
+              "round_index": 6,
+              "post_round": 3,
+              "context": "X",
+              "probability": 0.9086666666666666,
+              "truth": 1,
+              "brier": 0.008341777777777786,
+              "oracle_probability": 0.9132231404958678,
+              "cBR": 2.0761453756195564e-05,
+              "actor_forecasts": {
+                "B": 0.943,
+                "C": 0.89,
+                "A": 0.893
+              }
+            }
+          ],
+          "completed": true,
+          "mean_cBR": 0.002733789273204264,
+          "mean_brier": 0.044069074074074066
+        },
+        "team_R0": {
+          "architecture": "team",
+          "condition": "R0",
+          "rounds": [
+            {
+              "round_index": 4,
+              "post_round": 1,
+              "context": "Z",
+              "probability": 0.75,
+              "truth": 1,
+              "brier": 0.0625,
+              "oracle_probability": 0.9132231404958678,
+              "cBR": 0.02664179359333381,
+              "actor_forecasts": {
+                "B": 0.75,
+                "C": 0.7,
+                "A": 0.8
+              }
+            },
+            {
+              "round_index": 5,
+              "post_round": 2,
+              "context": "Y",
+              "probability": 0.72,
+              "truth": 1,
+              "brier": 0.07840000000000001,
+              "oracle_probability": 0.7531645569620252,
+              "cBR": 0.0010998878384874174,
+              "actor_forecasts": {
+                "B": 0.85,
+                "C": 0.56,
+                "A": 0.75
+              }
+            },
+            {
+              "round_index": 6,
+              "post_round": 3,
+              "context": "X",
+              "probability": 0.8866666666666666,
+              "truth": 1,
+              "brier": 0.012844444444444459,
+              "oracle_probability": 0.9132231404958678,
+              "cBR": 0.00070524630224105,
+              "actor_forecasts": {
+                "B": 0.9,
+                "C": 0.94,
+                "A": 0.82
+              }
+            }
+          ],
+          "completed": true,
+          "mean_cBR": 0.009482309244687426,
+          "mean_brier": 0.051248148148148154
+        },
+        "team_E": {
+          "architecture": "team",
+          "condition": "E",
+          "rounds": [
+            {
+              "round_index": 4,
+              "post_round": 1,
+              "context": "Z",
+              "probability": 0.8767254901960785,
+              "truth": 1,
+              "brier": 0.015196604767397143,
+              "oracle_probability": 0.9132231404958678,
+              "cBR": 0.001332078477405714,
+              "actor_forecasts": {
+                "B": 0.9411764705882353,
+                "C": 0.8,
+                "A": 0.889
+              }
+            },
+            {
+              "round_index": 5,
+              "post_round": 2,
+              "context": "Y",
+              "probability": 0.7943333333333333,
+              "truth": 1,
+              "brier": 0.042298777777777775,
+              "oracle_probability": 0.7531645569620252,
+              "cBR": 0.0016948681479107771,
+              "actor_forecasts": {
+                "B": 0.833,
+                "C": 0.75,
+                "A": 0.8
+              }
+            },
+            {
+              "round_index": 6,
+              "post_round": 3,
+              "context": "X",
+              "probability": 0.9507921568627451,
+              "truth": 1,
+              "brier": 0.0024214118262206844,
+              "oracle_probability": 0.9132231404958678,
+              "cBR": 0.0014114309907746916,
+              "actor_forecasts": {
+                "B": 0.97,
+                "C": 0.9412,
+                "A": 0.9411764705882353
+              }
+            }
+          ],
+          "completed": true,
+          "mean_cBR": 0.0014794592053637276,
+          "mean_brier": 0.0199722647904652
+        },
+        "team_RU": {
+          "architecture": "team",
+          "condition": "RU",
+          "rounds": [
+            {
+              "round_index": 4,
+              "post_round": 1,
+              "context": "Z",
+              "probability": 0.98,
+              "truth": 1,
+              "brier": 0.0004000000000000007,
+              "oracle_probability": 0.9132231404958678,
+              "cBR": 0.004459148965234604,
+              "actor_forecasts": {
+                "B": 0.99,
+                "C": 0.97,
+                "A": 0.98
+              }
+            },
+            {
+              "round_index": 5,
+              "post_round": 2,
+              "context": "Y",
+              "probability": 0.83,
+              "truth": 1,
+              "brier": 0.028900000000000012,
+              "oracle_probability": 0.7531645569620252,
+              "cBR": 0.005903685306841861,
+              "actor_forecasts": {
+                "B": 0.85,
+                "C": 0.86,
+                "A": 0.78
+              }
+            },
+            {
+              "round_index": 6,
+              "post_round": 3,
+              "context": "X",
+              "probability": 0.74,
+              "truth": 1,
+              "brier": 0.06760000000000001,
+              "oracle_probability": 0.9132231404958678,
+              "cBR": 0.03000625640325117,
+              "actor_forecasts": {
+                "B": 0.9,
+                "C": 0.65,
+                "A": 0.67
+              }
+            }
+          ],
+          "completed": true,
+          "mean_cBR": 0.013456363558442545,
+          "mean_brier": 0.03230000000000001
+        },
+        "solo_H": {
+          "architecture": "solo",
+          "condition": "H",
+          "rounds": [
+            {
+              "round_index": 4,
+              "post_round": 1,
+              "context": "Z",
+              "probability": 0.97,
+              "truth": 1,
+              "brier": 0.0009000000000000016,
+              "oracle_probability": 0.9132231404958678,
+              "cBR": 0.00322361177515196,
+              "actor_forecasts": {
+                "S": 0.97
+              }
+            },
+            {
+              "round_index": 5,
+              "post_round": 2,
+              "context": "Y",
+              "probability": 0.67,
+              "truth": 1,
+              "brier": 0.10889999999999997,
+              "oracle_probability": 0.7531645569620252,
+              "cBR": 0.006916343534689931,
+              "actor_forecasts": {
+                "S": 0.67
+              }
+            },
+            {
+              "round_index": 6,
+              "post_round": 3,
+              "context": "X",
+              "probability": 0.67,
+              "truth": 1,
+              "brier": 0.10889999999999997,
+              "oracle_probability": 0.9132231404958678,
+              "cBR": 0.05915749607267264,
+              "actor_forecasts": {
+                "S": 0.67
+              }
+            }
+          ],
+          "completed": true,
+          "mean_cBR": 0.02309915046083818,
+          "mean_brier": 0.07289999999999998
+        },
+        "solo_R0": {
+          "architecture": "solo",
+          "condition": "R0",
+          "rounds": [
+            {
+              "round_index": 4,
+              "post_round": 1,
+              "context": "Z",
+              "probability": 0.75,
+              "truth": 1,
+              "brier": 0.0625,
+              "oracle_probability": 0.9132231404958678,
+              "cBR": 0.02664179359333381,
+              "actor_forecasts": {
+                "S": 0.75
+              }
+            },
+            {
+              "round_index": 5,
+              "post_round": 2,
+              "context": "Y",
+              "probability": 0.58,
+              "truth": 1,
+              "brier": 0.17640000000000003,
+              "oracle_probability": 0.7531645569620252,
+              "cBR": 0.02998596378785449,
+              "actor_forecasts": {
+                "S": 0.58
+              }
+            },
+            {
+              "round_index": 6,
+              "post_round": 3,
+              "context": "X",
+              "probability": 0.68,
+              "truth": 1,
+              "brier": 0.10239999999999996,
+              "oracle_probability": 0.9132231404958678,
+              "cBR": 0.05439303326275528,
+              "actor_forecasts": {
+                "S": 0.68
+              }
+            }
+          ],
+          "completed": true,
+          "mean_cBR": 0.03700693021464786,
+          "mean_brier": 0.11376666666666667
+        },
+        "nomessage_H": {
+          "architecture": "nomessage",
+          "condition": "H",
+          "rounds": [
+            {
+              "round_index": 4,
+              "post_round": 1,
+              "context": "Z",
+              "probability": 0.68,
+              "truth": 1,
+              "brier": 0.10239999999999996,
+              "oracle_probability": 0.9132231404958678,
+              "cBR": 0.05439303326275528,
+              "actor_forecasts": {
+                "B": 0.67,
+                "C": 0.7,
+                "A": 0.67
+              }
+            },
+            {
+              "round_index": 5,
+              "post_round": 2,
+              "context": "Y",
+              "probability": 0.59,
+              "truth": 1,
+              "brier": 0.16810000000000003,
+              "oracle_probability": 0.7531645569620252,
+              "cBR": 0.026622672648613982,
+              "actor_forecasts": {
+                "B": 0.67,
+                "C": 0.35,
+                "A": 0.75
+              }
+            },
+            {
+              "round_index": 6,
+              "post_round": 3,
+              "context": "X",
+              "probability": 0.6866666666666666,
+              "truth": 1,
+              "brier": 0.0981777777777778,
+              "oracle_probability": 0.9132231404958678,
+              "cBR": 0.051327835833921524,
+              "actor_forecasts": {
+                "B": 0.67,
+                "C": 0.67,
+                "A": 0.72
+              }
+            }
+          ],
+          "completed": true,
+          "mean_cBR": 0.04411451391509693,
+          "mean_brier": 0.1228925925925926
+        },
+        "nomessage_R0": {
+          "architecture": "nomessage",
+          "condition": "R0",
+          "rounds": [
+            {
+              "round_index": 4,
+              "post_round": 1,
+              "context": "Z",
+              "probability": 0.8,
+              "truth": 1,
+              "brier": 0.03999999999999998,
+              "oracle_probability": 0.9132231404958678,
+              "cBR": 0.012819479543747016,
+              "actor_forecasts": {
+                "B": 0.75,
+                "C": 0.85,
+                "A": 0.8
+              }
+            },
+            {
+              "round_index": 5,
+              "post_round": 2,
+              "context": "Y",
+              "probability": 0.6733333333333333,
+              "truth": 1,
+              "brier": 0.1067111111111111,
+              "oracle_probability": 0.7531645569620252,
+              "cBR": 0.006373024266054213,
+              "actor_forecasts": {
+                "B": 0.62,
+                "C": 0.75,
+                "A": 0.65
+              }
+            },
+            {
+              "round_index": 6,
+              "post_round": 3,
+              "context": "X",
+              "probability": 0.8166666666666667,
+              "truth": 1,
+              "brier": 0.03361111111111112,
+              "oracle_probability": 0.9132231404958678,
+              "cBR": 0.009323152638329214,
+              "actor_forecasts": {
+                "B": 0.8,
+                "C": 0.78,
+                "A": 0.87
+              }
+            }
+          ],
+          "completed": true,
+          "mean_cBR": 0.00950521881604348,
+          "mean_brier": 0.0601074074074074
+        },
+        "nominal_H": {
+          "architecture": "nominal",
+          "condition": "H",
+          "rounds": [
+            {
+              "round_index": 4,
+              "post_round": 1,
+              "context": "Z",
+              "probability": 0.8503333333333334,
+              "truth": 1,
+              "brier": 0.022400111111111096,
+              "oracle_probability": 0.9132231404958678,
+              "cBR": 0.003955127844940769,
+              "actor_forecasts": {
+                "N1": 0.86,
+                "N2": 0.8,
+                "N3": 0.891
+              }
+            },
+            {
+              "round_index": 5,
+              "post_round": 2,
+              "context": "Y",
+              "probability": 0.6233333333333333,
+              "truth": 1,
+              "brier": 0.1418777777777778,
+              "oracle_probability": 0.7531645569620252,
+              "cBR": 0.016856146628923412,
+              "actor_forecasts": {
+                "N1": 0.62,
+                "N2": 0.58,
+                "N3": 0.67
+              }
+            },
+            {
+              "round_index": 6,
+              "post_round": 3,
+              "context": "X",
+              "probability": 0.8803333333333333,
+              "truth": 1,
+              "brier": 0.014320111111111119,
+              "oracle_probability": 0.9132231404958678,
+              "cBR": 0.001081739415188708,
+              "actor_forecasts": {
+                "N1": 0.88,
+                "N2": 0.87,
+                "N3": 0.891
+              }
+            }
+          ],
+          "completed": true,
+          "mean_cBR": 0.007297671296350963,
+          "mean_brier": 0.05953266666666667
+        },
+        "nominal_R0": {
+          "architecture": "nominal",
+          "condition": "R0",
+          "rounds": [
+            {
+              "round_index": 4,
+              "post_round": 1,
+              "context": "Z",
+              "probability": 0.88,
+              "truth": 1,
+              "brier": 0.0144,
+              "oracle_probability": 0.9132231404958678,
+              "cBR": 0.001103777064408173,
+              "actor_forecasts": {
+                "N1": 0.92,
+                "N2": 0.82,
+                "N3": 0.9
+              }
+            },
+            {
+              "round_index": 5,
+              "post_round": 2,
+              "context": "Y",
+              "probability": 0.7166666666666667,
+              "truth": 1,
+              "brier": 0.08027777777777777,
+              "oracle_probability": 0.7531645569620252,
+              "cBR": 0.0013320959960120278,
+              "actor_forecasts": {
+                "N1": 0.65,
+                "N2": 0.85,
+                "N3": 0.65
+              }
+            },
+            {
+              "round_index": 6,
+              "post_round": 3,
+              "context": "X",
+              "probability": 0.85,
+              "truth": 1,
+              "brier": 0.022500000000000006,
+              "oracle_probability": 0.9132231404958678,
+              "cBR": 0.003997165494160246,
+              "actor_forecasts": {
+                "N1": 0.75,
+                "N2": 0.96,
+                "N3": 0.84
+              }
+            }
+          ],
+          "completed": true,
+          "mean_cBR": 0.002144346184860149,
+          "mean_brier": 0.03905925925925926
+        }
+      },
+      "history_metrics": {
+        "M": 0.0,
+        "M_exact": {
+          "numerator": 0,
+          "denominator": 1
+        },
+        "strict_reversal_count": 0,
+        "worst_pair_concordance": 0.0,
+        "pairs": [
+          {
+            "context": "X",
+            "source_a": "A",
+            "source_b": "B",
+            "true_order_probability": 0.5,
+            "strict_reversal": false,
+            "signed_concordance": 0.0
+          },
+          {
+            "context": "X",
+            "source_a": "A",
+            "source_b": "C",
+            "true_order_probability": 0.5,
+            "strict_reversal": false,
+            "signed_concordance": 0.0
+          },
+          {
+            "context": "X",
+            "source_a": "B",
+            "source_b": "C",
+            "true_order_probability": 0.5,
+            "strict_reversal": false,
+            "signed_concordance": 0.0
+          },
+          {
+            "context": "Y",
+            "source_a": "A",
+            "source_b": "B",
+            "true_order_probability": 0.5,
+            "strict_reversal": false,
+            "signed_concordance": 0.0
+          },
+          {
+            "context": "Y",
+            "source_a": "A",
+            "source_b": "C",
+            "true_order_probability": 0.5,
+            "strict_reversal": false,
+            "signed_concordance": 0.0
+          },
+          {
+            "context": "Y",
+            "source_a": "B",
+            "source_b": "C",
+            "true_order_probability": 0.5,
+            "strict_reversal": false,
+            "signed_concordance": 0.0
+          },
+          {
+            "context": "Z",
+            "source_a": "A",
+            "source_b": "B",
+            "true_order_probability": 0.5,
+            "strict_reversal": false,
+            "signed_concordance": 0.0
+          },
+          {
+            "context": "Z",
+            "source_a": "A",
+            "source_b": "C",
+            "true_order_probability": 0.5,
+            "strict_reversal": false,
+            "signed_concordance": 0.0
+          },
+          {
+            "context": "Z",
+            "source_a": "B",
+            "source_b": "C",
+            "true_order_probability": 0.5,
+            "strict_reversal": false,
+            "signed_concordance": 0.0
+          }
+        ]
+      },
+      "paired_cBR_differences": {
+        "primary_team_H_minus_R0": -0.006748519971483163,
+        "secondary_team_H_minus_E": 0.0012543300678405363,
+        "secondary_team_RU_minus_R0": 0.0039740543137551185
+      }
+    }
+  },
+  "error": null,
+  "interpretation": "Pipeline verification only; no population inference, causal conclusion, or parameter-recovery claim.",
+  "measurement_policy": "post_feedback_pre_update; disposable clones; no outcome feedback or writeback"
+}
