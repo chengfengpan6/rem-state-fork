@@ -31,3 +31,7 @@ The tag `v0.1.0-smoke` adds the static review report to this checked code/eviden
 checkpoint. Its additional files are documentation; the experimental records and
 engine are unchanged. Scientific interpretation remains limited to a one-history,
 3+3-round execution. No full pilot or confirmatory study was run.
+
+The Pages deployment succeeded, but the inherited `pcf.codes` entry presents a
+human-verification gate. The body beyond that gate was not verified in this
+session. The standalone HTML is included in the repository and local delivery.

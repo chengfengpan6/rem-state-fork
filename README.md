@@ -1,5 +1,13 @@
 # REM state-fork prototype
 
+
+[Static review report](docs/index.html) · [Online entry](https://pcf.codes/rem-state-fork/) · [Release validation](docs/release_validation.md)
+
+The online entry inherits the account's existing domain and currently presents
+a human-verification gate. The standalone HTML can be downloaded and read
+without scripts, login or external assets. Post-gate access was not verified
+during release preparation.
+
 The archived GPT-5.6 Luna smoke completed on 19 October 2026: **342 successful
 experimental responses**, one shared history and ten branches of three future
 rounds. All 5,018 recording checks passed, and strict replay reproduced the
