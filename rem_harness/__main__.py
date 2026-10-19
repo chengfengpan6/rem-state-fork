@@ -30,11 +30,11 @@ def main():
             parser.error("replay requires --recording")
         provider = ReplayProvider(args.recording)
     result = Engine(provider, config, Path(args.output)).run()
-    if args.mode == "replay" and provider.index != len(provider.responses):
-        raise RuntimeError("Replay left unused responses")
     print(json.dumps(result, indent=2, ensure_ascii=False))
     if result["status"] != "completed":
         raise SystemExit(1)
+    if args.mode == "replay" and provider.index != len(provider.responses):
+        raise RuntimeError("Replay left unused responses")
 
 
 if __name__ == "__main__":

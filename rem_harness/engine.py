@@ -9,6 +9,7 @@ from pathlib import Path
 import platform
 import re
 from statistics import mean
+import time
 from typing import Callable, Protocol
 
 from .data import (CONTEXTS, SOURCES, DGP_VERSION, generate_tape, evidence_map,
@@ -69,6 +70,7 @@ class Engine:
         self._results = {}
         self._role_order = list(SOURCES)
         self._used = False
+        self._checkpoint_write_failed = False
 
     def cancel(self):
         self.cancelled = True
@@ -81,7 +83,17 @@ class Engine:
         path = self.output_dir / filename
         temporary = path.with_suffix(path.suffix + ".tmp")
         temporary.write_text(json.dumps(value, ensure_ascii=False, indent=2, allow_nan=False), encoding="utf-8")
-        temporary.replace(path)
+        # Windows scanners/readers can briefly deny atomic replacement. Retry
+        # only this file operation: five attempts, at most 0.50 seconds of sleep.
+        # Never retry serialization, provider calls, or other I/O exceptions.
+        for attempt in range(5):
+            try:
+                temporary.replace(path)
+                return
+            except PermissionError:
+                if attempt == 4:
+                    raise
+                time.sleep(.05 * (attempt + 1))
 
     def _record(self, event_type, **fields):
         self._event_index += 1
@@ -301,7 +313,13 @@ class Engine:
             self.probe(state, architecture, post_round)
 
     def _save_checkpoint(self):
-        self._write_json("checkpoint.json", self._checkpoints)
+        try:
+            self._write_json("checkpoint.json", self._checkpoints)
+        except Exception:
+            # Do not repeat an exhausted checkpoint write during finalization.
+            self._checkpoint_write_failed = True
+            raise
+        self._checkpoint_write_failed = False
 
     def _seed_run(self, seed, tape):
         self._seed = seed
@@ -400,11 +418,11 @@ class Engine:
                         "No fitted w/lambda or confirmatory inference in this implementation"],
                     "files": ["manifest.json", "tapes.json", "events.jsonl", "calls.jsonl", "checkpoint.json", "summary.json"]}
         self._write_json("manifest.json", manifest)
-        self._save_checkpoint()
         status, error_info = "completed", None
         with (self.output_dir/"events.jsonl").open("w", encoding="utf-8") as events, (self.output_dir/"calls.jsonl").open("w", encoding="utf-8") as calls:
             self._events, self._calls_log = events, calls
             try:
+                self._save_checkpoint()
                 self._check_cancel()
                 for seed, tape in tapes.items():
                     self._seed_run(seed, tape)
@@ -413,8 +431,18 @@ class Engine:
                 error_info = {"type": type(error).__name__, "message": safe_error(error)}
                 self._record("run_stopped", status=status, error=error_info)
             finally:
-                self._save_checkpoint()
-                self._events = self._calls_log = None
+                try:
+                    if not self._checkpoint_write_failed:
+                        self._save_checkpoint()
+                except Exception as checkpoint_error:
+                    details = {"type": type(checkpoint_error).__name__, "message": safe_error(checkpoint_error)}
+                    self._record("checkpoint_write_failed", error=details)
+                    # Preserve the initiating failure, if one already exists.
+                    if error_info is None:
+                        status, error_info = "error", details
+                        self._record("run_stopped", status=status, error=error_info)
+                finally:
+                    self._events = self._calls_log = None
         summary = {"status": status, "purpose": cfg["purpose"], "calls_attempted": self.calls,
                    "expected_successful_calls": expected_calls(cfg), "max_calls": cfg["max_calls"],
                    "seed_results": self._results, "error": error_info,
