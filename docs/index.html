@@ -1,0 +1,683 @@
+<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>REM: executable prototype and review report</title><style>
+:root{--ink:#193944;--muted:#5b7077;--line:#d9e2df;--teal:#176a62;--paper:#fffefa;--amber:#865b22}
+*{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;background:#f1f4f1;color:var(--ink);font:16px/1.8 "Segoe UI","Microsoft YaHei","PingFang SC",sans-serif}a{color:#0d6865;text-decoration-thickness:1px;text-underline-offset:3px;overflow-wrap:anywhere}.layout{max-width:1500px;margin:auto;display:grid;grid-template-columns:245px minmax(0,1fr);gap:30px;padding:30px}nav{position:sticky;top:24px;max-height:92vh;overflow:auto;font-size:13px}nav strong{display:block;letter-spacing:.15em;font-size:12px;margin:12px 0}nav a{display:block;text-decoration:none;padding:7px 10px;border-left:2px solid #d6e2dd;margin-bottom:3px}nav a:hover{background:#e0ebe5}main{background:var(--paper);border:1px solid var(--line);border-radius:16px;padding:46px 54px;min-width:0}h1{font-size:38px;line-height:1.25;letter-spacing:-.03em;margin:16px 0 22px}h2{font-size:25px;line-height:1.4;margin:56px 0 18px;padding-top:12px;border-top:2px solid var(--line);scroll-margin-top:25px}h3{font-size:20px;margin:30px 0 12px}h4{font-size:17px}p{margin:12px 0}strong{font-weight:650}.kicker{font-size:12px;letter-spacing:.16em;color:var(--teal);font-weight:700}.deck{font-size:19px;color:var(--muted)}.note,blockquote{border-left:4px solid var(--teal);background:#edf5f1;padding:14px 20px;margin:22px 0}.warning{border-color:var(--amber);background:#fbf2df}.cards{display:grid;grid-template-columns:repeat(4,1fr);gap:10px;margin:26px 0}.card{padding:18px;border:1px solid var(--line);border-radius:10px;background:#f6f8f4}.card b{display:block;font-size:30px;color:var(--teal);line-height:1.3}.card span{font-size:13px;color:var(--muted)}.table-scroll{overflow-x:auto;margin:20px 0}table{border-collapse:collapse;width:100%;font-size:14px;line-height:1.65}th,td{padding:12px 14px;vertical-align:top;text-align:left;border:1px solid var(--line);min-width:90px}th{background:#e8f0eb;font-weight:650}tr:nth-child(even) td{background:#fafbf8}code{font:13px/1.6 Consolas,monospace;background:#eaf0ec;padding:2px 4px;border-radius:4px;overflow-wrap:anywhere}pre{overflow:auto;background:#183740;color:#eff7f5;padding:20px;border-radius:10px;line-height:1.6}pre code{color:inherit;background:none;padding:0}ul,ol{padding-left:26px}li{margin:8px 0}figure{margin:24px 0;padding:10px;background:#fff;border:1px solid var(--line);border-radius:12px}svg{width:100%;height:auto;font-family:"Segoe UI","Microsoft YaHei",sans-serif}figcaption{font-size:13px;color:var(--muted);padding:8px 12px}details{border:1px solid var(--line);border-radius:10px;padding:14px 18px;margin:20px 0}summary{cursor:pointer;font-weight:650}footer{font-size:12px;color:var(--muted);border-top:1px solid var(--line);margin-top:40px;padding-top:20px}.tag{display:inline-block;border:1px solid #b6d0c2;padding:2px 9px;border-radius:30px;font-size:12px;margin:4px;color:var(--teal)}.muted{color:var(--muted)}img{max-width:100%;height:auto}
+@media(max-width:1050px){.layout{grid-template-columns:1fr;padding:16px}nav{position:static;max-height:220px}main{padding:28px}.cards{grid-template-columns:repeat(2,1fr)}}
+@media(max-width:700px){figure{overflow-x:auto}figure svg{min-width:740px}}
+@media print{body{background:white;font-size:11pt}.layout{display:block;padding:0}nav{display:none}main{border:0;padding:0}h2{break-after:avoid}figure,table,pre{break-inside:avoid}.table-scroll{overflow:visible}a{color:inherit}details{display:block}.cards{grid-template-columns:repeat(4,1fr)}}
+</style></head><body><div class="layout"><nav><strong>REM · 19 OCT 2026</strong><a href="#section-1">Execution and review evidence</a><a href="#section-2">Review from a clean copy without model calls</a><a href="#section-3">Experimental flow and state changes</a><a href="#section-4">A concrete case from this run</a><a href="#section-5">Scientific protocol and implementation choices</a><a href="#section-6">1. Research question</a><a href="#section-7">2. Research-design provenance and changes</a><a href="#section-8">3. Synthetic task and oracle</a><a href="#section-9">4. State and information boundaries</a><a href="#section-10">5. One round in each architecture</a><a href="#section-11">6. Map construction and treatments</a><a href="#section-12">7. Two lifecycle modes</a><a href="#section-13">8. Branch scope, probes, and execution status</a><a href="#section-14">9. Outcomes and recommended analysis</a><a href="#section-15">10. Failure and reproducibility rules</a><a href="#section-16">11. Published foundations and access boundaries</a><a href="#section-17">Technical appendix: executable REM state-fork prototype</a><a href="#section-18">1. Task and data-generating process</a><a href="#section-19">2. State and information boundaries</a><a href="#section-20">3. A round and the architecture comparisons</a><a href="#section-21">4. Formation, fork conditions and map lifecycle</a><a href="#section-22">5. Read-only measurement and scores</a><a href="#section-23">6. Model transport and replay</a><a href="#section-24">7. Research artifacts and failure handling</a><a href="#section-25">8. Post-smoke file-I/O correction</a><a href="#section-26">Proposed next measurement pilot: 7,314 responses, not run</a><a href="#section-27">Why the original budget cannot simply be inherited</a><a href="#section-28">A bounded measurement design</a><a href="#section-29">Model and execution continuity</a><a href="#section-30">What this would and would not answer</a><a href="#section-31">Readiness and evidence boundaries</a><a href="#section-32">What the Organization Science call requires</a><a href="#section-33">Dates and selection status</a><a href="#section-34">What each level of evidence establishes</a><a href="#section-35">Required release checks</a><a href="#section-36">Scientific work remaining beyond a smoke</a><a href="#section-37">Decisions for the authors, after reviewing the evidence</a></nav><main><div class="kicker">RESEARCH PROTOTYPE · EVIDENCE & DECISIONS</div><h1>REM: executable prototype and review report</h1><p class="deck">A small real-model smoke, an explicit experimental protocol, and a traceable account of what remains untested.</p><div class="cards"><div class="card"><b>342</b><span>real experimental responses</span></div><div class="card"><b>10</b><span>planned branches</span></div><div class="card"><b>3 + 3</b><span>formation + future rounds</span></div><div class="card"><b>1</b><span>shared-history seed</span></div></div><h2 id="section-1">Execution and review evidence</h2><p><a href="https://github.com/chengfengpan6/rem-state-fork">GitHub repository</a> · <a href="https://github.com/chengfengpan6/rem-state-fork/actions">Automated checks</a> · <a href="https://github.com/chengfengpan6/rem-state-fork/tree/main/evidence/luna-smoke">Raw smoke records</a></p><div class="note"><strong>Status: completed · 342 experimental responses recorded.</strong> One shared formation history, three formation rounds and three future rounds per branch. Requested model: GPT-5.6 Luna through a ChatGPT-authenticated official Codex CLI. No 6,000–8,000-call pilot was launched.</div><div class="table-scroll"><table><thead><tr><th>Branch</th><th>Future rounds completed</th><th>Responses</th><th>Status</th></tr></thead><tbody><tr><td>team_H</td><td>3</td><td>36</td><td>complete</td></tr><tr><td>team_R0</td><td>3</td><td>36</td><td>complete</td></tr><tr><td>team_E</td><td>3</td><td>36</td><td>complete</td></tr><tr><td>team_RU</td><td>3</td><td>36</td><td>complete</td></tr><tr><td>solo_H</td><td>3</td><td>12</td><td>complete</td></tr><tr><td>solo_R0</td><td>3</td><td>12</td><td>complete</td></tr><tr><td>nomessage_H</td><td>3</td><td>36</td><td>complete</td></tr><tr><td>nomessage_R0</td><td>3</td><td>36</td><td>complete</td></tr><tr><td>nominal_H</td><td>3</td><td>36</td><td>complete</td></tr><tr><td>nominal_R0</td><td>3</td><td>36</td><td>complete</td></tr></tbody></table></div><p>Formation responses: 30. Total experimental responses: 342. Reported input tokens: 2,758,384; cached input tokens: 1,305,856; output tokens: 89,914. These counts are not independent observations or a dollar-cost estimate. Two successful access/isolation handshakes occurred outside the experiment. An earlier request from an obsolete CLI was rejected; another configuration check failed before a model request.</p><div class="table-scroll"><table><thead><tr><th>Verification</th><th>Recorded outcome</th></tr></thead><tbody><tr><td>Live-run code</td><td>577026a4556178863697f20e11eb6f3b9b225d4e; all 342 model responses collected before the file-I/O correction</td></tr><tr><td>Release code and evidence</td><td>9c1255f718bedc2de1c21345cda9fee9b88fde4b; includes post-live persistence fix c355af5</td></tr><tr><td>Unit tests</td><td>38 tests passed locally and in a clean public clone; no live model calls</td></tr><tr><td>Clean clone</td><td>Public GitHub copy, fresh Python 3.12.4 environment and locked dependencies: tests, recording verification and strict replay passed</td></tr><tr><td>GitHub Actions</td><td>Code/evidence commit 9c1255f passed tests, record verification and replay: https://github.com/chengfengpan6/rem-state-fork/actions/runs/39185458449</td></tr><tr><td>Recording verification</td><td>5,018 checks passed; 342 requests, 342 responses, zero model-call errors; six raw-file SHA256 hashes verified after clone</td></tr><tr><td>Recorded replay</td><td>All 342 archived responses consumed; summary, checkpoint and tapes equal to originals, locally and from the public clone; zero new model calls</td></tr><tr><td>Replay issue and fix</td><td>First offline replay stopped at response 252 on a Windows file-replacement PermissionError. Failure retained; bounded file-I/O recovery added, then fresh replay passed. No model request was repeated.</td></tr><tr><td>Release version</td><td>v0.1.0-smoke; code/evidence 9c1255f, with final report files added separately</td></tr></tbody></table></div><p>The configured endpoint update is recorded for completed branches, but the default live smoke ends immediately afterward. Consumption of the updated map in a subsequent round is verified with scripted tests, not an additional live round. No immutable model snapshot is exposed; fresh model output is not promised to be deterministic.</p><h2 id="section-2">Review from a clean copy without model calls</h2><pre><code>git clone https://github.com/chengfengpan6/rem-state-fork.git
+cd rem-state-fork
+python -m venv .venv
+# Activate the new environment, then:
+python -m pip install -r requirements-lock.txt
+python -m unittest discover -s tests -v
+python tools/verify_recording.py evidence/luna-smoke
+python -m rem_harness replay --config configs/smoke.json --recording evidence/luna-smoke/calls.jsonl --output runs/replay
+</code></pre><p>These commands install dependencies, verify the recording, and replay archived responses. They make no model calls. New live responses require separate access to the specified model through a ChatGPT-authenticated official CLI. See the repository README for that optional route.</p><h2 id="section-3">Experimental flow and state changes</h2><figure><svg aria-label="fork" role="img" viewbox="0 0 1040 430" xmlns="http://www.w3.org/2000/svg"><defs><marker id="fork-arrow" markerheight="8" markerwidth="8" orient="auto" refx="7" refy="4"><path d="M0 0 L8 4 L0 8" fill="#70828c"></path></marker></defs><rect fill="#eef5f3" height="120" rx="12" stroke="#bfd0cc" width="280" x="20" y="24"></rect><text fill="#193944" font-size="19" font-weight="650" x="36" y="52">1 · Common history</text><text fill="#193944" font-size="16" font-weight="400" x="36" y="76">3 Team rounds · real model</text><text fill="#193944" font-size="16" font-weight="400" x="36" y="100">LE + LB + personal records</text><text fill="#193944" font-size="16" font-weight="400" x="36" y="124">3 independent maps → median H₀</text><rect fill="#eef5f3" height="120" rx="12" stroke="#bfd0cc" width="300" x="360" y="24"></rect><text fill="#193944" font-size="19" font-weight="650" x="376" y="52">2 · Immutable checkpoint</text><text fill="#193944" font-size="16" font-weight="400" x="376" y="76">Same observed history</text><text fill="#193944" font-size="16" font-weight="400" x="376" y="100">Same future tape</text><text fill="#193944" font-size="16" font-weight="400" x="376" y="124">Within architecture: change H</text><path d="M302 84 L357 84" marker-end="url(#fork-arrow)" stroke="#70828c" stroke-width="2"></path><rect fill="#eef5f3" height="120" rx="12" stroke="#bfd0cc" width="300" x="720" y="24"></rect><text fill="#193944" font-size="19" font-weight="650" x="736" y="52">3 · Four map policies</text><text fill="#193944" font-size="16" font-weight="400" x="736" y="76">H = elicited H₀; E = Beta ledger</text><text fill="#193944" font-size="16" font-weight="400" x="736" y="100">R0 = null map</text><text fill="#193944" font-size="16" font-weight="400" x="736" y="124">RU = nine unknown cells</text><path d="M662 84 L717 84" marker-end="url(#fork-arrow)" stroke="#70828c" stroke-width="2"></path><rect fill="#eef5f3" height="116" rx="12" stroke="#bfd0cc" width="230" x="20" y="222"></rect><text fill="#193944" font-size="19" font-weight="650" x="36" y="250">Team · H/R0/E/RU</text><text fill="#193944" font-size="16" font-weight="400" x="36" y="274">3 agents + peer messages</text><text fill="#193944" font-size="16" font-weight="400" x="36" y="298">9 calls / round</text><text fill="#193944" font-size="16" font-weight="400" x="36" y="322">4 branches</text><rect fill="#eef5f3" height="116" rx="12" stroke="#bfd0cc" width="230" x="280" y="222"></rect><text fill="#193944" font-size="19" font-weight="650" x="296" y="250">Solo · H/R0</text><text fill="#193944" font-size="16" font-weight="400" x="296" y="274">1 full-information actor</text><text fill="#193944" font-size="16" font-weight="400" x="296" y="298">3 calls / round</text><text fill="#193944" font-size="16" font-weight="400" x="296" y="322">2 branches</text><rect fill="#eef5f3" height="116" rx="12" stroke="#bfd0cc" width="230" x="540" y="222"></rect><text fill="#193944" font-size="19" font-weight="650" x="556" y="250">No-message · H/R0</text><text fill="#193944" font-size="16" font-weight="400" x="556" y="274">3 agents + private memos</text><text fill="#193944" font-size="16" font-weight="400" x="556" y="298">9 calls / round</text><text fill="#193944" font-size="16" font-weight="400" x="556" y="322">2 branches</text><rect fill="#eef5f3" height="116" rx="12" stroke="#bfd0cc" width="220" x="800" y="222"></rect><text fill="#193944" font-size="19" font-weight="650" x="816" y="250">Nominal · H/R0</text><text fill="#193944" font-size="16" font-weight="400" x="816" y="274">3 independent solo paths</text><text fill="#193944" font-size="16" font-weight="400" x="816" y="298">9 calls / round</text><text fill="#193944" font-size="16" font-weight="400" x="816" y="322">2 branches</text><path d="M870 148 L135 216" marker-end="url(#fork-arrow)" stroke="#70828c" stroke-width="2"></path><path d="M870 148 L395 216" marker-end="url(#fork-arrow)" stroke="#70828c" stroke-width="2"></path><path d="M870 148 L655 216" marker-end="url(#fork-arrow)" stroke="#70828c" stroke-width="2"></path><path d="M870 148 L910 216" marker-end="url(#fork-arrow)" stroke="#70828c" stroke-width="2"></path><text fill="#805d29" font-size="17" x="28" y="386">3 post-fork rounds per branch. One seed. No inferential claim.</text></svg><figcaption>Procedure implemented in v0.1. The protocol distinguishes baseline requirements from new implementation choices; the diagram is not an empirical causal result.</figcaption></figure><figure><svg aria-label="round" role="img" viewbox="0 0 1040 430" xmlns="http://www.w3.org/2000/svg"><defs><marker id="round-arrow" markerheight="8" markerwidth="8" orient="auto" refx="7" refy="4"><path d="M0 0 L8 4 L0 8" fill="#70828c"></path></marker></defs><rect fill="#eef5f3" height="115" rx="12" stroke="#bfd0cc" width="235" x="20" y="30"></rect><text fill="#193944" font-size="19" font-weight="650" x="36" y="58">Private forecasts</text><text fill="#193944" font-size="16" font-weight="400" x="36" y="82">3 calls</text><text fill="#193944" font-size="16" font-weight="400" x="36" y="106">Same-stage outputs hidden</text><path d="M257 87 L277 87" marker-end="url(#round-arrow)" stroke="#70828c" stroke-width="2"></path><rect fill="#eef5f3" height="115" rx="12" stroke="#bfd0cc" width="235" x="280" y="30"></rect><text fill="#193944" font-size="19" font-weight="650" x="296" y="58">Disclose signals</text><text fill="#193944" font-size="16" font-weight="400" x="296" y="82">No model call</text><text fill="#193944" font-size="16" font-weight="400" x="296" y="106">Same-stage outputs hidden</text><path d="M517 87 L537 87" marker-end="url(#round-arrow)" stroke="#70828c" stroke-width="2"></path><rect fill="#eef5f3" height="115" rx="12" stroke="#bfd0cc" width="235" x="540" y="30"></rect><text fill="#193944" font-size="19" font-weight="650" x="556" y="58">Peer messages</text><text fill="#193944" font-size="16" font-weight="400" x="556" y="82">3 calls</text><text fill="#193944" font-size="16" font-weight="400" x="556" y="106">Same-stage outputs hidden</text><path d="M777 87 L797 87" marker-end="url(#round-arrow)" stroke="#70828c" stroke-width="2"></path><rect fill="#eef5f3" height="115" rx="12" stroke="#bfd0cc" width="235" x="800" y="30"></rect><text fill="#193944" font-size="19" font-weight="650" x="816" y="58">Revised forecasts</text><text fill="#193944" font-size="16" font-weight="400" x="816" y="82">3 calls</text><text fill="#193944" font-size="16" font-weight="400" x="816" y="106">Same-stage outputs hidden</text><rect fill="#eef5f3" height="120" rx="12" stroke="#bfd0cc" width="310" x="20" y="220"></rect><text fill="#193944" font-size="19" font-weight="650" x="36" y="248">Aggregate → reveal truth</text><text fill="#193944" font-size="16" font-weight="400" x="36" y="272">Equal mean of final probabilities</text><text fill="#193944" font-size="16" font-weight="400" x="36" y="296">Append truth and scores</text><text fill="#193944" font-size="16" font-weight="400" x="36" y="320">No past messages restored</text><rect fill="#eef5f3" height="120" rx="12" stroke="#bfd0cc" width="310" x="365" y="220"></rect><text fill="#193944" font-size="19" font-weight="650" x="381" y="248">Architecture controls</text><text fill="#193944" font-size="16" font-weight="400" x="381" y="272">No-message: only own memo</text><text fill="#193944" font-size="16" font-weight="400" x="381" y="296">Solo: all signals from the start</text><text fill="#193944" font-size="16" font-weight="400" x="381" y="320">Nominal: average independent solos</text><rect fill="#eef5f3" height="120" rx="12" stroke="#bfd0cc" width="310" x="710" y="220"></rect><text fill="#193944" font-size="19" font-weight="650" x="726" y="248">Same future, different actions</text><text fill="#193944" font-size="16" font-weight="400" x="726" y="272">LE remains shared across forks</text><text fill="#193944" font-size="16" font-weight="400" x="726" y="296">LB and personal records diverge</text><text fill="#193944" font-size="16" font-weight="400" x="726" y="320">These are treatment consequences</text><text fill="#805d29" font-size="17" x="28" y="391">Equal stage counts do not guarantee equal tokens or computation.</text></svg><figcaption>Procedure implemented in v0.1. The protocol distinguishes baseline requirements from new implementation choices; the diagram is not an empirical causal result.</figcaption></figure><figure><svg aria-label="measurement" role="img" viewbox="0 0 1040 430" xmlns="http://www.w3.org/2000/svg"><defs><marker id="measurement-arrow" markerheight="8" markerwidth="8" orient="auto" refx="7" refy="4"><path d="M0 0 L8 4 L0 8" fill="#70828c"></path></marker></defs><rect fill="#eef5f3" height="122" rx="12" stroke="#bfd0cc" width="230" x="20" y="30"></rect><text fill="#193944" font-size="19" font-weight="650" x="36" y="58">Feedback arrives</text><text fill="#193944" font-size="16" font-weight="400" x="36" y="82">Finish predictions first</text><text fill="#193944" font-size="16" font-weight="400" x="36" y="106">Save pre-update snapshot</text><text fill="#193944" font-size="16" font-weight="400" x="36" y="130">Current H is still readable</text><rect fill="#eef5f3" height="122" rx="12" stroke="#bfd0cc" width="330" x="285" y="30"></rect><text fill="#193944" font-size="19" font-weight="650" x="301" y="58">Read-only measurement</text><text fill="#193944" font-size="16" font-weight="400" x="301" y="82">Audit: nine-cell belief readout</text><text fill="#193944" font-size="16" font-weight="400" x="301" y="106">Probe: 8 profiles in context X</text><text fill="#193944" font-size="16" font-weight="400" x="301" y="130">Never write back into live state</text><rect fill="#eef5f3" height="122" rx="12" stroke="#bfd0cc" width="370" x="650" y="30"></rect><text fill="#193944" font-size="19" font-weight="650" x="666" y="58">Separate update calls</text><text fill="#193944" font-size="16" font-weight="400" x="666" y="82">Team / no-message: median map</text><text fill="#193944" font-size="16" font-weight="400" x="666" y="106">Solo / nominal: own map</text><text fill="#193944" font-size="16" font-weight="400" x="666" y="130">Replace current H; archive old H</text><path d="M252 88 L282 88" marker-end="url(#measurement-arrow)" stroke="#70828c" stroke-width="2"></path><path d="M617 88 L647 88" marker-end="url(#measurement-arrow)" stroke="#70828c" stroke-width="2"></path><rect fill="#eef5f3" height="124" rx="12" stroke="#bfd0cc" width="465" x="20" y="225"></rect><text fill="#193944" font-size="19" font-weight="650" x="36" y="253">What the smoke establishes</text><text fill="#193944" font-size="16" font-weight="400" x="36" y="277">Feedback → audit/probe → map update</text><text fill="#193944" font-size="16" font-weight="400" x="36" y="301">It ends immediately after that first update</text><text fill="#193944" font-size="16" font-weight="400" x="36" y="325">Next-round consumption is checked offline</text><rect fill="#eef5f3" height="124" rx="12" stroke="#bfd0cc" width="495" x="525" y="225"></rect><text fill="#193944" font-size="19" font-weight="650" x="541" y="253">What remains a study candidate</text><text fill="#193944" font-size="16" font-weight="400" x="541" y="277">24 formation + 84 future rounds; update every 12</text><text fill="#193944" font-size="16" font-weight="400" x="541" y="301">Independent profiles, measurement validation, precision</text><text fill="#193944" font-size="16" font-weight="400" x="541" y="325">Mutable map is not a one-time stimulus</text><text fill="#805d29" font-size="17" x="28" y="394">Measure before publishing the new common map; avoid mechanical agreement.</text></svg><figcaption>Procedure implemented in v0.1. The protocol distinguishes baseline requirements from new implementation choices; the diagram is not an empirical causal result.</figcaption></figure><h2 id="section-4">A concrete case from this run</h2><p>This table comes from the archived tape. Rows 1–3 form the shared history; rows 4–6 are identical across all ten branches. Truth is disclosed to actors only after their forecasts; the complete tape is a researcher-side artifact.</p><div class="table-scroll"><table><thead><tr><th>Round</th><th>Context</th><th>Signal A</th><th>Signal B</th><th>Signal C</th><th>Later truth</th></tr></thead><tbody><tr><td>1</td><td>X</td><td>0</td><td>0</td><td>0</td><td>0</td></tr><tr><td>2</td><td>Y</td><td>0</td><td>0</td><td>0</td><td>0</td></tr><tr><td>3</td><td>Z</td><td>1</td><td>1</td><td>1</td><td>1</td></tr><tr><td>4</td><td>Z</td><td>1</td><td>1</td><td>1</td><td>1</td></tr><tr><td>5</td><td>Y</td><td>1</td><td>1</td><td>0</td><td>1</td></tr><tr><td>6</td><td>X</td><td>1</td><td>1</td><td>1</td><td>1</td></tr></tbody></table></div><p>The elicited H₀ is the coordinatewise median of three real model readouts. E₀ is computed from the same ledger. Their intervals have different interpretations. R0 carries a null map, and RU carries nine unknown cells. This table is execution evidence, not a comparative scientific finding.</p><div class="table-scroll"><table><thead><tr><th>Context</th><th>Source</th><th>H₀ estimate</th><th>H₀ subjective 90%</th><th>E₀ mean</th><th>E₀ Beta 90%</th></tr></thead><tbody><tr><td>X</td><td>A</td><td>0.670000</td><td>[0.2500, 0.9500]</td><td>0.666667</td><td>[0.2236, 0.9747]</td></tr><tr><td>X</td><td>B</td><td>0.670000</td><td>[0.2500, 0.9500]</td><td>0.666667</td><td>[0.2236, 0.9747]</td></tr><tr><td>X</td><td>C</td><td>0.670000</td><td>[0.2500, 0.9500]</td><td>0.666667</td><td>[0.2236, 0.9747]</td></tr><tr><td>Y</td><td>A</td><td>0.670000</td><td>[0.2500, 0.9500]</td><td>0.666667</td><td>[0.2236, 0.9747]</td></tr><tr><td>Y</td><td>B</td><td>0.670000</td><td>[0.2500, 0.9500]</td><td>0.666667</td><td>[0.2236, 0.9747]</td></tr><tr><td>Y</td><td>C</td><td>0.670000</td><td>[0.2500, 0.9500]</td><td>0.666667</td><td>[0.2236, 0.9747]</td></tr><tr><td>Z</td><td>A</td><td>0.670000</td><td>[0.2500, 0.9500]</td><td>0.666667</td><td>[0.2236, 0.9747]</td></tr><tr><td>Z</td><td>B</td><td>0.670000</td><td>[0.2500, 0.9500]</td><td>0.666667</td><td>[0.2236, 0.9747]</td></tr><tr><td>Z</td><td>C</td><td>0.670000</td><td>[0.2500, 0.9500]</td><td>0.666667</td><td>[0.2236, 0.9747]</td></tr></tbody></table></div><div class="note warning"><strong>This seed cannot demonstrate correction after an initial strict ordering reversal.</strong> All source signals happened to be correct in the three formation rounds. Each cell has one observation; all nine H₀ point estimates are 0.67, E₀ is 2/3 throughout, and the strict initial reversal count is zero. The uniform estimates still differ from true reliabilities 0.85/0.65/0.50, so this does not mean the map is error-free. The seed was not replaced to obtain a more favorable demonstration. The run remains plumbing evidence only.</div><h3>Round 5: from private forecasts to a team output</h3><p>Context Y supplies A=1, B=1 and C=0. Initial forecasts use each actor's own signal. The program then discloses all signals, collects synchronous messages, and requests revisions. These numbers are actual Team H responses, with trace identifiers.</p><div class="table-scroll"><table><thead><tr><th>Actor</th><th>Initial p</th><th>Revised p</th><th>Trace IDs</th></tr></thead><tbody><tr><td>A</td><td>0.75</td><td>0.67</td><td>call-000042 → call-000048</td></tr><tr><td>B</td><td>0.67</td><td>0.67</td><td>call-000040 → call-000046</td></tr><tr><td>C</td><td>0.33</td><td>0.67</td><td>call-000041 → call-000047</td></tr></tbody></table></div><p>The final team probability is 0.67 and the later truth is 1, giving Brier loss 0.1089. The researcher's known-matrix oracle is approximately 0.753165; conditional regret is the squared probability difference. Equal revised probabilities do not establish a shared-cognition mechanism. R0, E and RU receive the same exogenous signals, although their earlier post-fork behavioral records can differ.</p><h3>How a reset map becomes populated again</h3><p>For the Y/C cell, the common history contains one correct signal and the continuation adds one incorrect signal. After round 6 feedback and read-only measurements, each branch obtains separate map updates. The table compares the saved fork and terminal state, using the median of three Team readouts.</p><div class="table-scroll"><table><thead><tr><th>Branch</th><th>Y/C at fork</th><th>Y/C after terminal update</th></tr></thead><tbody><tr><td>team_H</td><td>0.670000</td><td>0.650000</td></tr><tr><td>team_R0</td><td>absent</td><td>0.500000</td></tr><tr><td>team_E</td><td>0.666667</td><td>0.500000</td></tr><tr><td>team_RU</td><td>unknown</td><td>0.600000</td></tr></tbody></table></div><p>R0 begins without a map but can acquire a numeric one at the update. H can also change from H0. These four values are one execution record; they do not establish anchoring, and no later live forecast tests the behavioral consequences of these updated maps.</p><h2 id="section-5">Scientific protocol and implementation choices</h2>
+<p>Protocol identifier: <code>rem-prototype-0.1-iid-initialized-median90</code>.</p>
+<p>This repository implements an experimental instrument for studying inherited reliability maps. It does not establish that inherited maps help, harm, or persist in language-model teams. A successful live smoke run establishes a narrower fact: a specified model executed the declared sequence, produced the recorded outputs, and passed the reported engineering checks. Consult the run manifest for actual coverage and completion; a configured branch is not necessarily a completed branch.</p>
+<h2 id="section-6">1. Research question</h2>
+<p>The proposed study asks whether initializing an external memory with a team's interpretation of earlier evidence changes subsequent probabilistic judgments when the underlying observations and future evidence are held fixed. The memory object is a small context-by-source reliability map. It is not a complete transactive memory system, all organizational knowledge, or an instruction about whose advice must be followed.</p>
+<p>Three links require separate evidence:</p>
+<ol>
+<li>Early random histories produce differences in the maps actors actually form.</li>
+<li>Inherited maps affect reported reliability beliefs, enacted cue use, or subsequent map updates.</li>
+<li>Those changes affect prediction quality.</li>
+</ol>
+<p>Agreement is not accuracy, recall is not behavioral use, and a performance difference does not identify a unique psychological mechanism. These distinctions draw on research on transactive memory, organizational learning, and forecast evaluation [1–7, 10]. The experiment provides a controlled synthetic setting; it does not by itself establish effects in human organizations or deployed agent systems.</p>
+<h2 id="section-7">2. Research-design provenance and changes</h2>
+<p>The earlier research design specified three role-bearing actors, a 24-round common history, an 84-round future, and matched Team/Solo contrasts between an inherited map and an <code>unknown</code> map. The present prototype makes several previously unspecified choices and adds controls. These are transparent implementation decisions, not parameters established as optimal by the cited literature.</p>
+<div class="table-scroll"><table>
+<thead>
+<tr>
+<th>Element</th>
+<th>Earlier design</th>
+<th>Prototype choice and limitation</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Map lifecycle</td>
+<td>Frozen fork map; subsequent reconstruction mentioned but underspecified</td>
+<td>Default: initialized, mutable block memory; separate standing mode</td>
+</tr>
+<tr>
+<td>Baseline</td>
+<td>Nine-cell <code>unknown</code> object</td>
+<td>Distinguish <code>RU</code> from <code>R0</code>, which has no map object</td>
+</tr>
+<tr>
+<td>Mechanical map</td>
+<td>Not a principal treatment</td>
+<td><code>E</code> initializes the map from the same observed ledger's Beta posterior</td>
+</tr>
+<tr>
+<td>Truth sequence</td>
+<td>Truth and contexts balanced in 12-round macroblocks</td>
+<td>IID Bernoulli(.5) truth; contexts balanced in groups of three</td>
+</tr>
+<tr>
+<td>Map formation</td>
+<td>A team produces a fixed-schema map</td>
+<td>Three independent map responses, followed by a coordinate-wise median</td>
+</tr>
+<tr>
+<td>Confidence</td>
+<td>Confidence values, without a complete operational definition</td>
+<td>A point estimate and subjective 90% uncertainty limits</td>
+</tr>
+<tr>
+<td>Communication</td>
+<td>Bounded message per actor, then revision</td>
+<td>Synchronous messages; actors cannot see peers' messages while generating their own</td>
+</tr>
+<tr>
+<td>No-message control</td>
+<td>Suggested removal of peer messaging</td>
+<td>Private memo in the same response stage, preserving the number of calls</td>
+</tr>
+<tr>
+<td>Solo/nominal</td>
+<td>One full-information Solo; additional nominal benchmark proposed</td>
+<td>Independent Solo plus three independently maintained full-information nominal actors</td>
+</tr>
+<tr>
+<td>Smoke horizon</td>
+<td>Not part of the scientific design</td>
+<td>Three formation rounds and three future rounds; noninferential</td>
+</tr>
+</tbody>
+</table></div>
+<p>The context/truth change matters. If a fixed truth quota is known and past truths are observed, the prior for a later round can depend on the remaining quota. IID truth makes the .5 prior unambiguous. It sacrifices exact truth balance and is therefore not a literal replication of the earlier sequence design. The 24+84 configuration remains an <strong>offline candidate</strong>, not an authorization or validation of a full live study.</p>
+<h2 id="section-8">3. Synthetic task and oracle</h2>
+<p>Each round has a binary truth, a context, and three role-labelled binary signals. Conditional on truth and context, signal correctness is independent across sources. Reliability is stationary:</p>
+<div class="table-scroll"><table>
+<thead>
+<tr>
+<th>Context</th>
+<th style="text-align: right;">Source A</th>
+<th style="text-align: right;">Source B</th>
+<th style="text-align: right;">Source C</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>X</td>
+<td style="text-align: right;">.85</td>
+<td style="text-align: right;">.65</td>
+<td style="text-align: right;">.50</td>
+</tr>
+<tr>
+<td>Y</td>
+<td style="text-align: right;">.50</td>
+<td style="text-align: right;">.85</td>
+<td style="text-align: right;">.65</td>
+</tr>
+<tr>
+<td>Z</td>
+<td style="text-align: right;">.65</td>
+<td style="text-align: right;">.50</td>
+<td style="text-align: right;">.85</td>
+</tr>
+</tbody>
+</table></div>
+<p>Each source has the same average reliability over balanced contexts. No source is best everywhere. A source's reliability is a property of its signal channel, not proof that the actor assigned to that channel is intrinsically more capable.</p>
+<p>The generator fixes the complete event tape before actor calls. It samples independent Bernoulli(.5) truths and independent correctness draws under the matrix. Contexts occur once each in a shuffled three-round block. At the formal candidate horizon, this gives eight observations per context before the fork and 28 afterward.</p>
+<p>The oracle computes the posterior probability of truth using the true reliability matrix and current signal vector. The matrix, oracle probability, future events, misleadingness statistic, branch labels, and researcher diagnostics are excluded from actor payloads. Actors know the task's IID truth rule and that reliability is stationary and context-dependent; they do not receive the reliability values.</p>
+<h2 id="section-9">4. State and information boundaries</h2>
+<p>Calls are stateless. The assembler supplies the permitted state explicitly:</p>
+<div class="table-scroll"><table>
+<thead>
+<tr>
+<th>Slot</th>
+<th>Content</th>
+<th>Important boundary</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>LE</code></td>
+<td>Observed contexts, role-labelled signals, and revealed truths</td>
+<td>No future outcomes or true reliability matrix</td>
+</tr>
+<tr>
+<td><code>LB</code></td>
+<td>Forecasts and scores generated in the branch</td>
+<td>These are endogenous; they may differ after treatment</td>
+</tr>
+<tr>
+<td><code>Pi</code></td>
+<td>The actor's own records and, where applicable, labelled founder records</td>
+<td>A new solo does not claim to have personally made the founders' predictions</td>
+</tr>
+<tr>
+<td><code>H</code></td>
+<td>Current reliability map, unknown-valued map, or null</td>
+<td>Its lifecycle is part of the intervention</td>
+</tr>
+</tbody>
+</table></div>
+<p>Past messages and private memos are archived but not restored into the next round. Forecast and score histories can nevertheless carry effects of earlier map exposure. Removing a named map field does not remove every possible causal carrier of that map's influence [5–7].</p>
+<p>Matched branches begin with the same permitted pre-fork history. They reuse the same future exogenous tape and scoring rules. They are <strong>not</strong> required to have identical subsequent forecasts, scores, or updated maps: such divergence can be the treatment effect. Isolation checks must distinguish unplanned input differences from legitimate endogenous changes.</p>
+<p>The no-peer-message architecture still has shared observations, shared branch behavior records, and a shared map. It is not an absence of every communication or social-information channel.</p>
+<h2 id="section-10">5. One round in each architecture</h2>
+<h3>Interactive Team</h3>
+<ol>
+<li>Each of three actors predicts privately using its current private signal and permitted history.</li>
+<li>The program discloses all three labelled signals mechanically.</li>
+<li>Each actor generates one bounded message without seeing the other actors' messages from that stage.</li>
+<li>Each revises its probability after receiving all three messages.</li>
+<li>The program takes the unweighted mean of the revised probabilities.</li>
+<li>Truth is revealed, scores are computed, and records are updated.</li>
+</ol>
+<p>This entails nine successful model calls per round. It studies interpretation after mechanical disclosure, not voluntary information search or strategic withholding. Equal aggregation fixes the explicit weights on final actor forecasts; it does not fix how each actor uses the three sources [2].</p>
+<h3>No-peer-message</h3>
+<p>Roles, initial private signals, mechanical disclosure, revision, and final averaging remain. The middle stage produces a private memo instead of a peer-visible message. Revision receives only the actor's own memo. This preserves nine calls per round, but does not guarantee equal realized tokens or equal cognitive effort.</p>
+<p>The private-memo substitution is an implementation choice. A literal deletion of the middle calls would be a different computational control. Neither comparison independently identifies common knowledge that the map is shared.</p>
+<h3>Full-information Solo</h3>
+<p>A separate single actor receives the complete signal vector from its first forecast stage. It produces an initial forecast, private memo, and final forecast: three calls per round. It is not three roles simulated inside one discussion, nor an average of three outputs.</p>
+<p>At the fork, founder records from A/B/C remain explicitly labelled as historical records. The solo starts its own trajectory. Its exact information path and computation differ from the Team; the comparison is an architectural boundary, not a pure treatment of interaction.</p>
+<h3>Nominal team</h3>
+<p>Three full-information solo actors run separately, each with initial forecast, private memo, and revision. They share the exogenous tape and initial evidence, but cannot read one another's post-fork memos, predictions, or private map updates. Their final probabilities are averaged for scoring.</p>
+<p>The implementation uses an independent Solo branch rather than reusing a nominal constituent. Nominal averaging entails nine calls per round. Score the average forecast itself; averaging the three individual losses answers a different question [8–9]. Separate instances are operationally isolated, but shared model and evidence can still produce correlated errors.</p>
+<h2 id="section-11">6. Map construction and treatments</h2>
+<h3>Schema and formation</h3>
+<p>There are exactly nine <code>(context, source)</code> cells. Each numeric cell has:</p>
+<pre><code class="language-text">estimate: a probability in [0, 1]
+lower: lower subjective 90% uncertainty limit
+upper: upper subjective 90% uncertainty limit
+constraint: lower &lt;= estimate &lt;= upper
+</code></pre>
+<p>The uncertainty refers to source reliability, not an interval for the next binary outcome. A valid response contains no ranking instruction, deference rule, or prose lesson. The implementation does not claim that subjective intervals are calibrated confidence intervals.</p>
+<p>The formation phase begins without a persistent public map. After the common history and its final feedback, the three actors independently report maps. The program computes the median of the three estimates, lower limits, and upper limits in each cell. This creates <code>H0</code> without adding a model-based editor. It is a reproducible aggregation rule, not evidence that the actors reached consensus. The original individual reports remain available for analysis.</p>
+<h3>Four initial map conditions</h3>
+<div class="table-scroll"><table>
+<thead>
+<tr>
+<th>Condition</th>
+<th>Fork input</th>
+<th>Meaning</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>H</code></td>
+<td>Agent-generated <code>H0</code></td>
+<td>Inherit the team's summary</td>
+</tr>
+<tr>
+<td><code>E</code></td>
+<td>Code-computed map from the observed ledger</td>
+<td>Initialize using a reproducible evidence summary</td>
+</tr>
+<tr>
+<td><code>RU</code></td>
+<td>The same nine-cell object with null estimates and limits</td>
+<td>Expose the actor to an unavailable-estimate object</td>
+</tr>
+<tr>
+<td><code>R0</code></td>
+<td><code>H: null</code></td>
+<td>No map object, while retaining the explicit state-slot interface</td>
+</tr>
+</tbody>
+</table></div>
+<p>For <code>E</code>, each cell has a Beta(1 + correct count, 1 + incorrect count) posterior. The displayed point is its mean; limits are its .05 and .95 quantiles. It does not contain the true reliability matrix. Finite evidence can make this map inaccurate about the environment.</p>
+<p>The point/interval schema aligns the display format across <code>H</code> and <code>E</code>, but subjective uncertainty and a specified Bayesian posterior are not psychologically equivalent. Their contrast initially identifies a <strong>summary-policy difference</strong>. Calling it pure interpretive distortion requires stronger evidence about display, provenance, confidence, and use.</p>
+<p><strong>Current limitation:</strong> <code>R0</code> uses a null slot and no token-matching padding. <code>RU</code> is a larger structured object. The smoke therefore does not establish a length-controlled absence-versus-unknown effect. Token length, placement, and padding sensitivity require explicit validation before a confirmatory claim. Null is not converted to .50; any actual model response to it must be observed.</p>
+<h2 id="section-12">7. Two lifecycle modes</h2>
+<h3>Default: <code>initialized_update</code></h3>
+<p>The selected fork object initializes the current map. Subsequent calls read that current state. At update points, actors can reconstruct it from their allowed current state and accumulated evidence. Archived <code>H0</code> is retained for researcher comparisons but is not separately replayed to actors.</p>
+<p>This is <strong>mutable block memory</strong>, not strict one-time exposure. Before the first update, a numeric current map remains equal to its initial value and is repeatedly available. The prototype's scientific target is an initial-condition intervention in an external memory system.</p>
+<p>All four map conditions have the same update opportunities. <code>R0</code> and <code>RU</code> can acquire numeric maps at the first update; <code>E</code> is not automatically replaced by a fresh code posterior each round. Comparing a frozen <code>H</code> with continually refreshed <code>E</code> would combine different policies and would not isolate initial summary content.</p>
+<p>The smoke updates after three future rounds. The offline 24+84 candidate updates every 12 future rounds. These intervals are explicit implementation choices, informed by cost and inspectability, not literature-derived optima [13].</p>
+<h3>Alternative: <code>standing</code></h3>
+<p>The fork map remains unchanged throughout the future and no live map updates occur. <code>R0</code> remains null. This mode tests continuously available fixed summaries and can support implementation checks against frozen-map reduced forms. It is a different policy from initialized-update, not proof of memory after the stimulus disappears.</p>
+<h3>Checkpoint ordering</h3>
+<p>At a scheduled checkpoint:</p>
+<ol>
+<li>Finish the round, reveal truth, and update event/behavior records.</li>
+<li>Clone the <strong>pre-update</strong> state for audits and probes.</li>
+<li>Run readonly measurements with no feedback or writeback.</li>
+<li>In initialized-update mode, independently obtain live map-update responses.</li>
+<li>Team/no-message: median-combine the three updates into one current map. Solo: use its own update. Nominal: keep each actor's update separately.</li>
+</ol>
+<p>Measuring before the new shared median is displayed avoids treating immediate common exposure as evidence of independently shared beliefs. Audit responses are not reused as live updates. Updated maps and individual update responses are stored separately. Literature on temporal specification motivates explicit ordering, but does not prescribe this particular schedule [1, 4, 13].</p>
+<h2 id="section-13">8. Branch scope, probes, and execution status</h2>
+<p>The standard smoke configuration contains ten branches: Team H/R0/E/RU and Solo, no-message, and nominal H/R0. It is not a full four-by-four factorial. The presence of ten entries is a plan; actual successful branches must be read from the resulting run files.</p>
+<p>The smoke uses three formation and three future rounds. It audits at the final future checkpoint. Its probe default batches the eight signal profiles for <strong>context X</strong> into one response per actor. A batch is a convenient diagnostic of schema and measurement routing. It is <strong>not</strong> eight independent interventions: the model sees the profiles together, and no complete three-context behavioral-weight claim follows.</p>
+<p>The offline candidate requests fork and 12-round checkpoints and separate calls for all eight profiles in each of three contexts. Each independent profile starts from the same unchanged checkpoint state. That mode is restricted to offline execution in the current prototype. A configuration requesting it is not evidence that it has been run with live actors.</p>
+<p>Source-list, actor-call, and message ordering use a seed-linked role permutation. This does not guarantee all occurrences of role labels are position-balanced: canonical JSON keys and map-cell ordering can remain fixed. A full positional-bias control needs additional prompt-level inspection and validation.</p>
+<p>Branches run sequentially in configuration order in the archived smoke. They are
+not interleaved or randomized in execution time. The explicit actor payloads are
+controlled, but this does not control backend drift over wall-clock time. A later
+study should predefine branch-order counterbalancing or interleaving, record
+timing, and retain matched histories. This is a proposed implementation control,
+not a manipulation already performed by the smoke [13].</p>
+<h2 id="section-14">9. Outcomes and recommended analysis</h2>
+<p>The implementation stores realized Brier score <code>(p-y)^2</code> and conditional Brier regret:</p>
+<pre><code class="language-text">cBR = (p - p_oracle)^2
+</code></pre>
+<p>cBR is not the realized difference between two Brier losses on every outcome. The connection holds in the relevant conditional expectation under the oracle model. Proper scores evaluate probabilistic quality; they do not by themselves identify how relative source weights changed [10].</p>
+<p>The recommended future primary direct estimand is the matched-seed difference in mean post-fork cBR between Team H and Team R0 under initialized-update. Team H−E and RU−R0 are key secondary policy contrasts. This is a recommendation, not a preregistered analysis or a result of the smoke. Primary/secondary families, inferential procedure, smallest relevant effect, missingness handling, and confirmatory sample size require a separate locked study plan.</p>
+<p>Map error against the true matrix, divergence from the evidence-only posterior, adherence to initial <code>H0</code>, between-actor dispersion, and behavioral response surfaces answer different questions. No effect or no significant effect does not prove map non-use. The earlier sharedness prediction additionally required lower dispersion, greater proximity to <code>H0</code>, and greater distance from the evidence map after a corrective opportunity. Histories without such an opportunity must not simply be removed from performance analysis.</p>
+<p>The signed history statistic <code>M</code> is computed from exogenous prehistory evidence, not from actor output. It is a candidate moderator and stratification variable, not a substitute for measuring the actual map. Both historical reference quintile means are negative, approximately −.713 and −.267; the latter is a less diagnostic region, not guaranteed overall misleading evidence or a guaranteed harmful map.</p>
+<p>Fixed-map pseudo-weight models can be checked in standing mode. Their parameters cannot be carried unchanged into a model with endogenous <code>Ht</code> updates. Ledger-based estimation can also inherit uncertainty from a noisy first-stage estimate of ledger reading. Recovery under a scripted generating model is not identification in real actors [11–12, 14].</p>
+<p>Behavioral analyses should preserve raw profile probabilities and separate overall response scale, relative cue profile, and interactions. Batched X-only smoke probes do not validate that measurement model. A future complete probe implementation should assess rounding, degenerate probabilities, additive-model fit, interactions, and whether reported reliability corresponds to enacted cue use.</p>
+<h2 id="section-15">10. Failure and reproducibility rules</h2>
+<p>Responses are strictly validated. The current implementation does not coerce malformed JSON, clip invalid probabilities, repair intervals, substitute .50, or silently retry failed model calls. The first provider, validation or budget failure stops the run and must be represented as failure or partial completion. Exhausted file-I/O recovery also stops dispatch. Researchers should not discard failures merely because they occur in a theoretically inconvenient condition.</p>
+<p>Successful-path call counts exclude failures and any later policy changes. The same stage count does not establish equal realized tokens, cost, or reasoning effort. Runtime limits, actual model identity, backend metadata available to the adapter, raw responses, state hashes, and completion status should be reported from artifacts rather than inferred from a model name or configuration.</p>
+<p>Evidence levels remain separate:</p>
+<ul>
+<li><strong>Scripted verification:</strong> known-answer checks of computation, routing, and state isolation.</li>
+<li><strong>Live smoke:</strong> a short execution of the declared workflow with a real model.</li>
+<li><strong>Technical pilot:</strong> enough complete trajectories to diagnose measurement, formation, errors, and cost.</li>
+<li><strong>Confirmatory research:</strong> a locked study with justified sampling, estimands, inference, and independent units.</li>
+</ul>
+<p>A smoke cannot determine whether 180 histories are sufficient, validate a map-error mechanism, or estimate a reliable crossover. Sample planning should address both power and precision, with the actual dependence and error-control procedure [12]. The independent experimental unit is the matched prehistory realization, not the number of actors, cells, rounds, or probes.</p>
+<h2 id="section-16">11. Published foundations and access boundaries</h2>
+<p>These 14 journal sources supported the bounded design review. FT50 eligibility was cross-checked through current institutional lists; the AJG/CABS entries below include public and institutional secondary evidence rather than an authenticated ratings export. A journal's ranking does not make it a source of REM-specific numeric settings. Access descriptions distinguish inspected text from unobtained full articles.</p>
+<ol>
+<li><strong>Brandon, D. P., &amp; Hollingshead, A. B. (2004).</strong> Transactive Memory Systems in Organizations: Matching Tasks, Expertise, and People. <em>Organization Science</em>, 15(6), 633–644. <a href="https://doi.org/10.1287/orsc.1040.0069">DOI</a>. FT50; publisher abstract inspected. Supports distinguishing accuracy, sharedness, and participation; no claim to full-text verification.</li>
+<li><strong>Hollenbeck, J. R., et al. (1995).</strong> Multilevel theory of team decision making: Decision performance in teams incorporating distributed expertise. <em>Journal of Applied Psychology</em>, 80(2), 292–316. <a href="https://doi.org/10.1037/0021-9010.80.2.292">DOI</a>. FT50; abstract and original-page/figure previews inspected. Supports careful separation of information, recommendations, and aggregation; detailed original operationalization is not claimed as fully reviewed.</li>
+<li><strong>Lewis, K., Belliveau, M., Herndon, B., &amp; Keller, J. (2007).</strong> Group cognition, membership change, and performance: Investigating the benefits and detriments of collective knowledge. <em>Organizational Behavior and Human Decision Processes</em>, 103(2), 159–178. <a href="https://doi.org/10.1016/j.obhdp.2007.01.005">DOI</a>. FT50; abstract and section extracts inspected. A human-team precedent for inherited structures and process mismatch, not direct evidence of REM effects.</li>
+<li><strong>March, J. G. (1991).</strong> Exploration and Exploitation in Organizational Learning. <em>Organization Science</em>, 2(1), 71–87. <a href="https://doi.org/10.1287/orsc.2.1.71">DOI</a>. FT50; original pp.74–76 inspected. Supports separating an organizational code from individual beliefs; its feedback assumptions differ from this task.</li>
+<li><strong>Levitt, B., &amp; March, J. G. (1988).</strong> Organizational Learning. <em>Annual Review of Sociology</em>, 14. <a href="https://doi.org/10.1146/annurev.so.14.080188.001535">DOI</a>. AJG 4* in cross-checked public/institutional records; original pp.319–320 and 323–327 inspected. Supports separating experience, interpretation, and memory carriers. Original pagination 319–340 differs from current publisher metadata 319–338.</li>
+<li><strong>de Holan, P. M., &amp; Phillips, N. (2004).</strong> Remembrance of Things Past? The Dynamics of Organizational Forgetting. <em>Management Science</em>, 50(11), 1603–1613. <a href="https://doi.org/10.1287/mnsc.1040.0273">DOI</a>. FT50; author-posted original-text transcription inspected. Supports defining what is removed and what remains; does not establish that resetting is beneficial.</li>
+<li><strong>Tsang, E. W. K., &amp; Zahra, S. A. (2008).</strong> Organizational unlearning. <em>Human Relations</em>, 61(10), 1435–1462. <a href="https://doi.org/10.1177/0018726708095710">DOI</a>. CABS 4 journal statement and public-record cross-check; original-text transcription inspected. Supports the distinction between representation replacement and discarding action routines. The journal is not labelled current FT50 here.</li>
+<li><strong>Larrick, R. P., &amp; Soll, J. B. (2006).</strong> Intuitions About Combining Opinions: Misappreciation of the Averaging Principle. <em>Management Science</em>, 52(1), 111–127. <a href="https://doi.org/10.1287/mnsc.1050.0459">DOI</a>. FT50; author manuscript, particularly manuscript p.26, and publisher abstract inspected. Supports scoring mechanical aggregation as a comparator. A published erratum concerns figure/table labels; those numerical displays are not used here.</li>
+<li><strong>Sniezek, J. A., &amp; Henry, R. A. (1989).</strong> Accuracy and confidence in group judgment. <em>Organizational Behavior and Human Decision Processes</em>, 43(1), 1–28. <a href="https://doi.org/10.1016/0749-5978(89)90055-1">DOI</a>. FT50; publisher abstract only. Supports distinguishing interactive judgment and statistical combination; no claim to replication of the article's detailed procedure.</li>
+<li><strong>Gneiting, T., &amp; Raftery, A. E. (2007).</strong> Strictly Proper Scoring Rules, Prediction, and Estimation. <em>Journal of the American Statistical Association</em>, 102(477), 359–378. <a href="https://doi.org/10.1198/016214506000001437">DOI</a>. AJG 4 public-record cross-check; original pp.359 and 362–365 inspected. Supports proper probability evaluation and distinctions among forecast-quality concepts.</li>
+<li><strong>Edwards, J. R. (2001).</strong> Ten Difference Score Myths. <em>Organizational Research Methods</em>, 4(3), 265–287. <a href="https://doi.org/10.1177/109442810143005">DOI</a>. AJG 4 public-record cross-check; original pp.265–268 inspected. Supports explicit measurement-error reasoning; it does not invalidate a randomized paired treatment difference.</li>
+<li><strong>Maxwell, S. E., Kelley, K., &amp; Rausch, J. R. (2008).</strong> Sample Size Planning for Statistical Power and Accuracy in Parameter Estimation. <em>Annual Review of Psychology</em>, 59, 537–563. <a href="https://doi.org/10.1146/annurev.psych.59.103006.093735">DOI</a>. AJG 4 public-record cross-check; original pp.537–546 inspected. Supports planning for the intended effect, precision, and analysis rather than inheriting an arbitrary sample count.</li>
+<li><strong>Mitchell, T. R., &amp; James, L. R. (2001).</strong> Building Better Theory: Time and the Specification of When Things Happen. <em>Academy of Management Review</em>, 26(4), 530–547. <a href="https://doi.org/10.5465/amr.2001.5393889">DOI</a>. FT50; original pp.532–533 and 536–537 inspected. Supports explicit exposure, change, and measurement timing; it does not prescribe a 12-round interval.</li>
+<li><strong>Davis, J. P., Eisenhardt, K. M., &amp; Bingham, C. B. (2007).</strong> Developing Theory Through Simulation Methods. <em>Academy of Management Review</em>, 32(2), 480–499. <a href="https://doi.org/10.5465/amr.2007.24351453">DOI</a>. FT50; Table 1 and verification/validation passages inspected. Supports separating computational representation and checks from empirical validation.</li>
+</ol>
+<p>The cited theories motivate distinctions and tests. They do not prove novelty, prescribe the model provider, or establish that this prototype's behavior generalizes beyond its synthetic task.</p><h2 id="section-17">Technical appendix: executable REM state-fork prototype</h2>
+<p>This appendix describes the implementation, not a completed confirmatory study. The authoritative specification for a particular run is its saved configuration and manifest. Small smoke runs test transport, state handling and traceability; they do not estimate population effects or establish a theory of team memory. See <a href="https://github.com/chengfengpan6/rem-state-fork/blob/main/docs/protocol.md">protocol.md</a> for the scientific rationale and <a href="https://github.com/chengfengpan6/rem-state-fork/blob/main/docs/readiness.md">readiness.md</a> for submission and evidence boundaries.</p>
+<h2 id="section-18">1. Task and data-generating process</h2>
+<p>Each round has a context X, Y or Z, a binary truth, and three labeled binary signals A, B and C. Contexts occur once each within shuffled blocks of three. Truth is independently Bernoulli(0.5) each round. Conditional on truth and context, signal errors are independent. The researcher-side reliability matrix is:</p>
+<div class="table-scroll"><table>
+<thead>
+<tr>
+<th>Context</th>
+<th style="text-align: right;">A</th>
+<th style="text-align: right;">B</th>
+<th style="text-align: right;">C</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>X</td>
+<td style="text-align: right;">0.85</td>
+<td style="text-align: right;">0.65</td>
+<td style="text-align: right;">0.50</td>
+</tr>
+<tr>
+<td>Y</td>
+<td style="text-align: right;">0.50</td>
+<td style="text-align: right;">0.85</td>
+<td style="text-align: right;">0.65</td>
+</tr>
+<tr>
+<td>Z</td>
+<td style="text-align: right;">0.65</td>
+<td style="text-align: right;">0.50</td>
+<td style="text-align: right;">0.85</td>
+</tr>
+</tbody>
+</table></div>
+<p>Respondents are told that reliability is unknown and stationary; the numerical matrix is not included in their task payloads. The deterministic generator uses a local pseudorandom stream seeded by the configuration. All branches of a seed receive the same future event tape. The full tape is a researcher artifact, not respondent input.</p>
+<p><strong>This implementation uses independent truths, not exact within-block truth quotas.</strong> It therefore must not inherit numerical results or oracle claims from another truth-balancing design. The known 0.5 prior remains appropriate conditional on past outcomes under this implemented generator.</p>
+<h2 id="section-19">2. State and information boundaries</h2>
+<p>The engine stores four slots and constructs an actor-specific view before each call:</p>
+<div class="table-scroll"><table>
+<thead>
+<tr>
+<th>Slot</th>
+<th>Meaning</th>
+<th>Visibility</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>LE</code></td>
+<td>Observed contexts, disclosed signals and realized truths</td>
+<td>Completed rounds only; shared evidence</td>
+</tr>
+<tr>
+<td><code>LB</code></td>
+<td>Recorded final forecasts and scores</td>
+<td>Shared team history; nominal respondents receive only their own post-fork behavioral records</td>
+</tr>
+<tr>
+<td><code>Pi</code></td>
+<td>Provenance-labeled personal/founder records</td>
+<td>Actor-specific view; no other actor's current private record</td>
+</tr>
+<tr>
+<td><code>H</code></td>
+<td>Nine-cell source-reliability representation</td>
+<td>The actor's current map; may be absent or contain unknown cells</td>
+</tr>
+</tbody>
+</table></div>
+<p>The map records an estimate and lower/upper subjective 90% uncertainty limits for each context/source cell. It contains no requested rankings or action recommendations. Valid map outputs must include every cell exactly once, with finite values in [0,1] and lower ≤ estimate ≤ upper.</p>
+<p>All branches are deep-copied before any branch continuation executes. The engine constructs payloads from an explicit allowlist rather than serializing the whole run manifest. Branch labels, future outcomes, the true reliability matrix, history moderator M and oracle predictions are researcher-side objects. Hashes and saved checkpoints make the resulting states inspectable; their existence is not a substitute for an independent isolation check.</p>
+<p>Solo and nominal respondents receive the common founders' pre-fork records as an explicitly labeled archive. Those records are not represented as the new respondent's own previous actions. Nominal respondents do not see one another's post-fork forecasts, private memos or evolving maps. Current messages are supplied only where the protocol allows them and are not appended to persistent conversation history.</p>
+<h2 id="section-20">3. A round and the architecture comparisons</h2>
+<p>Every round uses synchronous stages: all initial forecasts are collected, then all messages or private memos, then all final forecasts. Outputs from the same stage are not provided to later respondents in that stage. Truth is added to the observed ledger only after all final forecasts have been collected.</p>
+<div class="table-scroll"><table>
+<thead>
+<tr>
+<th>Architecture</th>
+<th>Initial information</th>
+<th>Intermediate step</th>
+<th>Final output</th>
+<th style="text-align: right;">Calls per round</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>team</code></td>
+<td>Own labeled signal</td>
+<td>All signals disclosed; each actor sends a peer message</td>
+<td>Three revised forecasts, equal mean</td>
+<td style="text-align: right;">9</td>
+</tr>
+<tr>
+<td><code>nomessage</code></td>
+<td>Own labeled signal</td>
+<td>All signals disclosed; each actor writes a private memo</td>
+<td>Three revised forecasts, equal mean</td>
+<td style="text-align: right;">9</td>
+</tr>
+<tr>
+<td><code>solo</code></td>
+<td>All three signals</td>
+<td>One private memo</td>
+<td>One revised forecast</td>
+<td style="text-align: right;">3</td>
+</tr>
+<tr>
+<td><code>nominal</code></td>
+<td>All three signals for each independent respondent</td>
+<td>Three separate private memos</td>
+<td>Three separate revised forecasts, equal mean</td>
+<td style="text-align: right;">9</td>
+</tr>
+</tbody>
+</table></div>
+<p><code>nomessage</code> removes peer-message exchange within the round. It still retains shared evidence and, in mutable mode, shared median map updates; it is not a removal of every coordination mechanism. Equal stage counts do not guarantee equal token use or computation. Solo versus nominal additionally changes the number of forecasts averaged. None of these contrasts alone identifies common knowledge or a uniquely social mechanism.</p>
+<p>Source-list, message and execution orders are recorded. A seed selects one of the six A/B/C order permutations. This does not establish that every label position throughout every serialized map and prompt is counterbalanced.</p>
+<h2 id="section-21">4. Formation, fork conditions and map lifecycle</h2>
+<p>A common team generates the formation history. Three independent map elicitations then produce the initial map <code>H0</code> through coordinatewise medians of estimates and interval endpoints. This aggregation is an explicit prototype choice, not a validated psychological model of consensus.</p>
+<p>The implemented fork conditions are:</p>
+<ul>
+<li><code>H</code>: initialize with the respondents' aggregated <code>H0</code>.</li>
+<li><code>R0</code>: initialize with an absent map, encoded as <code>null</code>.</li>
+<li><code>E</code>: initialize with a map computed from exactly the observed ledger, using a Beta(1,1) prior separately for each cell. Its estimate is the posterior mean; its interval is the equal-tail 90% credible interval.</li>
+<li><code>RU</code>: initialize with the nine-cell structure but unknown, null-valued entries.</li>
+</ul>
+<p><code>E</code> is an evidence-only finite-sample estimate, not the true reliability matrix. Its mathematical credible intervals and the models' subjective intervals share a schema but are not asserted to have equivalent semantics. <code>R0</code> and <code>RU</code> differ in content and structure; neither contrast is claimed to match token counts or formatting perfectly.</p>
+<p>Two lifecycle options are implemented. In <code>standing</code> mode the fork map remains unchanged. In <code>initialized_update</code> mode it persists until the configured update checkpoint, after which fresh respondent map elicitations replace it. The team and no-message architectures aggregate those maps by coordinatewise median; a solo uses its own readout; nominal respondents update independently. Thus condition labels describe initialization, not a promise that the <code>R0</code> map stays absent indefinitely. Measurements occur after outcome feedback but before that checkpoint's map update.</p>
+<p>The shipped short configuration uses three formation and three continuation rounds with a map update interval of three. Its terminal update is recorded, but no later forecast demonstrates the effect of that update. A longer design is needed to study repeated adaptation after updates. Other numerical settings must be read from the selected configuration, not inferred from this example.</p>
+<h2 id="section-22">5. Read-only measurement and scores</h2>
+<p>Map audits and hypothetical signal probes operate on disposable state copies. Their results are logged and are not written back into the running state. Before/after hashes check that the live state is unchanged. This is an engineering isolation property; it does not establish that the measurement perfectly captures the model's latent beliefs.</p>
+<p>Batch probes present multiple signal profiles in a single call. They are diagnostics, not independent interventions on each profile. The short configuration probes the eight X-context binary profiles at its final checkpoint. A single-profile mode exists for offline exploration and is not enabled for live use in this prototype. No outcome feedback is provided for probes.</p>
+<p>For forecast p and truth y, Brier loss is <code>(p - y)^2</code>. The researcher computes the exact conditional probability q from the known reliability matrix and the current signals. Conditional expected Brier regret is <code>(p - q)^2</code>; it is not the same as the realized difference between two Brier losses on one outcome. Recorded paired summaries are descriptive differences in mean regret within the same seed.</p>
+<p>History metrics include M, strict reversal count and the worst pair concordance. Pairwise Beta ordering probabilities are computed as exact rational quantities for equal observation counts, so ties remain exactly one-half. M describes the sampled history; it does not measure the model's actual map error. This release does not fit w or lambda, perform causal mediation analysis, or produce confirmatory significance tests.</p>
+<h2 id="section-23">6. Model transport and replay</h2>
+<p>The live adapter requests <code>gpt-5.6-luna</code> through a ChatGPT-authenticated Codex CLI. It does not implement a public API-key transport. It checks subscription login and removes inherited OpenAI/Codex API-key environment variables from the child process. Availability, account limits and permitted access remain properties of that installed interface; the requested model name must not be presented as an independently verified server model fingerprint.</p>
+<p>Each response uses a new ephemeral invocation in a temporary directory with task instructions and a JSON response schema. The adapter requests read-only execution, disables tools and host discovery features, and treats unexpected action events as failure. These measures reduce unintended local context and persistence. Host/server-added context is not fully observable, and subprocess isolation does not prove access to model internals or absence of provider-side state. The engine itself has no network or model SDK dependency.</p>
+<p>The provider interface is <code>complete(kind, payload, schema) -&gt; response</code>, with a trace exposed separately. Responses undergo strict validation. The harness does not clip probabilities, coerce values, repair malformed outputs or retry failed calls. A global cap counts dispatch attempts, including failed attempts. Cancellation prevents further dispatch; an already running provider invocation remains subject to its transport timeout.</p>
+<p>Recorded replay feeds archived responses back to the engine and requires exact request-kind, payload and schema agreement. A successful replay establishes consistency of the saved inputs, responses and engine execution. It is not a fresh model run, and it does not establish that another account can access the same model or reproduce identical stochastic responses. Release verification should check request–response pairing, full consumption of the intended trace and equality of substantive outputs. Do not label replay as verified until that check actually succeeds.</p>
+<h2 id="section-24">7. Research artifacts and failure handling</h2>
+<div class="table-scroll"><table>
+<thead>
+<tr>
+<th>Artifact</th>
+<th>Contents and role</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>manifest.json</code></td>
+<td>Configuration, version, requested provider/model, timestamps, call cap, execution status and deviations</td>
+</tr>
+<tr>
+<td><code>tapes.json</code></td>
+<td>Researcher-side generated events for common-history and future-tape verification</td>
+</tr>
+<tr>
+<td><code>events.jsonl</code></td>
+<td>Ordered call, round, fork, measurement and update events</td>
+</tr>
+<tr>
+<td><code>calls.jsonl</code></td>
+<td>Model-request/response/error events selected from the event stream</td>
+</tr>
+<tr>
+<td><code>checkpoint.json</code></td>
+<td>Formation, initial forks and latest completed branch states</td>
+</tr>
+<tr>
+<td><code>summary.json</code></td>
+<td>Completion status, calls attempted, descriptive outcomes and any stopping error</td>
+</tr>
+</tbody>
+</table></div>
+<p>JSON hashes use sorted keys, compact separators and UTF-8 SHA256. Output directories must be new or empty; completed artifacts are not silently overwritten. Checkpoints are inspection artifacts, not a claim of resumable execution after interruption. An unsuccessful run must remain unsuccessful in the manifest even if some calls returned valid outputs.</p>
+<p>The expected successful-path call count is computed from the selected horizon, architectures, measurements and updates. The provided ten-branch short configuration initially totals 342 responses, below its 500-attempt cap; <code>expected_calls(config)</code> and the saved manifest are authoritative if configuration changes. Counts are not monetary cost estimates or a power calculation. Public release should retain only synthetic-task research content and the metadata needed to audit it, excluding credentials, unrelated local context and private correspondence.</p>
+<h2 id="section-25">8. Post-smoke file-I/O correction</h2>
+<p>The 342-response live run completed before a Windows checkpoint-replacement
+issue appeared during fast offline replay. That first replay stopped after
+consuming 252 archived responses; it made no model calls. Its failure is retained
+in <code>evidence/verification_attempts/local_replay_01_failure.json</code>.</p>
+<p>The release adds at most five atomic-file replacement attempts when that specific
+operation raises <code>PermissionError</code>, separated by 0.05, 0.10, 0.15 and 0.20 seconds.
+Serialization, other exception types and model calls are not retried. Exhausted
+checkpoint recovery stops further dispatch and preserves the original error when
+failure reporting can still be written. The CLI reports the primary run error
+instead of masking it with an unused-replay-response check.</p>
+<p>This is an engineering correction after data collection. It changes file-failure
+handling, not prompts, state transitions, outcomes or the experiment's scoring.
+The provenance file distinguishes the actual live-run code commit from the
+subsequent replay/release commit. Archived evidence bytes are exempt from Git line
+ending conversion, so their saved SHA256 values remain portable.</p><h2 id="section-26">Proposed next measurement pilot: 7,314 responses, not run</h2>
+<p>The archived 3+3 smoke verifies a short execution. The next scientific need is to
+observe behavior after map updates and diagnose measurement, before any
+confirmatory study or 24+84 full design. The following is a concrete recommendation,
+not an accepted budget, preregistration, or evidence of execution.</p>
+<h2 id="section-27">Why the original budget cannot simply be inherited</h2>
+<p>The ten-branch, 24+84 offline candidate with fork and seven checkpoints, all map
+audits and independent probes of all 24 context/signal profiles requires
+<strong>12,153 responses for one seed</strong> under this implementation. Running six such
+seeds would require 72,918 responses. A historical estimate of 6,000–8,000 total
+pilot calls cannot support that whole design. Exact counts follow the declared
+call graph; they exclude transport failures, repeated measurements, and any
+later scope changes. Tokens and subscription limits are separate constraints.</p>
+<h2 id="section-28">A bounded measurement design</h2>
+<p>Use six prespecified natural histories. Form each with 24 team rounds, then run
+24 future rounds. Update maps after post rounds 12 and 24. This is a <strong>shorter
+measurement pilot</strong>, not the proposed 84-round outcome horizon.</p>
+<ul>
+<li>All six histories: Team H and R0.</li>
+<li>Two histories fixed before outcomes are examined: additionally Team E and RU.</li>
+<li>Read-only map audits at fork, post 12, and post 24, before updates.</li>
+<li>Independent no-feedback probes for all 24 context/signal profiles at fork and
+  post 24 only. Each profile receives a fresh unchanged state.</li>
+<li>The post-12 map update is followed by 12 real decision rounds.</li>
+<li>No new architecture factor in this pilot; the short smoke already checks
+  those code paths. Their scientific comparisons remain a later module.</li>
+</ul>
+<div class="table-scroll"><table>
+<thead>
+<tr>
+<th>Component</th>
+<th style="text-align: right;">H/R0 history</th>
+<th style="text-align: right;">H/R0/E/RU history</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Formation 24×9 plus three initial map reads</td>
+<td style="text-align: right;">219</td>
+<td style="text-align: right;">219</td>
+</tr>
+<tr>
+<td>Future decision stages</td>
+<td style="text-align: right;">432</td>
+<td style="text-align: right;">864</td>
+</tr>
+<tr>
+<td>Map audits: three checkpoints</td>
+<td style="text-align: right;">18</td>
+<td style="text-align: right;">36</td>
+</tr>
+<tr>
+<td>Map updates: two checkpoints</td>
+<td style="text-align: right;">12</td>
+<td style="text-align: right;">24</td>
+</tr>
+<tr>
+<td>Independent probes: two checkpoints</td>
+<td style="text-align: right;">288</td>
+<td style="text-align: right;">576</td>
+</tr>
+<tr>
+<td>Total per history</td>
+<td style="text-align: right;"><strong>969</strong></td>
+<td style="text-align: right;"><strong>1,719</strong></td>
+</tr>
+<tr>
+<td>Histories of this type</td>
+<td style="text-align: right;">4</td>
+<td style="text-align: right;">2</td>
+</tr>
+<tr>
+<td>Subtotal</td>
+<td style="text-align: right;"><strong>3,876</strong></td>
+<td style="text-align: right;"><strong>3,438</strong></td>
+</tr>
+</tbody>
+</table></div>
+<p><strong>Combined successful path: 7,314 calls.</strong> The two files cap attempted calls at
+3,876 and 3,438 respectively. Their sum is 7,314 for one execution of each file;
+there is no persistent cross-run account counter preventing repeated launches.
+A possible overall ceiling of 8,000 would leave 686 calls outside these configs,
+with no automatic use of that reserve. The current runner stops at the first
+error and does not resume. Both configurations remain disabled for live use.</p>
+<p>The two saved configurations use proposed seeds 20261101–20261106, which cover
+six source-list/message-order permutations. Their outcomes have not been
+generated or screened for this recommendation. This does not balance every JSON
+label position or guarantee informative misleading histories. The current smoke
+runs whole branches in a fixed sequence, so branch differences may also reflect
+backend changes over time. The next implementation should prespecify balanced
+branch order across histories, with round-level interleaving where feasible; that
+scheduler is not implemented in v0.1.</p>
+<pre><code class="language-sh">python -m rem_harness plan --config configs/pilot_pair_4seeds_offline.json
+python -m rem_harness plan --config configs/pilot_fourarm_2seeds_offline.json
+</code></pre>
+<p>Both files have <code>live_allowed=false</code>. The schema's existing
+<code>formal_candidate_offline</code> purpose value denotes a blocked longer-run
+configuration; it does not make these pilot files confirmatory designs. The live
+CLI also rejects horizons above three rounds and independent full-profile probes.
+No script in this repository automatically lifts those guards.</p>
+<h2 id="section-29">Model and execution continuity</h2>
+<p>For the first measurement pilot, retain the same requested GPT-5.6 Luna alias,
+low reasoning setting, explicit templates, and documented official transport to
+keep the comparison with the smoke interpretable. Record CLI version, execution
+time, available backend metadata, and actual tokens for every response. This is
+a recommendation, not a claim that an immutable model snapshot is available.
+A transport or model change requires renewed validation and must not be silently
+pooled with the earlier configuration. A call budget does not establish sufficient
+subscription allowance: 24+24 states are longer than 3+3 states, so smoke token
+usage must not be linearly extrapolated as an exact quota or cost estimate.</p>
+<h2 id="section-30">What this would and would not answer</h2>
+<p>The pilot can expose map formation, parser failures, probability rounding,
+post-update behavior, audit/probe consistency, practical token demand, and whether
+the proposed measurement scheme has usable variation. Six histories are not a
+defensible confirmatory sample or a well-powered test of M→H, mediation, crossover,
+or architecture moderation. E/RU observations on two histories are diagnostics.
+They must not be pooled with all six as if every condition had equal coverage.</p>
+<p>Select no seeds by their model-generated maps or outcomes. Preserve all failures.
+Use pilot evidence to decide whether a larger measurement/recovery phase is
+needed, then separately plan the final 84-round study's independent sample size.
+This sequencing follows the distinction between verification and validation
+in <a href="https://doi.org/10.5465/amr.2007.24351453">Davis et al. (2007)</a> and precision-based
+planning in <a href="https://doi.org/10.1146/annurev.psych.59.103006.093735">Maxwell et al. (2008)</a>.
+Neither paper prescribes six histories, these checkpoints, or this call budget.</p><h2 id="section-31">Readiness and evidence boundaries</h2>
+<p>This repository is an executable research prototype. A small real-model smoke run, offline tests, recorded-response replay and a journal submission are different deliverables. Each should be claimed only when its corresponding evidence exists. The scientific protocol remains a prototype specification, not a preregistered confirmatory study.</p>
+<h2 id="section-32">What the Organization Science call requires</h2>
+<p>The relevant journal is <strong>Organization Science</strong>, not <em>Operations Research</em>. Its <a href="https://pubsonline.informs.org/page/orsc/calls-for-papers">official call listing</a> links the <a href="https://pubsonline.informs.org/pb-assets/filesorsc/CFP_AI-Enabled%20Frontiers%20in%20Organizational%20Science-1785685920943.pdf">seven-page special-issue CFP</a>. These sources were checked on 19 October 2026.</p>
+<p>Stage 1 asks for a roughly 3–5 page, 1,500–2,000 word proposal plus references, a technical appendix or supplement, and a Git repository or equivalent artifact containing a prototype or proof of concept (PDF p.3). It does not specify GitHub as the sole host or explicitly require global public access at Stage 1. The artifact must nevertheless be accessible for assessment. Final publication calls for a public GitHub repository or an accessible equivalent research object (p.4).</p>
+<p>A repository therefore helps supply the research artifact, but does not replace the proposal, scientific contribution or technical explanation. This appendix describes the implementation; a submission appendix must additionally connect the implemented evidence, planned development, key risks and claimed contribution.</p>
+<p>The general <a href="https://pubsonline.informs.org/page/orsc/submission-guidelines">submission guidelines</a> specify double-blind review. The special-issue PDF does not state an exemption or a special repository-anonymization procedure. A public repository for technical review and the eventual review package can be prepared separately; follow the actual submission instructions rather than assuming a named repository is automatically suitable for anonymous review.</p>
+<p>The CFP specifies no named software license. Sharing should cover code and data the authors can legitimately distribute, with third-party material identified. It allows a differently focused longer paper elsewhere subject to copyright and duplicate-publication boundaries (p.6). The <a href="https://pubsonline.informs.org/page/orsc/data-and-methods-transparency">transparency policy</a> additionally emphasizes accurate disclosure of research sequence, changes and AI use.</p>
+<h2 id="section-33">Dates and selection status</h2>
+<p>The Stage-1 portal opened on 1 October 2026 and closes on Sunday 1 November 2026. The checked materials did not establish a precise deadline time or timezone. Selection notification is scheduled by 10 January 2027; development runs January–May 2027. The PDF tentatively specifies 27–28 February for the workshop, while the <a href="https://orgsci.org/">companion site</a> states February without exact days. At least one author's attendance is expected, with exceptions considered. Finalization is planned for summer and the target issue for autumn 2027 (PDF pp.4–5).</p>
+<p>Stage 1 is the main selection gate, but passing it is not an unconditional publication guarantee: editorial removal remains possible in exceptional circumstances, and the final format depends on development. The companion site names auditability as a criterion where the PDF names development stage; both favor an inspectable research artifact. No change to the repository requirements or November deadline was found in the checked official sources.</p>
+<h2 id="section-34">What each level of evidence establishes</h2>
+<div class="table-scroll"><table>
+<thead>
+<tr>
+<th>Evidence</th>
+<th>Supported claim</th>
+<th>Claim it does not support</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Scripted-provider/offline tests</td>
+<td>Particular code paths satisfy tested properties</td>
+<td>A real model followed the protocol or exhibited a scientific effect</td>
+</tr>
+<tr>
+<td>Successful real-model responses</td>
+<td>The requested transport returned observed responses for specified tasks</td>
+<td>Every configured branch completed, or the server model identity was independently verified</td>
+</tr>
+<tr>
+<td>Completed smoke manifest plus raw trace</td>
+<td>The named short configuration ran to completion and is inspectable</td>
+<td>Population generalization, mechanism identification, parameter recovery or adequate power</td>
+</tr>
+<tr>
+<td>State and future-tape checks</td>
+<td>Implemented copies and respondent input boundaries satisfy the checked invariants</td>
+<td>Perfect provider-level independence, equal effective context, or equivalence to human organizational memory</td>
+</tr>
+<tr>
+<td>Exact recorded-response replay</td>
+<td>Archived responses reproduce the substantive engine outputs</td>
+<td>A fresh live rerun will give identical responses or is universally accessible</td>
+</tr>
+<tr>
+<td>Clean-install reproduction</td>
+<td>The documented environment can rebuild the checked offline results</td>
+<td>All external model access and account requirements have disappeared</td>
+</tr>
+<tr>
+<td>A public repository</td>
+<td>Reviewers and readers can inspect the released materials</td>
+<td>Completion of the Stage-1 proposal, scientific novelty or editorial acceptance</td>
+</tr>
+</tbody>
+</table></div>
+<p>The status of a run must be read from its committed manifest and summary, not inferred from the presence of this documentation. Check attempted versus expected calls, completed branches, terminal status, errors and the requested model. Failed or partial runs remain valid engineering evidence when labeled accurately; they must not be relabeled as completed studies. Repository documentation should point to the specific release artifacts that substantiate any completion statement.</p>
+<h2 id="section-35">Required release checks</h2>
+<p>Before calling a release reproducible, check the following against that release's exact commit and configuration:</p>
+<ol>
+<li>Installation and offline tests work in a clean environment using the documented dependencies.</li>
+<li>Requests are paired with their responses and failures; records preserve the task inputs, schema, model request and available transport metadata without exposing credentials.</li>
+<li>Future truths, true reliability parameters, branch labels and researcher metrics are absent from respondent inputs. Copies do not share mutable state across branches.</li>
+<li>Audit/probe readouts leave live state unchanged, and checkpoint ordering matches the declared lifecycle.</li>
+<li>Exact recorded-response replay consumes the intended trace and reproduces substantive outputs. Timestamps and replay transport metadata may legitimately differ.</li>
+<li>Public files contain original/shareable code and synthetic-task research traces. Private correspondence, manuscript attachments, recordings, credentials and unrelated projects are excluded.</li>
+<li>A live run is reported with its actual transport and access requirements. If the adapter uses a subscription-authenticated Codex route, it is described that way, without inventing a public API endpoint or implying unlimited calls.</li>
+</ol>
+<p>These are engineering release criteria, not extra requirements attributed to the CFP. They do not independently validate the theoretical interpretation.</p>
+<h2 id="section-36">Scientific work remaining beyond a smoke</h2>
+<p>The short configuration observes only a few rounds and a single sampled history. Its final map update is not followed by further forecasts. It cannot show sustained persistence, correction, adaptation after repeated updates, or a reliable relation between history M and actual map distortion. Batched probes are diagnostic and do not validate recovery of separate source weights or forecast scale.</p>
+<p>Before a larger study, the map lifecycle, substantive estimand, interval interpretation, comparison architecture and measurement procedure need calibration. Real-model pilot data are needed to assess protocol compliance, map use, probability granularity, output variation, failure rates and costs. Confirmatory sample sizes and stopping thresholds must follow that work. Results from an earlier scripted surrogate or a different truth-balancing generator cannot be substituted for this evidence.</p>
+<p>The repository deliberately separates an inspectable tool from a substantive empirical claim. A failed or null smoke can reveal an implementation or measurement boundary; a successful smoke shows that a particular technical path works. Neither outcome alone establishes that retaining a shared reliability map improves or harms organizational decision making.</p><h2 id="section-37">Decisions for the authors, after reviewing the evidence</h2><ol><li><strong>Study target:</strong> recommend an instrument for controlled memory-state interventions, with the substantive study developed separately. The completed smoke removes the “design only” description, but it does not by itself justify submission by 1 November.</li><li><strong>Protocol freeze:</strong> recommend mutable block memory and the explicit IID-truth revision. The proposed primary direct contrast is Team H−R0 cBR; keeping w/λ as primary would require a different validated measurement and lifecycle model. This differs from the earlier proposed priority and needs substantive agreement.</li><li><strong>Paid or expanded pilot:</strong> recommend the 7,314-call measurement pilot (4×969 + 2×1,719), then approve a model/version, a shared cross-run call/token ceiling, and a stopping rule before any larger run. The current permission covered only this short smoke. Sample size should follow precision and pilot noise, not an inherited number.</li><li><strong>Submission:</strong> decide whether the independently valuable instrument and complete Stage-1 proposal can be ready. Prepare anonymous review access if required; public code does not waive the journal's review rules. Confirm workshop feasibility before a commitment.</li><li><strong>Reuse license:</strong> recommend MIT for newly authored code only after ownership and institutional/coauthor rights are clear. The current public inspection repository does not assign a general reuse license.</li></ol><p>No email, conference revision, journal submission, travel commitment, or expanded model run has been made by publishing this prototype.</p><footer>Standalone static HTML. All diagrams are embedded; no scripts, tracking, external fonts or network dependencies are required to read this report.<br>Prepared with AI assistance. Implementation choices and limitations are disclosed. 2026-10-19.</footer></main></div></body></html>
