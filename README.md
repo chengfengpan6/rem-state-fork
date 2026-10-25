@@ -1,157 +1,93 @@
-# REM state-fork prototype
+# REM: shared interpretation with a common factual record
 
+**Current OS revision: 25 October 2026.**
 
-[Static review report](docs/index.html) · [Online entry](https://pcf.codes/rem-state-fork/) · [Release validation](docs/release_validation.md)
+[Readable artifact overview](docs/index.html) · [Scientific question and task](docs/scenario_and_identification.md) · [V2 technical appendix](docs/technical_appendix_v2.md) · [Validation and limits](docs/validation_v2.md)
 
-The online entry inherits the account's existing domain and currently presents
-a human-verification gate. The standalone HTML can be downloaded and read
-without scripts, login or external assets. Post-gate access was not verified
-during release preparation.
+When factual records remain available, does an inherited shared interpretation
+of which sources are reliable change subsequent evidence use and collective
+judgment? This research prototype separates factual, behavioral, personal, and
+map state, then branches from a shared history under matched future evidence.
+Its contribution is an inspectable organizational experiment, not model-score
+optimization or a completed study of human organizational memory.
 
-The archived GPT-5.6 Luna smoke completed on 19 October 2026: **342 successful
-experimental responses**, one shared history and ten branches of three future
-rounds. All 5,018 recording checks passed, and strict replay reproduced the
-summary, checkpoint and event tape exactly. This is execution evidence, not a
-confirmatory result. See the [run provenance](evidence/luna-smoke/provenance.json)
-and [recorded replay failure and correction](docs/technical_appendix.md#8-post-smoke-file-io-correction).
+## What was actually run
 
-An executable instrument for comparing inherited reliability summaries while
-holding an agent system's observed history and future signal stream fixed.
-This repository contains newly implemented code, synthetic tasks, and small
-real-model execution records. It is a research prototype, not a completed study.
+The new bounded diagnostic completed **219 successful GPT-5.6 Luna responses**:
+30 in shared formation and189 across12 branches, each using9–18 calls under a
+hard cap20. It includes Team P/E/H/R0/RU and a separately executed R0 replicate,
+Solo H/R0, no-peer-message H/R0, and nominal H/R0. There were no failed calls
+or retries. The old342-response record remains unchanged and separate.
 
-**Research status:** mutable external map memory is the default. This differs
-from both a permanently frozen prompt and a genuinely one-time exposure. Read
-[the protocol](docs/protocol.md) and [technical appendix](docs/technical_appendix.md)
-before interpreting any output. The smoke does not test a hypothesis or establish
-transactive memory, organizational learning, or a publication-ready contribution.
+This is one selected history,3 formation rounds and1 future round. P is a
+full-cell permutation of E0, matched in precision and provenance. Its displayed
+change is only in Y; the actual future context is X. Thus this record verifies
+delivery and execution, **not behavioral positive-control sensitivity**. Updates
+are terminal; no post-update decision was observed. No p-values, power, real-agent
+weight recovery or population organizational effects are claimed.
 
-## What runs
-
-- Three source agents form a history and independently generate reliability maps.
-- The program compiles a nine-cell initial map using coordinatewise medians.
-- A saved state forks into Team H/R0/E/RU, Solo H/R0, no-peer-message H/R0,
-  and nominal-group H/R0: ten branches with the same future events.
-- Each real-model branch has three post-fork rounds; the common formation has
-  three rounds. Team rounds have nine model responses, Solo three, and nominal
-  and no-peer-message rounds nine. Measurement and map updates add responses.
-- The default smoke plans **342 responses**, with a hard cap of 500 attempted
-  harness calls. It does not launch a 6,000–8,000-call pilot.
-- Read-only map audits and one-context batch probes run before map updates.
-  They never write into the continuing state. The batch probe is diagnostic,
-  not an independently randomized counterfactual-profile experiment.
-- Structured validation, exact rational pairwise Beta comparisons, state hashes,
-  shared tape hashes, request/response logs, and strict offline replay support audit.
-
-The program uses IID Bernoulli(0.5) truth and balances contexts in groups of
-three. **Exact within-block truth quotas from the earlier manuscript are not
-implemented.** This change keeps the supplied 0.5 prior and scoring oracle
-consistent with the information available from past outcomes.
+Requested model and transport are unchanged: `gpt-5.6-luna`, Codex CLI
+`0.162.0-alpha.17.2`, ChatGPT login, low reasoning. The CLI did not expose a
+served-model ID. Alias consistency is not immutable weight identity.
 
 ## Install and verify without any model calls
 
-Python 3.12 was used for the archived run. Create a fresh environment:
-
 ```sh
 python -m venv .venv
-# Linux/macOS: source .venv/bin/activate
-# Windows PowerShell: .\.venv\Scripts\Activate.ps1
+# Activate the environment using the platform's standard command.
 python -m pip install -r requirements-lock.txt
 python -m unittest discover -s tests -v
-python -m rem_harness plan --config configs/smoke.json
+python tools/verify_recording.py evidence/luna-v2-bounded --output runs/v2-verification.json
+python tools/analyze_diagnostics.py evidence/luna-v2-bounded --baseline evidence/luna-smoke --output runs/v2-diagnostics.json
+python -m rem_harness replay --config configs/bounded_v2_smoke.json --recording evidence/luna-v2-bounded/calls.jsonl --output runs/v2-replay
 ```
 
-Use `requirements.txt` for the direct dependencies; `requirements-lock.txt`
-records the exact packages installed for this release. No login is needed for
-tests, plan, or replay. Test actors are explicitly scripted and are never
-reported as real model responses.
+Create `runs` first if needed (`mkdir runs`). Output paths must be new. Replay
+validates complete ordered requests and schemas before using saved responses;
+the semantic verifier reconstructs state and independently checks scoring.
+Fault-injection tests reject wrong-map and wrong-personal-record payloads even
+after their visible hashes are recomputed. These checks establish specified
+properties, not a complete causal interpretation.
 
-## Replay the archived real responses
+## Configuration and guarded live use
 
 ```sh
-python -m rem_harness replay --config configs/smoke.json \
-  --recording evidence/luna-smoke/calls.jsonl --output runs/replay
+python -m rem_harness plan --config configs/bounded_v2_smoke.json
 ```
 
-Replay checks the entire ordered request payload and schema before returning
-each recorded response. It then rebuilds states and scores. This verifies a
-recorded execution; it does not call the model or promise identical new answers.
-Choose a new output directory each time; completed and failed results are never
-overwritten. The evidence directory and validation report describe the actual
-execution status, including any failures.
+The current configuration is a diagnostic, not a formal study. Live entry is
+explicit, requires an existing authorized ChatGPT login, and is capped in both
+CLI and Engine at one history, <=3 formation rounds, <=2 future rounds, <=20
+attempts per branch and <=32 shared formation. The recorded config used219
+planned responses and a272 total ceiling. No API key is used by this adapter.
+Do not rerun live merely to inspect evidence. Fresh access can fail or drift.
 
-## Optional new live smoke: ChatGPT login, GPT-5.6 Luna only
+Interrupted v2 runs can use explicit `resume --recording RUN_DIRECTORY --output
+NEW_DIRECTORY`. Successful prefixes must match exactly; schema failures are
+not silently repaired. Persisted cumulative attempts include earlier failed
+dispatches. Completed runs and unverifiable recovery histories are refused.
 
-Install a current [official Codex CLI](https://learn.chatgpt.com/docs/non-interactive-mode)
-and sign in using `codex login`. The provider refuses API-key login and requests
-exactly `gpt-5.6-luna`. It does not fall back to another model. An old CLI may
-reject this model; use a current official executable.
+## Research interpretation
 
-```sh
-python -m rem_harness live --config configs/smoke.json --output runs/new-live
-# Optional: --codex-bin /absolute/path/to/codex
-```
+P−E is the primary planned content contrast; H−E connects to naturally formed
+maps. Keeping records available makes R0 removal of one external object, not
+erasure of experience. Recall, own estimates, cue use and outcomes are distinct.
+Architecture contrasts change several features and do not isolate a purely
+social mechanism. The future study needs independent histories, relevant
+post-update decisions, measurement validation and a justified sample size.
 
-`REM_CODEX_BIN` can also point to the official executable. Credentials remain
-with Codex; this package does not read, copy, or publish authentication files.
-API-key environment variables are removed from the child process. The adapter
-uses the account's Codex/ChatGPT allowance; it does not turn a subscription into
-API billing credits. Availability and limits depend on the signed-in account.
+The source and adaptation matrix cites organizational learning, expertise,
+knowledge integration and judgment research and states its actual reading
+scope. Technical neighbors are compared separately. See the
+[special-issue positioning](docs/os_positioning_and_submission.md).
 
-Each response uses a fresh ephemeral CLI invocation with user configuration,
-project instructions, plugins, shell, browser, and memory features disabled via
-explicit settings. The harness rejects unexpected tool/action events. These
-controls do **not** expose all host/server-added context. A successful request
-establishes access to the requested model alias, not an immutable model-weight
-snapshot. Provider seeds and temperature are not set by this transport.
+## Evidence and rights
 
-There is no model-call retry or silent JSON repair. The first provider, schema, or
-budget failure stops the run, preserving the completed trace. Codex itself is a
-separate transport layer; its internal network handling is not fully controlled
-or observed. A fresh run must not be mistaken for a continuation of a failed one.
-Atomic file replacement has separate bounded recovery for transient Windows
-`PermissionError`; it never redispatches a model request. See the technical
-appendix for the recorded post-smoke correction.
+[New raw evidence](evidence/luna-v2-bounded/) · [New provenance](evidence/luna-v2-bounded/provenance.json) · [Old raw evidence](evidence/luna-smoke/) · [Historical v1 README](docs/legacy_v1_readme.md)
 
-## Files and interpretation
-
-| File | Purpose |
-|---|---|
-| `rem_harness/data.py` | Synthetic event tape, exact pair comparison, evidence map, scoring oracle |
-| `rem_harness/models.py` | Four slots, forks, map aggregation, configurations and planned call counts |
-| `rem_harness/engine.py` | Synchronous stages, branch isolation, audits, updates, attempt budget |
-| `rem_harness/providers.py` | Official Codex CLI transport and strict recorded-response replay |
-| `configs/smoke.json` | 3+3 rounds, one seed, ten branches, mutable maps |
-| `configs/smoke_standing.json` | Separately labeled frozen-map policy, for offline verification |
-| `configs/formal_candidate_offline.json` | 24+84 design candidate; live execution deliberately disabled |
-| `evidence/luna-smoke/` | Real-model smoke records, if successfully completed |
-| `docs/` | Protocol, technical appendix, readiness boundaries and execution verification |
-
-The main direct performance contrast proposed for a later study is seed-paired
-Team H minus R0 conditional Brier regret. H minus E and RU minus R0 are secondary.
-No significance tests, parameter estimates of `w`/`lambda`, or substantive effect
-claims should be inferred from one seed. Full independent probes, correction
-opportunities over two checkpoints, measurement validation, model recovery,
-sample-size planning, and author-approved confirmatory analysis remain separate
-research work. A longer offline configuration is not evidence of a live pilot.
-
-The [proposed next measurement pilot](docs/pilot_plan.md) has an explicit
-7,314-response plan. It uses six 24+24 histories, with H/R0 throughout and E/RU
-on two histories. Its configurations are offline-only and it has not been run.
-The full ten-branch 24+84 configuration would require 12,153 calls **per seed**;
-it cannot be treated as a 6,000–8,000-call total pilot.
-
-## Sharing and provenance
-
-This repository excludes private correspondence, reviewer files, manuscript
-attachments, copyrighted papers, inherited private code archives, and credentials.
-The implementation was prepared with AI assistance and requires researcher
-review. Literature and the distinction between source requirements and new
-implementation choices are documented in the protocol.
-
-The code is public for inspection. No redistribution license has yet been
-selected; public visibility alone does not grant a general reuse license.
-External dependency licenses remain those of their respective packages.
-Journal submission, authorship, IP clearance for a reuse license, and the final
-study design require the authors' decisions. Nothing here constitutes submission
-to a journal or endorsement by an editor or reviewer.
+The run-source snapshot preserves exact package bytes; Git checkout line-ending
+normalization need not preserve those bytes. Offline replay checks semantics.
+Code is licensed under MIT within [the stated scope](NOTICE.md). Third-party
+materials, model weights/services and manuscript publication rights are separate.
+Private correspondence, credentials, recordings and unpublished attachments are
+excluded. A named development repository is not the anonymous submission link.

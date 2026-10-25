@@ -1,0 +1,64 @@
+{
+  "operational_code_commit": "0af03688d70014f1c9e40619815f5fdc7268c56b",
+  "protocol_version": "rem-prototype-0.2-iid-planted-split-audit",
+  "config_sha256": "cb339b1b994b7f4bf869489db6f5391968c8347575723cdd10500752e4feaf06",
+  "live_records_modified": false,
+  "source_snapshot": "Exact package Python bytes used in this run, preserved under source_snapshot/rem_harness",
+  "record_sha256": {
+    "calls.jsonl": "9e65e0c9ee883f7598e1cfaa79e25236073cea973fbc27a7c7b16f4a1f130bd6",
+    "checkpoint.json": "60d5cdd31a62b09a6b8998ed1d112b9150d5384dceb741ffcf6a3f59a546c209",
+    "diagnostics.json": "af78b7325813b3dbcee23e413ee24eb10b04f3d19b7ca110b4f069c1fc715e83",
+    "events.jsonl": "8f2b99cd7c074f27a555a24da4d101399bc960d65f5ad7544d56f5a14c3b955c",
+    "manifest.json": "313c81357c360e02fd34fb8475072026fb2aee042bbc38fea50c53cc75baf4a4",
+    "summary.json": "b87f56142f91abb1c2419e25390bc3b2f2441dace966d025b5c0860f4bc8f4d6",
+    "tapes.json": "9ae024a787645ad3d4d2ff0a62efb8803ef3ecca7f87d8afca3865eaed272757",
+    "verification.json": "d0ec10329705e7f3b79cb85795d2035a1deb783ddb7b1d6f0396d87979fb375b",
+    "replay_comparison.json": "276c4b2c8a8100040d52409fd6c06996aef40521a8e82d6f42c3155a8e5e7be9"
+  },
+  "source_hashes": {
+    "files": {
+      "rem_harness/__init__.py": "00e81c67308e9df394b81781ba83fb2cbfafbeac3cd7e4cb698bb0e8bdf771e7",
+      "rem_harness/__main__.py": "3b7cc4f3d71ad94ca591185870ff128ec2eb5e8c1287d88c8ca5f53969c40458",
+      "rem_harness/data.py": "e0189d7842927259eec9d66b7851d3e3e80f0cf4e583c803480c72adf814f69c",
+      "rem_harness/engine.py": "63b222fc4a843b530457091967681f48f3213ee43e40c2fb37becafe8cc5e71d",
+      "rem_harness/models.py": "d2e5da77cd2ad31f8cdd36ba3897ef1c8839f3efc657b04e87fbc1639bd2e051",
+      "rem_harness/providers.py": "f604973f1c9e224f9764b9b3f27bcd7eba900f215f87d14ba472ac18c798583b",
+      "rem_harness/schemas.py": "e33115e940e9dab70d3b12d7c98a819955fa8bfff5074c3754018b81e6500b76"
+    },
+    "combined_sha256": "5c9431920db705c149636c6c4fb84d139e57cb00a183edda303f0792f179d4d1",
+    "scope": "Package Python source bytes at run start; configuration has its own canonical hash."
+  },
+  "responses": 219,
+  "errors": 0,
+  "actual_new_model_dispatches": 219,
+  "replayed_calls": 0,
+  "setup_model_calls_in_this_revision": 0,
+  "requested_model": "gpt-5.6-luna",
+  "served_model_ids": [],
+  "identity_limit": "CLI did not expose served-model identity; requested alias is not weight attestation",
+  "verification": {
+    "verification_version": "2-semantic",
+    "verified_at_utc": "2026-10-25T20:44:21.043268+00:00",
+    "recording": "luna-v2-bounded-20261025",
+    "status": "verified_complete",
+    "recorded_run_status": "completed",
+    "checks_total": 2232,
+    "checks_failed": 0,
+    "failures": [],
+    "calls": {
+      "requests": 219,
+      "responses": 219,
+      "expected": 219
+    },
+    "scope": "Reconstructed prompt semantics plus independent scores. No live model call, hidden-context verification, statistical inference or proof of organizational construct validity."
+  },
+  "replay": {
+    "checkpoint.json": true,
+    "tapes.json": true,
+    "seed_results_equal": true,
+    "new_model_calls": 0,
+    "replayed_calls": 219,
+    "scope": "Exact experimental artifacts; whole summary differs in honest live/replay accounting"
+  },
+  "scope": "Bounded one-history engineering diagnostic. No positive-control sensitivity, power, parameter recovery or organizational effect is established."
+}

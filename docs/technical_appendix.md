@@ -1,3 +1,5 @@
+> Historical v1 document. For the current OS revision, read [the v2 appendix](technical_appendix_v2.md), [scientific design](scenario_and_identification.md), and [actual validation](validation_v2.md). Earlier primary contrasts and budgets are not current-run instructions.
+
 # Technical appendix: executable REM state-fork prototype
 
 This appendix describes the implementation, not a completed confirmatory study. The authoritative specification for a particular run is its saved configuration and manifest. Small smoke runs test transport, state handling and traceability; they do not estimate population effects or establish a theory of team memory. See [protocol.md](protocol.md) for the scientific rationale and [readiness.md](readiness.md) for submission and evidence boundaries.

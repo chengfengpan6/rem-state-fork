@@ -1,0 +1,8 @@
+{
+  "checkpoint.json": true,
+  "tapes.json": true,
+  "seed_results_equal": true,
+  "new_model_calls": 0,
+  "replayed_calls": 219,
+  "scope": "Exact experimental artifacts; whole summary differs in honest live/replay accounting"
+}

@@ -1,0 +1,467 @@
+{
+  "status": "completed",
+  "purpose": "smoke_noninferential",
+  "calls_attempted": 219,
+  "expected_successful_calls": 219,
+  "max_calls": 272,
+  "seed_results": {
+    "20261026": {
+      "branches": {
+        "team_P": {
+          "architecture": "team",
+          "condition": "P",
+          "rounds": [
+            {
+              "round_index": 4,
+              "post_round": 1,
+              "context": "X",
+              "probability": 0.5966666666666667,
+              "truth": 0,
+              "brier": 0.3560111111111111,
+              "oracle_probability": 0.7531645569620252,
+              "cBR": 0.02449158966689808,
+              "actor_forecasts": {
+                "C": 0.6,
+                "A": 0.57,
+                "B": 0.62
+              }
+            }
+          ],
+          "completed": true,
+          "mean_cBR": 0.02449158966689808,
+          "mean_brier": 0.3560111111111111
+        },
+        "team_E": {
+          "architecture": "team",
+          "condition": "E",
+          "rounds": [
+            {
+              "round_index": 4,
+              "post_round": 1,
+              "context": "X",
+              "probability": 0.5700000000000001,
+              "truth": 0,
+              "brier": 0.3249000000000001,
+              "oracle_probability": 0.7531645569620252,
+              "cBR": 0.03354925492709496,
+              "actor_forecasts": {
+                "C": 0.6,
+                "A": 0.56,
+                "B": 0.55
+              }
+            }
+          ],
+          "completed": true,
+          "mean_cBR": 0.03354925492709496,
+          "mean_brier": 0.3249000000000001
+        },
+        "team_H": {
+          "architecture": "team",
+          "condition": "H",
+          "rounds": [
+            {
+              "round_index": 4,
+              "post_round": 1,
+              "context": "X",
+              "probability": 0.39,
+              "truth": 0,
+              "brier": 0.1521,
+              "oracle_probability": 0.7531645569620252,
+              "cBR": 0.13188849543342404,
+              "actor_forecasts": {
+                "C": 0.4,
+                "A": 0.42,
+                "B": 0.35
+              }
+            }
+          ],
+          "completed": true,
+          "mean_cBR": 0.13188849543342404,
+          "mean_brier": 0.1521
+        },
+        "team_R0": {
+          "architecture": "team",
+          "condition": "R0",
+          "rounds": [
+            {
+              "round_index": 4,
+              "post_round": 1,
+              "context": "X",
+              "probability": 0.5933333333333333,
+              "truth": 0,
+              "brier": 0.3520444444444444,
+              "oracle_probability": 0.7531645569620252,
+              "cBR": 0.025546020046644937,
+              "actor_forecasts": {
+                "C": 0.58,
+                "A": 0.6,
+                "B": 0.6
+              }
+            }
+          ],
+          "completed": true,
+          "mean_cBR": 0.025546020046644937,
+          "mean_brier": 0.3520444444444444
+        },
+        "team_RU": {
+          "architecture": "team",
+          "condition": "RU",
+          "rounds": [
+            {
+              "round_index": 4,
+              "post_round": 1,
+              "context": "X",
+              "probability": 0.5466666666666666,
+              "truth": 0,
+              "brier": 0.2988444444444444,
+              "oracle_probability": 0.7531645569620252,
+              "cBR": 0.04264137869643395,
+              "actor_forecasts": {
+                "C": 0.56,
+                "A": 0.58,
+                "B": 0.5
+              }
+            }
+          ],
+          "completed": true,
+          "mean_cBR": 0.04264137869643395,
+          "mean_brier": 0.2988444444444444
+        },
+        "team_R0rep": {
+          "architecture": "team",
+          "condition": "R0",
+          "rounds": [
+            {
+              "round_index": 4,
+              "post_round": 1,
+              "context": "X",
+              "probability": 0.6233333333333333,
+              "truth": 0,
+              "brier": 0.3885444444444444,
+              "oracle_probability": 0.7531645569620252,
+              "cBR": 0.016856146628923412,
+              "actor_forecasts": {
+                "C": 0.68,
+                "A": 0.57,
+                "B": 0.62
+              }
+            }
+          ],
+          "completed": true,
+          "mean_cBR": 0.016856146628923412,
+          "mean_brier": 0.3885444444444444
+        },
+        "solo_H": {
+          "architecture": "solo",
+          "condition": "H",
+          "rounds": [
+            {
+              "round_index": 4,
+              "post_round": 1,
+              "context": "X",
+              "probability": 0.42,
+              "truth": 0,
+              "brier": 0.17639999999999997,
+              "oracle_probability": 0.7531645569620252,
+              "cBR": 0.11099862201570256,
+              "actor_forecasts": {
+                "S": 0.42
+              }
+            }
+          ],
+          "completed": true,
+          "mean_cBR": 0.11099862201570256,
+          "mean_brier": 0.17639999999999997
+        },
+        "solo_R0": {
+          "architecture": "solo",
+          "condition": "R0",
+          "rounds": [
+            {
+              "round_index": 4,
+              "post_round": 1,
+              "context": "X",
+              "probability": 0.52,
+              "truth": 0,
+              "brier": 0.27040000000000003,
+              "oracle_probability": 0.7531645569620252,
+              "cBR": 0.054365710623297495,
+              "actor_forecasts": {
+                "S": 0.52
+              }
+            }
+          ],
+          "completed": true,
+          "mean_cBR": 0.054365710623297495,
+          "mean_brier": 0.27040000000000003
+        },
+        "nomessage_H": {
+          "architecture": "nomessage",
+          "condition": "H",
+          "rounds": [
+            {
+              "round_index": 4,
+              "post_round": 1,
+              "context": "X",
+              "probability": 0.2733333333333333,
+              "truth": 0,
+              "brier": 0.0747111111111111,
+              "oracle_probability": 0.7531645569620252,
+              "cBR": 0.23023800316900775,
+              "actor_forecasts": {
+                "C": 0.22,
+                "A": 0.35,
+                "B": 0.25
+              }
+            }
+          ],
+          "completed": true,
+          "mean_cBR": 0.23023800316900775,
+          "mean_brier": 0.0747111111111111
+        },
+        "nomessage_R0": {
+          "architecture": "nomessage",
+          "condition": "R0",
+          "rounds": [
+            {
+              "round_index": 4,
+              "post_round": 1,
+              "context": "X",
+              "probability": 0.6166666666666667,
+              "truth": 0,
+              "brier": 0.3802777777777778,
+              "oracle_probability": 0.7531645569620252,
+              "cBR": 0.01863167405508373,
+              "actor_forecasts": {
+                "C": 0.68,
+                "A": 0.55,
+                "B": 0.62
+              }
+            }
+          ],
+          "completed": true,
+          "mean_cBR": 0.01863167405508373,
+          "mean_brier": 0.3802777777777778
+        },
+        "nominal_H": {
+          "architecture": "nominal",
+          "condition": "H",
+          "rounds": [
+            {
+              "round_index": 4,
+              "post_round": 1,
+              "context": "X",
+              "probability": 0.29,
+              "truth": 0,
+              "brier": 0.0841,
+              "oracle_probability": 0.7531645569620252,
+              "cBR": 0.21452140682582913,
+              "actor_forecasts": {
+                "N1": 0.23,
+                "N2": 0.29,
+                "N3": 0.35
+              }
+            }
+          ],
+          "completed": true,
+          "mean_cBR": 0.21452140682582913,
+          "mean_brier": 0.0841
+        },
+        "nominal_R0": {
+          "architecture": "nominal",
+          "condition": "R0",
+          "rounds": [
+            {
+              "round_index": 4,
+              "post_round": 1,
+              "context": "X",
+              "probability": 0.47333333333333333,
+              "truth": 0,
+              "brier": 0.22404444444444443,
+              "oracle_probability": 0.7531645569620252,
+              "cBR": 0.07830551371753097,
+              "actor_forecasts": {
+                "N1": 0.52,
+                "N2": 0.45,
+                "N3": 0.45
+              }
+            }
+          ],
+          "completed": true,
+          "mean_cBR": 0.07830551371753097,
+          "mean_brier": 0.22404444444444443
+        }
+      },
+      "history_metrics": {
+        "M": -0.14814814814814814,
+        "M_exact": {
+          "numerator": -4,
+          "denominator": 27
+        },
+        "strict_reversal_count": 0,
+        "worst_pair_concordance": 0.0,
+        "pairs": [
+          {
+            "context": "X",
+            "source_a": "A",
+            "source_b": "B",
+            "true_order_probability": 0.5,
+            "strict_reversal": false,
+            "signed_concordance": 0.0
+          },
+          {
+            "context": "X",
+            "source_a": "A",
+            "source_b": "C",
+            "true_order_probability": 0.5,
+            "strict_reversal": false,
+            "signed_concordance": 0.0
+          },
+          {
+            "context": "X",
+            "source_a": "B",
+            "source_b": "C",
+            "true_order_probability": 0.5,
+            "strict_reversal": false,
+            "signed_concordance": 0.0
+          },
+          {
+            "context": "Y",
+            "source_a": "A",
+            "source_b": "B",
+            "true_order_probability": 0.8333333333333334,
+            "strict_reversal": false,
+            "signed_concordance": 0.6666666666666666
+          },
+          {
+            "context": "Y",
+            "source_a": "A",
+            "source_b": "C",
+            "true_order_probability": 0.8333333333333334,
+            "strict_reversal": false,
+            "signed_concordance": 0.6666666666666666
+          },
+          {
+            "context": "Y",
+            "source_a": "B",
+            "source_b": "C",
+            "true_order_probability": 0.5,
+            "strict_reversal": false,
+            "signed_concordance": 0.0
+          },
+          {
+            "context": "Z",
+            "source_a": "A",
+            "source_b": "B",
+            "true_order_probability": 0.5,
+            "strict_reversal": false,
+            "signed_concordance": 0.0
+          },
+          {
+            "context": "Z",
+            "source_a": "A",
+            "source_b": "C",
+            "true_order_probability": 0.5,
+            "strict_reversal": false,
+            "signed_concordance": 0.0
+          },
+          {
+            "context": "Z",
+            "source_a": "B",
+            "source_b": "C",
+            "true_order_probability": 0.5,
+            "strict_reversal": false,
+            "signed_concordance": 0.0
+          }
+        ]
+      },
+      "planted_map_diagnostics": {
+        "precision_decimals": 2,
+        "rendered_changed_cells": [
+          "Y:A",
+          "Y:B"
+        ],
+        "rendered_nonzero": true,
+        "rendered_E_mse": 0.05834444444444444,
+        "rendered_P_mse": 0.08478888888888889,
+        "rendered_mse_increase": 0.026444444444444444,
+        "rendered_mse_strictly_increased": true,
+        "mse_increase_exact": {
+          "numerator": 119,
+          "denominator": 4500
+        },
+        "interpretation": "Map manipulation check only; no forecast-effect sign is guaranteed."
+      },
+      "paired_cBR_differences": {
+        "primary_team_P_minus_E": -0.009057665260196877,
+        "secondary_team_H_minus_R0": 0.1063424753867791,
+        "secondary_team_H_minus_E": 0.09833924050632908,
+        "secondary_team_RU_minus_R0": 0.017095358649789016,
+        "diagnostic_team_R0rep_minus_R0": -0.008689873417721525
+      },
+      "windowed_paired_cBR": {
+        "whole_trajectory": {
+          "first_post_round": 1,
+          "last_post_round": 1,
+          "differences": {
+            "primary_team_P_minus_E": -0.009057665260196877,
+            "secondary_team_H_minus_R0": 0.1063424753867791,
+            "secondary_team_H_minus_E": 0.09833924050632908,
+            "secondary_team_RU_minus_R0": 0.017095358649789016,
+            "diagnostic_team_R0rep_minus_R0": -0.008689873417721525
+          }
+        },
+        "before_first_update": {
+          "first_post_round": 1,
+          "last_post_round": 1,
+          "differences": {
+            "primary_team_P_minus_E": -0.009057665260196877,
+            "secondary_team_H_minus_R0": 0.1063424753867791,
+            "secondary_team_H_minus_E": 0.09833924050632908,
+            "secondary_team_RU_minus_R0": 0.017095358649789016,
+            "diagnostic_team_R0rep_minus_R0": -0.008689873417721525
+          }
+        }
+      }
+    }
+  },
+  "error": null,
+  "interpretation": "Pipeline verification only; no population inference, causal conclusion, or parameter-recovery claim.",
+  "measurement_policy": "post_feedback_pre_update; disposable clones; no outcome feedback or writeback",
+  "calls_attempted_by_scope": {
+    "20261026": {
+      "formation": 30,
+      "team_R0": 15,
+      "team_R0rep": 15,
+      "solo_H": 12,
+      "team_E": 18,
+      "nomessage_H": 18,
+      "team_H": 18,
+      "solo_R0": 9,
+      "team_RU": 15,
+      "team_P": 18,
+      "nomessage_R0": 15,
+      "nominal_H": 18,
+      "nominal_R0": 18
+    }
+  },
+  "replayed_calls": 0,
+  "physical_dispatches_this_execution": 219,
+  "new_dispatches": 219,
+  "cumulative_physical_attempts_by_branch": {
+    "20261026:formation": 30,
+    "20261026:team_R0": 15,
+    "20261026:team_R0rep": 15,
+    "20261026:solo_H": 12,
+    "20261026:team_E": 18,
+    "20261026:nomessage_H": 18,
+    "20261026:team_H": 18,
+    "20261026:solo_R0": 9,
+    "20261026:team_RU": 15,
+    "20261026:team_P": 18,
+    "20261026:nomessage_R0": 15,
+    "20261026:nominal_H": 18,
+    "20261026:nominal_R0": 18
+  },
+  "served_model_ids": []
+}

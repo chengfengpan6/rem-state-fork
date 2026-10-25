@@ -1,3 +1,5 @@
+> Historical v1 document. For the current OS revision, read [the v2 appendix](technical_appendix_v2.md), [scientific design](scenario_and_identification.md), and [actual validation](validation_v2.md). Earlier primary contrasts and budgets are not current-run instructions.
+
 # Proposed next measurement pilot: 7,314 responses, not run
 
 The archived 3+3 smoke verifies a short execution. The next scientific need is to

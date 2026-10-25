@@ -1,3 +1,5 @@
+> Historical v1 document. For the current OS revision, read [the v2 appendix](technical_appendix_v2.md), [scientific design](scenario_and_identification.md), and [actual validation](validation_v2.md). Earlier primary contrasts and budgets are not current-run instructions.
+
 # Readiness and evidence boundaries
 
 This repository is an executable research prototype. A small real-model smoke run, offline tests, recorded-response replay and a journal submission are different deliverables. Each should be claimed only when its corresponding evidence exists. The scientific protocol remains a prototype specification, not a preregistered confirmatory study.

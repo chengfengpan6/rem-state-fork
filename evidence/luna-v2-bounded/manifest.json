@@ -1,0 +1,322 @@
+{
+  "schema_version": "manifest-v2",
+  "protocol_version": "rem-prototype-0.2-iid-planted-split-audit",
+  "config": {
+    "protocol_version": "rem-prototype-0.2-iid-planted-split-audit",
+    "purpose": "smoke_noninferential",
+    "seeds": [
+      20261026
+    ],
+    "formation_rounds": 3,
+    "post_rounds": 1,
+    "truth_design": "iid_bernoulli_0.5",
+    "context_block": 3,
+    "lifecycle": "initialized_update",
+    "map_update_interval": 1,
+    "max_message_chars": 600,
+    "branches": [
+      {
+        "id": "team_P",
+        "architecture": "team",
+        "condition": "P"
+      },
+      {
+        "id": "team_E",
+        "architecture": "team",
+        "condition": "E"
+      },
+      {
+        "id": "team_H",
+        "architecture": "team",
+        "condition": "H"
+      },
+      {
+        "id": "team_R0",
+        "architecture": "team",
+        "condition": "R0"
+      },
+      {
+        "id": "team_RU",
+        "architecture": "team",
+        "condition": "RU"
+      },
+      {
+        "id": "team_R0rep",
+        "architecture": "team",
+        "condition": "R0"
+      },
+      {
+        "id": "solo_H",
+        "architecture": "solo",
+        "condition": "H"
+      },
+      {
+        "id": "solo_R0",
+        "architecture": "solo",
+        "condition": "R0"
+      },
+      {
+        "id": "nomessage_H",
+        "architecture": "nomessage",
+        "condition": "H"
+      },
+      {
+        "id": "nomessage_R0",
+        "architecture": "nomessage",
+        "condition": "R0"
+      },
+      {
+        "id": "nominal_H",
+        "architecture": "nominal",
+        "condition": "H"
+      },
+      {
+        "id": "nominal_R0",
+        "architecture": "nominal",
+        "condition": "R0"
+      }
+    ],
+    "audit": {
+      "mode": "split",
+      "at_fork": true,
+      "interval": 3,
+      "architectures": [
+        "team",
+        "solo",
+        "nomessage"
+      ]
+    },
+    "probes": {
+      "enabled": false,
+      "at_fork": false,
+      "interval": 3,
+      "mode": "batch",
+      "contexts": [
+        "X"
+      ]
+    },
+    "max_calls": 272,
+    "live_allowed": true,
+    "schedule": {
+      "mode": "round_interleaved",
+      "seed": 20261025
+    },
+    "per_branch_call_cap": 20,
+    "formation_call_cap": 32,
+    "planted_map": {
+      "contexts": [
+        "X",
+        "Y",
+        "Z"
+      ]
+    },
+    "solo_map_readouts": 3,
+    "nominal_map_readouts": 3
+  },
+  "config_hash": "cb339b1b994b7f4bf869489db6f5391968c8347575723cdd10500752e4feaf06",
+  "status": "completed",
+  "started_utc": "2026-10-25T20:23:48.932731+00:00",
+  "provider": {
+    "name": "codex_chatgpt_subscription",
+    "requested_model": "gpt-5.6-luna",
+    "is_live": true
+  },
+  "python": "3.12.4",
+  "dgp_version": "context3-iidtruth-v1",
+  "tape_hashes": {
+    "20261026": "7f9a1c6a221566461db5f8b66b2bea6d2bb42f6fb08daa90596868bc2b6e55ba"
+  },
+  "expected_successful_calls": 219,
+  "global_call_cap": 272,
+  "retry_policy": "none; first provider/schema failure stops the run",
+  "scope": "Executable prototype choices; not a frozen or preregistered confirmatory study",
+  "deviations_and_choices": [
+    "IID truth instead of the manuscript's exact truth balancing",
+    "Context-balanced blocks of 3; horizons and interval are configuration-specific",
+    "H0 and shared map updates use coordinatewise median of three independent actor maps",
+    "90% subjective map intervals; E uses equal-tail Beta credible intervals",
+    "Initialized-update is mutable block memory: inherited H remains until first update",
+    "Standing mode retains each fork map unchanged and performs no map updates",
+    "Checkpoint measurements occur post-feedback and before map update",
+    "No-message/solo/nominal use private memos for three-stage compute opportunity",
+    "Nominal members have no access to one another's post-fork behavior or maps",
+    "Solo/nominal founder records are provenance-labeled, not claimed as personal history",
+    "Batch probes are diagnostic and not independent profile interventions",
+    "No fitted w/lambda or confirmatory inference in this implementation",
+    "V2 allows an engineering prefix within a context block; a short prefix is not context-balanced",
+    "P swaps full E0 cells between true best/worst labels in configured contexts; manipulation checks are researcher-only",
+    "Only map and audit stages contain map-specific instructions; recall and own estimates use independent clones",
+    "Absent and all-null map recall is NA with no dispatch; own-estimate readouts remain applicable",
+    "Branch rounds are interleaved in a deterministic randomized schedule using a separate hidden seed",
+    "Actor-visible map values have two-decimal numerical precision; research-side source maps retain full precision",
+    "Solo/nominal map and audit readouts may be replicated three times per actor; these are not independent actors",
+    "Audit architecture subsets are explicit configuration choices, not equivalent measurement coverage"
+  ],
+  "files": [
+    "manifest.json",
+    "tapes.json",
+    "events.jsonl",
+    "calls.jsonl",
+    "checkpoint.json",
+    "summary.json"
+  ],
+  "source_hashes": {
+    "files": {
+      "rem_harness/__init__.py": "00e81c67308e9df394b81781ba83fb2cbfafbeac3cd7e4cb698bb0e8bdf771e7",
+      "rem_harness/__main__.py": "3b7cc4f3d71ad94ca591185870ff128ec2eb5e8c1287d88c8ca5f53969c40458",
+      "rem_harness/data.py": "e0189d7842927259eec9d66b7851d3e3e80f0cf4e583c803480c72adf814f69c",
+      "rem_harness/engine.py": "63b222fc4a843b530457091967681f48f3213ee43e40c2fb37becafe8cc5e71d",
+      "rem_harness/models.py": "d2e5da77cd2ad31f8cdd36ba3897ef1c8839f3efc657b04e87fbc1639bd2e051",
+      "rem_harness/providers.py": "f604973f1c9e224f9764b9b3f27bcd7eba900f215f87d14ba472ac18c798583b",
+      "rem_harness/schemas.py": "e33115e940e9dab70d3b12d7c98a819955fa8bfff5074c3754018b81e6500b76"
+    },
+    "combined_sha256": "5c9431920db705c149636c6c4fb84d139e57cb00a183edda303f0792f179d4d1",
+    "scope": "Package Python source bytes at run start; configuration has its own canonical hash."
+  },
+  "call_plan": {
+    "formation_per_seed": 30,
+    "branches_per_seed": {
+      "team_P": {
+        "forecast_and_memo": 9,
+        "map_updates": 3,
+        "belief_audits": 3,
+        "recall_audits": 3,
+        "probes": 0,
+        "total": 18
+      },
+      "team_E": {
+        "forecast_and_memo": 9,
+        "map_updates": 3,
+        "belief_audits": 3,
+        "recall_audits": 3,
+        "probes": 0,
+        "total": 18
+      },
+      "team_H": {
+        "forecast_and_memo": 9,
+        "map_updates": 3,
+        "belief_audits": 3,
+        "recall_audits": 3,
+        "probes": 0,
+        "total": 18
+      },
+      "team_R0": {
+        "forecast_and_memo": 9,
+        "map_updates": 3,
+        "belief_audits": 3,
+        "recall_audits": 0,
+        "probes": 0,
+        "total": 15
+      },
+      "team_RU": {
+        "forecast_and_memo": 9,
+        "map_updates": 3,
+        "belief_audits": 3,
+        "recall_audits": 0,
+        "probes": 0,
+        "total": 15
+      },
+      "team_R0rep": {
+        "forecast_and_memo": 9,
+        "map_updates": 3,
+        "belief_audits": 3,
+        "recall_audits": 0,
+        "probes": 0,
+        "total": 15
+      },
+      "solo_H": {
+        "forecast_and_memo": 3,
+        "map_updates": 3,
+        "belief_audits": 3,
+        "recall_audits": 3,
+        "probes": 0,
+        "total": 12
+      },
+      "solo_R0": {
+        "forecast_and_memo": 3,
+        "map_updates": 3,
+        "belief_audits": 3,
+        "recall_audits": 0,
+        "probes": 0,
+        "total": 9
+      },
+      "nomessage_H": {
+        "forecast_and_memo": 9,
+        "map_updates": 3,
+        "belief_audits": 3,
+        "recall_audits": 3,
+        "probes": 0,
+        "total": 18
+      },
+      "nomessage_R0": {
+        "forecast_and_memo": 9,
+        "map_updates": 3,
+        "belief_audits": 3,
+        "recall_audits": 0,
+        "probes": 0,
+        "total": 15
+      },
+      "nominal_H": {
+        "forecast_and_memo": 9,
+        "map_updates": 9,
+        "belief_audits": 0,
+        "recall_audits": 0,
+        "probes": 0,
+        "total": 18
+      },
+      "nominal_R0": {
+        "forecast_and_memo": 9,
+        "map_updates": 9,
+        "belief_audits": 0,
+        "recall_audits": 0,
+        "probes": 0,
+        "total": 18
+      }
+    },
+    "per_seed": 219,
+    "total": 219,
+    "meaning": "Successful-path logical calls; includes replayed calls, excludes skipped NA recall."
+  },
+  "formation_call_cap_per_seed": 32,
+  "call_cap_per_branch_per_seed": 20,
+  "map_display_decimals": 2,
+  "calls_attempted_by_scope": {
+    "20261026": {
+      "formation": 30,
+      "team_R0": 15,
+      "team_R0rep": 15,
+      "solo_H": 12,
+      "team_E": 18,
+      "nomessage_H": 18,
+      "team_H": 18,
+      "solo_R0": 9,
+      "team_RU": 15,
+      "team_P": 18,
+      "nomessage_R0": 15,
+      "nominal_H": 18,
+      "nominal_R0": 18
+    }
+  },
+  "replayed_calls": 0,
+  "physical_dispatches_this_execution": 219,
+  "new_dispatches": 219,
+  "cumulative_physical_attempts_by_branch": {
+    "20261026:formation": 30,
+    "20261026:team_R0": 15,
+    "20261026:team_R0rep": 15,
+    "20261026:solo_H": 12,
+    "20261026:team_E": 18,
+    "20261026:nomessage_H": 18,
+    "20261026:team_H": 18,
+    "20261026:solo_R0": 9,
+    "20261026:team_RU": 15,
+    "20261026:team_P": 18,
+    "20261026:nomessage_R0": 15,
+    "20261026:nominal_H": 18,
+    "20261026:nominal_R0": 18
+  },
+  "served_model_ids": [],
+  "ended_utc": "2026-10-25T20:43:32.437723+00:00",
+  "calls_attempted": 219,
+  "error": null
+}
