@@ -13,13 +13,13 @@ optimization or a completed study of human organizational memory.
 
 ## What was actually run
 
-The new bounded diagnostic completed **219 successful GPT-5.6 Luna responses**:
-30 in shared formation and189 across12 branches, each using9–18 calls under a
-hard cap20. It includes Team P/E/H/R0/RU and a separately executed R0 replicate,
+The new bounded diagnostic completed **219 successful responses**, all requesting
+GPT-5.6 Luna: 30 in shared formation and 189 across 12 branches, each using
+9–18 calls under a hard cap of 20. It includes Team P/E/H/R0/RU and a separately executed R0 replicate,
 Solo H/R0, no-peer-message H/R0, and nominal H/R0. There were no failed calls
-or retries. The old342-response record remains unchanged and separate.
+or retries. The old 342-response record remains unchanged and separate.
 
-This is one selected history,3 formation rounds and1 future round. P is a
+This is one selected history, 3 formation rounds and 1 future round. P is a
 full-cell permutation of E0, matched in precision and provenance. Its displayed
 change is only in Y; the actual future context is X. Thus this record verifies
 delivery and execution, **not behavioral positive-control sensitivity**. Updates
@@ -58,8 +58,8 @@ python -m rem_harness plan --config configs/bounded_v2_smoke.json
 The current configuration is a diagnostic, not a formal study. Live entry is
 explicit, requires an existing authorized ChatGPT login, and is capped in both
 CLI and Engine at one history, <=3 formation rounds, <=2 future rounds, <=20
-attempts per branch and <=32 shared formation. The recorded config used219
-planned responses and a272 total ceiling. No API key is used by this adapter.
+attempts per branch and <=32 shared formation. The recorded config used 219
+planned responses and a 272 total ceiling. No API key is used by this adapter.
 Do not rerun live merely to inspect evidence. Fresh access can fail or drift.
 
 Interrupted v2 runs can use explicit `resume --recording RUN_DIRECTORY --output
