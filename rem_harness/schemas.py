@@ -2,6 +2,7 @@
 from __future__ import annotations
 
 from math import isfinite
+from copy import deepcopy
 from .data import CONTEXTS, SOURCES
 
 PROBABILITY_SCHEMA = {"type": "object", "properties": {"probability": {"type": "number", "minimum": 0, "maximum": 1}},
@@ -15,6 +16,9 @@ CELL_SCHEMA = {"type": "object", "properties": {
     "required": ["context", "source", "estimate", "lower", "upper"], "additionalProperties": False}
 MAP_SCHEMA = {"type": "object", "properties": {"cells": {"type": "array", "items": CELL_SCHEMA, "minItems": 9, "maxItems": 9}},
               "required": ["cells"], "additionalProperties": False}
+# Recall is a distinct operation with the same numeric response contract.
+# Absent and all-null maps are logged as NA by the engine, without a model call.
+MAP_RECALL_SCHEMA = deepcopy(MAP_SCHEMA)
 
 
 def message_schema(max_chars):

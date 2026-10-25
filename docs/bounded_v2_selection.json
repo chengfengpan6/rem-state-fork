@@ -1,0 +1,151 @@
+{
+  "plan": "docs/run_plan_2026-10-25.md",
+  "selection_uses": "formation tape only; no future or LLM response criterion",
+  "selected_seed": 20261026,
+  "candidates_examined": [
+    {
+      "seed": 20261025,
+      "eligible": false,
+      "precision_decimals": 2,
+      "rendered_changed_cells": [
+        "X:A",
+        "X:C",
+        "Z:B",
+        "Z:C"
+      ],
+      "rendered_nonzero": true,
+      "rendered_E_mse": 0.06967777777777778,
+      "rendered_P_mse": 0.06967777777777778,
+      "rendered_mse_increase": 0.0,
+      "rendered_mse_strictly_increased": false,
+      "mse_increase_exact": {
+        "numerator": 0,
+        "denominator": 1
+      },
+      "interpretation": "Map manipulation check only; no forecast-effect sign is guaranteed."
+    },
+    {
+      "seed": 20261026,
+      "eligible": true,
+      "precision_decimals": 2,
+      "rendered_changed_cells": [
+        "Y:A",
+        "Y:B"
+      ],
+      "rendered_nonzero": true,
+      "rendered_E_mse": 0.05834444444444444,
+      "rendered_P_mse": 0.08478888888888889,
+      "rendered_mse_increase": 0.026444444444444444,
+      "rendered_mse_strictly_increased": true,
+      "mse_increase_exact": {
+        "numerator": 119,
+        "denominator": 4500
+      },
+      "interpretation": "Map manipulation check only; no forecast-effect sign is guaranteed."
+    }
+  ],
+  "call_plan": {
+    "formation_per_seed": 30,
+    "branches_per_seed": {
+      "team_P": {
+        "forecast_and_memo": 9,
+        "map_updates": 3,
+        "belief_audits": 3,
+        "recall_audits": 3,
+        "probes": 0,
+        "total": 18
+      },
+      "team_E": {
+        "forecast_and_memo": 9,
+        "map_updates": 3,
+        "belief_audits": 3,
+        "recall_audits": 3,
+        "probes": 0,
+        "total": 18
+      },
+      "team_H": {
+        "forecast_and_memo": 9,
+        "map_updates": 3,
+        "belief_audits": 3,
+        "recall_audits": 3,
+        "probes": 0,
+        "total": 18
+      },
+      "team_R0": {
+        "forecast_and_memo": 9,
+        "map_updates": 3,
+        "belief_audits": 3,
+        "recall_audits": 0,
+        "probes": 0,
+        "total": 15
+      },
+      "team_RU": {
+        "forecast_and_memo": 9,
+        "map_updates": 3,
+        "belief_audits": 3,
+        "recall_audits": 0,
+        "probes": 0,
+        "total": 15
+      },
+      "team_R0rep": {
+        "forecast_and_memo": 9,
+        "map_updates": 3,
+        "belief_audits": 3,
+        "recall_audits": 0,
+        "probes": 0,
+        "total": 15
+      },
+      "solo_H": {
+        "forecast_and_memo": 3,
+        "map_updates": 3,
+        "belief_audits": 3,
+        "recall_audits": 3,
+        "probes": 0,
+        "total": 12
+      },
+      "solo_R0": {
+        "forecast_and_memo": 3,
+        "map_updates": 3,
+        "belief_audits": 3,
+        "recall_audits": 0,
+        "probes": 0,
+        "total": 9
+      },
+      "nomessage_H": {
+        "forecast_and_memo": 9,
+        "map_updates": 3,
+        "belief_audits": 3,
+        "recall_audits": 3,
+        "probes": 0,
+        "total": 18
+      },
+      "nomessage_R0": {
+        "forecast_and_memo": 9,
+        "map_updates": 3,
+        "belief_audits": 3,
+        "recall_audits": 0,
+        "probes": 0,
+        "total": 15
+      },
+      "nominal_H": {
+        "forecast_and_memo": 9,
+        "map_updates": 9,
+        "belief_audits": 0,
+        "recall_audits": 0,
+        "probes": 0,
+        "total": 18
+      },
+      "nominal_R0": {
+        "forecast_and_memo": 9,
+        "map_updates": 9,
+        "belief_audits": 0,
+        "recall_audits": 0,
+        "probes": 0,
+        "total": 18
+      }
+    },
+    "per_seed": 219,
+    "total": 219,
+    "meaning": "Successful-path logical calls; includes replayed calls, excludes skipped NA recall."
+  }
+}

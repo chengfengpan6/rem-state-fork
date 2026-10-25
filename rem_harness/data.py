@@ -2,6 +2,7 @@
 from __future__ import annotations
 
 from dataclasses import asdict, dataclass
+from copy import deepcopy
 from fractions import Fraction
 from itertools import combinations
 from math import comb
@@ -32,7 +33,8 @@ class Event:
                 "signals": self.signal_dict(), "truth": self.truth}
 
 
-def generate_tape(seed: int, formation_rounds: int, post_rounds: int) -> tuple[Event, ...]:
+def generate_tape(seed: int, formation_rounds: int, post_rounds: int,
+                  *, allow_partial_post: bool = False) -> tuple[Event, ...]:
     """Balance contexts within 3 rounds, but draw each truth independently.
 
     This deliberately differs from the manuscript's exact truth quotas. No quota
@@ -41,8 +43,9 @@ def generate_tape(seed: int, formation_rounds: int, post_rounds: int) -> tuple[E
     """
     if isinstance(seed, bool) or not isinstance(seed, int):
         raise ValueError("seed must be an integer")
-    if any(isinstance(x, bool) or not isinstance(x, int) or x <= 0 or x % 3
-           for x in (formation_rounds, post_rounds)):
+    if (any(isinstance(x, bool) or not isinstance(x, int) or x <= 0
+            for x in (formation_rounds, post_rounds)) or formation_rounds % 3
+            or (post_rounds % 3 and not allow_partial_post)):
         raise ValueError("Both horizons must be positive multiples of 3")
     rng = random.Random(seed)
     events = []
@@ -54,7 +57,9 @@ def generate_tape(seed: int, formation_rounds: int, post_rounds: int) -> tuple[E
             signals = tuple(truth if rng.random() < REL[context][source] else 1-truth
                             for source in SOURCES)
             events.append(Event(start+offset+1, context, truth, signals))
-    return tuple(events)
+    # V2 engineering smokes may stop within a context block. This is an exact
+    # prefix of the same full-block tape, not a newly balanced shorter task.
+    return tuple(events[:formation_rounds + post_rounds])
 
 
 def oracle_probability(context: str, signals: Mapping[str, int], prior=.5) -> float:
@@ -104,6 +109,58 @@ def evidence_map(ledger: list[dict]) -> dict:
             cells.append({"context": c, "source": s, "estimate": a/(a+b),
                           "lower": float(beta.ppf(.05, a, b)), "upper": float(beta.ppf(.95, a, b))})
     return {"cells": cells}
+
+
+def render_map(mapping, digits=2):
+    """Actor-visible numerical precision only; preserve the research-side map."""
+    result = deepcopy(mapping)
+    if result is not None:
+        for cell in result["cells"]:
+            for key in ("estimate", "lower", "upper"):
+                if cell[key] is not None:
+                    cell[key] = round(cell[key], digits)
+    return result
+
+
+def planted_evidence_map(e0, contexts=CONTEXTS):
+    """Swap entire E0 cells for the true best and worst source in each context.
+
+    REL is used only by the researcher. The operation may be a no-op when
+    finite-history cells tie, and need not increase error for every history.
+    """
+    result = deepcopy(e0)
+    indexed = {(cell["context"], cell["source"]): cell for cell in result["cells"]}
+    for context in contexts:
+        best = max(SOURCES, key=REL[context].get)
+        worst = min(SOURCES, key=REL[context].get)
+        a, b = indexed[context, best], indexed[context, worst]
+        for key in ("estimate", "lower", "upper"):
+            a[key], b[key] = b[key], a[key]
+    return result
+
+
+def planted_map_diagnostics(e0, p0):
+    """Research-only manipulation checks on exactly the displayed precision.
+
+    Strict comparisons use rational arithmetic on the displayed numbers, so a
+    floating-point subtraction cannot turn a true tie into a positive result.
+    These checks concern map contents, not downstream forecast-effect signs.
+    """
+    e, p = render_map(e0), render_map(p0)
+    ei = {(c["context"], c["source"]): c for c in e["cells"]}
+    pi = {(c["context"], c["source"]): c for c in p["cells"]}
+    changed = [f"{c}:{s}" for c, s in ei if ei[c, s] != pi[c, s]]
+    def mse(index):
+        return sum((Fraction(str(v["estimate"])) - Fraction(str(REL[c][s])))**2
+                   for (c, s), v in index.items()) / len(index)
+    emse, pmse = mse(ei), mse(pi)
+    delta = pmse - emse
+    return {"precision_decimals": 2, "rendered_changed_cells": changed,
+            "rendered_nonzero": bool(changed), "rendered_E_mse": float(emse),
+            "rendered_P_mse": float(pmse), "rendered_mse_increase": float(delta),
+            "rendered_mse_strictly_increased": delta > 0,
+            "mse_increase_exact": {"numerator": delta.numerator, "denominator": delta.denominator},
+            "interpretation": "Map manipulation check only; no forecast-effect sign is guaranteed."}
 
 
 def pair_probability_exact(correct_a: int, correct_b: int, n: int) -> Fraction:

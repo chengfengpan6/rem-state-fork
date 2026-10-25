@@ -94,6 +94,13 @@ def verify(recording):
             return None
 
     manifest=read("manifest.json")
+    if manifest and manifest.get("protocol_version", "").startswith("rem-prototype-0.2"):
+        # Keep the original v1 verifier unchanged for historical evidence.
+        import importlib.util
+        module_spec = importlib.util.spec_from_file_location("rem_verify_v2", Path(__file__).with_name("verify_v2.py"))
+        module = importlib.util.module_from_spec(module_spec)
+        module_spec.loader.exec_module(module)
+        return module.verify_v2(folder)
     complete=bool(manifest and manifest.get("status")=="completed")
     summary=read("summary.json",required=complete)
     checkpoint=read("checkpoint.json")

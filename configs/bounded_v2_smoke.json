@@ -1,0 +1,112 @@
+{
+  "protocol_version": "rem-prototype-0.2-iid-planted-split-audit",
+  "purpose": "smoke_noninferential",
+  "seeds": [
+    20261026
+  ],
+  "formation_rounds": 3,
+  "post_rounds": 1,
+  "truth_design": "iid_bernoulli_0.5",
+  "context_block": 3,
+  "lifecycle": "initialized_update",
+  "map_update_interval": 1,
+  "max_message_chars": 600,
+  "branches": [
+    {
+      "id": "team_P",
+      "architecture": "team",
+      "condition": "P"
+    },
+    {
+      "id": "team_E",
+      "architecture": "team",
+      "condition": "E"
+    },
+    {
+      "id": "team_H",
+      "architecture": "team",
+      "condition": "H"
+    },
+    {
+      "id": "team_R0",
+      "architecture": "team",
+      "condition": "R0"
+    },
+    {
+      "id": "team_RU",
+      "architecture": "team",
+      "condition": "RU"
+    },
+    {
+      "id": "team_R0rep",
+      "architecture": "team",
+      "condition": "R0"
+    },
+    {
+      "id": "solo_H",
+      "architecture": "solo",
+      "condition": "H"
+    },
+    {
+      "id": "solo_R0",
+      "architecture": "solo",
+      "condition": "R0"
+    },
+    {
+      "id": "nomessage_H",
+      "architecture": "nomessage",
+      "condition": "H"
+    },
+    {
+      "id": "nomessage_R0",
+      "architecture": "nomessage",
+      "condition": "R0"
+    },
+    {
+      "id": "nominal_H",
+      "architecture": "nominal",
+      "condition": "H"
+    },
+    {
+      "id": "nominal_R0",
+      "architecture": "nominal",
+      "condition": "R0"
+    }
+  ],
+  "audit": {
+    "mode": "split",
+    "at_fork": true,
+    "interval": 3,
+    "architectures": [
+      "team",
+      "solo",
+      "nomessage"
+    ]
+  },
+  "probes": {
+    "enabled": false,
+    "at_fork": false,
+    "interval": 3,
+    "mode": "batch",
+    "contexts": [
+      "X"
+    ]
+  },
+  "max_calls": 272,
+  "live_allowed": true,
+  "schedule": {
+    "mode": "round_interleaved",
+    "seed": 20261025
+  },
+  "per_branch_call_cap": 20,
+  "formation_call_cap": 32,
+  "planted_map": {
+    "contexts": [
+      "X",
+      "Y",
+      "Z"
+    ]
+  },
+  "solo_map_readouts": 3,
+  "nominal_map_readouts": 3
+}
