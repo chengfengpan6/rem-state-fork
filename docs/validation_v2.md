@@ -66,10 +66,19 @@ history or reliability. This is not a randomized old-versus-new-prompt test.
 
 ## Clean-copy check
 
-Fresh-environment validation is recorded in the final release note after its
-actual execution. The dependency lock specifies the packages; the run-source
-snapshot preserves package bytes separately from Git checkout line endings.
-The documented replay path requires no account, key, live model or private file.
+A fresh local Git clone (`--no-local`) at commit `20b75be` and a newly created
+Python environment installed `requirements-lock.txt`. **All 76 tests passed**.
+The archived live record again passed 2,232 checks; offline replay consumed all
+219 responses with zero new model calls and exactly reproduced the checkpoint,
+tape and seed results. All seven executed-package snapshot hashes matched.
+No working-tree or untracked files were copied into that checkout. This was a
+new checkout/environment on the same Windows machine, not a second-machine or
+fresh-provider replication. See [the clean-copy record](clean_validation.json).
+
+The dependency lock specifies the packages; the run-source snapshot preserves
+package bytes separately from Git checkout line endings. The documented replay
+path requires no account, key, live model or private file. Subsequent release
+edits are documentation and packaging only, without changes to validated code.
 
 ## Artifact provenance
 

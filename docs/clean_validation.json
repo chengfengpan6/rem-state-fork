@@ -1,0 +1,26 @@
+{
+  "source_commit": "20b75be1f4f04804ccb06079c93e4d4fbad2c62b",
+  "source": "fresh local Git clone --no-local; no working-tree or untracked files copied",
+  "environment": "new Python venv; requirements-lock.txt installed",
+  "python": "3.12.4",
+  "tests_passed": 76,
+  "tests_failed": 0,
+  "record_verification_checks": 2232,
+  "record_verification_failures": 0,
+  "replay_equality": {
+    "checkpoint.json": true,
+    "tapes.json": true,
+    "seed_results": true
+  },
+  "replayed_responses": 219,
+  "new_model_calls": 0,
+  "executed_source_snapshot_hashes": {
+    "rem_harness/__init__.py": true,
+    "rem_harness/__main__.py": true,
+    "rem_harness/data.py": true,
+    "rem_harness/engine.py": true,
+    "rem_harness/models.py": true,
+    "rem_harness/providers.py": true,
+    "rem_harness/schemas.py": true
+  }
+}
