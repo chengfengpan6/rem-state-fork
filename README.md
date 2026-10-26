@@ -1,93 +1,100 @@
 # REM: shared interpretation with a common factual record
 
-**Current OS revision: 25 October 2026.**
-
-[Readable artifact overview](docs/index.html) · [Scientific question and task](docs/scenario_and_identification.md) · [V2 technical appendix](docs/technical_appendix_v2.md) · [Validation and limits](docs/validation_v2.md)
-
 When factual records remain available, does an inherited shared interpretation
-of which sources are reliable change subsequent evidence use and collective
-judgment? This research prototype separates factual, behavioral, personal, and
-map state, then branches from a shared history under matched future evidence.
-Its contribution is an inspectable organizational experiment, not model-score
-optimization or a completed study of human organizational memory.
+of source reliability change collective judgment? REM provides inspectable
+state separation, common-history branching, matched inputs, recorded responses,
+and diagnostic tests for this organizational question.
 
-## What was actually run
+[Readable overview](docs/index.html) · [Targeted protocol](docs/targeted_protocol_2026-10-25.md) · [Analysis plan](docs/targeted_analysis_plan_2026-10-25.md) · [Technical appendix](docs/technical_appendix_targeted.md) · [Scientific sources](docs/scenario_and_identification.md)
 
-The new bounded diagnostic completed **219 successful responses**, all requesting
-GPT-5.6 Luna: 30 in shared formation and 189 across 12 branches, each using
-9–18 calls under a hard cap of 20. It includes Team P/E/H/R0/RU and a separately executed R0 replicate,
-Solo H/R0, no-peer-message H/R0, and nominal H/R0. There were no failed calls
-or retries. The old 342-response record remains unchanged and separate.
+# Targeted Y-profile map-content diagnostic
 
-This is one selected history, 3 formation rounds and 1 future round. P is a
-full-cell permutation of E0, matched in precision and provenance. Its displayed
-change is only in Y; the actual future context is X. Thus this record verifies
-delivery and execution, **not behavioral positive-control sensitivity**. Updates
-are terminal; no post-update decision was observed. No p-values, power, real-agent
-weight recovery or population organizational effects are claimed.
+Execution status: **completed**. Completed histories: **30/30**.
+Planned successful path: 3,600 calls; cumulative recorded transport reservations: 3600.
+The requested model remains `gpt-5.6-luna` through the official Codex CLI,
+ChatGPT login, low reasoning. A requested alias is not immutable weight attestation.
 
-Requested model and transport are unchanged: `gpt-5.6-luna`, Codex CLI
-`0.162.0-alpha.17.2`, ChatGPT login, low reasoning. The CLI did not expose a
-served-model ID. Alias consistency is not immutable weight identity.
+The prospective primary history-level P−E cBR estimate is 0.21002870,
+95% t interval [0.1785239938919171, 0.2415334012718417], two-sided p=3.83281e-14, complete-pair n=30.
+See analysis.json for the prespecified bootstrap, Holm-adjusted secondary
+comparisons, A/A descriptions, direction diagnostic, all history outcomes and
+missing-history bounds. This is a targeted conditional diagnostic, not the
+original H1–H4 hypothesis study or a general estimate for human organizations.
 
-## Install and verify without any model calls
+Each eligible history has three formation rounds, one per context. Eligibility
+uses only exogenous formation observations; in Y it implies A wrong and B right.
+P swaps the complete Y:A/Y:B E-map cells. Both fixed Y profiles independently
+clone the same fork. There is no profile feedback, update, or cross-profile
+writeback. Records remain accessible in every arm, including R0/R0rep.
+
+Original request/response/event files, all attempts, checkpoints, schedules and
+manifests are unchanged. Source bytes from the pre-execution freeze are under
+source_snapshot. Provenance hashes identify copied and derived files separately.
+The frozen code commit is `358b4eb7f4796437d19de3640ab2f04fac620c2a`. Earlier v1
+and v2 evidence remains separate; it is not pooled into this diagnostic.
+
+## Offline review
+
+From the repository root after installing requirements-lock.txt:
+
+```sh
+python tools/run_targeted.py verify --recording evidence/luna-targeted-30histories --output runs/targeted-verification.json
+python tools/run_targeted.py replay --recording evidence/luna-targeted-30histories --output runs/targeted-replay
+python tools/analyze_targeted.py evidence/luna-targeted-30histories --output runs/targeted-analysis.json
+```
+
+Create runs first. Output paths must be new. Full replay requires all histories
+complete. An incomplete archive instead retains the failed or unfinished states
+and its conditional complete-pair analysis. Never run live to inspect an archive.
+See [the targeted protocol](docs/targeted_protocol_2026-10-25.md) and
+[the frozen analysis plan](docs/targeted_analysis_plan_2026-10-25.md).
+
+## Secondary contrasts
+
+| Comparison | Mean cBR difference | Marginal 95% t interval | Holm-adjusted p |
+|---|---:|---|---:|
+| H − E | -0.00025395 | [-0.011156782529559563, 0.010648890212449077] | 0.962332 |
+| H − R0 | -0.05509228 | [-0.07152750081601268, -0.03865705204594018] | 3.14003e-07 |
+
+These two comparisons form a separately adjusted exploratory family; their intervals are marginal, not simultaneous. Positive differences indicate greater prediction loss. The observed H-versus-R0 improvement and P-versus-E harm concern different interventions. The near-zero H-versus-E estimate does not establish equivalence. A/A repetition remains descriptive and is not an equivalence test.
+
+## Clean installation and tests
 
 ```sh
 python -m venv .venv
-# Activate the environment using the platform's standard command.
+# Activate using your platform's standard command.
 python -m pip install -r requirements-lock.txt
 python -m unittest discover -s tests -v
-python tools/verify_recording.py evidence/luna-v2-bounded --output runs/v2-verification.json
-python tools/analyze_diagnostics.py evidence/luna-v2-bounded --baseline evidence/luna-smoke --output runs/v2-diagnostics.json
-python -m rem_harness replay --config configs/bounded_v2_smoke.json --recording evidence/luna-v2-bounded/calls.jsonl --output runs/v2-replay
+python tools/run_targeted.py plan --config configs/targeted_30histories.json
 ```
 
-Create `runs` first if needed (`mkdir runs`). Output paths must be new. Replay
-validates complete ordered requests and schemas before using saved responses;
-the semantic verifier reconstructs state and independently checks scoring.
-Fault-injection tests reject wrong-map and wrong-personal-record payloads even
-after their visible hashes are recomputed. These checks establish specified
-properties, not a complete causal interpretation.
+Plan, verification, replay and analysis make no model calls. The historical
+source snapshot records exact execution bytes. Git line-ending normalization
+can alter file-byte hashes without changing executable semantics; the selector's
+strict byte-hash check is distinct from the runner's deterministic candidate
+reconstruction, which is checked before dispatch and works from a clean clone.
 
-## Configuration and guarded live use
+## Explicit live use and recovery
 
-```sh
-python -m rem_harness plan --config configs/bounded_v2_smoke.json
-```
+The targeted live entry point requires 30 prespecified histories, the original
+model alias and shared durable attempt ledger. It caps formation at 32 calls
+per history, each condition at 20, and all attempts at 3,660. Its successful path
+is 3,600. This new authorized diagnostic is separate from the older one-history
+smoke limit. It has no automatic retry or outcome-based replacement.
 
-The current configuration is a diagnostic, not a formal study. Live entry is
-explicit, requires an existing authorized ChatGPT login, and is capped in both
-CLI and Engine at one history, <=3 formation rounds, <=2 future rounds, <=20
-attempts per branch and <=32 shared formation. The recorded config used 219
-planned responses and a 272 total ceiling. No API key is used by this adapter.
-Do not rerun live merely to inspect evidence. Fresh access can fail or drift.
-
-Interrupted v2 runs can use explicit `resume --recording RUN_DIRECTORY --output
-NEW_DIRECTORY`. Successful prefixes must match exactly; schema failures are
-not silently repaired. Persisted cumulative attempts include earlier failed
-dispatches. Completed runs and unverifiable recovery histories are refused.
-
-## Research interpretation
-
-P−E is the primary planned content contrast; H−E connects to naturally formed
-maps. Keeping records available makes R0 removal of one external object, not
-erasure of experience. Recall, own estimates, cue use and outcomes are distinct.
-Architecture contrasts change several features and do not isolate a purely
-social mechanism. The future study needs independent histories, relevant
-post-update decisions, measurement validation and a justified sample size.
-
-The source and adaptation matrix cites organizational learning, expertise,
-knowledge integration and judgment research and states its actual reading
-scope. Technical neighbors are compared separately. See the
-[special-issue positioning](docs/os_positioning_and_submission.md).
+Operate exactly one coordinator. Before explicit resume, ensure the original
+coordinator has stopped. Resume creates a new root, preserves prior attempts,
+checks unchanged code/configuration, reconstructs completed prefixes and keeps
+all prior charges. Separate concurrent coordinators must not resume the same
+budget. No API billing fallback is configured or invoked automatically.
 
 ## Evidence and rights
 
-[New raw evidence](evidence/luna-v2-bounded/) · [New provenance](evidence/luna-v2-bounded/provenance.json) · [Old raw evidence](evidence/luna-smoke/) · [Historical v1 README](docs/legacy_v1_readme.md)
+[Current targeted evidence](evidence/luna-targeted-30histories/) · [Prior 219-response diagnostic](evidence/luna-v2-bounded/) · [Earlier 342-response record](evidence/luna-smoke/) · [Historical v2 overview](docs/legacy_v2_bounded_readme.md)
 
-The run-source snapshot preserves exact package bytes; Git checkout line-ending
-normalization need not preserve those bytes. Offline replay checks semantics.
-Code is licensed under MIT within [the stated scope](NOTICE.md). Third-party
-materials, model weights/services and manuscript publication rights are separate.
-Private correspondence, credentials, recordings and unpublished attachments are
-excluded. A named development repository is not the anonymous submission link.
+The research contribution is the instrument and its demonstrated limits. A
+significant content contrast is not proof of endogenous memory formation,
+learning persistence, architecture mechanisms or human external validity.
+MIT applies within [NOTICE.md](NOTICE.md)'s scope. Private correspondence,
+unpublished manuscript attachments and credentials are excluded. This named
+development repository is not an anonymous submission link.

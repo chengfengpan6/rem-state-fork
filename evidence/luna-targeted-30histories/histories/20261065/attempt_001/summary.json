@@ -1,0 +1,365 @@
+{
+  "seed": 20261065,
+  "status": "completed",
+  "branches": {
+    "team_P": {
+      "condition": "P",
+      "profiles": [
+        {
+          "profile_id": "Y100",
+          "context": "Y",
+          "signals": {
+            "A": 1,
+            "B": 0,
+            "C": 0
+          },
+          "actor_forecasts": {
+            "A": 0.58,
+            "C": 0.67,
+            "B": 0.67
+          },
+          "probability": 0.64,
+          "oracle_probability": 0.08677685950413225,
+          "cBR": 0.3060558431801106,
+          "fork_state_hash": "84c13f22f461cb29521fe07234a8eef1469c8c208f3bde7990ee389ee40856e7",
+          "state_hash_after": "84c13f22f461cb29521fe07234a8eef1469c8c208f3bde7990ee389ee40856e7",
+          "outcome_feedback": false,
+          "writeback": false
+        },
+        {
+          "profile_id": "Y011",
+          "context": "Y",
+          "signals": {
+            "A": 0,
+            "B": 1,
+            "C": 1
+          },
+          "actor_forecasts": {
+            "A": 0.4,
+            "C": 0.67,
+            "B": 0.33
+          },
+          "probability": 0.4666666666666667,
+          "oracle_probability": 0.9132231404958678,
+          "cBR": 0.19941268431877002,
+          "fork_state_hash": "84c13f22f461cb29521fe07234a8eef1469c8c208f3bde7990ee389ee40856e7",
+          "state_hash_after": "84c13f22f461cb29521fe07234a8eef1469c8c208f3bde7990ee389ee40856e7",
+          "outcome_feedback": false,
+          "writeback": false
+        }
+      ],
+      "complete": true,
+      "mean_cBR": 0.2527342637494403
+    },
+    "team_E": {
+      "condition": "E",
+      "profiles": [
+        {
+          "profile_id": "Y100",
+          "context": "Y",
+          "signals": {
+            "A": 1,
+            "B": 0,
+            "C": 0
+          },
+          "actor_forecasts": {
+            "A": 0.11,
+            "C": 0.11,
+            "B": 0.11
+          },
+          "probability": 0.11,
+          "oracle_probability": 0.08677685950413225,
+          "cBR": 0.0005393142544908127,
+          "fork_state_hash": "289ee086cef1437ab606e8d87c670aeeb07676559b39e4a0c56772a6697b39bb",
+          "state_hash_after": "289ee086cef1437ab606e8d87c670aeeb07676559b39e4a0c56772a6697b39bb",
+          "outcome_feedback": false,
+          "writeback": false
+        },
+        {
+          "profile_id": "Y011",
+          "context": "Y",
+          "signals": {
+            "A": 0,
+            "B": 1,
+            "C": 1
+          },
+          "actor_forecasts": {
+            "A": 0.67,
+            "C": 0.67,
+            "B": 0.83
+          },
+          "probability": 0.7233333333333334,
+          "oracle_probability": 0.9132231404958678,
+          "cBR": 0.03605813886422452,
+          "fork_state_hash": "289ee086cef1437ab606e8d87c670aeeb07676559b39e4a0c56772a6697b39bb",
+          "state_hash_after": "289ee086cef1437ab606e8d87c670aeeb07676559b39e4a0c56772a6697b39bb",
+          "outcome_feedback": false,
+          "writeback": false
+        }
+      ],
+      "complete": true,
+      "mean_cBR": 0.018298726559357666
+    },
+    "team_H": {
+      "condition": "H",
+      "profiles": [
+        {
+          "profile_id": "Y100",
+          "context": "Y",
+          "signals": {
+            "A": 1,
+            "B": 0,
+            "C": 0
+          },
+          "actor_forecasts": {
+            "A": 0.15,
+            "C": 0.25,
+            "B": 0.12
+          },
+          "probability": 0.17333333333333334,
+          "oracle_probability": 0.08677685950413225,
+          "cBR": 0.007492023161745173,
+          "fork_state_hash": "8231014b8c0b94de8a0231951cc4c1cd5503d4011a2cdcbb49fad4da6130192f",
+          "state_hash_after": "8231014b8c0b94de8a0231951cc4c1cd5503d4011a2cdcbb49fad4da6130192f",
+          "outcome_feedback": false,
+          "writeback": false
+        },
+        {
+          "profile_id": "Y011",
+          "context": "Y",
+          "signals": {
+            "A": 0,
+            "B": 1,
+            "C": 1
+          },
+          "actor_forecasts": {
+            "A": 0.88,
+            "C": 0.72,
+            "B": 0.67
+          },
+          "probability": 0.7566666666666667,
+          "oracle_probability": 0.9132231404958678,
+          "cBR": 0.024509929497833337,
+          "fork_state_hash": "8231014b8c0b94de8a0231951cc4c1cd5503d4011a2cdcbb49fad4da6130192f",
+          "state_hash_after": "8231014b8c0b94de8a0231951cc4c1cd5503d4011a2cdcbb49fad4da6130192f",
+          "outcome_feedback": false,
+          "writeback": false
+        }
+      ],
+      "complete": true,
+      "mean_cBR": 0.016000976329789255
+    },
+    "team_R0": {
+      "condition": "R0",
+      "profiles": [
+        {
+          "profile_id": "Y100",
+          "context": "Y",
+          "signals": {
+            "A": 1,
+            "B": 0,
+            "C": 0
+          },
+          "actor_forecasts": {
+            "A": 0.5,
+            "C": 0.4,
+            "B": 0.4
+          },
+          "probability": 0.43333333333333335,
+          "oracle_probability": 0.08677685950413225,
+          "cBR": 0.12010138955292973,
+          "fork_state_hash": "a0eddd9bb21423148ee250f2875e5f237675333cedef72fb2dc0488b0fd6464a",
+          "state_hash_after": "a0eddd9bb21423148ee250f2875e5f237675333cedef72fb2dc0488b0fd6464a",
+          "outcome_feedback": false,
+          "writeback": false
+        },
+        {
+          "profile_id": "Y011",
+          "context": "Y",
+          "signals": {
+            "A": 0,
+            "B": 1,
+            "C": 1
+          },
+          "actor_forecasts": {
+            "A": 0.55,
+            "C": 0.62,
+            "B": 0.5
+          },
+          "probability": 0.5566666666666666,
+          "oracle_probability": 0.9132231404958678,
+          "cBR": 0.12713251902951384,
+          "fork_state_hash": "a0eddd9bb21423148ee250f2875e5f237675333cedef72fb2dc0488b0fd6464a",
+          "state_hash_after": "a0eddd9bb21423148ee250f2875e5f237675333cedef72fb2dc0488b0fd6464a",
+          "outcome_feedback": false,
+          "writeback": false
+        }
+      ],
+      "complete": true,
+      "mean_cBR": 0.12361695429122178
+    },
+    "team_R0rep": {
+      "condition": "R0",
+      "profiles": [
+        {
+          "profile_id": "Y100",
+          "context": "Y",
+          "signals": {
+            "A": 1,
+            "B": 0,
+            "C": 0
+          },
+          "actor_forecasts": {
+            "A": 0.5,
+            "C": 0.5,
+            "B": 0.45
+          },
+          "probability": 0.48333333333333334,
+          "oracle_probability": 0.08677685950413225,
+          "cBR": 0.15725703693584986,
+          "fork_state_hash": "a0eddd9bb21423148ee250f2875e5f237675333cedef72fb2dc0488b0fd6464a",
+          "state_hash_after": "a0eddd9bb21423148ee250f2875e5f237675333cedef72fb2dc0488b0fd6464a",
+          "outcome_feedback": false,
+          "writeback": false
+        },
+        {
+          "profile_id": "Y011",
+          "context": "Y",
+          "signals": {
+            "A": 0,
+            "B": 1,
+            "C": 1
+          },
+          "actor_forecasts": {
+            "A": 0.65,
+            "C": 0.7,
+            "B": 0.7
+          },
+          "probability": 0.6833333333333333,
+          "oracle_probability": 0.9132231404958678,
+          "cBR": 0.05284932343722729,
+          "fork_state_hash": "a0eddd9bb21423148ee250f2875e5f237675333cedef72fb2dc0488b0fd6464a",
+          "state_hash_after": "a0eddd9bb21423148ee250f2875e5f237675333cedef72fb2dc0488b0fd6464a",
+          "outcome_feedback": false,
+          "writeback": false
+        }
+      ],
+      "complete": true,
+      "mean_cBR": 0.10505318018653857
+    }
+  },
+  "expected_calls": 120,
+  "history_metrics": {
+    "M": -0.2962962962962963,
+    "M_exact": {
+      "numerator": -8,
+      "denominator": 27
+    },
+    "strict_reversal_count": 0,
+    "worst_pair_concordance": 0.0,
+    "pairs": [
+      {
+        "context": "X",
+        "source_a": "A",
+        "source_b": "B",
+        "true_order_probability": 0.8333333333333334,
+        "strict_reversal": false,
+        "signed_concordance": 0.6666666666666666
+      },
+      {
+        "context": "X",
+        "source_a": "A",
+        "source_b": "C",
+        "true_order_probability": 0.8333333333333334,
+        "strict_reversal": false,
+        "signed_concordance": 0.6666666666666666
+      },
+      {
+        "context": "X",
+        "source_a": "B",
+        "source_b": "C",
+        "true_order_probability": 0.5,
+        "strict_reversal": false,
+        "signed_concordance": 0.0
+      },
+      {
+        "context": "Y",
+        "source_a": "A",
+        "source_b": "B",
+        "true_order_probability": 0.8333333333333334,
+        "strict_reversal": false,
+        "signed_concordance": 0.6666666666666666
+      },
+      {
+        "context": "Y",
+        "source_a": "A",
+        "source_b": "C",
+        "true_order_probability": 0.8333333333333334,
+        "strict_reversal": false,
+        "signed_concordance": 0.6666666666666666
+      },
+      {
+        "context": "Y",
+        "source_a": "B",
+        "source_b": "C",
+        "true_order_probability": 0.5,
+        "strict_reversal": false,
+        "signed_concordance": 0.0
+      },
+      {
+        "context": "Z",
+        "source_a": "A",
+        "source_b": "B",
+        "true_order_probability": 0.5,
+        "strict_reversal": false,
+        "signed_concordance": 0.0
+      },
+      {
+        "context": "Z",
+        "source_a": "A",
+        "source_b": "C",
+        "true_order_probability": 0.5,
+        "strict_reversal": false,
+        "signed_concordance": 0.0
+      },
+      {
+        "context": "Z",
+        "source_a": "B",
+        "source_b": "C",
+        "true_order_probability": 0.5,
+        "strict_reversal": false,
+        "signed_concordance": 0.0
+      }
+    ]
+  },
+  "planted_map_diagnostics": {
+    "precision_decimals": 2,
+    "rendered_changed_cells": [
+      "Y:A",
+      "Y:B"
+    ],
+    "rendered_nonzero": true,
+    "rendered_E_mse": 0.0319,
+    "rendered_P_mse": 0.05834444444444444,
+    "rendered_mse_increase": 0.026444444444444444,
+    "rendered_mse_strictly_increased": true,
+    "mse_increase_exact": {
+      "numerator": 119,
+      "denominator": 4500
+    },
+    "interpretation": "Map manipulation check only; no forecast-effect sign is guaranteed."
+  },
+  "error": null,
+  "calls_attempted": 120,
+  "replayed_calls": 0,
+  "physical_dispatches_this_execution": 120,
+  "attempts_by_branch": {
+    "formation": 30,
+    "team_H": 18,
+    "team_E": 18,
+    "team_R0rep": 18,
+    "team_P": 18,
+    "team_R0": 18
+  },
+  "served_model_ids": []
+}

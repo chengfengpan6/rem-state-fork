@@ -1,0 +1,46 @@
+{
+  "frozen_utc": "2026-10-25T22:40:21.515069+00:00",
+  "operational_code_commit": "358b4eb7f4796437d19de3640ab2f04fac620c2a",
+  "public_fixed_source": "https://github.com/chengfengpan6/rem-state-fork/tree/358b4eb7f4796437d19de3640ab2f04fac620c2a",
+  "live_model_calls_before_freeze_in_this_diagnostic": 0,
+  "config_hash": "4c3cf95715e100156417a7a90d0ece114b415a0d091e8d0bdc2c9d7bef02674e",
+  "source_files_sha256": {
+    "rem_harness/__init__.py": "00e81c67308e9df394b81781ba83fb2cbfafbeac3cd7e4cb698bb0e8bdf771e7",
+    "rem_harness/__main__.py": "3b7cc4f3d71ad94ca591185870ff128ec2eb5e8c1287d88c8ca5f53969c40458",
+    "rem_harness/data.py": "e0189d7842927259eec9d66b7851d3e3e80f0cf4e583c803480c72adf814f69c",
+    "rem_harness/engine.py": "63b222fc4a843b530457091967681f48f3213ee43e40c2fb37becafe8cc5e71d",
+    "rem_harness/models.py": "d2e5da77cd2ad31f8cdd36ba3897ef1c8839f3efc657b04e87fbc1639bd2e051",
+    "rem_harness/providers.py": "f604973f1c9e224f9764b9b3f27bcd7eba900f215f87d14ba472ac18c798583b",
+    "rem_harness/schemas.py": "e33115e940e9dab70d3b12d7c98a819955fa8bfff5074c3754018b81e6500b76",
+    "rem_harness/targeted.py": "67544e5f6fb54b75a8708375d37d94c2aa36ace82e5c56a710841d3297f0e79b",
+    "tools/run_targeted.py": "e5657e1fcc7d8954eddff51fa3099daa67d071ee19370fad43fcf1e7141157b4",
+    "tools/prepare_targeted_histories.py": "217de9994db4c29c596b2b0a50001b668795a2ed1110b10596f4b9742802fc8b",
+    "configs/targeted_30histories.json": "b26f5474a5d6f83e390964bdc6f5ba9f57a3ab80cff01c18b9a856ca110690b1",
+    "docs/targeted_protocol_2026-10-25.md": "71c3e0c63f591aaaa60ee02f9ea96d329d7c0bd468b532966ffef96d3b255319",
+    "docs/targeted_analysis_plan_2026-10-25.md": "84d2924fec598a8db2ddbb28d6edcb7159cfe5222da3260e5fc281a64373d80a",
+    "requirements-lock.txt": "b3909aa3060137178e6ae8e9c5175049afa8f090cb5e0e27cac6e71af7c3de8c"
+  },
+  "requested_model": "gpt-5.6-luna",
+  "reasoning_effort": "low",
+  "transport": "official Codex CLI; existing ChatGPT login",
+  "codex_executable_sha256": "e98c516f1c8935789aabe9122ee7e05ec4c3efd1ba6acf179242e031c495b99e",
+  "codex_cli_version": "codex-cli 0.162.0-alpha.17.2",
+  "python": "3.12.4 | packaged by Anaconda, Inc. | (main, Jun 18 2024, 15:03:56) [MSC v.1929 64 bit (AMD64)]",
+  "packages": {
+    "numpy": "2.4.6",
+    "scipy": "1.15.3",
+    "jsonschema": "4.25.1"
+  },
+  "planned_histories": 30,
+  "expected_successful_calls": 3600,
+  "cumulative_reservation_cap": 3660,
+  "maximum_concurrent_histories": 2,
+  "preflight_tests": {
+    "passed": 114,
+    "failed": 0,
+    "log_sha256": "34edd059ce113189f6b8bad2d667f05122031b3ecb32c7aab5ee66f53e979b99"
+  },
+  "operational_rule": "Exactly one coordinator; verify old coordinator stopped before any explicit resume. No automatic retry or outcome-dependent replacement.",
+  "line_ending_note": "This snapshot preserves exact execution bytes. Git checkout normalization can alter text byte hashes without altering executable semantics.",
+  "external_preregistration": false
+}

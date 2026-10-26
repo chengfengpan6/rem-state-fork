@@ -1,0 +1,5726 @@
+{
+  "analysis_version": "targeted-analysis-1",
+  "protocol_version": "rem-prototype-0.2-targeted-Y-v1",
+  "status": "terminal_complete_study",
+  "recorded_execution_status": "completed",
+  "planned_n": 30,
+  "completed_history_count": 30,
+  "statistical_unit": "formation_history_fork_family_equal_profile_weight",
+  "primary_contrast": "P_minus_E",
+  "primary": {
+    "n": 30,
+    "mean": 0.2100286975818794,
+    "sd": 0.08437114602209037,
+    "median": 0.2089260789715335,
+    "min": 0.02936455463728195,
+    "max": 0.38917929292929293,
+    "q25": 0.15530445362718093,
+    "q75": 0.25010580808080807,
+    "positive": 30,
+    "negative": 0,
+    "exact_zero": 0,
+    "mean_absolute": 0.2100286975818794,
+    "root_mean_square": 0.22581687509938686,
+    "method": "two_sided_one_sample_t_on_history_differences",
+    "alpha": 0.05,
+    "confidence_level": 0.95,
+    "df": 29,
+    "se": 0.015403993292953718,
+    "t": 13.634691575589901,
+    "p_two_sided": 3.8328080523348813e-14,
+    "ci95": [
+      0.1785239938919171,
+      0.2415334012718417
+    ],
+    "reject_zero_at_05": true,
+    "inference_status": "calculated_under_history_sampling_assumptions",
+    "complete_history_ids": [
+      "20261029",
+      "20261030",
+      "20261035",
+      "20261039",
+      "20261040",
+      "20261044",
+      "20261047",
+      "20261051",
+      "20261053",
+      "20261054",
+      "20261056",
+      "20261057",
+      "20261061",
+      "20261062",
+      "20261065",
+      "20261066",
+      "20261070",
+      "20261074",
+      "20261076",
+      "20261077",
+      "20261080",
+      "20261084",
+      "20261088",
+      "20261091",
+      "20261092",
+      "20261093",
+      "20261094",
+      "20261098",
+      "20261100",
+      "20261101"
+    ],
+    "missing_history_ids": [],
+    "all_planned_missing_bounds": {
+      "planned_n": 30,
+      "complete_n": 30,
+      "missing_n": 0,
+      "lower": 0.2100286975818794,
+      "upper": 0.2100286975818794,
+      "assumed_missing_contrast_range": [
+        -1,
+        1
+      ],
+      "interpretation": "logical_all_planned_history_mean_bounds_not_confidence_interval"
+    }
+  },
+  "primary_bootstrap_sensitivity": {
+    "method": "history_percentile_bootstrap",
+    "confidence_level": 0.95,
+    "resamples": 10000,
+    "rng": "numpy.PCG64",
+    "seed": 20261025,
+    "quantile_method": "linear",
+    "ci95": [
+      0.18027339359504133,
+      0.23987733168809303
+    ],
+    "role": "prespecified_sensitivity_not_second_primary_test",
+    "status": "calculated",
+    "disagrees_with_t_interval_on_zero_inclusion": false
+  },
+  "primary_leave_one_out": {
+    "minimum": {
+      "omitted_history": "20261074",
+      "mean": 0.2038510908457617
+    },
+    "maximum": {
+      "omitted_history": "20261051",
+      "mean": 0.21625849561445173
+    },
+    "all": [
+      {
+        "omitted_history": "20261029",
+        "mean": 0.21211966055539722
+      },
+      {
+        "omitted_history": "20261030",
+        "mean": 0.20878070200436974
+      },
+      {
+        "omitted_history": "20261035",
+        "mean": 0.20675916848738166
+      },
+      {
+        "omitted_history": "20261039",
+        "mean": 0.20667181216554256
+      },
+      {
+        "omitted_history": "20261040",
+        "mean": 0.2121297995630284
+      },
+      {
+        "omitted_history": "20261044",
+        "mean": 0.20950218010829297
+      },
+      {
+        "omitted_history": "20261047",
+        "mean": 0.2120594012222539
+      },
+      {
+        "omitted_history": "20261051",
+        "mean": 0.21625849561445173
+      },
+      {
+        "omitted_history": "20261053",
+        "mean": 0.21154690795098316
+      },
+      {
+        "omitted_history": "20261054",
+        "mean": 0.20887600139324275
+      },
+      {
+        "omitted_history": "20261056",
+        "mean": 0.2090188056109686
+      },
+      {
+        "omitted_history": "20261057",
+        "mean": 0.21459897881637693
+      },
+      {
+        "omitted_history": "20261061",
+        "mean": 0.20865515658148887
+      },
+      {
+        "omitted_history": "20261062",
+        "mean": 0.20630769924954878
+      },
+      {
+        "omitted_history": "20261065",
+        "mean": 0.20918708242297582
+      },
+      {
+        "omitted_history": "20261066",
+        "mean": 0.21118777587790127
+      },
+      {
+        "omitted_history": "20261070",
+        "mean": 0.21134119248915487
+      },
+      {
+        "omitted_history": "20261074",
+        "mean": 0.2038510908457617
+      },
+      {
+        "omitted_history": "20261076",
+        "mean": 0.2112474256673316
+      },
+      {
+        "omitted_history": "20261077",
+        "mean": 0.20666181406541909
+      },
+      {
+        "omitted_history": "20261080",
+        "mean": 0.20933410911624079
+      },
+      {
+        "omitted_history": "20261084",
+        "mean": 0.21063125771824834
+      },
+      {
+        "omitted_history": "20261088",
+        "mean": 0.21503524587568476
+      },
+      {
+        "omitted_history": "20261091",
+        "mean": 0.21203868465216427
+      },
+      {
+        "omitted_history": "20261092",
+        "mean": 0.20586337038092523
+      },
+      {
+        "omitted_history": "20261093",
+        "mean": 0.21355632025585003
+      },
+      {
+        "omitted_history": "20261094",
+        "mean": 0.20685704537538394
+      },
+      {
+        "omitted_history": "20261098",
+        "mean": 0.2111897691650043
+      },
+      {
+        "omitted_history": "20261100",
+        "mean": 0.20864391881194388
+      },
+      {
+        "omitted_history": "20261101",
+        "mean": 0.2109500554130648
+      }
+    ],
+    "role": "description_only_no_observations_removed"
+  },
+  "exploratory_secondary_family": {
+    "H_minus_E": {
+      "n": 30,
+      "mean": -0.0002539461585552428,
+      "sd": 0.029198332051161225,
+      "median": -0.00227741046831957,
+      "min": -0.04825206611570246,
+      "max": 0.08076023875114782,
+      "q25": -0.020163556014692396,
+      "q75": 0.01973950872359967,
+      "positive": 13,
+      "negative": 17,
+      "exact_zero": 0,
+      "mean_absolute": 0.023053503091521276,
+      "root_mean_square": 0.028708692006701588,
+      "method": "two_sided_one_sample_t_on_history_differences",
+      "alpha": 0.05,
+      "confidence_level": 0.95,
+      "df": 29,
+      "se": 0.005330861701982363,
+      "t": -0.047636981177134836,
+      "p_two_sided": 0.9623321157905113,
+      "ci95": [
+        -0.011156782529559563,
+        0.010648890212449077
+      ],
+      "reject_zero_at_05": false,
+      "inference_status": "calculated_under_history_sampling_assumptions",
+      "complete_history_ids": [
+        "20261029",
+        "20261030",
+        "20261035",
+        "20261039",
+        "20261040",
+        "20261044",
+        "20261047",
+        "20261051",
+        "20261053",
+        "20261054",
+        "20261056",
+        "20261057",
+        "20261061",
+        "20261062",
+        "20261065",
+        "20261066",
+        "20261070",
+        "20261074",
+        "20261076",
+        "20261077",
+        "20261080",
+        "20261084",
+        "20261088",
+        "20261091",
+        "20261092",
+        "20261093",
+        "20261094",
+        "20261098",
+        "20261100",
+        "20261101"
+      ],
+      "missing_history_ids": [],
+      "all_planned_missing_bounds": {
+        "planned_n": 30,
+        "complete_n": 30,
+        "missing_n": 0,
+        "lower": -0.0002539461585552428,
+        "upper": -0.0002539461585552428,
+        "assumed_missing_contrast_range": [
+          -1,
+          1
+        ],
+        "interpretation": "logical_all_planned_history_mean_bounds_not_confidence_interval"
+      },
+      "ci_scope": "marginal_95_percent_not_simultaneous",
+      "holm_adjusted_p_two_member_family": 0.9623321157905113,
+      "reject_holm_at_05": false
+    },
+    "H_minus_R0": {
+      "n": 30,
+      "mean": -0.05509227643097643,
+      "sd": 0.044014339259998085,
+      "median": -0.05590394857667587,
+      "min": -0.1266299357208448,
+      "max": 0.04093719008264468,
+      "q25": -0.09237025941230485,
+      "q75": -0.028400149219467426,
+      "positive": 4,
+      "negative": 26,
+      "exact_zero": 0,
+      "mean_absolute": 0.060015848515457604,
+      "root_mean_square": 0.07005601744907325,
+      "method": "two_sided_one_sample_t_on_history_differences",
+      "alpha": 0.05,
+      "confidence_level": 0.95,
+      "df": 29,
+      "se": 0.008035882155462064,
+      "t": -6.855784513157612,
+      "p_two_sided": 1.5700128221438783e-07,
+      "ci95": [
+        -0.07152750081601268,
+        -0.03865705204594018
+      ],
+      "reject_zero_at_05": true,
+      "inference_status": "calculated_under_history_sampling_assumptions",
+      "complete_history_ids": [
+        "20261029",
+        "20261030",
+        "20261035",
+        "20261039",
+        "20261040",
+        "20261044",
+        "20261047",
+        "20261051",
+        "20261053",
+        "20261054",
+        "20261056",
+        "20261057",
+        "20261061",
+        "20261062",
+        "20261065",
+        "20261066",
+        "20261070",
+        "20261074",
+        "20261076",
+        "20261077",
+        "20261080",
+        "20261084",
+        "20261088",
+        "20261091",
+        "20261092",
+        "20261093",
+        "20261094",
+        "20261098",
+        "20261100",
+        "20261101"
+      ],
+      "missing_history_ids": [],
+      "all_planned_missing_bounds": {
+        "planned_n": 30,
+        "complete_n": 30,
+        "missing_n": 0,
+        "lower": -0.05509227643097643,
+        "upper": -0.05509227643097643,
+        "assumed_missing_contrast_range": [
+          -1,
+          1
+        ],
+        "interpretation": "logical_all_planned_history_mean_bounds_not_confidence_interval"
+      },
+      "ci_scope": "marginal_95_percent_not_simultaneous",
+      "holm_adjusted_p_two_member_family": 3.1400256442877566e-07,
+      "reject_holm_at_05": true
+    }
+  },
+  "aa_repeatability_descriptive": {
+    "history_cBR_difference": {
+      "n": 30,
+      "mean": -0.014772260958065503,
+      "sd": 0.030945204838913064,
+      "median": -0.014628191000918285,
+      "min": -0.10081799816345272,
+      "max": 0.04091570247933888,
+      "q25": -0.027913223140495828,
+      "q75": 0.0035066804407713394,
+      "positive": 10,
+      "negative": 20,
+      "exact_zero": 0,
+      "mean_absolute": 0.026154421962044695,
+      "root_mean_square": 0.03382166770358018
+    },
+    "history_mean_absolute_profile_forecast_difference": {
+      "n": 30,
+      "mean": 0.05442777777777778,
+      "sd": 0.0317873587290305,
+      "median": 0.04916666666666666,
+      "min": 0.009999999999999953,
+      "max": 0.1333333333333333,
+      "q25": 0.03333333333333334,
+      "q75": 0.07375000000000001,
+      "positive": 30,
+      "negative": 0,
+      "exact_zero": 0,
+      "mean_absolute": 0.05442777777777778,
+      "root_mean_square": 0.06276255223429783
+    },
+    "complete_history_ids": [
+      "20261029",
+      "20261030",
+      "20261035",
+      "20261039",
+      "20261040",
+      "20261044",
+      "20261047",
+      "20261051",
+      "20261053",
+      "20261054",
+      "20261056",
+      "20261057",
+      "20261061",
+      "20261062",
+      "20261065",
+      "20261066",
+      "20261070",
+      "20261074",
+      "20261076",
+      "20261077",
+      "20261080",
+      "20261084",
+      "20261088",
+      "20261091",
+      "20261092",
+      "20261093",
+      "20261094",
+      "20261098",
+      "20261100",
+      "20261101"
+    ],
+    "all_planned_missing_bounds": {
+      "planned_n": 30,
+      "complete_n": 30,
+      "missing_n": 0,
+      "lower": -0.014772260958065503,
+      "upper": -0.014772260958065503,
+      "assumed_missing_contrast_range": [
+        -1,
+        1
+      ],
+      "interpretation": "logical_all_planned_history_mean_bounds_not_confidence_interval"
+    },
+    "p_value": null,
+    "equivalence_test_performed": false,
+    "scope": "Repeat discrepancy includes sampling, order and drift; not a pure noise floor."
+  },
+  "aligned_shift_descriptive": {
+    "n": 30,
+    "mean": 0.29916666666666664,
+    "sd": 0.10726908729043333,
+    "median": 0.32333333333333336,
+    "min": 0.06000000000000005,
+    "max": 0.5250000000000001,
+    "q25": 0.22999999999999998,
+    "q75": 0.35416666666666674,
+    "positive": 30,
+    "negative": 0,
+    "exact_zero": 0,
+    "mean_absolute": 0.29916666666666664,
+    "root_mean_square": 0.3172125412027341,
+    "complete_history_ids": [
+      "20261029",
+      "20261030",
+      "20261035",
+      "20261039",
+      "20261040",
+      "20261044",
+      "20261047",
+      "20261051",
+      "20261053",
+      "20261054",
+      "20261056",
+      "20261057",
+      "20261061",
+      "20261062",
+      "20261065",
+      "20261066",
+      "20261070",
+      "20261074",
+      "20261076",
+      "20261077",
+      "20261080",
+      "20261084",
+      "20261088",
+      "20261091",
+      "20261092",
+      "20261093",
+      "20261094",
+      "20261098",
+      "20261100",
+      "20261101"
+    ],
+    "p_value": null,
+    "scope": "Direction implied by displayed-map plug-in predictions, not inferred model beliefs."
+  },
+  "histories": [
+    {
+      "seed": "20261029",
+      "status": "completed",
+      "error": null,
+      "arms": {
+        "P": {
+          "Y100": {
+            "probability": 0.48333333333333334,
+            "oracle_probability": 0.08677685950413225,
+            "cBR": 0.15725703693584986,
+            "actor_forecasts": {
+              "A": 0.62,
+              "C": 0.5,
+              "B": 0.33
+            }
+          },
+          "Y011": {
+            "probability": 0.3866666666666667,
+            "oracle_probability": 0.9132231404958678,
+            "cBR": 0.2772617201314422,
+            "actor_forecasts": {
+              "A": 0.5,
+              "C": 0.33,
+              "B": 0.33
+            }
+          }
+        },
+        "E": {
+          "Y100": {
+            "probability": 0.42333333333333334,
+            "oracle_probability": 0.08677685950413225,
+            "cBR": 0.1132702600763457,
+            "actor_forecasts": {
+              "A": 0.2,
+              "C": 0.67,
+              "B": 0.4
+            }
+          },
+          "Y011": {
+            "probability": 0.7633333333333333,
+            "oracle_probability": 0.9132231404958678,
+            "cBR": 0.022466954291221787,
+            "actor_forecasts": {
+              "A": 0.84,
+              "C": 0.67,
+              "B": 0.78
+            }
+          }
+        },
+        "H": {
+          "Y100": {
+            "probability": 0.15333333333333332,
+            "oracle_probability": 0.08677685950413225,
+            "cBR": 0.004429764208577127,
+            "actor_forecasts": {
+              "A": 0.16,
+              "C": 0.18,
+              "B": 0.12
+            }
+          },
+          "Y011": {
+            "probability": 0.7266666666666666,
+            "oracle_probability": 0.9132231404958678,
+            "cBR": 0.03480331792758545,
+            "actor_forecasts": {
+              "A": 0.78,
+              "C": 0.7,
+              "B": 0.7
+            }
+          }
+        },
+        "R0": {
+          "Y100": {
+            "probability": 0.47000000000000003,
+            "oracle_probability": 0.08677685950413225,
+            "cBR": 0.14685997541151563,
+            "actor_forecasts": {
+              "A": 0.78,
+              "C": 0.38,
+              "B": 0.25
+            }
+          },
+          "Y011": {
+            "probability": 0.82,
+            "oracle_probability": 0.9132231404958678,
+            "cBR": 0.008690553923912322,
+            "actor_forecasts": {
+              "A": 0.82,
+              "C": 0.78,
+              "B": 0.86
+            }
+          }
+        },
+        "R0rep": {
+          "Y100": {
+            "probability": 0.3066666666666667,
+            "oracle_probability": 0.08677685950413225,
+            "cBR": 0.048351527293976584,
+            "actor_forecasts": {
+              "A": 0.22,
+              "C": 0.4,
+              "B": 0.3
+            }
+          },
+          "Y011": {
+            "probability": 0.7166666666666667,
+            "oracle_probability": 0.9132231404958678,
+            "cBR": 0.03863444740416944,
+            "actor_forecasts": {
+              "A": 0.65,
+              "C": 0.78,
+              "B": 0.72
+            }
+          }
+        }
+      },
+      "contrasts": {
+        "P_minus_E": {
+          "mean": 0.14939077134986226,
+          "by_profile": {
+            "Y100": 0.043986776859504154,
+            "Y011": 0.25479476584022037
+          }
+        },
+        "H_minus_E": {
+          "mean": -0.04825206611570246,
+          "by_profile": {
+            "Y100": -0.10884049586776857,
+            "Y011": 0.012336363636363666
+          }
+        },
+        "H_minus_R0": {
+          "mean": -0.058158723599632686,
+          "by_profile": {
+            "Y100": -0.1424302112029385,
+            "Y011": 0.02611276400367313
+          }
+        },
+        "R0rep_minus_R0": {
+          "mean": -0.03428227731864096,
+          "by_profile": {
+            "Y100": -0.09850844811753905,
+            "Y011": 0.02994389348025712
+          }
+        }
+      },
+      "aligned_shift": {
+        "mean": 0.2183333333333333,
+        "profiles": [
+          {
+            "profile_id": "Y100",
+            "ideal_E": 0.10673299673299673,
+            "ideal_P": 0.6699999999999999,
+            "ideal_change": 0.5632670032670032,
+            "direction": 1,
+            "actual_change": 0.06,
+            "aligned_change": 0.06
+          },
+          {
+            "profile_id": "Y011",
+            "ideal_E": 0.8932670032670033,
+            "ideal_P": 0.33000000000000007,
+            "ideal_change": -0.5632670032670032,
+            "direction": -1,
+            "actual_change": -0.3766666666666666,
+            "aligned_change": 0.3766666666666666
+          }
+        ],
+        "zero_direction_profiles": 0
+      },
+      "aa_mean_absolute_profile_forecast_difference": 0.1333333333333333
+    },
+    {
+      "seed": "20261030",
+      "status": "completed",
+      "error": null,
+      "arms": {
+        "P": {
+          "Y100": {
+            "probability": 0.7266666666666667,
+            "oracle_probability": 0.08677685950413225,
+            "cBR": 0.40945896531050546,
+            "actor_forecasts": {
+              "B": 0.78,
+              "A": 0.62,
+              "C": 0.78
+            }
+          },
+          "Y011": {
+            "probability": 0.4833333333333334,
+            "oracle_probability": 0.9132231404958678,
+            "cBR": 0.18480524630224104,
+            "actor_forecasts": {
+              "B": 0.67,
+              "A": 0.38,
+              "C": 0.4
+            }
+          }
+        },
+        "E": {
+          "Y100": {
+            "probability": 0.33,
+            "oracle_probability": 0.08677685950413225,
+            "cBR": 0.05915749607267263,
+            "actor_forecasts": {
+              "B": 0.33,
+              "A": 0.33,
+              "C": 0.33
+            }
+          },
+          "Y011": {
+            "probability": 0.7066666666666667,
+            "oracle_probability": 0.9132231404958678,
+            "cBR": 0.04266557688075347,
+            "actor_forecasts": {
+              "B": 0.67,
+              "A": 0.7,
+              "C": 0.75
+            }
+          }
+        },
+        "H": {
+          "Y100": {
+            "probability": 0.3499999999999999,
+            "oracle_probability": 0.08677685950413225,
+            "cBR": 0.0692864216925073,
+            "actor_forecasts": {
+              "B": 0.35,
+              "A": 0.35,
+              "C": 0.35
+            }
+          },
+          "Y011": {
+            "probability": 0.6066666666666666,
+            "oracle_probability": 0.9132231404958678,
+            "cBR": 0.09397687164659375,
+            "actor_forecasts": {
+              "B": 0.65,
+              "A": 0.57,
+              "C": 0.6
+            }
+          }
+        },
+        "R0": {
+          "Y100": {
+            "probability": 0.27999999999999997,
+            "oracle_probability": 0.08677685950413225,
+            "cBR": 0.03733518202308584,
+            "actor_forecasts": {
+              "B": 0.3,
+              "A": 0.18,
+              "C": 0.36
+            }
+          },
+          "Y011": {
+            "probability": 0.7033333333333335,
+            "oracle_probability": 0.9132231404958678,
+            "cBR": 0.04405373115072586,
+            "actor_forecasts": {
+              "B": 0.75,
+              "A": 0.68,
+              "C": 0.68
+            }
+          }
+        },
+        "R0rep": {
+          "Y100": {
+            "probability": 0.4166666666666667,
+            "oracle_probability": 0.08677685950413225,
+            "cBR": 0.10882728486973417,
+            "actor_forecasts": {
+              "B": 0.45,
+              "A": 0.4,
+              "C": 0.4
+            }
+          },
+          "Y011": {
+            "probability": 0.68,
+            "oracle_probability": 0.9132231404958678,
+            "cBR": 0.05439303326275528,
+            "actor_forecasts": {
+              "B": 0.65,
+              "A": 0.64,
+              "C": 0.75
+            }
+          }
+        }
+      },
+      "contrasts": {
+        "P_minus_E": {
+          "mean": 0.24622056932966022,
+          "by_profile": {
+            "Y100": 0.35030146923783284,
+            "Y011": 0.1421396694214876
+          }
+        },
+        "H_minus_E": {
+          "mean": 0.03072011019283748,
+          "by_profile": {
+            "Y100": 0.010128925619834674,
+            "Y011": 0.05131129476584029
+          }
+        },
+        "H_minus_R0": {
+          "mean": 0.04093719008264468,
+          "by_profile": {
+            "Y100": 0.03195123966942146,
+            "Y011": 0.04992314049586789
+          }
+        },
+        "R0rep_minus_R0": {
+          "mean": 0.04091570247933888,
+          "by_profile": {
+            "Y100": 0.07149210284664834,
+            "Y011": 0.010339302112029422
+          }
+        }
+      },
+      "aligned_shift": {
+        "mean": 0.30999999999999994,
+        "profiles": [
+          {
+            "profile_id": "Y100",
+            "ideal_E": 0.33,
+            "ideal_P": 0.8932670032670033,
+            "ideal_change": 0.5632670032670033,
+            "direction": 1,
+            "actual_change": 0.39666666666666667,
+            "aligned_change": 0.39666666666666667
+          },
+          {
+            "profile_id": "Y011",
+            "ideal_E": 0.67,
+            "ideal_P": 0.10673299673299676,
+            "ideal_change": -0.5632670032670033,
+            "direction": -1,
+            "actual_change": -0.22333333333333327,
+            "aligned_change": 0.22333333333333327
+          }
+        ],
+        "zero_direction_profiles": 0
+      },
+      "aa_mean_absolute_profile_forecast_difference": 0.08000000000000007
+    },
+    {
+      "seed": "20261035",
+      "status": "completed",
+      "error": null,
+      "arms": {
+        "P": {
+          "Y100": {
+            "probability": 0.7200000000000001,
+            "oracle_probability": 0.08677685950413225,
+            "cBR": 0.40097154565944954,
+            "actor_forecasts": {
+              "A": 0.72,
+              "C": 0.82,
+              "B": 0.62
+            }
+          },
+          "Y011": {
+            "probability": 0.2833333333333333,
+            "oracle_probability": 0.9132231404958678,
+            "cBR": 0.3967611691672549,
+            "actor_forecasts": {
+              "A": 0.22,
+              "C": 0.3,
+              "B": 0.33
+            }
+          }
+        },
+        "E": {
+          "Y100": {
+            "probability": 0.3866666666666667,
+            "oracle_probability": 0.08677685950413225,
+            "cBR": 0.08993389643998209,
+            "actor_forecasts": {
+              "A": 0.33,
+              "C": 0.33,
+              "B": 0.5
+            }
+          },
+          "Y011": {
+            "probability": 0.6,
+            "oracle_probability": 0.9132231404958678,
+            "cBR": 0.09810873574209418,
+            "actor_forecasts": {
+              "A": 0.67,
+              "C": 0.58,
+              "B": 0.55
+            }
+          }
+        },
+        "H": {
+          "Y100": {
+            "probability": 0.4000000000000001,
+            "oracle_probability": 0.08677685950413225,
+            "cBR": 0.09810873574209418,
+            "actor_forecasts": {
+              "A": 0.4,
+              "C": 0.4,
+              "B": 0.4
+            }
+          },
+          "Y011": {
+            "probability": 0.5499999999999999,
+            "oracle_probability": 0.9132231404958678,
+            "cBR": 0.131931049791681,
+            "actor_forecasts": {
+              "A": 0.5,
+              "C": 0.55,
+              "B": 0.6
+            }
+          }
+        },
+        "R0": {
+          "Y100": {
+            "probability": 0.37666666666666665,
+            "oracle_probability": 0.08677685950413225,
+            "cBR": 0.08403610029673139,
+            "actor_forecasts": {
+              "A": 0.4,
+              "C": 0.38,
+              "B": 0.35
+            }
+          },
+          "Y011": {
+            "probability": 0.5333333333333333,
+            "oracle_probability": 0.9132231404958678,
+            "cBR": 0.14431626558598765,
+            "actor_forecasts": {
+              "A": 0.55,
+              "C": 0.5,
+              "B": 0.55
+            }
+          }
+        },
+        "R0rep": {
+          "Y100": {
+            "probability": 0.4000000000000001,
+            "oracle_probability": 0.08677685950413225,
+            "cBR": 0.09810873574209418,
+            "actor_forecasts": {
+              "A": 0.4,
+              "C": 0.4,
+              "B": 0.4
+            }
+          },
+          "Y011": {
+            "probability": 0.5066666666666667,
+            "oracle_probability": 0.9132231404958678,
+            "cBR": 0.1652881664124339,
+            "actor_forecasts": {
+              "A": 0.52,
+              "C": 0.5,
+              "B": 0.5
+            }
+          }
+        }
+      },
+      "contrasts": {
+        "P_minus_E": {
+          "mean": 0.30484504132231405,
+          "by_profile": {
+            "Y100": 0.3110376492194674,
+            "Y011": 0.29865243342516073
+          }
+        },
+        "H_minus_E": {
+          "mean": 0.02099857667584945,
+          "by_profile": {
+            "Y100": 0.008174839302112089,
+            "Y011": 0.03382231404958681
+          }
+        },
+        "H_minus_R0": {
+          "mean": 0.0008437098255280676,
+          "by_profile": {
+            "Y100": 0.014072635445362788,
+            "Y011": -0.012385215794306653
+          }
+        },
+        "R0rep_minus_R0": {
+          "mean": 0.017522268135904524,
+          "by_profile": {
+            "Y100": 0.014072635445362788,
+            "Y011": 0.02097190082644626
+          }
+        }
+      },
+      "aligned_shift": {
+        "mean": 0.325,
+        "profiles": [
+          {
+            "profile_id": "Y100",
+            "ideal_E": 0.33,
+            "ideal_P": 0.8932670032670033,
+            "ideal_change": 0.5632670032670033,
+            "direction": 1,
+            "actual_change": 0.33333333333333337,
+            "aligned_change": 0.33333333333333337
+          },
+          {
+            "profile_id": "Y011",
+            "ideal_E": 0.67,
+            "ideal_P": 0.10673299673299676,
+            "ideal_change": -0.5632670032670033,
+            "direction": -1,
+            "actual_change": -0.31666666666666665,
+            "aligned_change": 0.31666666666666665
+          }
+        ],
+        "zero_direction_profiles": 0
+      },
+      "aa_mean_absolute_profile_forecast_difference": 0.025000000000000022
+    },
+    {
+      "seed": "20261039",
+      "status": "completed",
+      "error": null,
+      "arms": {
+        "P": {
+          "Y100": {
+            "probability": 0.8633333333333333,
+            "oracle_probability": 0.08677685950413225,
+            "cBR": 0.6030399570460425,
+            "actor_forecasts": {
+              "C": 0.85,
+              "B": 0.85,
+              "A": 0.89
+            }
+          },
+          "Y011": {
+            "probability": 0.5333333333333333,
+            "oracle_probability": 0.9132231404958678,
+            "cBR": 0.14431626558598765,
+            "actor_forecasts": {
+              "C": 0.58,
+              "B": 0.4,
+              "A": 0.62
+            }
+          }
+        },
+        "E": {
+          "Y100": {
+            "probability": 0.29333333333333333,
+            "oracle_probability": 0.08677685950413225,
+            "cBR": 0.04266557688075343,
+            "actor_forecasts": {
+              "C": 0.33,
+              "B": 0.2,
+              "A": 0.35
+            }
+          },
+          "Y011": {
+            "probability": 0.6133333333333334,
+            "oracle_probability": 0.9132231404958678,
+            "cBR": 0.08993389643998209,
+            "actor_forecasts": {
+              "C": 0.67,
+              "B": 0.5,
+              "A": 0.67
+            }
+          }
+        },
+        "H": {
+          "Y100": {
+            "probability": 0.31666666666666665,
+            "oracle_probability": 0.08677685950413225,
+            "cBR": 0.05284932343722726,
+            "actor_forecasts": {
+              "C": 0.5,
+              "B": 0.225,
+              "A": 0.225
+            }
+          },
+          "Y011": {
+            "probability": 0.5499999999999999,
+            "oracle_probability": 0.9132231404958678,
+            "cBR": 0.131931049791681,
+            "actor_forecasts": {
+              "C": 0.65,
+              "B": 0.65,
+              "A": 0.35
+            }
+          }
+        },
+        "R0": {
+          "Y100": {
+            "probability": 0.5833333333333334,
+            "oracle_probability": 0.08677685950413225,
+            "cBR": 0.24656833170169007,
+            "actor_forecasts": {
+              "C": 0.55,
+              "B": 0.6,
+              "A": 0.6
+            }
+          },
+          "Y011": {
+            "probability": 0.56,
+            "oracle_probability": 0.9132231404958678,
+            "cBR": 0.12476658698176354,
+            "actor_forecasts": {
+              "C": 0.4,
+              "B": 0.68,
+              "A": 0.6
+            }
+          }
+        },
+        "R0rep": {
+          "Y100": {
+            "probability": 0.5499999999999999,
+            "oracle_probability": 0.08677685950413225,
+            "cBR": 0.21457567789085435,
+            "actor_forecasts": {
+              "C": 0.55,
+              "B": 0.52,
+              "A": 0.58
+            }
+          },
+          "Y011": {
+            "probability": 0.589,
+            "oracle_probability": 0.9132231404958678,
+            "cBR": 0.10512064483300328,
+            "actor_forecasts": {
+              "C": 0.6,
+              "B": 0.667,
+              "A": 0.5
+            }
+          }
+        }
+      },
+      "contrasts": {
+        "P_minus_E": {
+          "mean": 0.3073783746556473,
+          "by_profile": {
+            "Y100": 0.5603743801652891,
+            "Y011": 0.054382369146005555
+          }
+        },
+        "H_minus_E": {
+          "mean": 0.026090449954086364,
+          "by_profile": {
+            "Y100": 0.010183746556473826,
+            "Y011": 0.0419971533516989
+          }
+        },
+        "H_minus_R0": {
+          "mean": -0.09327727272727268,
+          "by_profile": {
+            "Y100": -0.1937190082644628,
+            "Y011": 0.007164462809917449
+          }
+        },
+        "R0rep_minus_R0": {
+          "mean": -0.02581929797979799,
+          "by_profile": {
+            "Y100": -0.031992653810835714,
+            "Y011": -0.019645942148760268
+          }
+        }
+      },
+      "aligned_shift": {
+        "mean": 0.325,
+        "profiles": [
+          {
+            "profile_id": "Y100",
+            "ideal_E": 0.33,
+            "ideal_P": 0.8932670032670033,
+            "ideal_change": 0.5632670032670033,
+            "direction": 1,
+            "actual_change": 0.57,
+            "aligned_change": 0.57
+          },
+          {
+            "profile_id": "Y011",
+            "ideal_E": 0.67,
+            "ideal_P": 0.10673299673299676,
+            "ideal_change": -0.5632670032670033,
+            "direction": -1,
+            "actual_change": -0.08000000000000007,
+            "aligned_change": 0.08000000000000007
+          }
+        ],
+        "zero_direction_profiles": 0
+      },
+      "aa_mean_absolute_profile_forecast_difference": 0.031166666666666676
+    },
+    {
+      "seed": "20261040",
+      "status": "completed",
+      "error": null,
+      "arms": {
+        "P": {
+          "Y100": {
+            "probability": 0.6066666666666667,
+            "oracle_probability": 0.08677685950413225,
+            "cBR": 0.2702854115914972,
+            "actor_forecasts": {
+              "A": 0.67,
+              "B": 0.48,
+              "C": 0.67
+            }
+          },
+          "Y011": {
+            "probability": 0.6266666666666666,
+            "oracle_probability": 0.9132231404958678,
+            "cBR": 0.0821146126934257,
+            "actor_forecasts": {
+              "A": 0.62,
+              "B": 0.58,
+              "C": 0.68
+            }
+          }
+        },
+        "E": {
+          "Y100": {
+            "probability": 0.21666666666666667,
+            "oracle_probability": 0.08677685950413225,
+            "cBR": 0.01687136200472038,
+            "actor_forecasts": {
+              "A": 0.28,
+              "B": 0.22,
+              "C": 0.15
+            }
+          },
+          "Y011": {
+            "probability": 0.7200000000000001,
+            "oracle_probability": 0.9132231404958678,
+            "cBR": 0.03733518202308585,
+            "actor_forecasts": {
+              "A": 0.67,
+              "B": 0.67,
+              "C": 0.82
+            }
+          }
+        },
+        "H": {
+          "Y100": {
+            "probability": 0.31333333333333335,
+            "oracle_probability": 0.08677685950413225,
+            "cBR": 0.05132783583392148,
+            "actor_forecasts": {
+              "A": 0.15,
+              "B": 0.65,
+              "C": 0.14
+            }
+          },
+          "Y011": {
+            "probability": 0.7266666666666667,
+            "oracle_probability": 0.9132231404958678,
+            "cBR": 0.03480331792758541,
+            "actor_forecasts": {
+              "A": 0.65,
+              "B": 0.78,
+              "C": 0.75
+            }
+          }
+        },
+        "R0": {
+          "Y100": {
+            "probability": 0.5299999999999999,
+            "oracle_probability": 0.08677685950413225,
+            "cBR": 0.19644675227101963,
+            "actor_forecasts": {
+              "A": 0.58,
+              "B": 0.58,
+              "C": 0.43
+            }
+          },
+          "Y011": {
+            "probability": 0.6,
+            "oracle_probability": 0.9132231404958678,
+            "cBR": 0.09810873574209418,
+            "actor_forecasts": {
+              "A": 0.6,
+              "B": 0.6,
+              "C": 0.6
+            }
+          }
+        },
+        "R0rep": {
+          "Y100": {
+            "probability": 0.48666666666666664,
+            "oracle_probability": 0.08677685950413225,
+            "cBR": 0.15991185787248896,
+            "actor_forecasts": {
+              "A": 0.52,
+              "B": 0.45,
+              "C": 0.49
+            }
+          },
+          "Y011": {
+            "probability": 0.6333333333333333,
+            "oracle_probability": 0.9132231404958678,
+            "cBR": 0.07833830415348077,
+            "actor_forecasts": {
+              "A": 0.63,
+              "B": 0.65,
+              "C": 0.62
+            }
+          }
+        }
+      },
+      "contrasts": {
+        "P_minus_E": {
+          "mean": 0.14909674012855834,
+          "by_profile": {
+            "Y100": 0.2534140495867768,
+            "Y011": 0.04477943067033985
+          }
+        },
+        "H_minus_E": {
+          "mean": 0.01596230486685033,
+          "by_profile": {
+            "Y100": 0.0344564738292011,
+            "Y011": -0.0025318640955004357
+          }
+        },
+        "H_minus_R0": {
+          "mean": -0.10421216712580346,
+          "by_profile": {
+            "Y100": -0.14511891643709815,
+            "Y011": -0.06330541781450877
+          }
+        },
+        "R0rep_minus_R0": {
+          "mean": -0.02815266299357204,
+          "by_profile": {
+            "Y100": -0.036534894398530665,
+            "Y011": -0.019770431588613413
+          }
+        }
+      },
+      "aligned_shift": {
+        "mean": 0.24166666666666675,
+        "profiles": [
+          {
+            "profile_id": "Y100",
+            "ideal_E": 0.10673299673299673,
+            "ideal_P": 0.6699999999999999,
+            "ideal_change": 0.5632670032670032,
+            "direction": 1,
+            "actual_change": 0.39,
+            "aligned_change": 0.39
+          },
+          {
+            "profile_id": "Y011",
+            "ideal_E": 0.8932670032670033,
+            "ideal_P": 0.33000000000000007,
+            "ideal_change": -0.5632670032670032,
+            "direction": -1,
+            "actual_change": -0.09333333333333349,
+            "aligned_change": 0.09333333333333349
+          }
+        ],
+        "zero_direction_profiles": 0
+      },
+      "aa_mean_absolute_profile_forecast_difference": 0.0383333333333333
+    },
+    {
+      "seed": "20261044",
+      "status": "completed",
+      "error": null,
+      "arms": {
+        "P": {
+          "Y100": {
+            "probability": 0.45999999999999996,
+            "oracle_probability": 0.08677685950413225,
+            "cBR": 0.1392955126015982,
+            "actor_forecasts": {
+              "C": 0.4,
+              "A": 0.58,
+              "B": 0.4
+            }
+          },
+          "Y011": {
+            "probability": 0.33,
+            "oracle_probability": 0.9132231404958678,
+            "cBR": 0.3401492316098628,
+            "actor_forecasts": {
+              "C": 0.33,
+              "A": 0.33,
+              "B": 0.33
+            }
+          }
+        },
+        "E": {
+          "Y100": {
+            "probability": 0.16666666666666666,
+            "oracle_probability": 0.08677685950413225,
+            "cBR": 0.006382381288466935,
+            "actor_forecasts": {
+              "C": 0.12,
+              "A": 0.2,
+              "B": 0.18
+            }
+          },
+          "Y011": {
+            "probability": 0.7633333333333333,
+            "oracle_probability": 0.9132231404958678,
+            "cBR": 0.022466954291221787,
+            "actor_forecasts": {
+              "C": 0.67,
+              "A": 0.8,
+              "B": 0.82
+            }
+          }
+        },
+        "H": {
+          "Y100": {
+            "probability": 0.20666666666666667,
+            "oracle_probability": 0.08677685950413225,
+            "cBR": 0.014373565861469689,
+            "actor_forecasts": {
+              "C": 0.5,
+              "A": 0.05,
+              "B": 0.07
+            }
+          },
+          "Y011": {
+            "probability": 0.79,
+            "oracle_probability": 0.9132231404958678,
+            "cBR": 0.015183942353664374,
+            "actor_forecasts": {
+              "C": 0.75,
+              "A": 0.82,
+              "B": 0.8
+            }
+          }
+        },
+        "R0": {
+          "Y100": {
+            "probability": 0.3333333333333333,
+            "oracle_probability": 0.08677685950413225,
+            "cBR": 0.06079009478708951,
+            "actor_forecasts": {
+              "C": 0.2,
+              "A": 0.4,
+              "B": 0.4
+            }
+          },
+          "Y011": {
+            "probability": 0.67,
+            "oracle_probability": 0.9132231404958678,
+            "cBR": 0.05915749607267264,
+            "actor_forecasts": {
+              "C": 0.68,
+              "A": 0.65,
+              "B": 0.68
+            }
+          }
+        },
+        "R0rep": {
+          "Y100": {
+            "probability": 0.26666666666666666,
+            "oracle_probability": 0.08677685950413225,
+            "cBR": 0.032360342720973816,
+            "actor_forecasts": {
+              "C": 0.25,
+              "A": 0.35,
+              "B": 0.2
+            }
+          },
+          "Y011": {
+            "probability": 0.6566666666666666,
+            "oracle_probability": 0.9132231404958678,
+            "cBR": 0.06582122426367361,
+            "actor_forecasts": {
+              "C": 0.7,
+              "A": 0.62,
+              "B": 0.65
+            }
+          }
+        }
+      },
+      "contrasts": {
+        "P_minus_E": {
+          "mean": 0.22529770431588614,
+          "by_profile": {
+            "Y100": 0.13291313131313126,
+            "Y011": 0.317682277318641
+          }
+        },
+        "H_minus_E": {
+          "mean": 0.0003540863177226711,
+          "by_profile": {
+            "Y100": 0.007991184573002755,
+            "Y011": -0.007283011937557413
+          }
+        },
+        "H_minus_R0": {
+          "mean": -0.04519504132231404,
+          "by_profile": {
+            "Y100": -0.046416528925619815,
+            "Y011": -0.04397355371900827
+          }
+        },
+        "R0rep_minus_R0": {
+          "mean": -0.010883011937557363,
+          "by_profile": {
+            "Y100": -0.028429752066115692,
+            "Y011": 0.006663728191000966
+          }
+        }
+      },
+      "aligned_shift": {
+        "mean": 0.3633333333333333,
+        "profiles": [
+          {
+            "profile_id": "Y100",
+            "ideal_E": 0.10673299673299673,
+            "ideal_P": 0.6699999999999999,
+            "ideal_change": 0.5632670032670032,
+            "direction": 1,
+            "actual_change": 0.29333333333333333,
+            "aligned_change": 0.29333333333333333
+          },
+          {
+            "profile_id": "Y011",
+            "ideal_E": 0.8932670032670033,
+            "ideal_P": 0.33000000000000007,
+            "ideal_change": -0.5632670032670032,
+            "direction": -1,
+            "actual_change": -0.4333333333333333,
+            "aligned_change": 0.4333333333333333
+          }
+        ],
+        "zero_direction_profiles": 0
+      },
+      "aa_mean_absolute_profile_forecast_difference": 0.040000000000000036
+    },
+    {
+      "seed": "20261047",
+      "status": "completed",
+      "error": null,
+      "arms": {
+        "P": {
+          "Y100": {
+            "probability": 0.6166666666666667,
+            "oracle_probability": 0.08677685950413225,
+            "cBR": 0.2807832077347479,
+            "actor_forecasts": {
+              "A": 0.6,
+              "C": 0.58,
+              "B": 0.67
+            }
+          },
+          "Y011": {
+            "probability": 0.68,
+            "oracle_probability": 0.9132231404958678,
+            "cBR": 0.05439303326275528,
+            "actor_forecasts": {
+              "A": 0.7,
+              "C": 0.67,
+              "B": 0.67
+            }
+          }
+        },
+        "E": {
+          "Y100": {
+            "probability": 0.11,
+            "oracle_probability": 0.08677685950413225,
+            "cBR": 0.0005393142544908127,
+            "actor_forecasts": {
+              "A": 0.11,
+              "C": 0.11,
+              "B": 0.11
+            }
+          },
+          "Y011": {
+            "probability": 0.7333333333333334,
+            "oracle_probability": 0.9132231404958678,
+            "cBR": 0.03236034272097383,
+            "actor_forecasts": {
+              "A": 0.75,
+              "C": 0.78,
+              "B": 0.67
+            }
+          }
+        },
+        "H": {
+          "Y100": {
+            "probability": 0.13333333333333333,
+            "oracle_probability": 0.08677685950413225,
+            "cBR": 0.0021675052554090855,
+            "actor_forecasts": {
+              "A": 0.18,
+              "C": 0.08,
+              "B": 0.14
+            }
+          },
+          "Y011": {
+            "probability": 0.8166666666666668,
+            "oracle_probability": 0.9132231404958678,
+            "cBR": 0.009323152638329191,
+            "actor_forecasts": {
+              "A": 0.73,
+              "C": 0.86,
+              "B": 0.86
+            }
+          }
+        },
+        "R0": {
+          "Y100": {
+            "probability": 0.4000000000000001,
+            "oracle_probability": 0.08677685950413225,
+            "cBR": 0.09810873574209418,
+            "actor_forecasts": {
+              "A": 0.4,
+              "C": 0.4,
+              "B": 0.4
+            }
+          },
+          "Y011": {
+            "probability": 0.75,
+            "oracle_probability": 0.9132231404958678,
+            "cBR": 0.02664179359333381,
+            "actor_forecasts": {
+              "A": 0.75,
+              "C": 0.75,
+              "B": 0.75
+            }
+          }
+        },
+        "R0rep": {
+          "Y100": {
+            "probability": 0.37666666666666665,
+            "oracle_probability": 0.08677685950413225,
+            "cBR": 0.08403610029673139,
+            "actor_forecasts": {
+              "A": 0.38,
+              "C": 0.4,
+              "B": 0.35
+            }
+          },
+          "Y011": {
+            "probability": 0.6999999999999998,
+            "oracle_probability": 0.9132231404958678,
+            "cBR": 0.04546410764292066,
+            "actor_forecasts": {
+              "A": 0.7,
+              "C": 0.7,
+              "B": 0.7
+            }
+          }
+        }
+      },
+      "contrasts": {
+        "P_minus_E": {
+          "mean": 0.15113829201101928,
+          "by_profile": {
+            "Y100": 0.2802438934802571,
+            "Y011": 0.022032690541781454
+          }
+        },
+        "H_minus_E": {
+          "mean": -0.010704499540863183,
+          "by_profile": {
+            "Y100": 0.0016281910009182728,
+            "Y011": -0.02303719008264464
+          }
+        },
+        "H_minus_R0": {
+          "mean": -0.05662993572084486,
+          "by_profile": {
+            "Y100": -0.0959412304866851,
+            "Y011": -0.01731864095500462
+          }
+        },
+        "R0rep_minus_R0": {
+          "mean": 0.00237483930211203,
+          "by_profile": {
+            "Y100": -0.014072635445362788,
+            "Y011": 0.018822314049586848
+          }
+        }
+      },
+      "aligned_shift": {
+        "mean": 0.28,
+        "profiles": [
+          {
+            "profile_id": "Y100",
+            "ideal_E": 0.10673299673299673,
+            "ideal_P": 0.6699999999999999,
+            "ideal_change": 0.5632670032670032,
+            "direction": 1,
+            "actual_change": 0.5066666666666667,
+            "aligned_change": 0.5066666666666667
+          },
+          {
+            "profile_id": "Y011",
+            "ideal_E": 0.8932670032670033,
+            "ideal_P": 0.33000000000000007,
+            "ideal_change": -0.5632670032670032,
+            "direction": -1,
+            "actual_change": -0.053333333333333344,
+            "aligned_change": 0.053333333333333344
+          }
+        ],
+        "zero_direction_profiles": 0
+      },
+      "aa_mean_absolute_profile_forecast_difference": 0.03666666666666679
+    },
+    {
+      "seed": "20261051",
+      "status": "completed",
+      "error": null,
+      "arms": {
+        "P": {
+          "Y100": {
+            "probability": 0.35000000000000003,
+            "oracle_probability": 0.08677685950413225,
+            "cBR": 0.06928642169250737,
+            "actor_forecasts": {
+              "C": 0.3,
+              "B": 0.5,
+              "A": 0.25
+            }
+          },
+          "Y011": {
+            "probability": 0.6166666666666667,
+            "oracle_probability": 0.9132231404958678,
+            "cBR": 0.08794574217000967,
+            "actor_forecasts": {
+              "C": 0.72,
+              "B": 0.55,
+              "A": 0.58
+            }
+          }
+        },
+        "E": {
+          "Y100": {
+            "probability": 0.27666666666666667,
+            "oracle_probability": 0.08677685950413225,
+            "cBR": 0.03605813886422451,
+            "actor_forecasts": {
+              "C": 0.25,
+              "B": 0.33,
+              "A": 0.25
+            }
+          },
+          "Y011": {
+            "probability": 0.6633333333333334,
+            "oracle_probability": 0.9132231404958678,
+            "cBR": 0.06244491572372863,
+            "actor_forecasts": {
+              "C": 0.67,
+              "B": 0.67,
+              "A": 0.65
+            }
+          }
+        },
+        "H": {
+          "Y100": {
+            "probability": 0.145,
+            "oracle_probability": 0.08677685950413225,
+            "cBR": 0.0033899340892015544,
+            "actor_forecasts": {
+              "C": 0.135,
+              "B": 0.15,
+              "A": 0.15
+            }
+          },
+          "Y011": {
+            "probability": 0.7200000000000001,
+            "oracle_probability": 0.9132231404958678,
+            "cBR": 0.03733518202308585,
+            "actor_forecasts": {
+              "C": 0.65,
+              "B": 0.65,
+              "A": 0.86
+            }
+          }
+        },
+        "R0": {
+          "Y100": {
+            "probability": 0.3666666666666667,
+            "oracle_probability": 0.08677685950413225,
+            "cBR": 0.0783383041534807,
+            "actor_forecasts": {
+              "C": 0.4,
+              "B": 0.3,
+              "A": 0.4
+            }
+          },
+          "Y011": {
+            "probability": 0.65,
+            "oracle_probability": 0.9132231404958678,
+            "cBR": 0.06928642169250737,
+            "actor_forecasts": {
+              "C": 0.65,
+              "B": 0.68,
+              "A": 0.62
+            }
+          }
+        },
+        "R0rep": {
+          "Y100": {
+            "probability": 0.2833333333333333,
+            "oracle_probability": 0.08677685950413225,
+            "cBR": 0.03863444740416941,
+            "actor_forecasts": {
+              "C": 0.2,
+              "B": 0.3,
+              "A": 0.35
+            }
+          },
+          "Y011": {
+            "probability": 0.7233333333333333,
+            "oracle_probability": 0.9132231404958678,
+            "cBR": 0.03605813886422456,
+            "actor_forecasts": {
+              "C": 0.75,
+              "B": 0.75,
+              "A": 0.67
+            }
+          }
+        }
+      },
+      "contrasts": {
+        "P_minus_E": {
+          "mean": 0.02936455463728195,
+          "by_profile": {
+            "Y100": 0.033228282828282864,
+            "Y011": 0.025500826446281037
+          }
+        },
+        "H_minus_E": {
+          "mean": -0.02888896923783287,
+          "by_profile": {
+            "Y100": -0.032668204775022955,
+            "Y011": -0.025109733700642782
+          }
+        },
+        "H_minus_R0": {
+          "mean": -0.05344980486685033,
+          "by_profile": {
+            "Y100": -0.07494837006427914,
+            "Y011": -0.031951239669421524
+          }
+        },
+        "R0rep_minus_R0": {
+          "mean": -0.036466069788797045,
+          "by_profile": {
+            "Y100": -0.03970385674931129,
+            "Y011": -0.03322828282828281
+          }
+        }
+      },
+      "aligned_shift": {
+        "mean": 0.06000000000000005,
+        "profiles": [
+          {
+            "profile_id": "Y100",
+            "ideal_E": 0.10673299673299673,
+            "ideal_P": 0.6699999999999999,
+            "ideal_change": 0.5632670032670032,
+            "direction": 1,
+            "actual_change": 0.07333333333333336,
+            "aligned_change": 0.07333333333333336
+          },
+          {
+            "profile_id": "Y011",
+            "ideal_E": 0.8932670032670033,
+            "ideal_P": 0.33000000000000007,
+            "ideal_change": -0.5632670032670032,
+            "direction": -1,
+            "actual_change": -0.046666666666666745,
+            "aligned_change": 0.046666666666666745
+          }
+        ],
+        "zero_direction_profiles": 0
+      },
+      "aa_mean_absolute_profile_forecast_difference": 0.07833333333333331
+    },
+    {
+      "seed": "20261053",
+      "status": "completed",
+      "error": null,
+      "arms": {
+        "P": {
+          "Y100": {
+            "probability": 0.4566666666666667,
+            "oracle_probability": 0.08677685950413225,
+            "cBR": 0.13681846944273696,
+            "actor_forecasts": {
+              "A": 0.67,
+              "C": 0.2,
+              "B": 0.5
+            }
+          },
+          "Y011": {
+            "probability": 0.44333333333333336,
+            "oracle_probability": 0.9132231404958678,
+            "cBR": 0.22079643087524384,
+            "actor_forecasts": {
+              "A": 0.33,
+              "C": 0.67,
+              "B": 0.33
+            }
+          }
+        },
+        "E": {
+          "Y100": {
+            "probability": 0.24333333333333332,
+            "oracle_probability": 0.08677685950413225,
+            "cBR": 0.02450992949783332,
+            "actor_forecasts": {
+              "A": 0.15,
+              "C": 0.25,
+              "B": 0.33
+            }
+          },
+          "Y011": {
+            "probability": 0.88,
+            "oracle_probability": 0.9132231404958678,
+            "cBR": 0.001103777064408173,
+            "actor_forecasts": {
+              "A": 0.86,
+              "C": 0.89,
+              "B": 0.89
+            }
+          }
+        },
+        "H": {
+          "Y100": {
+            "probability": 0.22666666666666666,
+            "oracle_probability": 0.08677685950413225,
+            "cBR": 0.019569158147971062,
+            "actor_forecasts": {
+              "A": 0.18,
+              "C": 0.25,
+              "B": 0.25
+            }
+          },
+          "Y011": {
+            "probability": 0.7366666666666667,
+            "oracle_probability": 0.9132231404958678,
+            "cBR": 0.03117218845100139,
+            "actor_forecasts": {
+              "A": 0.84,
+              "C": 0.72,
+              "B": 0.65
+            }
+          }
+        },
+        "R0": {
+          "Y100": {
+            "probability": 0.4000000000000001,
+            "oracle_probability": 0.08677685950413225,
+            "cBR": 0.09810873574209418,
+            "actor_forecasts": {
+              "A": 0.4,
+              "C": 0.4,
+              "B": 0.4
+            }
+          },
+          "Y011": {
+            "probability": 0.5499999999999999,
+            "oracle_probability": 0.9132231404958678,
+            "cBR": 0.131931049791681,
+            "actor_forecasts": {
+              "A": 0.45,
+              "C": 0.58,
+              "B": 0.62
+            }
+          }
+        },
+        "R0rep": {
+          "Y100": {
+            "probability": 0.3333333333333333,
+            "oracle_probability": 0.08677685950413225,
+            "cBR": 0.06079009478708951,
+            "actor_forecasts": {
+              "A": 0.35,
+              "C": 0.3,
+              "B": 0.35
+            }
+          },
+          "Y011": {
+            "probability": 0.5333333333333333,
+            "oracle_probability": 0.9132231404958678,
+            "cBR": 0.14431626558598765,
+            "actor_forecasts": {
+              "A": 0.45,
+              "C": 0.65,
+              "B": 0.5
+            }
+          }
+        }
+      },
+      "contrasts": {
+        "P_minus_E": {
+          "mean": 0.16600059687786967,
+          "by_profile": {
+            "Y100": 0.11230853994490364,
+            "Y011": 0.21969265381083566
+          }
+        },
+        "H_minus_E": {
+          "mean": 0.012563820018365479,
+          "by_profile": {
+            "Y100": -0.004940771349862257,
+            "Y011": 0.030068411386593216
+          }
+        },
+        "H_minus_R0": {
+          "mean": -0.08964921946740136,
+          "by_profile": {
+            "Y100": -0.07853957759412311,
+            "Y011": -0.1007588613406796
+          }
+        },
+        "R0rep_minus_R0": {
+          "mean": -0.01246671258034901,
+          "by_profile": {
+            "Y100": -0.03731864095500467,
+            "Y011": 0.012385215794306653
+          }
+        }
+      },
+      "aligned_shift": {
+        "mean": 0.325,
+        "profiles": [
+          {
+            "profile_id": "Y100",
+            "ideal_E": 0.10673299673299673,
+            "ideal_P": 0.6699999999999999,
+            "ideal_change": 0.5632670032670032,
+            "direction": 1,
+            "actual_change": 0.2133333333333334,
+            "aligned_change": 0.2133333333333334
+          },
+          {
+            "profile_id": "Y011",
+            "ideal_E": 0.8932670032670033,
+            "ideal_P": 0.33000000000000007,
+            "ideal_change": -0.5632670032670032,
+            "direction": -1,
+            "actual_change": -0.43666666666666665,
+            "aligned_change": 0.43666666666666665
+          }
+        ],
+        "zero_direction_profiles": 0
+      },
+      "aa_mean_absolute_profile_forecast_difference": 0.041666666666666685
+    },
+    {
+      "seed": "20261054",
+      "status": "completed",
+      "error": null,
+      "arms": {
+        "P": {
+          "Y100": {
+            "probability": 0.6066666666666667,
+            "oracle_probability": 0.08677685950413225,
+            "cBR": 0.2702854115914972,
+            "actor_forecasts": {
+              "B": 0.67,
+              "A": 0.8,
+              "C": 0.35
+            }
+          },
+          "Y011": {
+            "probability": 0.35333333333333333,
+            "oracle_probability": 0.9132231404958678,
+            "cBR": 0.3134765961645,
+            "actor_forecasts": {
+              "B": 0.33,
+              "A": 0.33,
+              "C": 0.4
+            }
+          }
+        },
+        "E": {
+          "Y100": {
+            "probability": 0.27666666666666667,
+            "oracle_probability": 0.08677685950413225,
+            "cBR": 0.03605813886422451,
+            "actor_forecasts": {
+              "B": 0.35,
+              "A": 0.15,
+              "C": 0.33
+            }
+          },
+          "Y011": {
+            "probability": 0.6666666666666666,
+            "oracle_probability": 0.9132231404958678,
+            "cBR": 0.06079009478708958,
+            "actor_forecasts": {
+              "B": 0.67,
+              "A": 0.61,
+              "C": 0.72
+            }
+          }
+        },
+        "H": {
+          "Y100": {
+            "probability": 0.12,
+            "oracle_probability": 0.08677685950413225,
+            "cBR": 0.0011037770644081674,
+            "actor_forecasts": {
+              "B": 0.12,
+              "A": 0.12,
+              "C": 0.12
+            }
+          },
+          "Y011": {
+            "probability": 0.67,
+            "oracle_probability": 0.9132231404958678,
+            "cBR": 0.05915749607267264,
+            "actor_forecasts": {
+              "B": 0.67,
+              "A": 0.67,
+              "C": 0.67
+            }
+          }
+        },
+        "R0": {
+          "Y100": {
+            "probability": 0.3499999999999999,
+            "oracle_probability": 0.08677685950413225,
+            "cBR": 0.0692864216925073,
+            "actor_forecasts": {
+              "B": 0.35,
+              "A": 0.35,
+              "C": 0.35
+            }
+          },
+          "Y011": {
+            "probability": 0.5766666666666667,
+            "oracle_probability": 0.9132231404958678,
+            "cBR": 0.11327026007634577,
+            "actor_forecasts": {
+              "B": 0.6,
+              "A": 0.55,
+              "C": 0.58
+            }
+          }
+        },
+        "R0rep": {
+          "Y100": {
+            "probability": 0.3499999999999999,
+            "oracle_probability": 0.08677685950413225,
+            "cBR": 0.0692864216925073,
+            "actor_forecasts": {
+              "B": 0.35,
+              "A": 0.35,
+              "C": 0.35
+            }
+          },
+          "Y011": {
+            "probability": 0.65,
+            "oracle_probability": 0.9132231404958678,
+            "cBR": 0.06928642169250737,
+            "actor_forecasts": {
+              "B": 0.65,
+              "A": 0.65,
+              "C": 0.65
+            }
+          }
+        }
+      },
+      "contrasts": {
+        "P_minus_E": {
+          "mean": 0.2434568870523416,
+          "by_profile": {
+            "Y100": 0.2342272727272727,
+            "Y011": 0.25268650137741044
+          }
+        },
+        "H_minus_E": {
+          "mean": -0.018293480257116638,
+          "by_profile": {
+            "Y100": -0.03495436179981634,
+            "Y011": -0.0016325987144169343
+          }
+        },
+        "H_minus_R0": {
+          "mean": -0.061147704315886134,
+          "by_profile": {
+            "Y100": -0.06818264462809913,
+            "Y011": -0.05411276400367313
+          }
+        },
+        "R0rep_minus_R0": {
+          "mean": -0.0219919191919192,
+          "by_profile": {
+            "Y100": 0.0,
+            "Y011": -0.0439838383838384
+          }
+        }
+      },
+      "aligned_shift": {
+        "mean": 0.32166666666666666,
+        "profiles": [
+          {
+            "profile_id": "Y100",
+            "ideal_E": 0.10673299673299673,
+            "ideal_P": 0.6699999999999999,
+            "ideal_change": 0.5632670032670032,
+            "direction": 1,
+            "actual_change": 0.33,
+            "aligned_change": 0.33
+          },
+          {
+            "profile_id": "Y011",
+            "ideal_E": 0.8932670032670033,
+            "ideal_P": 0.33000000000000007,
+            "ideal_change": -0.5632670032670032,
+            "direction": -1,
+            "actual_change": -0.3133333333333333,
+            "aligned_change": 0.3133333333333333
+          }
+        ],
+        "zero_direction_profiles": 0
+      },
+      "aa_mean_absolute_profile_forecast_difference": 0.03666666666666668
+    },
+    {
+      "seed": "20261056",
+      "status": "completed",
+      "error": null,
+      "arms": {
+        "P": {
+          "Y100": {
+            "probability": 0.6166666666666667,
+            "oracle_probability": 0.08677685950413225,
+            "cBR": 0.2807832077347479,
+            "actor_forecasts": {
+              "C": 0.58,
+              "A": 0.6,
+              "B": 0.67
+            }
+          },
+          "Y011": {
+            "probability": 0.4366666666666667,
+            "oracle_probability": 0.9132231404958678,
+            "cBR": 0.22710607274852207,
+            "actor_forecasts": {
+              "C": 0.33,
+              "A": 0.4,
+              "B": 0.58
+            }
+          }
+        },
+        "E": {
+          "Y100": {
+            "probability": 0.10666666666666667,
+            "oracle_probability": 0.08677685950413225,
+            "cBR": 0.00039560442896280574,
+            "actor_forecasts": {
+              "C": 0.11,
+              "A": 0.11,
+              "B": 0.1
+            }
+          },
+          "Y011": {
+            "probability": 0.7433333333333333,
+            "oracle_probability": 0.9132231404958678,
+            "cBR": 0.028862546577723174,
+            "actor_forecasts": {
+              "C": 0.67,
+              "A": 0.67,
+              "B": 0.89
+            }
+          }
+        },
+        "H": {
+          "Y100": {
+            "probability": 0.28,
+            "oracle_probability": 0.08677685950413225,
+            "cBR": 0.03733518202308586,
+            "actor_forecasts": {
+              "C": 0.33,
+              "A": 0.18,
+              "B": 0.33
+            }
+          },
+          "Y011": {
+            "probability": 0.8033333333333333,
+            "oracle_probability": 0.9132231404958678,
+            "cBR": 0.012075769718219017,
+            "actor_forecasts": {
+              "C": 0.67,
+              "A": 0.93,
+              "B": 0.81
+            }
+          }
+        },
+        "R0": {
+          "Y100": {
+            "probability": 0.4833333333333334,
+            "oracle_probability": 0.08677685950413225,
+            "cBR": 0.15725703693584986,
+            "actor_forecasts": {
+              "C": 0.65,
+              "A": 0.4,
+              "B": 0.4
+            }
+          },
+          "Y011": {
+            "probability": 0.56,
+            "oracle_probability": 0.9132231404958678,
+            "cBR": 0.12476658698176354,
+            "actor_forecasts": {
+              "C": 0.55,
+              "A": 0.55,
+              "B": 0.58
+            }
+          }
+        },
+        "R0rep": {
+          "Y100": {
+            "probability": 0.3499999999999999,
+            "oracle_probability": 0.08677685950413225,
+            "cBR": 0.0692864216925073,
+            "actor_forecasts": {
+              "C": 0.35,
+              "A": 0.35,
+              "B": 0.35
+            }
+          },
+          "Y011": {
+            "probability": 0.67,
+            "oracle_probability": 0.9132231404958678,
+            "cBR": 0.05915749607267264,
+            "actor_forecasts": {
+              "C": 0.67,
+              "A": 0.67,
+              "B": 0.67
+            }
+          }
+        }
+      },
+      "contrasts": {
+        "P_minus_E": {
+          "mean": 0.23931556473829202,
+          "by_profile": {
+            "Y100": 0.2803876033057851,
+            "Y011": 0.1982435261707989
+          }
+        },
+        "H_minus_E": {
+          "mean": 0.01007640036730945,
+          "by_profile": {
+            "Y100": 0.03693957759412306,
+            "Y011": -0.01678677685950416
+          }
+        },
+        "H_minus_R0": {
+          "mean": -0.11630633608815427,
+          "by_profile": {
+            "Y100": -0.119921854912764,
+            "Y011": -0.11269081726354453
+          }
+        },
+        "R0rep_minus_R0": {
+          "mean": -0.07678985307621672,
+          "by_profile": {
+            "Y100": -0.08797061524334256,
+            "Y011": -0.0656090909090909
+          }
+        }
+      },
+      "aligned_shift": {
+        "mean": 0.4083333333333333,
+        "profiles": [
+          {
+            "profile_id": "Y100",
+            "ideal_E": 0.10673299673299673,
+            "ideal_P": 0.6699999999999999,
+            "ideal_change": 0.5632670032670032,
+            "direction": 1,
+            "actual_change": 0.51,
+            "aligned_change": 0.51
+          },
+          {
+            "profile_id": "Y011",
+            "ideal_E": 0.8932670032670033,
+            "ideal_P": 0.33000000000000007,
+            "ideal_change": -0.5632670032670032,
+            "direction": -1,
+            "actual_change": -0.3066666666666666,
+            "aligned_change": 0.3066666666666666
+          }
+        ],
+        "zero_direction_profiles": 0
+      },
+      "aa_mean_absolute_profile_forecast_difference": 0.12166666666666673
+    },
+    {
+      "seed": "20261057",
+      "status": "completed",
+      "error": null,
+      "arms": {
+        "P": {
+          "Y100": {
+            "probability": 0.6166666666666667,
+            "oracle_probability": 0.08677685950413225,
+            "cBR": 0.2807832077347479,
+            "actor_forecasts": {
+              "C": 0.67,
+              "B": 0.78,
+              "A": 0.4
+            }
+          },
+          "Y011": {
+            "probability": 0.63,
+            "oracle_probability": 0.9132231404958678,
+            "cBR": 0.08021534731234209,
+            "actor_forecasts": {
+              "C": 0.64,
+              "B": 0.6,
+              "A": 0.65
+            }
+          }
+        },
+        "E": {
+          "Y100": {
+            "probability": 0.47,
+            "oracle_probability": 0.08677685950413225,
+            "cBR": 0.14685997541151555,
+            "actor_forecasts": {
+              "C": 0.5,
+              "B": 0.58,
+              "A": 0.33
+            }
+          },
+          "Y011": {
+            "probability": 0.67,
+            "oracle_probability": 0.9132231404958678,
+            "cBR": 0.05915749607267264,
+            "actor_forecasts": {
+              "C": 0.67,
+              "B": 0.67,
+              "A": 0.67
+            }
+          }
+        },
+        "H": {
+          "Y100": {
+            "probability": 0.2733333333333333,
+            "oracle_probability": 0.08677685950413225,
+            "cBR": 0.034803317927585384,
+            "actor_forecasts": {
+              "C": 0.35,
+              "B": 0.24,
+              "A": 0.23
+            }
+          },
+          "Y011": {
+            "probability": 0.6333333333333333,
+            "oracle_probability": 0.9132231404958678,
+            "cBR": 0.07833830415348077,
+            "actor_forecasts": {
+              "C": 0.6,
+              "B": 0.65,
+              "A": 0.65
+            }
+          }
+        },
+        "R0": {
+          "Y100": {
+            "probability": 0.3933333333333333,
+            "oracle_probability": 0.08677685950413225,
+            "cBR": 0.09397687164659362,
+            "actor_forecasts": {
+              "C": 0.36,
+              "B": 0.38,
+              "A": 0.44
+            }
+          },
+          "Y011": {
+            "probability": 0.5533333333333333,
+            "oracle_probability": 0.9132231404958678,
+            "cBR": 0.12952067329948627,
+            "actor_forecasts": {
+              "C": 0.56,
+              "B": 0.55,
+              "A": 0.55
+            }
+          }
+        },
+        "R0rep": {
+          "Y100": {
+            "probability": 0.4000000000000001,
+            "oracle_probability": 0.08677685950413225,
+            "cBR": 0.09810873574209418,
+            "actor_forecasts": {
+              "C": 0.4,
+              "B": 0.4,
+              "A": 0.4
+            }
+          },
+          "Y011": {
+            "probability": 0.5666666666666668,
+            "oracle_probability": 0.9132231404958678,
+            "cBR": 0.12010138955292973,
+            "actor_forecasts": {
+              "C": 0.56,
+              "B": 0.58,
+              "A": 0.56
+            }
+          }
+        }
+      },
+      "contrasts": {
+        "P_minus_E": {
+          "mean": 0.0774905417814509,
+          "by_profile": {
+            "Y100": 0.13392323232323236,
+            "Y011": 0.021057851239669446
+          }
+        },
+        "H_minus_E": {
+          "mean": -0.04643792470156102,
+          "by_profile": {
+            "Y100": -0.11205665748393016,
+            "Y011": 0.019180808080808125
+          }
+        },
+        "H_minus_R0": {
+          "mean": -0.05517796143250687,
+          "by_profile": {
+            "Y100": -0.05917355371900823,
+            "Y011": -0.051182369146005505
+          }
+        },
+        "R0rep_minus_R0": {
+          "mean": -0.0026437098255279873,
+          "by_profile": {
+            "Y100": 0.004131864095500565,
+            "Y011": -0.00941928374655654
+          }
+        }
+      },
+      "aligned_shift": {
+        "mean": 0.09333333333333338,
+        "profiles": [
+          {
+            "profile_id": "Y100",
+            "ideal_E": 0.33,
+            "ideal_P": 0.8932670032670033,
+            "ideal_change": 0.5632670032670033,
+            "direction": 1,
+            "actual_change": 0.14666666666666672,
+            "aligned_change": 0.14666666666666672
+          },
+          {
+            "profile_id": "Y011",
+            "ideal_E": 0.67,
+            "ideal_P": 0.10673299673299676,
+            "ideal_change": -0.5632670032670033,
+            "direction": -1,
+            "actual_change": -0.040000000000000036,
+            "aligned_change": 0.040000000000000036
+          }
+        ],
+        "zero_direction_profiles": 0
+      },
+      "aa_mean_absolute_profile_forecast_difference": 0.010000000000000092
+    },
+    {
+      "seed": "20261061",
+      "status": "completed",
+      "error": null,
+      "arms": {
+        "P": {
+          "Y100": {
+            "probability": 0.5566666666666666,
+            "oracle_probability": 0.08677685950413225,
+            "cBR": 0.22079643087524373,
+            "actor_forecasts": {
+              "B": 0.5,
+              "C": 0.67,
+              "A": 0.5
+            }
+          },
+          "Y011": {
+            "probability": 0.33,
+            "oracle_probability": 0.9132231404958678,
+            "cBR": 0.3401492316098628,
+            "actor_forecasts": {
+              "B": 0.33,
+              "C": 0.33,
+              "A": 0.33
+            }
+          }
+        },
+        "E": {
+          "Y100": {
+            "probability": 0.25666666666666665,
+            "oracle_probability": 0.08677685950413225,
+            "cBR": 0.028862546577723126,
+            "actor_forecasts": {
+              "B": 0.11,
+              "C": 0.33,
+              "A": 0.33
+            }
+          },
+          "Y011": {
+            "probability": 0.7333333333333334,
+            "oracle_probability": 0.9132231404958678,
+            "cBR": 0.03236034272097383,
+            "actor_forecasts": {
+              "B": 0.67,
+              "C": 0.75,
+              "A": 0.78
+            }
+          }
+        },
+        "H": {
+          "Y100": {
+            "probability": 0.056666666666666664,
+            "oracle_probability": 0.08677685950413225,
+            "cBR": 0.0009066237127093637,
+            "actor_forecasts": {
+              "B": 0.04,
+              "C": 0.04,
+              "A": 0.09
+            }
+          },
+          "Y011": {
+            "probability": 0.82,
+            "oracle_probability": 0.9132231404958678,
+            "cBR": 0.008690553923912322,
+            "actor_forecasts": {
+              "B": 0.7,
+              "C": 0.85,
+              "A": 0.91
+            }
+          }
+        },
+        "R0": {
+          "Y100": {
+            "probability": 0.22333333333333336,
+            "oracle_probability": 0.08677685950413225,
+            "cBR": 0.018647670544665287,
+            "actor_forecasts": {
+              "B": 0.22,
+              "C": 0.2,
+              "A": 0.25
+            }
+          },
+          "Y011": {
+            "probability": 0.6866666666666666,
+            "oracle_probability": 0.9132231404958678,
+            "cBR": 0.051327835833921524,
+            "actor_forecasts": {
+              "B": 0.7,
+              "C": 0.68,
+              "A": 0.68
+            }
+          }
+        },
+        "R0rep": {
+          "Y100": {
+            "probability": 0.27666666666666667,
+            "oracle_probability": 0.08677685950413225,
+            "cBR": 0.03605813886422451,
+            "actor_forecasts": {
+              "B": 0.3,
+              "C": 0.25,
+              "A": 0.28
+            }
+          },
+          "Y011": {
+            "probability": 0.7333333333333334,
+            "oracle_probability": 0.9132231404958678,
+            "cBR": 0.03236034272097383,
+            "actor_forecasts": {
+              "B": 0.84,
+              "C": 0.68,
+              "A": 0.68
+            }
+          }
+        }
+      },
+      "contrasts": {
+        "P_minus_E": {
+          "mean": 0.24986138659320478,
+          "by_profile": {
+            "Y100": 0.1919338842975206,
+            "Y011": 0.307788888888889
+          }
+        },
+        "H_minus_E": {
+          "mean": -0.025812855831037637,
+          "by_profile": {
+            "Y100": -0.027955922865013763,
+            "Y011": -0.023669788797061508
+          }
+        },
+        "H_minus_R0": {
+          "mean": -0.030189164370982565,
+          "by_profile": {
+            "Y100": -0.017741046831955924,
+            "Y011": -0.042637281910009206
+          }
+        },
+        "R0rep_minus_R0": {
+          "mean": -0.0007785123966942368,
+          "by_profile": {
+            "Y100": 0.01741046831955922,
+            "Y011": -0.018967493112947695
+          }
+        }
+      },
+      "aligned_shift": {
+        "mean": 0.3516666666666667,
+        "profiles": [
+          {
+            "profile_id": "Y100",
+            "ideal_E": 0.10673299673299673,
+            "ideal_P": 0.6699999999999999,
+            "ideal_change": 0.5632670032670032,
+            "direction": 1,
+            "actual_change": 0.3,
+            "aligned_change": 0.3
+          },
+          {
+            "profile_id": "Y011",
+            "ideal_E": 0.8932670032670033,
+            "ideal_P": 0.33000000000000007,
+            "ideal_change": -0.5632670032670032,
+            "direction": -1,
+            "actual_change": -0.4033333333333334,
+            "aligned_change": 0.4033333333333334
+          }
+        ],
+        "zero_direction_profiles": 0
+      },
+      "aa_mean_absolute_profile_forecast_difference": 0.05000000000000003
+    },
+    {
+      "seed": "20261062",
+      "status": "completed",
+      "error": null,
+      "arms": {
+        "P": {
+          "Y100": {
+            "probability": 0.4666666666666666,
+            "oracle_probability": 0.08677685950413225,
+            "cBR": 0.14431626558598756,
+            "actor_forecasts": {
+              "C": 0.42,
+              "A": 0.43,
+              "B": 0.55
+            }
+          },
+          "Y011": {
+            "probability": 0.12666666666666668,
+            "oracle_probability": 0.9132231404958678,
+            "cBR": 0.6186710865226268,
+            "actor_forecasts": {
+              "C": 0.12,
+              "A": 0.15,
+              "B": 0.11
+            }
+          }
+        },
+        "E": {
+          "Y100": {
+            "probability": 0.30333333333333334,
+            "oracle_probability": 0.08677685950413225,
+            "cBR": 0.04689670635733746,
+            "actor_forecasts": {
+              "C": 0.33,
+              "A": 0.23,
+              "B": 0.35
+            }
+          },
+          "Y011": {
+            "probability": 0.63,
+            "oracle_probability": 0.9132231404958678,
+            "cBR": 0.08021534731234209,
+            "actor_forecasts": {
+              "C": 0.6,
+              "A": 0.62,
+              "B": 0.67
+            }
+          }
+        },
+        "H": {
+          "Y100": {
+            "probability": 0.4666666666666666,
+            "oracle_probability": 0.08677685950413225,
+            "cBR": 0.14431626558598756,
+            "actor_forecasts": {
+              "C": 0.4,
+              "A": 0.4,
+              "B": 0.6
+            }
+          },
+          "Y011": {
+            "probability": 0.5333333333333333,
+            "oracle_probability": 0.9132231404958678,
+            "cBR": 0.14431626558598765,
+            "actor_forecasts": {
+              "C": 0.6,
+              "A": 0.5,
+              "B": 0.5
+            }
+          }
+        },
+        "R0": {
+          "Y100": {
+            "probability": 0.4266666666666667,
+            "oracle_probability": 0.08677685950413225,
+            "cBR": 0.11552508101298486,
+            "actor_forecasts": {
+              "C": 0.4,
+              "A": 0.45,
+              "B": 0.43
+            }
+          },
+          "Y011": {
+            "probability": 0.5233333333333333,
+            "oracle_probability": 0.9132231404958678,
+            "cBR": 0.15201406172923834,
+            "actor_forecasts": {
+              "C": 0.55,
+              "A": 0.42,
+              "B": 0.6
+            }
+          }
+        },
+        "R0rep": {
+          "Y100": {
+            "probability": 0.36999999999999994,
+            "oracle_probability": 0.08677685950413225,
+            "cBR": 0.08021534731234202,
+            "actor_forecasts": {
+              "C": 0.38,
+              "A": 0.37,
+              "B": 0.36
+            }
+          },
+          "Y011": {
+            "probability": 0.5133333333333333,
+            "oracle_probability": 0.9132231404958678,
+            "cBR": 0.15991185787248904,
+            "actor_forecasts": {
+              "C": 0.52,
+              "A": 0.47,
+              "B": 0.55
+            }
+          }
+        }
+      },
+      "contrasts": {
+        "P_minus_E": {
+          "mean": 0.3179376492194674,
+          "by_profile": {
+            "Y100": 0.0974195592286501,
+            "Y011": 0.5384557392102847
+          }
+        },
+        "H_minus_E": {
+          "mean": 0.08076023875114782,
+          "by_profile": {
+            "Y100": 0.0974195592286501,
+            "Y011": 0.06410091827364556
+          }
+        },
+        "H_minus_R0": {
+          "mean": 0.010546694214876001,
+          "by_profile": {
+            "Y100": 0.0287911845730027,
+            "Y011": -0.007697796143250696
+          }
+        },
+        "R0rep_minus_R0": {
+          "mean": -0.013705968778696072,
+          "by_profile": {
+            "Y100": -0.035309733700642845,
+            "Y011": 0.007897796143250702
+          }
+        }
+      },
+      "aligned_shift": {
+        "mean": 0.33333333333333326,
+        "profiles": [
+          {
+            "profile_id": "Y100",
+            "ideal_E": 0.33,
+            "ideal_P": 0.8932670032670033,
+            "ideal_change": 0.5632670032670033,
+            "direction": 1,
+            "actual_change": 0.16333333333333327,
+            "aligned_change": 0.16333333333333327
+          },
+          {
+            "profile_id": "Y011",
+            "ideal_E": 0.67,
+            "ideal_P": 0.10673299673299676,
+            "ideal_change": -0.5632670032670033,
+            "direction": -1,
+            "actual_change": -0.5033333333333333,
+            "aligned_change": 0.5033333333333333
+          }
+        ],
+        "zero_direction_profiles": 0
+      },
+      "aa_mean_absolute_profile_forecast_difference": 0.03333333333333338
+    },
+    {
+      "seed": "20261065",
+      "status": "completed",
+      "error": null,
+      "arms": {
+        "P": {
+          "Y100": {
+            "probability": 0.64,
+            "oracle_probability": 0.08677685950413225,
+            "cBR": 0.3060558431801106,
+            "actor_forecasts": {
+              "A": 0.58,
+              "C": 0.67,
+              "B": 0.67
+            }
+          },
+          "Y011": {
+            "probability": 0.46666666666666673,
+            "oracle_probability": 0.9132231404958678,
+            "cBR": 0.19941268431876996,
+            "actor_forecasts": {
+              "A": 0.4,
+              "C": 0.67,
+              "B": 0.33
+            }
+          }
+        },
+        "E": {
+          "Y100": {
+            "probability": 0.11,
+            "oracle_probability": 0.08677685950413225,
+            "cBR": 0.0005393142544908127,
+            "actor_forecasts": {
+              "A": 0.11,
+              "C": 0.11,
+              "B": 0.11
+            }
+          },
+          "Y011": {
+            "probability": 0.7233333333333333,
+            "oracle_probability": 0.9132231404958678,
+            "cBR": 0.03605813886422456,
+            "actor_forecasts": {
+              "A": 0.67,
+              "C": 0.67,
+              "B": 0.83
+            }
+          }
+        },
+        "H": {
+          "Y100": {
+            "probability": 0.17333333333333334,
+            "oracle_probability": 0.08677685950413225,
+            "cBR": 0.007492023161745173,
+            "actor_forecasts": {
+              "A": 0.15,
+              "C": 0.25,
+              "B": 0.12
+            }
+          },
+          "Y011": {
+            "probability": 0.7566666666666667,
+            "oracle_probability": 0.9132231404958678,
+            "cBR": 0.024509929497833337,
+            "actor_forecasts": {
+              "A": 0.88,
+              "C": 0.72,
+              "B": 0.67
+            }
+          }
+        },
+        "R0": {
+          "Y100": {
+            "probability": 0.43333333333333335,
+            "oracle_probability": 0.08677685950413225,
+            "cBR": 0.12010138955292973,
+            "actor_forecasts": {
+              "A": 0.5,
+              "C": 0.4,
+              "B": 0.4
+            }
+          },
+          "Y011": {
+            "probability": 0.5566666666666666,
+            "oracle_probability": 0.9132231404958678,
+            "cBR": 0.12713251902951384,
+            "actor_forecasts": {
+              "A": 0.55,
+              "C": 0.62,
+              "B": 0.5
+            }
+          }
+        },
+        "R0rep": {
+          "Y100": {
+            "probability": 0.48333333333333334,
+            "oracle_probability": 0.08677685950413225,
+            "cBR": 0.15725703693584986,
+            "actor_forecasts": {
+              "A": 0.5,
+              "C": 0.5,
+              "B": 0.45
+            }
+          },
+          "Y011": {
+            "probability": 0.6833333333333332,
+            "oracle_probability": 0.9132231404958678,
+            "cBR": 0.05284932343722734,
+            "actor_forecasts": {
+              "A": 0.65,
+              "C": 0.7,
+              "B": 0.7
+            }
+          }
+        }
+      },
+      "contrasts": {
+        "P_minus_E": {
+          "mean": 0.2344355371900826,
+          "by_profile": {
+            "Y100": 0.30551652892561976,
+            "Y011": 0.1633545454545454
+          }
+        },
+        "H_minus_E": {
+          "mean": -0.002297750229568433,
+          "by_profile": {
+            "Y100": 0.00695270890725436,
+            "Y011": -0.011548209366391227
+          }
+        },
+        "H_minus_R0": {
+          "mean": -0.10761597796143252,
+          "by_profile": {
+            "Y100": -0.11260936639118456,
+            "Y011": -0.10262258953168049
+          }
+        },
+        "R0rep_minus_R0": {
+          "mean": -0.018563774104683184,
+          "by_profile": {
+            "Y100": 0.037155647382920126,
+            "Y011": -0.0742831955922865
+          }
+        }
+      },
+      "aligned_shift": {
+        "mean": 0.3933333333333333,
+        "profiles": [
+          {
+            "profile_id": "Y100",
+            "ideal_E": 0.10673299673299673,
+            "ideal_P": 0.6699999999999999,
+            "ideal_change": 0.5632670032670032,
+            "direction": 1,
+            "actual_change": 0.53,
+            "aligned_change": 0.53
+          },
+          {
+            "profile_id": "Y011",
+            "ideal_E": 0.8932670032670033,
+            "ideal_P": 0.33000000000000007,
+            "ideal_change": -0.5632670032670032,
+            "direction": -1,
+            "actual_change": -0.25666666666666654,
+            "aligned_change": 0.25666666666666654
+          }
+        ],
+        "zero_direction_profiles": 0
+      },
+      "aa_mean_absolute_profile_forecast_difference": 0.08833333333333329
+    },
+    {
+      "seed": "20261066",
+      "status": "completed",
+      "error": null,
+      "arms": {
+        "P": {
+          "Y100": {
+            "probability": 0.59,
+            "oracle_probability": 0.08677685950413225,
+            "cBR": 0.25323352913052377,
+            "actor_forecasts": {
+              "B": 0.58,
+              "A": 0.62,
+              "C": 0.57
+            }
+          },
+          "Y011": {
+            "probability": 0.5566666666666668,
+            "oracle_probability": 0.9132231404958678,
+            "cBR": 0.12713251902951375,
+            "actor_forecasts": {
+              "B": 0.33,
+              "A": 0.67,
+              "C": 0.67
+            }
+          }
+        },
+        "E": {
+          "Y100": {
+            "probability": 0.11666666666666665,
+            "oracle_probability": 0.08677685950413225,
+            "cBR": 0.0008934005722134931,
+            "actor_forecasts": {
+              "B": 0.12,
+              "A": 0.11,
+              "C": 0.12
+            }
+          },
+          "Y011": {
+            "probability": 0.75,
+            "oracle_probability": 0.9132231404958678,
+            "cBR": 0.02664179359333381,
+            "actor_forecasts": {
+              "B": 0.75,
+              "A": 0.75,
+              "C": 0.75
+            }
+          }
+        },
+        "H": {
+          "Y100": {
+            "probability": 0.11666666666666665,
+            "oracle_probability": 0.08677685950413225,
+            "cBR": 0.0008934005722134931,
+            "actor_forecasts": {
+              "B": 0.12,
+              "A": 0.11,
+              "C": 0.12
+            }
+          },
+          "Y011": {
+            "probability": 0.7033333333333333,
+            "oracle_probability": 0.9132231404958678,
+            "cBR": 0.04405373115072595,
+            "actor_forecasts": {
+              "B": 0.72,
+              "A": 0.67,
+              "C": 0.72
+            }
+          }
+        },
+        "R0": {
+          "Y100": {
+            "probability": 0.4166666666666667,
+            "oracle_probability": 0.08677685950413225,
+            "cBR": 0.10882728486973417,
+            "actor_forecasts": {
+              "B": 0.4,
+              "A": 0.45,
+              "C": 0.4
+            }
+          },
+          "Y011": {
+            "probability": 0.7066666666666667,
+            "oracle_probability": 0.9132231404958678,
+            "cBR": 0.04266557688075347,
+            "actor_forecasts": {
+              "B": 0.75,
+              "A": 0.65,
+              "C": 0.72
+            }
+          }
+        },
+        "R0rep": {
+          "Y100": {
+            "probability": 0.31666666666666665,
+            "oracle_probability": 0.08677685950413225,
+            "cBR": 0.05284932343722726,
+            "actor_forecasts": {
+              "B": 0.25,
+              "A": 0.35,
+              "C": 0.35
+            }
+          },
+          "Y011": {
+            "probability": 0.6533333333333333,
+            "oracle_probability": 0.9132231404958678,
+            "cBR": 0.06754271186697938,
+            "actor_forecasts": {
+              "B": 0.62,
+              "A": 0.67,
+              "C": 0.67
+            }
+          }
+        }
+      },
+      "contrasts": {
+        "P_minus_E": {
+          "mean": 0.1764154269972451,
+          "by_profile": {
+            "Y100": 0.2523401285583103,
+            "Y011": 0.10049072543617994
+          }
+        },
+        "H_minus_E": {
+          "mean": 0.00870596877869607,
+          "by_profile": {
+            "Y100": 0.0,
+            "Y011": 0.01741193755739214
+          }
+        },
+        "H_minus_R0": {
+          "mean": -0.053272865013774096,
+          "by_profile": {
+            "Y100": -0.10793388429752068,
+            "Y011": 0.0013881542699724844
+          }
+        },
+        "R0rep_minus_R0": {
+          "mean": -0.015550413223140498,
+          "by_profile": {
+            "Y100": -0.05597796143250691,
+            "Y011": 0.024877134986225916
+          }
+        }
+      },
+      "aligned_shift": {
+        "mean": 0.33333333333333326,
+        "profiles": [
+          {
+            "profile_id": "Y100",
+            "ideal_E": 0.10673299673299673,
+            "ideal_P": 0.6699999999999999,
+            "ideal_change": 0.5632670032670032,
+            "direction": 1,
+            "actual_change": 0.47333333333333333,
+            "aligned_change": 0.47333333333333333
+          },
+          {
+            "profile_id": "Y011",
+            "ideal_E": 0.8932670032670033,
+            "ideal_P": 0.33000000000000007,
+            "ideal_change": -0.5632670032670032,
+            "direction": -1,
+            "actual_change": -0.19333333333333325,
+            "aligned_change": 0.19333333333333325
+          }
+        ],
+        "zero_direction_profiles": 0
+      },
+      "aa_mean_absolute_profile_forecast_difference": 0.07666666666666669
+    },
+    {
+      "seed": "20261070",
+      "status": "completed",
+      "error": null,
+      "arms": {
+        "P": {
+          "Y100": {
+            "probability": 0.5833333333333334,
+            "oracle_probability": 0.08677685950413225,
+            "cBR": 0.24656833170169007,
+            "actor_forecasts": {
+              "A": 0.67,
+              "B": 0.58,
+              "C": 0.5
+            }
+          },
+          "Y011": {
+            "probability": 0.4266666666666667,
+            "oracle_probability": 0.9132231404958678,
+            "cBR": 0.2367372022251061,
+            "actor_forecasts": {
+              "A": 0.33,
+              "B": 0.6,
+              "C": 0.35
+            }
+          }
+        },
+        "E": {
+          "Y100": {
+            "probability": 0.37000000000000005,
+            "oracle_probability": 0.08677685950413225,
+            "cBR": 0.08021534731234209,
+            "actor_forecasts": {
+              "A": 0.33,
+              "B": 0.67,
+              "C": 0.11
+            }
+          },
+          "Y011": {
+            "probability": 0.67,
+            "oracle_probability": 0.9132231404958678,
+            "cBR": 0.05915749607267264,
+            "actor_forecasts": {
+              "A": 0.67,
+              "B": 0.67,
+              "C": 0.67
+            }
+          }
+        },
+        "H": {
+          "Y100": {
+            "probability": 0.3233333333333333,
+            "oracle_probability": 0.08677685950413225,
+            "cBR": 0.05595896531050548,
+            "actor_forecasts": {
+              "A": 0.33,
+              "B": 0.32,
+              "C": 0.32
+            }
+          },
+          "Y011": {
+            "probability": 0.7233333333333333,
+            "oracle_probability": 0.9132231404958678,
+            "cBR": 0.03605813886422456,
+            "actor_forecasts": {
+              "A": 0.7,
+              "B": 0.75,
+              "C": 0.72
+            }
+          }
+        },
+        "R0": {
+          "Y100": {
+            "probability": 0.35000000000000003,
+            "oracle_probability": 0.08677685950413225,
+            "cBR": 0.06928642169250737,
+            "actor_forecasts": {
+              "A": 0.4,
+              "B": 0.3,
+              "C": 0.35
+            }
+          },
+          "Y011": {
+            "probability": 0.6333333333333333,
+            "oracle_probability": 0.9132231404958678,
+            "cBR": 0.07833830415348077,
+            "actor_forecasts": {
+              "A": 0.6,
+              "B": 0.65,
+              "C": 0.65
+            }
+          }
+        },
+        "R0rep": {
+          "Y100": {
+            "probability": 0.34,
+            "oracle_probability": 0.08677685950413225,
+            "cBR": 0.06412195888259001,
+            "actor_forecasts": {
+              "A": 0.42,
+              "B": 0.3,
+              "C": 0.3
+            }
+          },
+          "Y011": {
+            "probability": 0.7399999999999999,
+            "oracle_probability": 0.9132231404958678,
+            "cBR": 0.03000625640325121,
+            "actor_forecasts": {
+              "A": 0.72,
+              "B": 0.75,
+              "C": 0.75
+            }
+          }
+        }
+      },
+      "contrasts": {
+        "P_minus_E": {
+          "mean": 0.17196634527089072,
+          "by_profile": {
+            "Y100": 0.16635298438934798,
+            "Y011": 0.17757970615243346
+          }
+        },
+        "H_minus_E": {
+          "mean": -0.023677869605142343,
+          "by_profile": {
+            "Y100": -0.024256382001836607,
+            "Y011": -0.02309935720844808
+          }
+        },
+        "H_minus_R0": {
+          "mean": -0.027803810835629047,
+          "by_profile": {
+            "Y100": -0.01332745638200189,
+            "Y011": -0.042280165289256204
+          }
+        },
+        "R0rep_minus_R0": {
+          "mean": -0.026748255280073463,
+          "by_profile": {
+            "Y100": -0.005164462809917364,
+            "Y011": -0.04833204775022956
+          }
+        }
+      },
+      "aligned_shift": {
+        "mean": 0.22833333333333333,
+        "profiles": [
+          {
+            "profile_id": "Y100",
+            "ideal_E": 0.10673299673299673,
+            "ideal_P": 0.6699999999999999,
+            "ideal_change": 0.5632670032670032,
+            "direction": 1,
+            "actual_change": 0.21333333333333332,
+            "aligned_change": 0.21333333333333332
+          },
+          {
+            "profile_id": "Y011",
+            "ideal_E": 0.8932670032670033,
+            "ideal_P": 0.33000000000000007,
+            "ideal_change": -0.5632670032670032,
+            "direction": -1,
+            "actual_change": -0.24333333333333335,
+            "aligned_change": 0.24333333333333335
+          }
+        ],
+        "zero_direction_profiles": 0
+      },
+      "aa_mean_absolute_profile_forecast_difference": 0.05833333333333329
+    },
+    {
+      "seed": "20261074",
+      "status": "completed",
+      "error": null,
+      "arms": {
+        "P": {
+          "Y100": {
+            "probability": 0.63,
+            "oracle_probability": 0.08677685950413225,
+            "cBR": 0.2950913803701932,
+            "actor_forecasts": {
+              "C": 0.67,
+              "A": 0.67,
+              "B": 0.55
+            }
+          },
+          "Y011": {
+            "probability": 0.14,
+            "oracle_probability": 0.9132231404958678,
+            "cBR": 0.5978740249982926,
+            "actor_forecasts": {
+              "C": 0.11,
+              "A": 0.2,
+              "B": 0.11
+            }
+          }
+        },
+        "E": {
+          "Y100": {
+            "probability": 0.2866666666666667,
+            "oracle_probability": 0.08677685950413225,
+            "cBR": 0.0399559350074752,
+            "actor_forecasts": {
+              "C": 0.33,
+              "A": 0.2,
+              "B": 0.33
+            }
+          },
+          "Y011": {
+            "probability": 0.64,
+            "oracle_probability": 0.9132231404958678,
+            "cBR": 0.07465088450242473,
+            "actor_forecasts": {
+              "C": 0.65,
+              "A": 0.65,
+              "B": 0.62
+            }
+          }
+        },
+        "H": {
+          "Y100": {
+            "probability": 0.37333333333333335,
+            "oracle_probability": 0.08677685950413225,
+            "cBR": 0.08211461269342563,
+            "actor_forecasts": {
+              "C": 0.5,
+              "A": 0.31,
+              "B": 0.31
+            }
+          },
+          "Y011": {
+            "probability": 0.5666666666666667,
+            "oracle_probability": 0.9132231404958678,
+            "cBR": 0.1201013895529298,
+            "actor_forecasts": {
+              "C": 0.5,
+              "A": 0.6,
+              "B": 0.6
+            }
+          }
+        },
+        "R0": {
+          "Y100": {
+            "probability": 0.5166666666666667,
+            "oracle_probability": 0.08677685950413225,
+            "cBR": 0.18480524630224104,
+            "actor_forecasts": {
+              "C": 0.6,
+              "A": 0.5,
+              "B": 0.45
+            }
+          },
+          "Y011": {
+            "probability": 0.6466666666666666,
+            "oracle_probability": 0.9132231404958678,
+            "cBR": 0.07105235374025763,
+            "actor_forecasts": {
+              "C": 0.65,
+              "A": 0.62,
+              "B": 0.67
+            }
+          }
+        },
+        "R0rep": {
+          "Y100": {
+            "probability": 0.53,
+            "oracle_probability": 0.08677685950413225,
+            "cBR": 0.19644675227101974,
+            "actor_forecasts": {
+              "C": 0.55,
+              "A": 0.62,
+              "B": 0.42
+            }
+          },
+          "Y011": {
+            "probability": 0.5933333333333333,
+            "oracle_probability": 0.9132231404958678,
+            "cBR": 0.10232948872648355,
+            "actor_forecasts": {
+              "C": 0.6,
+              "A": 0.58,
+              "B": 0.6
+            }
+          }
+        }
+      },
+      "contrasts": {
+        "P_minus_E": {
+          "mean": 0.38917929292929293,
+          "by_profile": {
+            "Y100": 0.25513544536271804,
+            "Y011": 0.5232231404958678
+          }
+        },
+        "H_minus_E": {
+          "mean": 0.04380459136822775,
+          "by_profile": {
+            "Y100": 0.04215867768595043,
+            "Y011": 0.045450505050505075
+          }
+        },
+        "H_minus_R0": {
+          "mean": -0.026820798898071624,
+          "by_profile": {
+            "Y100": -0.10269063360881542,
+            "Y011": 0.04904903581267217
+          }
+        },
+        "R0rep_minus_R0": {
+          "mean": 0.021459320477502306,
+          "by_profile": {
+            "Y100": 0.011641505968778693,
+            "Y011": 0.03127713498622592
+          }
+        }
+      },
+      "aligned_shift": {
+        "mean": 0.42166666666666663,
+        "profiles": [
+          {
+            "profile_id": "Y100",
+            "ideal_E": 0.33,
+            "ideal_P": 0.8932670032670033,
+            "ideal_change": 0.5632670032670033,
+            "direction": 1,
+            "actual_change": 0.3433333333333333,
+            "aligned_change": 0.3433333333333333
+          },
+          {
+            "profile_id": "Y011",
+            "ideal_E": 0.67,
+            "ideal_P": 0.10673299673299676,
+            "ideal_change": -0.5632670032670033,
+            "direction": -1,
+            "actual_change": -0.5,
+            "aligned_change": 0.5
+          }
+        ],
+        "zero_direction_profiles": 0
+      },
+      "aa_mean_absolute_profile_forecast_difference": 0.033333333333333326
+    },
+    {
+      "seed": "20261076",
+      "status": "completed",
+      "error": null,
+      "arms": {
+        "P": {
+          "Y100": {
+            "probability": 0.5566666666666668,
+            "oracle_probability": 0.08677685950413225,
+            "cBR": 0.22079643087524384,
+            "actor_forecasts": {
+              "A": 0.67,
+              "B": 0.33,
+              "C": 0.67
+            }
+          },
+          "Y011": {
+            "probability": 0.3666666666666667,
+            "oracle_probability": 0.9132231404958678,
+            "cBR": 0.29872397908461024,
+            "actor_forecasts": {
+              "A": 0.4,
+              "B": 0.3,
+              "C": 0.4
+            }
+          }
+        },
+        "E": {
+          "Y100": {
+            "probability": 0.38666666666666666,
+            "oracle_probability": 0.08677685950413225,
+            "cBR": 0.08993389643998209,
+            "actor_forecasts": {
+              "A": 0.35,
+              "B": 0.36,
+              "C": 0.45
+            }
+          },
+          "Y011": {
+            "probability": 0.63,
+            "oracle_probability": 0.9132231404958678,
+            "cBR": 0.08021534731234209,
+            "actor_forecasts": {
+              "A": 0.62,
+              "B": 0.62,
+              "C": 0.65
+            }
+          }
+        },
+        "H": {
+          "Y100": {
+            "probability": 0.45999999999999996,
+            "oracle_probability": 0.08677685950413225,
+            "cBR": 0.1392955126015982,
+            "actor_forecasts": {
+              "A": 0.48,
+              "B": 0.45,
+              "C": 0.45
+            }
+          },
+          "Y011": {
+            "probability": 0.57,
+            "oracle_probability": 0.9132231404958678,
+            "cBR": 0.11780212417184627,
+            "actor_forecasts": {
+              "A": 0.6,
+              "B": 0.55,
+              "C": 0.56
+            }
+          }
+        },
+        "R0": {
+          "Y100": {
+            "probability": 0.45,
+            "oracle_probability": 0.08677685950413225,
+            "cBR": 0.1319310497916809,
+            "actor_forecasts": {
+              "A": 0.4,
+              "B": 0.45,
+              "C": 0.5
+            }
+          },
+          "Y011": {
+            "probability": 0.6266666666666666,
+            "oracle_probability": 0.9132231404958678,
+            "cBR": 0.0821146126934257,
+            "actor_forecasts": {
+              "A": 0.62,
+              "B": 0.62,
+              "C": 0.64
+            }
+          }
+        },
+        "R0rep": {
+          "Y100": {
+            "probability": 0.49666666666666665,
+            "oracle_probability": 0.08677685950413225,
+            "cBR": 0.16800965401573967,
+            "actor_forecasts": {
+              "A": 0.47,
+              "B": 0.5,
+              "C": 0.52
+            }
+          },
+          "Y011": {
+            "probability": 0.63,
+            "oracle_probability": 0.9132231404958678,
+            "cBR": 0.08021534731234209,
+            "actor_forecasts": {
+              "A": 0.62,
+              "B": 0.62,
+              "C": 0.65
+            }
+          }
+        }
+      },
+      "contrasts": {
+        "P_minus_E": {
+          "mean": 0.17468558310376495,
+          "by_profile": {
+            "Y100": 0.13086253443526175,
+            "Y011": 0.21850863177226815
+          }
+        },
+        "H_minus_E": {
+          "mean": 0.04347419651056014,
+          "by_profile": {
+            "Y100": 0.049361616161616106,
+            "Y011": 0.03758677685950418
+          }
+        },
+        "H_minus_R0": {
+          "mean": 0.02152598714416893,
+          "by_profile": {
+            "Y100": 0.007364462809917288,
+            "Y011": 0.03568751147842057
+          }
+        },
+        "R0rep_minus_R0": {
+          "mean": 0.017089669421487576,
+          "by_profile": {
+            "Y100": 0.03607860422405876,
+            "Y011": -0.0018992653810836063
+          }
+        }
+      },
+      "aligned_shift": {
+        "mean": 0.2166666666666667,
+        "profiles": [
+          {
+            "profile_id": "Y100",
+            "ideal_E": 0.33,
+            "ideal_P": 0.8932670032670033,
+            "ideal_change": 0.5632670032670033,
+            "direction": 1,
+            "actual_change": 0.1700000000000001,
+            "aligned_change": 0.1700000000000001
+          },
+          {
+            "profile_id": "Y011",
+            "ideal_E": 0.67,
+            "ideal_P": 0.10673299673299676,
+            "ideal_change": -0.5632670032670033,
+            "direction": -1,
+            "actual_change": -0.2633333333333333,
+            "aligned_change": 0.2633333333333333
+          }
+        ],
+        "zero_direction_profiles": 0
+      },
+      "aa_mean_absolute_profile_forecast_difference": 0.025000000000000022
+    },
+    {
+      "seed": "20261077",
+      "status": "completed",
+      "error": null,
+      "arms": {
+        "P": {
+          "Y100": {
+            "probability": 0.59,
+            "oracle_probability": 0.08677685950413225,
+            "cBR": 0.25323352913052377,
+            "actor_forecasts": {
+              "A": 0.6,
+              "C": 0.5,
+              "B": 0.67
+            }
+          },
+          "Y011": {
+            "probability": 0.30333333333333334,
+            "oracle_probability": 0.9132231404958678,
+            "cBR": 0.3719655768807535,
+            "actor_forecasts": {
+              "A": 0.25,
+              "C": 0.33,
+              "B": 0.33
+            }
+          }
+        },
+        "E": {
+          "Y100": {
+            "probability": 0.11,
+            "oracle_probability": 0.08677685950413225,
+            "cBR": 0.0005393142544908127,
+            "actor_forecasts": {
+              "A": 0.11,
+              "C": 0.11,
+              "B": 0.11
+            }
+          },
+          "Y011": {
+            "probability": 0.8166666666666668,
+            "oracle_probability": 0.9132231404958678,
+            "cBR": 0.009323152638329191,
+            "actor_forecasts": {
+              "A": 0.67,
+              "C": 0.89,
+              "B": 0.89
+            }
+          }
+        },
+        "H": {
+          "Y100": {
+            "probability": 0.2383333333333333,
+            "oracle_probability": 0.08677685950413225,
+            "cBR": 0.022969364759541307,
+            "actor_forecasts": {
+              "A": 0.25,
+              "C": 0.3,
+              "B": 0.165
+            }
+          },
+          "Y011": {
+            "probability": 0.7266666666666667,
+            "oracle_probability": 0.9132231404958678,
+            "cBR": 0.03480331792758541,
+            "actor_forecasts": {
+              "A": 0.75,
+              "C": 0.68,
+              "B": 0.75
+            }
+          }
+        },
+        "R0": {
+          "Y100": {
+            "probability": 0.42,
+            "oracle_probability": 0.08677685950413225,
+            "cBR": 0.11103766136192883,
+            "actor_forecasts": {
+              "A": 0.45,
+              "C": 0.46,
+              "B": 0.35
+            }
+          },
+          "Y011": {
+            "probability": 0.4766666666666666,
+            "oracle_probability": 0.9132231404958678,
+            "cBR": 0.19058155484218603,
+            "actor_forecasts": {
+              "A": 0.43,
+              "C": 0.5,
+              "B": 0.5
+            }
+          }
+        },
+        "R0rep": {
+          "Y100": {
+            "probability": 0.3833333333333333,
+            "oracle_probability": 0.08677685950413225,
+            "cBR": 0.0879457421700096,
+            "actor_forecasts": {
+              "A": 0.35,
+              "C": 0.4,
+              "B": 0.4
+            }
+          },
+          "Y011": {
+            "probability": 0.54,
+            "oracle_probability": 0.9132231404958678,
+            "cBR": 0.13929551260159828,
+            "actor_forecasts": {
+              "A": 0.55,
+              "C": 0.55,
+              "B": 0.52
+            }
+          }
+        }
+      },
+      "contrasts": {
+        "P_minus_E": {
+          "mean": 0.30766831955922863,
+          "by_profile": {
+            "Y100": 0.25269421487603294,
+            "Y011": 0.3626424242424243
+          }
+        },
+        "H_minus_E": {
+          "mean": 0.02395510789715336,
+          "by_profile": {
+            "Y100": 0.022430050505050494,
+            "Y011": 0.025480165289256222
+          }
+        },
+        "H_minus_R0": {
+          "mean": -0.12192326675849408,
+          "by_profile": {
+            "Y100": -0.08806829660238752,
+            "Y011": -0.15577823691460063
+          }
+        },
+        "R0rep_minus_R0": {
+          "mean": -0.03718898071625349,
+          "by_profile": {
+            "Y100": -0.023091919191919233,
+            "Y011": -0.05128604224058775
+          }
+        }
+      },
+      "aligned_shift": {
+        "mean": 0.4966666666666667,
+        "profiles": [
+          {
+            "profile_id": "Y100",
+            "ideal_E": 0.10673299673299673,
+            "ideal_P": 0.6699999999999999,
+            "ideal_change": 0.5632670032670032,
+            "direction": 1,
+            "actual_change": 0.48,
+            "aligned_change": 0.48
+          },
+          {
+            "profile_id": "Y011",
+            "ideal_E": 0.8932670032670033,
+            "ideal_P": 0.33000000000000007,
+            "ideal_change": -0.5632670032670032,
+            "direction": -1,
+            "actual_change": -0.5133333333333334,
+            "aligned_change": 0.5133333333333334
+          }
+        ],
+        "zero_direction_profiles": 0
+      },
+      "aa_mean_absolute_profile_forecast_difference": 0.050000000000000044
+    },
+    {
+      "seed": "20261080",
+      "status": "completed",
+      "error": null,
+      "arms": {
+        "P": {
+          "Y100": {
+            "probability": 0.5166666666666667,
+            "oracle_probability": 0.08677685950413225,
+            "cBR": 0.18480524630224104,
+            "actor_forecasts": {
+              "C": 0.33,
+              "A": 0.67,
+              "B": 0.55
+            }
+          },
+          "Y011": {
+            "probability": 0.3499999999999999,
+            "oracle_probability": 0.9132231404958678,
+            "cBR": 0.3172203059900281,
+            "actor_forecasts": {
+              "C": 0.35,
+              "A": 0.35,
+              "B": 0.35
+            }
+          }
+        },
+        "E": {
+          "Y100": {
+            "probability": 0.19999999999999998,
+            "oracle_probability": 0.08677685950413225,
+            "cBR": 0.012819479543747004,
+            "actor_forecasts": {
+              "C": 0.3,
+              "A": 0.15,
+              "B": 0.15
+            }
+          },
+          "Y011": {
+            "probability": 0.7433333333333333,
+            "oracle_probability": 0.9132231404958678,
+            "cBR": 0.028862546577723174,
+            "actor_forecasts": {
+              "C": 0.67,
+              "A": 0.89,
+              "B": 0.67
+            }
+          }
+        },
+        "H": {
+          "Y100": {
+            "probability": 0.09666666666666668,
+            "oracle_probability": 0.08677685950413225,
+            "cBR": 9.780828571211733e-05,
+            "actor_forecasts": {
+              "C": 0.1,
+              "A": 0.1,
+              "B": 0.09
+            }
+          },
+          "Y011": {
+            "probability": 0.91,
+            "oracle_probability": 0.9132231404958678,
+            "cBR": 1.0388634656102956e-05,
+            "actor_forecasts": {
+              "C": 0.91,
+              "A": 0.9,
+              "B": 0.92
+            }
+          }
+        },
+        "R0": {
+          "Y100": {
+            "probability": 0.2933333333333334,
+            "oracle_probability": 0.08677685950413225,
+            "cBR": 0.04266557688075346,
+            "actor_forecasts": {
+              "C": 0.28,
+              "A": 0.4,
+              "B": 0.2
+            }
+          },
+          "Y011": {
+            "probability": 0.7366666666666667,
+            "oracle_probability": 0.9132231404958678,
+            "cBR": 0.03117218845100139,
+            "actor_forecasts": {
+              "C": 0.76,
+              "A": 0.7,
+              "B": 0.75
+            }
+          }
+        },
+        "R0rep": {
+          "Y100": {
+            "probability": 0.27666666666666667,
+            "oracle_probability": 0.08677685950413225,
+            "cBR": 0.03605813886422451,
+            "actor_forecasts": {
+              "C": 0.3,
+              "A": 0.35,
+              "B": 0.18
+            }
+          },
+          "Y011": {
+            "probability": 0.7000000000000001,
+            "oracle_probability": 0.9132231404958678,
+            "cBR": 0.04546410764292057,
+            "actor_forecasts": {
+              "C": 0.7,
+              "A": 0.65,
+              "B": 0.75
+            }
+          }
+        }
+      },
+      "contrasts": {
+        "P_minus_E": {
+          "mean": 0.23017176308539947,
+          "by_profile": {
+            "Y100": 0.17198576675849403,
+            "Y011": 0.2883577594123049
+          }
+        },
+        "H_minus_E": {
+          "mean": -0.02078691460055098,
+          "by_profile": {
+            "Y100": -0.012721671258034887,
+            "Y011": -0.028852157943067072
+          }
+        },
+        "H_minus_R0": {
+          "mean": -0.036864784205693314,
+          "by_profile": {
+            "Y100": -0.04256776859504134,
+            "Y011": -0.031161799816345287
+          }
+        },
+        "R0rep_minus_R0": {
+          "mean": 0.0038422405876951133,
+          "by_profile": {
+            "Y100": -0.006607438016528952,
+            "Y011": 0.014291919191919179
+          }
+        }
+      },
+      "aligned_shift": {
+        "mean": 0.3550000000000001,
+        "profiles": [
+          {
+            "profile_id": "Y100",
+            "ideal_E": 0.10673299673299673,
+            "ideal_P": 0.6699999999999999,
+            "ideal_change": 0.5632670032670032,
+            "direction": 1,
+            "actual_change": 0.31666666666666676,
+            "aligned_change": 0.31666666666666676
+          },
+          {
+            "profile_id": "Y011",
+            "ideal_E": 0.8932670032670033,
+            "ideal_P": 0.33000000000000007,
+            "ideal_change": -0.5632670032670032,
+            "direction": -1,
+            "actual_change": -0.39333333333333337,
+            "aligned_change": 0.39333333333333337
+          }
+        ],
+        "zero_direction_profiles": 0
+      },
+      "aa_mean_absolute_profile_forecast_difference": 0.026666666666666672
+    },
+    {
+      "seed": "20261084",
+      "status": "completed",
+      "error": null,
+      "arms": {
+        "P": {
+          "Y100": {
+            "probability": 0.43333333333333335,
+            "oracle_probability": 0.08677685950413225,
+            "cBR": 0.12010138955292973,
+            "actor_forecasts": {
+              "B": 0.4,
+              "A": 0.55,
+              "C": 0.35
+            }
+          },
+          "Y011": {
+            "probability": 0.22333333333333336,
+            "oracle_probability": 0.9132231404958678,
+            "cBR": 0.475947946026759,
+            "actor_forecasts": {
+              "B": 0.25,
+              "A": 0.22,
+              "C": 0.2
+            }
+          }
+        },
+        "E": {
+          "Y100": {
+            "probability": 0.30666666666666664,
+            "oracle_probability": 0.08677685950413225,
+            "cBR": 0.048351527293976564,
+            "actor_forecasts": {
+              "B": 0.32,
+              "A": 0.3,
+              "C": 0.3
+            }
+          },
+          "Y011": {
+            "probability": 0.51,
+            "oracle_probability": 0.9132231404958678,
+            "cBR": 0.16258890103135037,
+            "actor_forecasts": {
+              "B": 0.33,
+              "A": 0.7,
+              "C": 0.5
+            }
+          }
+        },
+        "H": {
+          "Y100": {
+            "probability": 0.31666666666666665,
+            "oracle_probability": 0.08677685950413225,
+            "cBR": 0.05284932343722726,
+            "actor_forecasts": {
+              "B": 0.35,
+              "A": 0.3,
+              "C": 0.3
+            }
+          },
+          "Y011": {
+            "probability": 0.5499999999999999,
+            "oracle_probability": 0.9132231404958678,
+            "cBR": 0.131931049791681,
+            "actor_forecasts": {
+              "B": 0.65,
+              "A": 0.35,
+              "C": 0.65
+            }
+          }
+        },
+        "R0": {
+          "Y100": {
+            "probability": 0.4833333333333334,
+            "oracle_probability": 0.08677685950413225,
+            "cBR": 0.15725703693584986,
+            "actor_forecasts": {
+              "B": 0.35,
+              "A": 0.55,
+              "C": 0.55
+            }
+          },
+          "Y011": {
+            "probability": 0.3833333333333333,
+            "oracle_probability": 0.9132231404958678,
+            "cBR": 0.280783207734748,
+            "actor_forecasts": {
+              "B": 0.4,
+              "A": 0.35,
+              "C": 0.4
+            }
+          }
+        },
+        "R0rep": {
+          "Y100": {
+            "probability": 0.45,
+            "oracle_probability": 0.08677685950413225,
+            "cBR": 0.1319310497916809,
+            "actor_forecasts": {
+              "B": 0.5,
+              "A": 0.3,
+              "C": 0.55
+            }
+          },
+          "Y011": {
+            "probability": 0.59,
+            "oracle_probability": 0.9132231404958678,
+            "cBR": 0.10447319855201154,
+            "actor_forecasts": {
+              "B": 0.62,
+              "A": 0.55,
+              "C": 0.6
+            }
+          }
+        }
+      },
+      "contrasts": {
+        "P_minus_E": {
+          "mean": 0.19255445362718088,
+          "by_profile": {
+            "Y100": 0.07174986225895316,
+            "Y011": 0.3133590449954086
+          }
+        },
+        "H_minus_E": {
+          "mean": -0.013080027548209344,
+          "by_profile": {
+            "Y100": 0.004497796143250694,
+            "Y011": -0.03065785123966938
+          }
+        },
+        "H_minus_R0": {
+          "mean": -0.1266299357208448,
+          "by_profile": {
+            "Y100": -0.1044077134986226,
+            "Y011": -0.14885215794306703
+          }
+        },
+        "R0rep_minus_R0": {
+          "mean": -0.10081799816345272,
+          "by_profile": {
+            "Y100": -0.02532598714416895,
+            "Y011": -0.17631000918273648
+          }
+        }
+      },
+      "aligned_shift": {
+        "mean": 0.20666666666666667,
+        "profiles": [
+          {
+            "profile_id": "Y100",
+            "ideal_E": 0.33,
+            "ideal_P": 0.8932670032670033,
+            "ideal_change": 0.5632670032670033,
+            "direction": 1,
+            "actual_change": 0.1266666666666667,
+            "aligned_change": 0.1266666666666667
+          },
+          {
+            "profile_id": "Y011",
+            "ideal_E": 0.67,
+            "ideal_P": 0.10673299673299676,
+            "ideal_change": -0.5632670032670033,
+            "direction": -1,
+            "actual_change": -0.2866666666666666,
+            "aligned_change": 0.2866666666666666
+          }
+        ],
+        "zero_direction_profiles": 0
+      },
+      "aa_mean_absolute_profile_forecast_difference": 0.12000000000000002
+    },
+    {
+      "seed": "20261088",
+      "status": "completed",
+      "error": null,
+      "arms": {
+        "P": {
+          "Y100": {
+            "probability": 0.4000000000000001,
+            "oracle_probability": 0.08677685950413225,
+            "cBR": 0.09810873574209418,
+            "actor_forecasts": {
+              "A": 0.67,
+              "B": 0.33,
+              "C": 0.2
+            }
+          },
+          "Y011": {
+            "probability": 0.63,
+            "oracle_probability": 0.9132231404958678,
+            "cBR": 0.08021534731234209,
+            "actor_forecasts": {
+              "A": 0.55,
+              "B": 0.67,
+              "C": 0.67
+            }
+          }
+        },
+        "E": {
+          "Y100": {
+            "probability": 0.18000000000000002,
+            "oracle_probability": 0.08677685950413225,
+            "cBR": 0.008690553923912303,
+            "actor_forecasts": {
+              "A": 0.1,
+              "B": 0.33,
+              "C": 0.11
+            }
+          },
+          "Y011": {
+            "probability": 0.7133333333333334,
+            "oracle_probability": 0.9132231404958678,
+            "cBR": 0.03995593500747521,
+            "actor_forecasts": {
+              "A": 0.67,
+              "B": 0.72,
+              "C": 0.75
+            }
+          }
+        },
+        "H": {
+          "Y100": {
+            "probability": 0.13333333333333333,
+            "oracle_probability": 0.08677685950413225,
+            "cBR": 0.0021675052554090855,
+            "actor_forecasts": {
+              "A": 0.15,
+              "B": 0.1,
+              "C": 0.15
+            }
+          },
+          "Y011": {
+            "probability": 0.7766666666666667,
+            "oracle_probability": 0.9132231404958678,
+            "cBR": 0.018647670544665287,
+            "actor_forecasts": {
+              "A": 0.86,
+              "B": 0.65,
+              "C": 0.82
+            }
+          }
+        },
+        "R0": {
+          "Y100": {
+            "probability": 0.39666666666666667,
+            "oracle_probability": 0.08677685950413225,
+            "cBR": 0.09603169258323278,
+            "actor_forecasts": {
+              "A": 0.44,
+              "B": 0.4,
+              "C": 0.35
+            }
+          },
+          "Y011": {
+            "probability": 0.7166666666666667,
+            "oracle_probability": 0.9132231404958678,
+            "cBR": 0.03863444740416944,
+            "actor_forecasts": {
+              "A": 0.7,
+              "B": 0.7,
+              "C": 0.75
+            }
+          }
+        },
+        "R0rep": {
+          "Y100": {
+            "probability": 0.3466666666666667,
+            "oracle_probability": 0.08677685950413225,
+            "cBR": 0.06754271186697931,
+            "actor_forecasts": {
+              "A": 0.4,
+              "B": 0.28,
+              "C": 0.36
+            }
+          },
+          "Y011": {
+            "probability": 0.7766666666666667,
+            "oracle_probability": 0.9132231404958678,
+            "cBR": 0.018647670544665287,
+            "actor_forecasts": {
+              "A": 0.78,
+              "B": 0.75,
+              "C": 0.8
+            }
+          }
+        }
+      },
+      "contrasts": {
+        "P_minus_E": {
+          "mean": 0.06483879706152437,
+          "by_profile": {
+            "Y100": 0.08941818181818188,
+            "Y011": 0.040259412304866876
+          }
+        },
+        "H_minus_E": {
+          "mean": -0.013915656565656572,
+          "by_profile": {
+            "Y100": -0.006523048668503217,
+            "Y011": -0.021308264462809926
+          }
+        },
+        "H_minus_R0": {
+          "mean": -0.05692548209366393,
+          "by_profile": {
+            "Y100": -0.0938641873278237,
+            "Y011": -0.019986776859504157
+          }
+        },
+        "R0rep_minus_R0": {
+          "mean": -0.024237878787878815,
+          "by_profile": {
+            "Y100": -0.02848898071625347,
+            "Y011": -0.019986776859504157
+          }
+        }
+      },
+      "aligned_shift": {
+        "mean": 0.15166666666666673,
+        "profiles": [
+          {
+            "profile_id": "Y100",
+            "ideal_E": 0.10673299673299673,
+            "ideal_P": 0.6699999999999999,
+            "ideal_change": 0.5632670032670032,
+            "direction": 1,
+            "actual_change": 0.22000000000000006,
+            "aligned_change": 0.22000000000000006
+          },
+          {
+            "profile_id": "Y011",
+            "ideal_E": 0.8932670032670033,
+            "ideal_P": 0.33000000000000007,
+            "ideal_change": -0.5632670032670032,
+            "direction": -1,
+            "actual_change": -0.08333333333333337,
+            "aligned_change": 0.08333333333333337
+          }
+        ],
+        "zero_direction_profiles": 0
+      },
+      "aa_mean_absolute_profile_forecast_difference": 0.05500000000000002
+    },
+    {
+      "seed": "20261091",
+      "status": "completed",
+      "error": null,
+      "arms": {
+        "P": {
+          "Y100": {
+            "probability": 0.51,
+            "oracle_probability": 0.08677685950413225,
+            "cBR": 0.179117826651185,
+            "actor_forecasts": {
+              "B": 0.4,
+              "C": 0.58,
+              "A": 0.55
+            }
+          },
+          "Y011": {
+            "probability": 0.51,
+            "oracle_probability": 0.9132231404958678,
+            "cBR": 0.16258890103135037,
+            "actor_forecasts": {
+              "B": 0.58,
+              "C": 0.33,
+              "A": 0.62
+            }
+          }
+        },
+        "E": {
+          "Y100": {
+            "probability": 0.11666666666666665,
+            "oracle_probability": 0.08677685950413225,
+            "cBR": 0.0008934005722134931,
+            "actor_forecasts": {
+              "B": 0.12,
+              "C": 0.11,
+              "A": 0.12
+            }
+          },
+          "Y011": {
+            "probability": 0.7200000000000001,
+            "oracle_probability": 0.9132231404958678,
+            "cBR": 0.03733518202308585,
+            "actor_forecasts": {
+              "B": 0.67,
+              "C": 0.82,
+              "A": 0.67
+            }
+          }
+        },
+        "H": {
+          "Y100": {
+            "probability": 0.08600000000000001,
+            "oracle_probability": 0.08677685950413225,
+            "cBR": 6.035106891605909e-07,
+            "actor_forecasts": {
+              "B": 0.1,
+              "C": 0.08,
+              "A": 0.078
+            }
+          },
+          "Y011": {
+            "probability": 0.87,
+            "oracle_probability": 0.9132231404958678,
+            "cBR": 0.0018682398743255304,
+            "actor_forecasts": {
+              "B": 0.87,
+              "C": 0.87,
+              "A": 0.87
+            }
+          }
+        },
+        "R0": {
+          "Y100": {
+            "probability": 0.49,
+            "oracle_probability": 0.08677685950413225,
+            "cBR": 0.16258890103135026,
+            "actor_forecasts": {
+              "B": 0.5,
+              "C": 0.45,
+              "A": 0.52
+            }
+          },
+          "Y011": {
+            "probability": 0.6999999999999998,
+            "oracle_probability": 0.9132231404958678,
+            "cBR": 0.04546410764292066,
+            "actor_forecasts": {
+              "B": 0.7,
+              "C": 0.7,
+              "A": 0.7
+            }
+          }
+        },
+        "R0rep": {
+          "Y100": {
+            "probability": 0.3733333333333333,
+            "oracle_probability": 0.08677685950413225,
+            "cBR": 0.08211461269342557,
+            "actor_forecasts": {
+              "B": 0.35,
+              "C": 0.35,
+              "A": 0.42
+            }
+          },
+          "Y011": {
+            "probability": 0.7533333333333333,
+            "oracle_probability": 0.9132231404958678,
+            "cBR": 0.02556475043447248,
+            "actor_forecasts": {
+              "B": 0.75,
+              "C": 0.75,
+              "A": 0.76
+            }
+          }
+        }
+      },
+      "contrasts": {
+        "P_minus_E": {
+          "mean": 0.15173907254361801,
+          "by_profile": {
+            "Y100": 0.17822442607897152,
+            "Y011": 0.12525371900826454
+          }
+        },
+        "H_minus_E": {
+          "mean": -0.018179869605142326,
+          "by_profile": {
+            "Y100": -0.0008927970615243325,
+            "Y011": -0.03546694214876032
+          }
+        },
+        "H_minus_R0": {
+          "mean": -0.1030920826446281,
+          "by_profile": {
+            "Y100": -0.1625882975206611,
+            "Y011": -0.04359586776859513
+          }
+        },
+        "R0rep_minus_R0": {
+          "mean": -0.05018682277318644,
+          "by_profile": {
+            "Y100": -0.0804742883379247,
+            "Y011": -0.01989935720844818
+          }
+        }
+      },
+      "aligned_shift": {
+        "mean": 0.30166666666666675,
+        "profiles": [
+          {
+            "profile_id": "Y100",
+            "ideal_E": 0.10673299673299673,
+            "ideal_P": 0.6699999999999999,
+            "ideal_change": 0.5632670032670032,
+            "direction": 1,
+            "actual_change": 0.39333333333333337,
+            "aligned_change": 0.39333333333333337
+          },
+          {
+            "profile_id": "Y011",
+            "ideal_E": 0.8932670032670033,
+            "ideal_P": 0.33000000000000007,
+            "ideal_change": -0.5632670032670032,
+            "direction": -1,
+            "actual_change": -0.21000000000000008,
+            "aligned_change": 0.21000000000000008
+          }
+        ],
+        "zero_direction_profiles": 0
+      },
+      "aa_mean_absolute_profile_forecast_difference": 0.08500000000000008
+    },
+    {
+      "seed": "20261092",
+      "status": "completed",
+      "error": null,
+      "arms": {
+        "P": {
+          "Y100": {
+            "probability": 0.66,
+            "oracle_probability": 0.08677685950413225,
+            "cBR": 0.32858476879994536,
+            "actor_forecasts": {
+              "C": 0.45,
+              "A": 0.86,
+              "B": 0.67
+            }
+          },
+          "Y011": {
+            "probability": 0.33,
+            "oracle_probability": 0.9132231404958678,
+            "cBR": 0.3401492316098628,
+            "actor_forecasts": {
+              "C": 0.33,
+              "A": 0.33,
+              "B": 0.33
+            }
+          }
+        },
+        "E": {
+          "Y100": {
+            "probability": 0.11333333333333333,
+            "oracle_probability": 0.08677685950413225,
+            "cBR": 0.0007052463022410418,
+            "actor_forecasts": {
+              "C": 0.11,
+              "A": 0.12,
+              "B": 0.11
+            }
+          },
+          "Y011": {
+            "probability": 0.8333333333333334,
+            "oracle_probability": 0.9132231404958678,
+            "cBR": 0.006382381288466943,
+            "actor_forecasts": {
+              "C": 0.85,
+              "A": 0.87,
+              "B": 0.78
+            }
+          }
+        },
+        "H": {
+          "Y100": {
+            "probability": 0.11333333333333333,
+            "oracle_probability": 0.08677685950413225,
+            "cBR": 0.0007052463022410418,
+            "actor_forecasts": {
+              "C": 0.11,
+              "A": 0.12,
+              "B": 0.11
+            }
+          },
+          "Y011": {
+            "probability": 0.87,
+            "oracle_probability": 0.9132231404958678,
+            "cBR": 0.0018682398743255304,
+            "actor_forecasts": {
+              "C": 0.84,
+              "A": 0.88,
+              "B": 0.89
+            }
+          }
+        },
+        "R0": {
+          "Y100": {
+            "probability": 0.5066666666666667,
+            "oracle_probability": 0.08677685950413225,
+            "cBR": 0.17630745015899035,
+            "actor_forecasts": {
+              "C": 0.4,
+              "A": 0.62,
+              "B": 0.5
+            }
+          },
+          "Y011": {
+            "probability": 0.7333333333333334,
+            "oracle_probability": 0.9132231404958678,
+            "cBR": 0.03236034272097383,
+            "actor_forecasts": {
+              "C": 0.75,
+              "A": 0.7,
+              "B": 0.75
+            }
+          }
+        },
+        "R0rep": {
+          "Y100": {
+            "probability": 0.5166666666666667,
+            "oracle_probability": 0.08677685950413225,
+            "cBR": 0.18480524630224104,
+            "actor_forecasts": {
+              "C": 0.5,
+              "A": 0.6,
+              "B": 0.45
+            }
+          },
+          "Y011": {
+            "probability": 0.7433333333333333,
+            "oracle_probability": 0.9132231404958678,
+            "cBR": 0.028862546577723174,
+            "actor_forecasts": {
+              "C": 0.78,
+              "A": 0.7,
+              "B": 0.75
+            }
+          }
+        }
+      },
+      "contrasts": {
+        "P_minus_E": {
+          "mean": 0.3308231864095501,
+          "by_profile": {
+            "Y100": 0.3278795224977043,
+            "Y011": 0.33376685032139586
+          }
+        },
+        "H_minus_E": {
+          "mean": -0.0022570707070707066,
+          "by_profile": {
+            "Y100": 0.0,
+            "Y011": -0.004514141414141413
+          }
+        },
+        "H_minus_R0": {
+          "mean": -0.10304715335169881,
+          "by_profile": {
+            "Y100": -0.17560220385674932,
+            "Y011": -0.0304921028466483
+          }
+        },
+        "R0rep_minus_R0": {
+          "mean": 0.002500000000000018,
+          "by_profile": {
+            "Y100": 0.008497796143250691,
+            "Y011": -0.0034977961432506553
+          }
+        }
+      },
+      "aligned_shift": {
+        "mean": 0.5250000000000001,
+        "profiles": [
+          {
+            "profile_id": "Y100",
+            "ideal_E": 0.10673299673299673,
+            "ideal_P": 0.6699999999999999,
+            "ideal_change": 0.5632670032670032,
+            "direction": 1,
+            "actual_change": 0.5466666666666667,
+            "aligned_change": 0.5466666666666667
+          },
+          {
+            "profile_id": "Y011",
+            "ideal_E": 0.8932670032670033,
+            "ideal_P": 0.33000000000000007,
+            "ideal_change": -0.5632670032670032,
+            "direction": -1,
+            "actual_change": -0.5033333333333334,
+            "aligned_change": 0.5033333333333334
+          }
+        ],
+        "zero_direction_profiles": 0
+      },
+      "aa_mean_absolute_profile_forecast_difference": 0.009999999999999953
+    },
+    {
+      "seed": "20261093",
+      "status": "completed",
+      "error": null,
+      "arms": {
+        "P": {
+          "Y100": {
+            "probability": 0.64,
+            "oracle_probability": 0.08677685950413225,
+            "cBR": 0.3060558431801106,
+            "actor_forecasts": {
+              "C": 0.5,
+              "B": 0.67,
+              "A": 0.75
+            }
+          },
+          "Y011": {
+            "probability": 0.6366666666666667,
+            "oracle_probability": 0.9132231404958678,
+            "cBR": 0.0764834832168416,
+            "actor_forecasts": {
+              "C": 0.64,
+              "B": 0.65,
+              "A": 0.62
+            }
+          }
+        },
+        "E": {
+          "Y100": {
+            "probability": 0.39666666666666667,
+            "oracle_probability": 0.08677685950413225,
+            "cBR": 0.09603169258323278,
+            "actor_forecasts": {
+              "C": 0.43,
+              "B": 0.26,
+              "A": 0.5
+            }
+          },
+          "Y011": {
+            "probability": 0.6466666666666666,
+            "oracle_probability": 0.9132231404958678,
+            "cBR": 0.07105235374025763,
+            "actor_forecasts": {
+              "C": 0.67,
+              "B": 0.67,
+              "A": 0.6
+            }
+          }
+        },
+        "H": {
+          "Y100": {
+            "probability": 0.31666666666666665,
+            "oracle_probability": 0.08677685950413225,
+            "cBR": 0.05284932343722726,
+            "actor_forecasts": {
+              "C": 0.3,
+              "B": 0.3,
+              "A": 0.35
+            }
+          },
+          "Y011": {
+            "probability": 0.65,
+            "oracle_probability": 0.9132231404958678,
+            "cBR": 0.06928642169250737,
+            "actor_forecasts": {
+              "C": 0.65,
+              "B": 0.65,
+              "A": 0.65
+            }
+          }
+        },
+        "R0": {
+          "Y100": {
+            "probability": 0.57,
+            "oracle_probability": 0.08677685950413225,
+            "cBR": 0.23350460351068908,
+            "actor_forecasts": {
+              "C": 0.56,
+              "B": 0.58,
+              "A": 0.57
+            }
+          },
+          "Y011": {
+            "probability": 0.7466666666666667,
+            "oracle_probability": 0.9132231404958678,
+            "cBR": 0.027741058974417362,
+            "actor_forecasts": {
+              "C": 0.72,
+              "B": 0.8,
+              "A": 0.72
+            }
+          }
+        },
+        "R0rep": {
+          "Y100": {
+            "probability": 0.4566666666666667,
+            "oracle_probability": 0.08677685950413225,
+            "cBR": 0.13681846944273696,
+            "actor_forecasts": {
+              "C": 0.62,
+              "B": 0.4,
+              "A": 0.35
+            }
+          },
+          "Y011": {
+            "probability": 0.7533333333333333,
+            "oracle_probability": 0.9132231404958678,
+            "cBR": 0.02556475043447248,
+            "actor_forecasts": {
+              "C": 0.78,
+              "B": 0.76,
+              "A": 0.72
+            }
+          }
+        }
+      },
+      "contrasts": {
+        "P_minus_E": {
+          "mean": 0.10772764003673088,
+          "by_profile": {
+            "Y100": 0.2100241505968778,
+            "Y011": 0.0054311294765839735
+          }
+        },
+        "H_minus_E": {
+          "mean": -0.022474150596877893,
+          "by_profile": {
+            "Y100": -0.043182369146005525,
+            "Y011": -0.00176593204775026
+          }
+        },
+        "H_minus_R0": {
+          "mean": -0.06955495867768591,
+          "by_profile": {
+            "Y100": -0.18065528007346182,
+            "Y011": 0.041545362718090006
+          }
+        },
+        "R0rep_minus_R0": {
+          "mean": -0.0494312213039485,
+          "by_profile": {
+            "Y100": -0.09668613406795212,
+            "Y011": -0.0021763085399448823
+          }
+        }
+      },
+      "aligned_shift": {
+        "mean": 0.12666666666666662,
+        "profiles": [
+          {
+            "profile_id": "Y100",
+            "ideal_E": 0.33,
+            "ideal_P": 0.8932670032670033,
+            "ideal_change": 0.5632670032670033,
+            "direction": 1,
+            "actual_change": 0.24333333333333335,
+            "aligned_change": 0.24333333333333335
+          },
+          {
+            "profile_id": "Y011",
+            "ideal_E": 0.67,
+            "ideal_P": 0.10673299673299676,
+            "ideal_change": -0.5632670032670033,
+            "direction": -1,
+            "actual_change": -0.009999999999999898,
+            "aligned_change": 0.009999999999999898
+          }
+        ],
+        "zero_direction_profiles": 0
+      },
+      "aa_mean_absolute_profile_forecast_difference": 0.059999999999999915
+    },
+    {
+      "seed": "20261094",
+      "status": "completed",
+      "error": null,
+      "arms": {
+        "P": {
+          "Y100": {
+            "probability": 0.6333333333333333,
+            "oracle_probability": 0.08677685950413225,
+            "cBR": 0.2987239790846101,
+            "actor_forecasts": {
+              "A": 0.62,
+              "B": 0.88,
+              "C": 0.4
+            }
+          },
+          "Y011": {
+            "probability": 0.27666666666666667,
+            "oracle_probability": 0.9132231404958678,
+            "cBR": 0.40520414437386637,
+            "actor_forecasts": {
+              "A": 0.25,
+              "B": 0.33,
+              "C": 0.25
+            }
+          }
+        },
+        "E": {
+          "Y100": {
+            "probability": 0.25666666666666665,
+            "oracle_probability": 0.08677685950413225,
+            "cBR": 0.028862546577723126,
+            "actor_forecasts": {
+              "A": 0.33,
+              "B": 0.11,
+              "C": 0.33
+            }
+          },
+          "Y011": {
+            "probability": 0.6466666666666666,
+            "oracle_probability": 0.9132231404958678,
+            "cBR": 0.07105235374025763,
+            "actor_forecasts": {
+              "A": 0.67,
+              "B": 0.6,
+              "C": 0.67
+            }
+          }
+        },
+        "H": {
+          "Y100": {
+            "probability": 0.26333333333333336,
+            "oracle_probability": 0.08677685950413225,
+            "cBR": 0.03117218845100138,
+            "actor_forecasts": {
+              "A": 0.3,
+              "B": 0.3,
+              "C": 0.19
+            }
+          },
+          "Y011": {
+            "probability": 0.6999999999999998,
+            "oracle_probability": 0.9132231404958678,
+            "cBR": 0.04546410764292066,
+            "actor_forecasts": {
+              "A": 0.7,
+              "B": 0.7,
+              "C": 0.7
+            }
+          }
+        },
+        "R0": {
+          "Y100": {
+            "probability": 0.3333333333333333,
+            "oracle_probability": 0.08677685950413225,
+            "cBR": 0.06079009478708951,
+            "actor_forecasts": {
+              "A": 0.4,
+              "B": 0.25,
+              "C": 0.35
+            }
+          },
+          "Y011": {
+            "probability": 0.7000000000000001,
+            "oracle_probability": 0.9132231404958678,
+            "cBR": 0.04546410764292057,
+            "actor_forecasts": {
+              "A": 0.65,
+              "B": 0.75,
+              "C": 0.7
+            }
+          }
+        },
+        "R0rep": {
+          "Y100": {
+            "probability": 0.3499999999999999,
+            "oracle_probability": 0.08677685950413225,
+            "cBR": 0.0692864216925073,
+            "actor_forecasts": {
+              "A": 0.35,
+              "B": 0.35,
+              "C": 0.35
+            }
+          },
+          "Y011": {
+            "probability": 0.6733333333333333,
+            "oracle_probability": 0.9132231404958678,
+            "cBR": 0.057547119580477986,
+            "actor_forecasts": {
+              "A": 0.65,
+              "B": 0.72,
+              "C": 0.65
+            }
+          }
+        }
+      },
+      "contrasts": {
+        "P_minus_E": {
+          "mean": 0.3020066115702479,
+          "by_profile": {
+            "Y100": 0.269861432506887,
+            "Y011": 0.3341517906336087
+          }
+        },
+        "H_minus_E": {
+          "mean": -0.01163930211202936,
+          "by_profile": {
+            "Y100": 0.002309641873278253,
+            "Y011": -0.025588246097336974
+          }
+        },
+        "H_minus_R0": {
+          "mean": -0.01480895316804402,
+          "by_profile": {
+            "Y100": -0.02961790633608813,
+            "Y011": 9.020562075079397e-17
+          }
+        },
+        "R0rep_minus_R0": {
+          "mean": 0.010289669421487607,
+          "by_profile": {
+            "Y100": 0.008496326905417795,
+            "Y011": 0.012083011937557418
+          }
+        }
+      },
+      "aligned_shift": {
+        "mean": 0.3733333333333333,
+        "profiles": [
+          {
+            "profile_id": "Y100",
+            "ideal_E": 0.33,
+            "ideal_P": 0.8932670032670033,
+            "ideal_change": 0.5632670032670033,
+            "direction": 1,
+            "actual_change": 0.37666666666666665,
+            "aligned_change": 0.37666666666666665
+          },
+          {
+            "profile_id": "Y011",
+            "ideal_E": 0.67,
+            "ideal_P": 0.10673299673299676,
+            "ideal_change": -0.5632670032670033,
+            "direction": -1,
+            "actual_change": -0.36999999999999994,
+            "aligned_change": 0.36999999999999994
+          }
+        ],
+        "zero_direction_profiles": 0
+      },
+      "aa_mean_absolute_profile_forecast_difference": 0.021666666666666667
+    },
+    {
+      "seed": "20261098",
+      "status": "completed",
+      "error": null,
+      "arms": {
+        "P": {
+          "Y100": {
+            "probability": 0.3833333333333333,
+            "oracle_probability": 0.08677685950413225,
+            "cBR": 0.0879457421700096,
+            "actor_forecasts": {
+              "C": 0.4,
+              "A": 0.5,
+              "B": 0.25
+            }
+          },
+          "Y011": {
+            "probability": 0.36333333333333334,
+            "oracle_probability": 0.9132231404958678,
+            "cBR": 0.30237880002124934,
+            "actor_forecasts": {
+              "C": 0.38,
+              "A": 0.38,
+              "B": 0.33
+            }
+          }
+        },
+        "E": {
+          "Y100": {
+            "probability": 0.10333333333333333,
+            "oracle_probability": 0.08677685950413225,
+            "cBR": 0.00027411682565702043,
+            "actor_forecasts": {
+              "C": 0.11,
+              "A": 0.1,
+              "B": 0.1
+            }
+          },
+          "Y011": {
+            "probability": 0.7200000000000001,
+            "oracle_probability": 0.9132231404958678,
+            "cBR": 0.03733518202308585,
+            "actor_forecasts": {
+              "C": 0.82,
+              "A": 0.67,
+              "B": 0.67
+            }
+          }
+        },
+        "H": {
+          "Y100": {
+            "probability": 0.16666666666666666,
+            "oracle_probability": 0.08677685950413225,
+            "cBR": 0.006382381288466935,
+            "actor_forecasts": {
+              "C": 0.16,
+              "A": 0.18,
+              "B": 0.16
+            }
+          },
+          "Y011": {
+            "probability": 0.7399999999999999,
+            "oracle_probability": 0.9132231404958678,
+            "cBR": 0.03000625640325121,
+            "actor_forecasts": {
+              "C": 0.84,
+              "A": 0.78,
+              "B": 0.6
+            }
+          }
+        },
+        "R0": {
+          "Y100": {
+            "probability": 0.3833333333333333,
+            "oracle_probability": 0.08677685950413225,
+            "cBR": 0.0879457421700096,
+            "actor_forecasts": {
+              "C": 0.4,
+              "A": 0.4,
+              "B": 0.35
+            }
+          },
+          "Y011": {
+            "probability": 0.5933333333333334,
+            "oracle_probability": 0.9132231404958678,
+            "cBR": 0.10232948872648348,
+            "actor_forecasts": {
+              "C": 0.6,
+              "A": 0.56,
+              "B": 0.62
+            }
+          }
+        },
+        "R0rep": {
+          "Y100": {
+            "probability": 0.3666666666666667,
+            "oracle_probability": 0.08677685950413225,
+            "cBR": 0.0783383041534807,
+            "actor_forecasts": {
+              "C": 0.35,
+              "A": 0.4,
+              "B": 0.35
+            }
+          },
+          "Y011": {
+            "probability": 0.6733333333333333,
+            "oracle_probability": 0.9132231404958678,
+            "cBR": 0.057547119580477986,
+            "actor_forecasts": {
+              "C": 0.65,
+              "A": 0.65,
+              "B": 0.72
+            }
+          }
+        }
+      },
+      "contrasts": {
+        "P_minus_E": {
+          "mean": 0.17635762167125804,
+          "by_profile": {
+            "Y100": 0.08767162534435258,
+            "Y011": 0.2650436179981635
+          }
+        },
+        "H_minus_E": {
+          "mean": -0.0006103305785123622,
+          "by_profile": {
+            "Y100": 0.006108264462809914,
+            "Y011": -0.0073289256198346385
+          }
+        },
+        "H_minus_R0": {
+          "mean": -0.07694329660238747,
+          "by_profile": {
+            "Y100": -0.08156336088154266,
+            "Y011": -0.07232323232323228
+          }
+        },
+        "R0rep_minus_R0": {
+          "mean": -0.027194903581267197,
+          "by_profile": {
+            "Y100": -0.0096074380165289,
+            "Y011": -0.044782369146005495
+          }
+        }
+      },
+      "aligned_shift": {
+        "mean": 0.31833333333333336,
+        "profiles": [
+          {
+            "profile_id": "Y100",
+            "ideal_E": 0.10673299673299673,
+            "ideal_P": 0.6699999999999999,
+            "ideal_change": 0.5632670032670032,
+            "direction": 1,
+            "actual_change": 0.27999999999999997,
+            "aligned_change": 0.27999999999999997
+          },
+          {
+            "profile_id": "Y011",
+            "ideal_E": 0.8932670032670033,
+            "ideal_P": 0.33000000000000007,
+            "ideal_change": -0.5632670032670032,
+            "direction": -1,
+            "actual_change": -0.35666666666666674,
+            "aligned_change": 0.35666666666666674
+          }
+        ],
+        "zero_direction_profiles": 0
+      },
+      "aa_mean_absolute_profile_forecast_difference": 0.048333333333333284
+    },
+    {
+      "seed": "20261100",
+      "status": "completed",
+      "error": null,
+      "arms": {
+        "P": {
+          "Y100": {
+            "probability": 0.6,
+            "oracle_probability": 0.08677685950413225,
+            "cBR": 0.26339799194044117,
+            "actor_forecasts": {
+              "A": 0.67,
+              "B": 0.8,
+              "C": 0.33
+            }
+          },
+          "Y011": {
+            "probability": 0.3466666666666667,
+            "oracle_probability": 0.9132231404958678,
+            "cBR": 0.3209862380377783,
+            "actor_forecasts": {
+              "A": 0.33,
+              "B": 0.33,
+              "C": 0.38
+            }
+          }
+        },
+        "E": {
+          "Y100": {
+            "probability": 0.2966666666666667,
+            "oracle_probability": 0.08677685950413225,
+            "cBR": 0.044053731150725896,
+            "actor_forecasts": {
+              "A": 0.11,
+              "B": 0.11,
+              "C": 0.67
+            }
+          },
+          "Y011": {
+            "probability": 0.7133333333333334,
+            "oracle_probability": 0.9132231404958678,
+            "cBR": 0.03995593500747521,
+            "actor_forecasts": {
+              "A": 0.67,
+              "B": 0.8,
+              "C": 0.67
+            }
+          }
+        },
+        "H": {
+          "Y100": {
+            "probability": 0.31666666666666665,
+            "oracle_probability": 0.08677685950413225,
+            "cBR": 0.05284932343722726,
+            "actor_forecasts": {
+              "A": 0.35,
+              "B": 0.35,
+              "C": 0.25
+            }
+          },
+          "Y011": {
+            "probability": 0.63,
+            "oracle_probability": 0.9132231404958678,
+            "cBR": 0.08021534731234209,
+            "actor_forecasts": {
+              "A": 0.68,
+              "B": 0.7,
+              "C": 0.51
+            }
+          }
+        },
+        "R0": {
+          "Y100": {
+            "probability": 0.3933333333333333,
+            "oracle_probability": 0.08677685950413225,
+            "cBR": 0.09397687164659362,
+            "actor_forecasts": {
+              "A": 0.38,
+              "B": 0.45,
+              "C": 0.35
+            }
+          },
+          "Y011": {
+            "probability": 0.5933333333333333,
+            "oracle_probability": 0.9132231404958678,
+            "cBR": 0.10232948872648355,
+            "actor_forecasts": {
+              "A": 0.58,
+              "B": 0.6,
+              "C": 0.6
+            }
+          }
+        },
+        "R0rep": {
+          "Y100": {
+            "probability": 0.37666666666666665,
+            "oracle_probability": 0.08677685950413225,
+            "cBR": 0.08403610029673139,
+            "actor_forecasts": {
+              "A": 0.38,
+              "B": 0.35,
+              "C": 0.4
+            }
+          },
+          "Y011": {
+            "probability": 0.5033333333333333,
+            "oracle_probability": 0.9132231404958678,
+            "cBR": 0.16800965401573975,
+            "actor_forecasts": {
+              "A": 0.55,
+              "B": 0.48,
+              "C": 0.48
+            }
+          }
+        }
+      },
+      "contrasts": {
+        "P_minus_E": {
+          "mean": 0.25018728191000916,
+          "by_profile": {
+            "Y100": 0.21934426078971528,
+            "Y011": 0.2810303030303031
+          }
+        },
+        "H_minus_E": {
+          "mean": 0.02452750229568412,
+          "by_profile": {
+            "Y100": 0.008795592286501362,
+            "Y011": 0.040259412304866876
+          }
+        },
+        "H_minus_R0": {
+          "mean": -0.03162084481175391,
+          "by_profile": {
+            "Y100": -0.04112754820936636,
+            "Y011": -0.02211414141414146
+          }
+        },
+        "R0rep_minus_R0": {
+          "mean": 0.02786969696969699,
+          "by_profile": {
+            "Y100": -0.009940771349862224,
+            "Y011": 0.0656801652892562
+          }
+        }
+      },
+      "aligned_shift": {
+        "mean": 0.33499999999999996,
+        "profiles": [
+          {
+            "profile_id": "Y100",
+            "ideal_E": 0.10673299673299673,
+            "ideal_P": 0.6699999999999999,
+            "ideal_change": 0.5632670032670032,
+            "direction": 1,
+            "actual_change": 0.3033333333333333,
+            "aligned_change": 0.3033333333333333
+          },
+          {
+            "profile_id": "Y011",
+            "ideal_E": 0.8932670032670033,
+            "ideal_P": 0.33000000000000007,
+            "ideal_change": -0.5632670032670032,
+            "direction": -1,
+            "actual_change": -0.3666666666666667,
+            "aligned_change": 0.3666666666666667
+          }
+        ],
+        "zero_direction_profiles": 0
+      },
+      "aa_mean_absolute_profile_forecast_difference": 0.053333333333333316
+    },
+    {
+      "seed": "20261101",
+      "status": "completed",
+      "error": null,
+      "arms": {
+        "P": {
+          "Y100": {
+            "probability": 0.48666666666666664,
+            "oracle_probability": 0.08677685950413225,
+            "cBR": 0.15991185787248896,
+            "actor_forecasts": {
+              "A": 0.34,
+              "C": 0.72,
+              "B": 0.4
+            }
+          },
+          "Y011": {
+            "probability": 0.33,
+            "oracle_probability": 0.9132231404958678,
+            "cBR": 0.3401492316098628,
+            "actor_forecasts": {
+              "A": 0.33,
+              "C": 0.33,
+              "B": 0.33
+            }
+          }
+        },
+        "E": {
+          "Y100": {
+            "probability": 0.37333333333333335,
+            "oracle_probability": 0.08677685950413225,
+            "cBR": 0.08211461269342563,
+            "actor_forecasts": {
+              "A": 0.67,
+              "C": 0.33,
+              "B": 0.12
+            }
+          },
+          "Y011": {
+            "probability": 0.6866666666666666,
+            "oracle_probability": 0.9132231404958678,
+            "cBR": 0.051327835833921524,
+            "actor_forecasts": {
+              "A": 0.72,
+              "C": 0.67,
+              "B": 0.67
+            }
+          }
+        },
+        "H": {
+          "Y100": {
+            "probability": 0.22399999999999998,
+            "oracle_probability": 0.08677685950413225,
+            "cBR": 0.018830190287548655,
+            "actor_forecasts": {
+              "A": 0.162,
+              "C": 0.16,
+              "B": 0.35
+            }
+          },
+          "Y011": {
+            "probability": 0.7399999999999999,
+            "oracle_probability": 0.9132231404958678,
+            "cBR": 0.03000625640325121,
+            "actor_forecasts": {
+              "A": 0.8,
+              "C": 0.72,
+              "B": 0.7
+            }
+          }
+        },
+        "R0": {
+          "Y100": {
+            "probability": 0.25,
+            "oracle_probability": 0.08677685950413225,
+            "cBR": 0.026641793593333782,
+            "actor_forecasts": {
+              "A": 0.25,
+              "C": 0.2,
+              "B": 0.3
+            }
+          },
+          "Y011": {
+            "probability": 0.7266666666666667,
+            "oracle_probability": 0.9132231404958678,
+            "cBR": 0.03480331792758541,
+            "actor_forecasts": {
+              "A": 0.68,
+              "C": 0.75,
+              "B": 0.75
+            }
+          }
+        },
+        "R0rep": {
+          "Y100": {
+            "probability": 0.3333333333333333,
+            "oracle_probability": 0.08677685950413225,
+            "cBR": 0.06079009478708951,
+            "actor_forecasts": {
+              "A": 0.3,
+              "C": 0.3,
+              "B": 0.4
+            }
+          },
+          "Y011": {
+            "probability": 0.68,
+            "oracle_probability": 0.9132231404958678,
+            "cBR": 0.05439303326275528,
+            "actor_forecasts": {
+              "A": 0.67,
+              "C": 0.7,
+              "B": 0.67
+            }
+          }
+        }
+      },
+      "contrasts": {
+        "P_minus_E": {
+          "mean": 0.1833093204775023,
+          "by_profile": {
+            "Y100": 0.07779724517906333,
+            "Y011": 0.2888213957759413
+          }
+        },
+        "H_minus_E": {
+          "mean": -0.042303000918273645,
+          "by_profile": {
+            "Y100": -0.06328442240587698,
+            "Y011": -0.021321579430670316
+          }
+        },
+        "H_minus_R0": {
+          "mean": -0.006304332415059665,
+          "by_profile": {
+            "Y100": -0.007811603305785127,
+            "Y011": -0.004797061524334203
+          }
+        },
+        "R0rep_minus_R0": {
+          "mean": 0.0268690082644628,
+          "by_profile": {
+            "Y100": 0.034148301193755726,
+            "Y011": 0.01958971533516987
+          }
+        }
+      },
+      "aligned_shift": {
+        "mean": 0.23499999999999996,
+        "profiles": [
+          {
+            "profile_id": "Y100",
+            "ideal_E": 0.10673299673299673,
+            "ideal_P": 0.6699999999999999,
+            "ideal_change": 0.5632670032670032,
+            "direction": 1,
+            "actual_change": 0.11333333333333329,
+            "aligned_change": 0.11333333333333329
+          },
+          {
+            "profile_id": "Y011",
+            "ideal_E": 0.8932670032670033,
+            "ideal_P": 0.33000000000000007,
+            "ideal_change": -0.5632670032670032,
+            "direction": -1,
+            "actual_change": -0.35666666666666663,
+            "aligned_change": 0.35666666666666663
+          }
+        ],
+        "zero_direction_profiles": 0
+      },
+      "aa_mean_absolute_profile_forecast_difference": 0.06499999999999997
+    }
+  ],
+  "scope_limits": [
+    "Selected synthetic histories and two fixed profiles, not all tasks or human organizations.",
+    "Thirty histories are not a power guarantee; no observed/post-hoc power is calculated.",
+    "No profile-to-profile learning, update trajectory, crossover or architecture inference.",
+    "P/E content responsiveness, harm and natural-H formation are different propositions.",
+    "History independence and stable provider response distributions remain assumptions.",
+    "Complete-pair inference is conditional on completion; bounds are not confidence intervals.",
+    "Arithmetic validation does not certify prompt integrity or absence of provider context."
+  ],
+  "input_sha256": {
+    "manifest.json": "68a1ee9317e6d7ee219b80e82f32f788f833fb5372462d4ca452d596acd0cb2e",
+    "summary.json": "bfa6949830b6b0fa223a2721b804533813c797b911cf9041b924d7d99ec40482",
+    "histories/20261029/attempt_001/checkpoint.json": "c9c8e29f5d0ff418d50014c4bf3190538979aaa2a11d913ef64de9a56062bd1c",
+    "histories/20261030/attempt_001/checkpoint.json": "25727237334a054c4912966321265f7198f79cf74a42ffaf0a07d86b71ae037c",
+    "histories/20261035/attempt_001/checkpoint.json": "e1881c752b6bb4b191da7bb93b870a28d5ea28b2c26c7356f010c63e98f42ad1",
+    "histories/20261039/attempt_001/checkpoint.json": "c468ddf377838da5bcdc7aca578c96e056723fdbe51f80b56c94bc06c3870eab",
+    "histories/20261044/attempt_001/checkpoint.json": "95beb103067b939800eec870fb650737dcfbdcb596d616a46feeea6a81e5707e",
+    "histories/20261040/attempt_001/checkpoint.json": "6e50da92666e6260fcc7b5931097dc017b16af33dfcdf923004d2609945ea3d4",
+    "histories/20261047/attempt_001/checkpoint.json": "08aa2365a3e29e0371abec44bc1469bd6e4fd148c6e6fe81885f1ac2ff995ea8",
+    "histories/20261051/attempt_001/checkpoint.json": "d1c7f41545caf7fef26ba0801c05ff3128618132868da8976836fab4bb968b40",
+    "histories/20261054/attempt_001/checkpoint.json": "c2eb9a8777f0f1ddc528a559502bf449255f1467def57178534ddb0aefd3cd94",
+    "histories/20261053/attempt_001/checkpoint.json": "cf8c4e841e5ef536e8285332f86cc12e7b3acafa6e4c7782f2794b5689c32e9c",
+    "histories/20261056/attempt_001/checkpoint.json": "2e8a41fd527da3a5e8bf92efc449b106f193506cd81f470c1726f34c3066fa8c",
+    "histories/20261057/attempt_001/checkpoint.json": "dda6c2227ec63411e2d36d9308eb63a94106217e63a7df0597fb5dfd58a1aa25",
+    "histories/20261061/attempt_001/checkpoint.json": "10d388bee5af89470a4043baf6681df93f4f76b049d25cd4ffa21a6e93edbd6d",
+    "histories/20261062/attempt_001/checkpoint.json": "73e9ec7f9cdce69be1aa9cfd3481de137b349abfaa5e3cff595b8f9a949ce2c1",
+    "histories/20261065/attempt_001/checkpoint.json": "b6aff9615a48da1cb05c8449b6f8c40c49c348fdf6c603eb01330267f59e60ba",
+    "histories/20261066/attempt_001/checkpoint.json": "65b6d1050ce4f36fdb1d74d4a1a74f3207307ed69ad62ddb59521add8c45daf8",
+    "histories/20261070/attempt_001/checkpoint.json": "66ec3f8b5a5c39bf1a237acda6dcec43f66500da21ee77e7395f110089fa1994",
+    "histories/20261074/attempt_001/checkpoint.json": "63967a0c78c736c978b9cded2a5a27b4e340f05ae0cce98504471a6d744cd855",
+    "histories/20261077/attempt_001/checkpoint.json": "18a5406efac254a15b16db084b3432f384f9698d110a4f72ddd33eae12adc190",
+    "histories/20261076/attempt_001/checkpoint.json": "2928b96747e6b56060b43c2a7b5104bd2a40d541dec5f2b49d2be8b3d40638af",
+    "histories/20261080/attempt_001/checkpoint.json": "5c13f53d1dd65d551ad1d318eb7736ccf7295a813c7d46e956fe6316dc144e1e",
+    "histories/20261084/attempt_001/checkpoint.json": "0b5d445efb4a90b3ff5dc41d4e1a4862cf12845257bb241c59eaa74e6da942e8",
+    "histories/20261088/attempt_001/checkpoint.json": "bcf0df31d96efc4978277c9e0090f81879b4ceece3e577066ef05c2d87ca266b",
+    "histories/20261091/attempt_001/checkpoint.json": "8e9b0810366a406b6e5a089b243b1d45e91af26a0c88c4ff8b24000945911bcb",
+    "histories/20261092/attempt_001/checkpoint.json": "bc56ec55507012923197abdc542e62312f2f6dabb4c37845cc003e4c34a8f832",
+    "histories/20261093/attempt_001/checkpoint.json": "787afcd68b2adebd9b113f04288d59db63a16509ae10154b120825374a838cbd",
+    "histories/20261094/attempt_001/checkpoint.json": "ae18ed2df8efc6a9d76c689697a4553ef388572755ea66ed7b9e992488b55f55",
+    "histories/20261098/attempt_001/checkpoint.json": "d37a9360c8d78f5d07e1f6c12f86e7eda6638682d9021471bb5d11fa4e3115e9",
+    "histories/20261100/attempt_001/checkpoint.json": "e0c6d50314b56883a8f35e78b9ffee7a4f6665832cae552c71b07c18e445caa4",
+    "histories/20261101/attempt_001/checkpoint.json": "78a689b754f4b75c09d9a1c1e32665409c02c3acfe6eac6bbd5ddf9765825871"
+  },
+  "recording": "luna-targeted-30histories-20261025",
+  "recorded_config_hash": "4c3cf95715e100156417a7a90d0ece114b415a0d091e8d0bdc2c9d7bef02674e",
+  "analysis_source_sha256": "51831cedefffd67fcfd5b04a383e3fc976c5871dda46ede0e30b08598977ab6a",
+  "analysis_plan_sha256": "e6b702847db398f30f3621e4c8959c3d69e902ce3998ffd0e5756716ee70b66d",
+  "software": {
+    "numpy": "2.4.6",
+    "scipy": "1.15.3"
+  }
+}

@@ -1,0 +1,19 @@
+{
+  "analysis_sha256": "3cc19ef61d40c2389e1a849aba8d1451795aa2f5c62e26e0c2d4916dacbeaaf9",
+  "analysis_status": "terminal_complete_study",
+  "matplotlib": "3.8.4",
+  "recording": "luna-targeted-30histories-20261025",
+  "recorded_config_hash": "4c3cf95715e100156417a7a90d0ece114b415a0d091e8d0bdc2c9d7bef02674e",
+  "input_hashes_rechecked": true,
+  "original_live_providers_checked": true,
+  "numpy_for_plotting_only": "1.26.4",
+  "statistical_estimates_recomputed": false,
+  "files_sha256": {
+    "history_effects.png": "c0197e09ea4e970e30da3fa3b00247ea8e9b9586dfa747f301a61f0c426bb3ac",
+    "history_effects.svg": "8ee6bf412264da05c12d25952e3f2986c9bf1c7aae13d1d3f3209469e364aa45",
+    "contrast_intervals.png": "a9812e31548058955cf4b81dd6542b08b8bddda8b1d66ad93f98bb16c7b6caf9",
+    "contrast_intervals.svg": "c749fafc029b3605839d46d1371805c02e0448b17cd50cb7b4d833a16f0e699c",
+    "paired_forecasts.png": "3292bc830514d150790cf4e66d2067562080c746354de4c121f05c08fa37f966",
+    "paired_forecasts.svg": "d87625053e9448716c281ed71a056d6debf5f31c0e06e28a3138b4755752e667"
+  }
+}
