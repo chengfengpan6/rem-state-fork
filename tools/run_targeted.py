@@ -16,6 +16,7 @@ sys.path.insert(0, str(ROOT))
 from rem_harness.targeted import (read_json, validate_plan, run_plan, replay_plan,
                                   verify_plan)
 from rem_harness.providers import CodexProvider
+from rem_harness.replay_validation import validate_tolerance
 
 
 def main(argv=None):
@@ -26,22 +27,30 @@ def main(argv=None):
     parser.add_argument("--recording", type=Path, help="existing immutable run root")
     parser.add_argument("--codex-bin", help="explicit Codex CLI executable; only live/resume")
     parser.add_argument("--workers", type=int, default=1, choices=(1, 2))
+    parser.add_argument("--float-tolerance", type=float, default=0.0,
+                        help="verify/replay only: absolute tolerance for recomputed score fields (0 to 1e-12); default strict")
     args = parser.parse_args(argv)
+    try:
+        validate_tolerance(args.float_tolerance)
+    except ValueError as error:
+        parser.error(str(error))
+    if args.float_tolerance and args.command not in ("verify", "replay"):
+        parser.error("--float-tolerance is only permitted for offline verify/replay")
     if args.command in ("verify", "replay", "resume") and args.recording is None:
         parser.error("--recording is required")
     if args.command in ("live", "resume", "replay") and args.output is None:
         parser.error("--output must name a new directory")
     if args.command == "verify":
-        result = verify_plan(args.recording)
+        result = verify_plan(args.recording, float_tolerance=args.float_tolerance)
         if args.output:
             args.output.parent.mkdir(parents=True, exist_ok=True)
             with args.output.open("x", encoding="utf-8") as stream:
-                json.dump(result, stream, indent=2, ensure_ascii=False)
+                json.dump(result, stream, indent=2, ensure_ascii=False, allow_nan=False)
                 stream.write("\n")
-        print(json.dumps(result, ensure_ascii=False))
+        print(json.dumps(result, ensure_ascii=False, allow_nan=False))
         return 0 if result["status"] == "verified_complete" else 1
     if args.command == "replay":
-        result = replay_plan(args.recording, args.output)
+        result = replay_plan(args.recording, args.output, float_tolerance=args.float_tolerance)
     else:
         config = (read_json(args.config) if args.config else
                   read_json(args.recording / "manifest.json")["config"] if args.command == "resume" else

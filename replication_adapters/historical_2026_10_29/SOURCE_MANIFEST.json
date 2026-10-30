@@ -1,0 +1,31 @@
+{
+  "schema": "rem-historical-adapter-source-1",
+  "scope": "Unmodified supplied adapter code, not a validated future live entry point; not hash-bound to historical per-call traces.",
+  "new_model_calls": 0,
+  "files": [
+    {
+      "original_path": "4_replications/adapters/anthropic_provider.py",
+      "archived_path": "anthropic_provider.py",
+      "bytes": 5904,
+      "sha256": "e94d128ad7b0d8430f06e4d64d18b9c8933246102c9a3885a3543e1944f685ed"
+    },
+    {
+      "original_path": "4_replications/adapters/compare_runs.py",
+      "archived_path": "compare_runs.py",
+      "bytes": 2494,
+      "sha256": "11d8689b245b1290f7d3af677ee0c8dd6905dee12ba93108762bf35a445afcab"
+    },
+    {
+      "original_path": "4_replications/adapters/gemini_provider.py",
+      "archived_path": "gemini_provider.py",
+      "bytes": 5628,
+      "sha256": "f9d41970771221295f55d61cc784fde0c0b7121ecfd51fa3b8dc650097805fe0"
+    },
+    {
+      "original_path": "4_replications/adapters/run_claude_standin.py",
+      "archived_path": "run_claude_standin.py",
+      "bytes": 2151,
+      "sha256": "01b10e9bd7d3d2bf0d50e4fb2e5ea42c3800d670831af12e1c89269d36864a9a"
+    }
+  ]
+}

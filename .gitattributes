@@ -1,2 +1,6 @@
+# Keep active Python tool hashes stable across operating systems.
+*.py text eol=lf
 # Preserve archived research records byte-for-byte across operating systems.
 evidence/** -text
+replication_adapters/historical_2026_10_29/** -text
+validation/historical_macos_2026-10-29/** -text

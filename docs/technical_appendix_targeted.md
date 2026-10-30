@@ -1,3 +1,5 @@
+> Historical document. For the current three-route diagnostic and offline review instructions, start with [the repository README](../README.md) and [the 30 October release notes](release_2026-10-30.md). The historical design and results below are retained; they are not instructions for a new live run.
+
 # Technical appendix for the targeted REM map-content diagnostic
 
 *Review draft updated 26 October 2026. Protocol `rem-prototype-0.2-targeted-Y-v1`. This document describes the implemented design, unchanged prospective analysis and completed 30-history diagnostic. It asserts no author approval or journal submission.*

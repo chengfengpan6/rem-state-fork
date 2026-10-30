@@ -1,100 +1,110 @@
-# REM: shared interpretation with a common factual record
+# REM — intervening on shared reliability representations
 
-When factual records remain available, does an inherited shared interpretation
-of source reliability change collective judgment? REM provides inspectable
-state separation, common-history branching, matched inputs, recorded responses,
-and diagnostic tests for this organizational question.
+REM studies an organizational question: when the factual record remains
+available, does changing a supplied interpretation of source reliability alter
+collective judgment? It separates factual, behavioral and private records from
+a public reliability table, then forks a synthetic team from a common recorded
+state. The contribution is an inspectable research instrument.
 
-[Readable overview](docs/index.html) · [Targeted protocol](docs/targeted_protocol_2026-10-25.md) · [Analysis plan](docs/targeted_analysis_plan_2026-10-25.md) · [Technical appendix](docs/technical_appendix_targeted.md) · [Scientific sources](docs/scenario_and_identification.md)
+This 30 October review release consolidates the completed Luna diagnostic and
+the supplied Claude/Gemini replications. It adds restricted score-tolerance
+verification, explicit provenance, complete offline replay and an independent
+response-level calculation. **It adds no experimental model observations.**
 
-# Targeted Y-profile map-content diagnostic
+[Visual overview](docs/index.html) · [Release notes](docs/release_2026-10-30.md) ·
+[API archive provenance](docs/API_REPLICATION_PROVENANCE.md) ·
+[Frozen protocol](docs/targeted_protocol_2026-10-25.md) ·
+[Frozen analysis plan](docs/targeted_analysis_plan_2026-10-25.md)
 
-Execution status: **completed**. Completed histories: **30/30**.
-Planned successful path: 3,600 calls; cumulative recorded transport reservations: 3600.
-The requested model remains `gpt-5.6-luna` through the official Codex CLI,
-ChatGPT login, low reasoning. A requested alias is not immutable weight attestation.
+## What was observed
 
-The prospective primary history-level P−E cBR estimate is 0.21002870,
-95% t interval [0.1785239938919171, 0.2415334012718417], two-sided p=3.83281e-14, complete-pair n=30.
-See analysis.json for the prespecified bootstrap, Holm-adjusted secondary
-comparisons, A/A descriptions, direction diagnostic, all history outcomes and
-missing-history bounds. This is a targeted conditional diagnostic, not the
-original H1–H4 hypothesis study or a general estimate for human organizations.
+Each route used the same 30 selected exogenous three-event histories. Every
+history supplied five Team conditions (P, E, H, R0, R0rep), with two isolated
+conflicting-signal Y profiles and no feedback or updates. There were 3,600
+accepted logical responses per route. These are 30 history units per route,
+not 10,800 independent observations or 90 unrelated exogenous histories.
 
-Each eligible history has three formation rounds, one per context. Eligibility
-uses only exogenous formation observations; in Y it implies A wrong and B right.
-P swaps the complete Y:A/Y:B E-map cells. Both fixed Y profiles independently
-clone the same fork. There is no profile feedback, update, or cross-profile
-writeback. Records remain accessible in every arm, including R0/R0rep.
+| Route | P−E mean cBR | 95% t interval | Two-sided p | Positive histories |
+|---|---:|---|---:|---:|
+| Requested gpt-5.6-luna / Codex | .210029 | [.178524, .241533] | 3.8328e−14 | 30/30 |
+| Returned claude-opus-5-5 / API | .075866 | [.045844, .105889] | 1.5891e−5 | 28/30 |
+| Returned gemini-3.8-flash / API | .117669 | [.085744, .149594] | 2.6114e−8 | 30/30 |
 
-Original request/response/event files, all attempts, checkpoints, schedules and
-manifests are unchanged. Source bytes from the pre-execution freeze are under
-source_snapshot. Provenance hashes identify copied and derived files separately.
-The frozen code commit is `358b4eb7f4796437d19de3640ab2f04fac620c2a`. Earlier v1
-and v2 evidence remains separate; it is not pooled into this diagnostic.
+cBR is the conditional expected excess Brier loss `(p-q)^2`. P swaps the
+complete Y:A/B cells of E; E summarizes the observed records. Positive P−E
+means increased loss under the planted table. H−E is near zero on Luna,
+positive on Claude and negative on Gemini. These bounded diagnostic results
+do not establish naturally harmful memory, the original H1–H4, a Team/Solo
+mechanism, correction after updates or human-organizational validity.
 
-## Offline review
+## Review a clean copy without model access
 
-From the repository root after installing requirements-lock.txt:
-
-```sh
-python tools/run_targeted.py verify --recording evidence/luna-targeted-30histories --output runs/targeted-verification.json
-python tools/run_targeted.py replay --recording evidence/luna-targeted-30histories --output runs/targeted-replay
-python tools/analyze_targeted.py evidence/luna-targeted-30histories --output runs/targeted-analysis.json
-```
-
-Create runs first. Output paths must be new. Full replay requires all histories
-complete. An incomplete archive instead retains the failed or unfinished states
-and its conditional complete-pair analysis. Never run live to inspect an archive.
-See [the targeted protocol](docs/targeted_protocol_2026-10-25.md) and
-[the frozen analysis plan](docs/targeted_analysis_plan_2026-10-25.md).
-
-## Secondary contrasts
-
-| Comparison | Mean cBR difference | Marginal 95% t interval | Holm-adjusted p |
-|---|---:|---|---:|
-| H − E | -0.00025395 | [-0.011156782529559563, 0.010648890212449077] | 0.962332 |
-| H − R0 | -0.05509228 | [-0.07152750081601268, -0.03865705204594018] | 3.14003e-07 |
-
-These two comparisons form a separately adjusted exploratory family; their intervals are marginal, not simultaneous. Positive differences indicate greater prediction loss. The observed H-versus-R0 improvement and P-versus-E harm concern different interventions. The near-zero H-versus-E estimate does not establish equivalence. A/A repetition remains descriptive and is not an equivalence test.
-
-## Clean installation and tests
+Use Python 3.12 and the locked dependencies; the supplied original Mac receipt
+used Python 3.13. Set up and activate a fresh virtual environment using your
+platform's usual commands, then run from this repository root:
 
 ```sh
-python -m venv .venv
-# Activate using your platform's standard command.
 python -m pip install -r requirements-lock.txt
-python -m unittest discover -s tests -v
-python tools/run_targeted.py plan --config configs/targeted_30histories.json
+python tools/review_all_archives.py --output runs/complete-offline-review
 ```
 
-Plan, verification, replay and analysis make no model calls. The historical
-source snapshot records exact execution bytes. Git line-ending normalization
-can alter file-byte hashes without changing executable semantics; the selector's
-strict byte-hash check is distinct from the runner's deterministic candidate
-reconstruction, which is checked before dispatch and works from a clean clone.
+The output directory must be new. This single command runs the unit tests,
+strict and bounded verification, bounded recorded-response replay, verification
+of each replay, frozen analysis and separate-code arithmetic for all three
+archives. It makes **zero model calls** and needs no API key or model account.
+It retains strict failures if a platform needs the explicitly bounded mode,
+and stops if bounded verification/replay fails. Read `review_receipt.json`
+and the individual logs; completion is not inferred from merely starting it.
 
-## Explicit live use and recovery
+For a narrower arithmetic-only check:
 
-The targeted live entry point requires 30 prespecified histories, the original
-model alias and shared durable attempt ledger. It caps formation at 32 calls
-per history, each condition at 20, and all attempts at 3,660. Its successful path
-is 3,600. This new authorized diagnostic is separate from the older one-history
-smoke limit. It has no automatic retry or outcome-based replacement.
+```sh
+python tools/recompute_replications.py --output runs/independent-arithmetic.json
+```
 
-Operate exactly one coordinator. Before explicit resume, ensure the original
-coordinator has stopped. Resume creates a new root, preserves prior attempts,
-checks unchanged code/configuration, reconstructs completed prefixes and keeps
-all prior charges. Separate concurrent coordinators must not resume the same
-budget. No API billing fallback is configured or invoked automatically.
+The semantic CLI accepts `--float-tolerance 1e-12` for `verify` and `replay`.
+The default is strict zero tolerance. Only specified recomputed LB/Pi Brier
+scores and cBR summaries can differ within the limit. Predictions, signals,
+maps, types, schemas and messages remain exact; changed derived state hashes
+require a path-level explanation tied to those scores. A failed verification
+is never labeled a successful tolerance replay. See
+[current validation receipts](validation/2026-10-30/).
 
-## Evidence and rights
+## Evidence and execution provenance
 
-[Current targeted evidence](evidence/luna-targeted-30histories/) · [Prior 219-response diagnostic](evidence/luna-v2-bounded/) · [Earlier 342-response record](evidence/luna-smoke/) · [Historical v2 overview](docs/legacy_v2_bounded_readme.md)
+- [Luna archive](evidence/luna-targeted-30histories/)
+- [Claude archive](evidence/claude-opus55-30histories/)
+- [Gemini archive](evidence/gemini38flash-30histories/)
+- [Historical API adapter sources](replication_adapters/README.md)
 
-The research contribution is the instrument and its demonstrated limits. A
-significant content contrast is not proof of endogenous memory formation,
-learning persistence, architecture mechanisms or human external validity.
-MIT applies within [NOTICE.md](NOTICE.md)'s scope. Private correspondence,
-unpublished manuscript attachments and credentials are excluded. This named
-development repository is not an anonymous submission link.
+All 450 supplied API files and four adapter sources are preserved byte for
+byte, with source manifests. Gemini recovery reuses 132 saved response rows;
+the independent script checks those prefixes and does not count them as new
+observations. API logical-response counts are not complete physical attempt
+or billing counts. Missing rejected responses and service metadata cannot be
+reconstructed. The provenance document specifies these limits.
+
+Templates, exogenous records and scheduled cases are shared; complete
+downstream prompts differ with each model's own records and responses.
+Returned API model names are recorded identifiers, not immutable-weight
+attestations. Luna's CLI did not expose a served-model identifier. Explicit
+client text does not reveal every provider-internal input.
+
+The original execution commit and exact source snapshot remain preserved with
+the Luna archive. The current verifier is a later tool, not a replacement
+claim about what code generated the historical data. Earlier 342-response and
+219-response engineering executions remain separate and are not pooled.
+
+## Scope of this release
+
+The supported cross-provider path is offline inspection. Historical adapters
+are archived for provenance and **are not a validated new live-study command**.
+A future API dispatcher needs explicit authorization/configuration and durable
+per-attempt budgeting, tracing and recovery. The original Luna live command
+retains its prior guards; inspection must not use a live/run/resume command.
+
+The MIT license applies within [NOTICE.md](NOTICE.md)'s scope. Provider models,
+third-party dependencies and separately submitted manuscripts are not covered
+by a blanket software license. Private correspondence, credentials and
+unpublished proposal documents are excluded from this repository. This named
+development repository is not the external anonymous-review entry point.

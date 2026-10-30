@@ -1,0 +1,1066 @@
+{
+  "status": "verified_complete",
+  "protocol_version": "rem-prototype-0.2-targeted-Y-v1",
+  "checks_total": 16568,
+  "checks_failed": 0,
+  "failures": [],
+  "planned_histories": 30,
+  "expected_calls": 3600,
+  "float_tolerance": 1e-12,
+  "float_tolerance_report": [
+    {
+      "history": "20261029",
+      "where": "branch state hashes",
+      "max_abs_diff": null,
+      "note": "state hash differs because a state float differs within tolerance"
+    },
+    {
+      "history": "20261029",
+      "where": "checkpoint",
+      "max_abs_diff": 2.7755575615628914e-17
+    },
+    {
+      "history": "20261029",
+      "where": "request payload call-000019",
+      "max_abs_diff": 2.7755575615628914e-17
+    },
+    {
+      "history": "20261029",
+      "where": "request payload call-000020",
+      "max_abs_diff": 2.7755575615628914e-17
+    },
+    {
+      "history": "20261029",
+      "where": "request payload call-000021",
+      "max_abs_diff": 2.7755575615628914e-17
+    },
+    {
+      "history": "20261029",
+      "where": "request payload call-000022",
+      "max_abs_diff": 2.7755575615628914e-17
+    },
+    {
+      "history": "20261029",
+      "where": "request payload call-000023",
+      "max_abs_diff": 2.7755575615628914e-17
+    },
+    {
+      "history": "20261029",
+      "where": "request payload call-000024",
+      "max_abs_diff": 2.7755575615628914e-17
+    },
+    {
+      "history": "20261029",
+      "where": "request payload call-000025",
+      "max_abs_diff": 2.7755575615628914e-17
+    },
+    {
+      "history": "20261029",
+      "where": "request payload call-000026",
+      "max_abs_diff": 2.7755575615628914e-17
+    },
+    {
+      "history": "20261029",
+      "where": "request payload call-000027",
+      "max_abs_diff": 2.7755575615628914e-17
+    },
+    {
+      "history": "20261029",
+      "where": "request payload call-000028",
+      "max_abs_diff": 2.7755575615628914e-17
+    },
+    {
+      "history": "20261029",
+      "where": "request payload call-000029",
+      "max_abs_diff": 2.7755575615628914e-17
+    },
+    {
+      "history": "20261029",
+      "where": "request payload call-000030",
+      "max_abs_diff": 2.7755575615628914e-17
+    },
+    {
+      "history": "20261029",
+      "where": "request payload call-000031",
+      "max_abs_diff": 2.7755575615628914e-17
+    },
+    {
+      "history": "20261029",
+      "where": "request payload call-000032",
+      "max_abs_diff": 2.7755575615628914e-17
+    },
+    {
+      "history": "20261029",
+      "where": "request payload call-000033",
+      "max_abs_diff": 2.7755575615628914e-17
+    },
+    {
+      "history": "20261029",
+      "where": "request payload call-000034",
+      "max_abs_diff": 2.7755575615628914e-17
+    },
+    {
+      "history": "20261029",
+      "where": "request payload call-000035",
+      "max_abs_diff": 2.7755575615628914e-17
+    },
+    {
+      "history": "20261029",
+      "where": "request payload call-000036",
+      "max_abs_diff": 2.7755575615628914e-17
+    },
+    {
+      "history": "20261029",
+      "where": "request payload call-000037",
+      "max_abs_diff": 2.7755575615628914e-17
+    },
+    {
+      "history": "20261029",
+      "where": "request payload call-000038",
+      "max_abs_diff": 2.7755575615628914e-17
+    },
+    {
+      "history": "20261029",
+      "where": "request payload call-000039",
+      "max_abs_diff": 2.7755575615628914e-17
+    },
+    {
+      "history": "20261029",
+      "where": "request payload call-000040",
+      "max_abs_diff": 2.7755575615628914e-17
+    },
+    {
+      "history": "20261029",
+      "where": "request payload call-000041",
+      "max_abs_diff": 2.7755575615628914e-17
+    },
+    {
+      "history": "20261029",
+      "where": "request payload call-000042",
+      "max_abs_diff": 2.7755575615628914e-17
+    },
+    {
+      "history": "20261029",
+      "where": "request payload call-000043",
+      "max_abs_diff": 2.7755575615628914e-17
+    },
+    {
+      "history": "20261029",
+      "where": "request payload call-000044",
+      "max_abs_diff": 2.7755575615628914e-17
+    },
+    {
+      "history": "20261029",
+      "where": "request payload call-000045",
+      "max_abs_diff": 2.7755575615628914e-17
+    },
+    {
+      "history": "20261029",
+      "where": "request payload call-000046",
+      "max_abs_diff": 2.7755575615628914e-17
+    },
+    {
+      "history": "20261029",
+      "where": "request payload call-000047",
+      "max_abs_diff": 2.7755575615628914e-17
+    },
+    {
+      "history": "20261029",
+      "where": "request payload call-000048",
+      "max_abs_diff": 2.7755575615628914e-17
+    },
+    {
+      "history": "20261029",
+      "where": "request payload call-000049",
+      "max_abs_diff": 2.7755575615628914e-17
+    },
+    {
+      "history": "20261029",
+      "where": "request payload call-000050",
+      "max_abs_diff": 2.7755575615628914e-17
+    },
+    {
+      "history": "20261029",
+      "where": "request payload call-000051",
+      "max_abs_diff": 2.7755575615628914e-17
+    },
+    {
+      "history": "20261029",
+      "where": "request payload call-000052",
+      "max_abs_diff": 2.7755575615628914e-17
+    },
+    {
+      "history": "20261029",
+      "where": "request payload call-000053",
+      "max_abs_diff": 2.7755575615628914e-17
+    },
+    {
+      "history": "20261029",
+      "where": "request payload call-000054",
+      "max_abs_diff": 2.7755575615628914e-17
+    },
+    {
+      "history": "20261029",
+      "where": "request payload call-000055",
+      "max_abs_diff": 2.7755575615628914e-17
+    },
+    {
+      "history": "20261029",
+      "where": "request payload call-000056",
+      "max_abs_diff": 2.7755575615628914e-17
+    },
+    {
+      "history": "20261029",
+      "where": "request payload call-000057",
+      "max_abs_diff": 2.7755575615628914e-17
+    },
+    {
+      "history": "20261029",
+      "where": "request payload call-000058",
+      "max_abs_diff": 2.7755575615628914e-17
+    },
+    {
+      "history": "20261029",
+      "where": "request payload call-000059",
+      "max_abs_diff": 2.7755575615628914e-17
+    },
+    {
+      "history": "20261029",
+      "where": "request payload call-000060",
+      "max_abs_diff": 2.7755575615628914e-17
+    },
+    {
+      "history": "20261029",
+      "where": "request payload call-000061",
+      "max_abs_diff": 2.7755575615628914e-17
+    },
+    {
+      "history": "20261029",
+      "where": "request payload call-000062",
+      "max_abs_diff": 2.7755575615628914e-17
+    },
+    {
+      "history": "20261029",
+      "where": "request payload call-000063",
+      "max_abs_diff": 2.7755575615628914e-17
+    },
+    {
+      "history": "20261029",
+      "where": "request payload call-000064",
+      "max_abs_diff": 2.7755575615628914e-17
+    },
+    {
+      "history": "20261029",
+      "where": "request payload call-000065",
+      "max_abs_diff": 2.7755575615628914e-17
+    },
+    {
+      "history": "20261029",
+      "where": "request payload call-000066",
+      "max_abs_diff": 2.7755575615628914e-17
+    },
+    {
+      "history": "20261029",
+      "where": "request payload call-000067",
+      "max_abs_diff": 2.7755575615628914e-17
+    },
+    {
+      "history": "20261029",
+      "where": "request payload call-000068",
+      "max_abs_diff": 2.7755575615628914e-17
+    },
+    {
+      "history": "20261029",
+      "where": "request payload call-000069",
+      "max_abs_diff": 2.7755575615628914e-17
+    },
+    {
+      "history": "20261029",
+      "where": "request payload call-000070",
+      "max_abs_diff": 2.7755575615628914e-17
+    },
+    {
+      "history": "20261029",
+      "where": "request payload call-000071",
+      "max_abs_diff": 2.7755575615628914e-17
+    },
+    {
+      "history": "20261029",
+      "where": "request payload call-000072",
+      "max_abs_diff": 2.7755575615628914e-17
+    },
+    {
+      "history": "20261029",
+      "where": "request payload call-000073",
+      "max_abs_diff": 2.7755575615628914e-17
+    },
+    {
+      "history": "20261029",
+      "where": "request payload call-000074",
+      "max_abs_diff": 2.7755575615628914e-17
+    },
+    {
+      "history": "20261029",
+      "where": "request payload call-000075",
+      "max_abs_diff": 2.7755575615628914e-17
+    },
+    {
+      "history": "20261029",
+      "where": "request payload call-000076",
+      "max_abs_diff": 2.7755575615628914e-17
+    },
+    {
+      "history": "20261029",
+      "where": "request payload call-000077",
+      "max_abs_diff": 2.7755575615628914e-17
+    },
+    {
+      "history": "20261029",
+      "where": "request payload call-000078",
+      "max_abs_diff": 2.7755575615628914e-17
+    },
+    {
+      "history": "20261029",
+      "where": "request payload call-000079",
+      "max_abs_diff": 2.7755575615628914e-17
+    },
+    {
+      "history": "20261029",
+      "where": "request payload call-000080",
+      "max_abs_diff": 2.7755575615628914e-17
+    },
+    {
+      "history": "20261029",
+      "where": "request payload call-000081",
+      "max_abs_diff": 2.7755575615628914e-17
+    },
+    {
+      "history": "20261029",
+      "where": "request payload call-000082",
+      "max_abs_diff": 2.7755575615628914e-17
+    },
+    {
+      "history": "20261029",
+      "where": "request payload call-000083",
+      "max_abs_diff": 2.7755575615628914e-17
+    },
+    {
+      "history": "20261029",
+      "where": "request payload call-000084",
+      "max_abs_diff": 2.7755575615628914e-17
+    },
+    {
+      "history": "20261029",
+      "where": "request payload call-000085",
+      "max_abs_diff": 2.7755575615628914e-17
+    },
+    {
+      "history": "20261029",
+      "where": "request payload call-000086",
+      "max_abs_diff": 2.7755575615628914e-17
+    },
+    {
+      "history": "20261029",
+      "where": "request payload call-000087",
+      "max_abs_diff": 2.7755575615628914e-17
+    },
+    {
+      "history": "20261029",
+      "where": "request payload call-000088",
+      "max_abs_diff": 2.7755575615628914e-17
+    },
+    {
+      "history": "20261029",
+      "where": "request payload call-000089",
+      "max_abs_diff": 2.7755575615628914e-17
+    },
+    {
+      "history": "20261029",
+      "where": "request payload call-000090",
+      "max_abs_diff": 2.7755575615628914e-17
+    },
+    {
+      "history": "20261029",
+      "where": "request payload call-000091",
+      "max_abs_diff": 2.7755575615628914e-17
+    },
+    {
+      "history": "20261029",
+      "where": "request payload call-000092",
+      "max_abs_diff": 2.7755575615628914e-17
+    },
+    {
+      "history": "20261029",
+      "where": "request payload call-000093",
+      "max_abs_diff": 2.7755575615628914e-17
+    },
+    {
+      "history": "20261029",
+      "where": "request payload call-000094",
+      "max_abs_diff": 2.7755575615628914e-17
+    },
+    {
+      "history": "20261029",
+      "where": "request payload call-000095",
+      "max_abs_diff": 2.7755575615628914e-17
+    },
+    {
+      "history": "20261029",
+      "where": "request payload call-000096",
+      "max_abs_diff": 2.7755575615628914e-17
+    },
+    {
+      "history": "20261029",
+      "where": "request payload call-000097",
+      "max_abs_diff": 2.7755575615628914e-17
+    },
+    {
+      "history": "20261029",
+      "where": "request payload call-000098",
+      "max_abs_diff": 2.7755575615628914e-17
+    },
+    {
+      "history": "20261029",
+      "where": "request payload call-000099",
+      "max_abs_diff": 2.7755575615628914e-17
+    },
+    {
+      "history": "20261029",
+      "where": "request payload call-000100",
+      "max_abs_diff": 2.7755575615628914e-17
+    },
+    {
+      "history": "20261029",
+      "where": "request payload call-000101",
+      "max_abs_diff": 2.7755575615628914e-17
+    },
+    {
+      "history": "20261029",
+      "where": "request payload call-000102",
+      "max_abs_diff": 2.7755575615628914e-17
+    },
+    {
+      "history": "20261029",
+      "where": "request payload call-000103",
+      "max_abs_diff": 2.7755575615628914e-17
+    },
+    {
+      "history": "20261029",
+      "where": "request payload call-000104",
+      "max_abs_diff": 2.7755575615628914e-17
+    },
+    {
+      "history": "20261029",
+      "where": "request payload call-000105",
+      "max_abs_diff": 2.7755575615628914e-17
+    },
+    {
+      "history": "20261029",
+      "where": "request payload call-000106",
+      "max_abs_diff": 2.7755575615628914e-17
+    },
+    {
+      "history": "20261029",
+      "where": "request payload call-000107",
+      "max_abs_diff": 2.7755575615628914e-17
+    },
+    {
+      "history": "20261029",
+      "where": "request payload call-000108",
+      "max_abs_diff": 2.7755575615628914e-17
+    },
+    {
+      "history": "20261029",
+      "where": "request payload call-000109",
+      "max_abs_diff": 2.7755575615628914e-17
+    },
+    {
+      "history": "20261029",
+      "where": "request payload call-000110",
+      "max_abs_diff": 2.7755575615628914e-17
+    },
+    {
+      "history": "20261029",
+      "where": "request payload call-000111",
+      "max_abs_diff": 2.7755575615628914e-17
+    },
+    {
+      "history": "20261029",
+      "where": "request payload call-000112",
+      "max_abs_diff": 2.7755575615628914e-17
+    },
+    {
+      "history": "20261029",
+      "where": "request payload call-000113",
+      "max_abs_diff": 2.7755575615628914e-17
+    },
+    {
+      "history": "20261029",
+      "where": "request payload call-000114",
+      "max_abs_diff": 2.7755575615628914e-17
+    },
+    {
+      "history": "20261029",
+      "where": "request payload call-000115",
+      "max_abs_diff": 2.7755575615628914e-17
+    },
+    {
+      "history": "20261029",
+      "where": "request payload call-000116",
+      "max_abs_diff": 2.7755575615628914e-17
+    },
+    {
+      "history": "20261029",
+      "where": "request payload call-000117",
+      "max_abs_diff": 2.7755575615628914e-17
+    },
+    {
+      "history": "20261029",
+      "where": "request payload call-000118",
+      "max_abs_diff": 2.7755575615628914e-17
+    },
+    {
+      "history": "20261029",
+      "where": "request payload call-000119",
+      "max_abs_diff": 2.7755575615628914e-17
+    },
+    {
+      "history": "20261029",
+      "where": "request payload call-000120",
+      "max_abs_diff": 2.7755575615628914e-17
+    },
+    {
+      "history": "20261040",
+      "where": "branch state hashes",
+      "max_abs_diff": null,
+      "note": "state hash differs because a state float differs within tolerance"
+    },
+    {
+      "history": "20261040",
+      "where": "checkpoint",
+      "max_abs_diff": 2.7755575615628914e-17
+    },
+    {
+      "history": "20261040",
+      "where": "request payload call-000019",
+      "max_abs_diff": 2.7755575615628914e-17
+    },
+    {
+      "history": "20261040",
+      "where": "request payload call-000020",
+      "max_abs_diff": 2.7755575615628914e-17
+    },
+    {
+      "history": "20261040",
+      "where": "request payload call-000021",
+      "max_abs_diff": 2.7755575615628914e-17
+    },
+    {
+      "history": "20261040",
+      "where": "request payload call-000022",
+      "max_abs_diff": 2.7755575615628914e-17
+    },
+    {
+      "history": "20261040",
+      "where": "request payload call-000023",
+      "max_abs_diff": 2.7755575615628914e-17
+    },
+    {
+      "history": "20261040",
+      "where": "request payload call-000024",
+      "max_abs_diff": 2.7755575615628914e-17
+    },
+    {
+      "history": "20261040",
+      "where": "request payload call-000025",
+      "max_abs_diff": 2.7755575615628914e-17
+    },
+    {
+      "history": "20261040",
+      "where": "request payload call-000026",
+      "max_abs_diff": 2.7755575615628914e-17
+    },
+    {
+      "history": "20261040",
+      "where": "request payload call-000027",
+      "max_abs_diff": 2.7755575615628914e-17
+    },
+    {
+      "history": "20261040",
+      "where": "request payload call-000028",
+      "max_abs_diff": 2.7755575615628914e-17
+    },
+    {
+      "history": "20261040",
+      "where": "request payload call-000029",
+      "max_abs_diff": 2.7755575615628914e-17
+    },
+    {
+      "history": "20261040",
+      "where": "request payload call-000030",
+      "max_abs_diff": 2.7755575615628914e-17
+    },
+    {
+      "history": "20261040",
+      "where": "request payload call-000031",
+      "max_abs_diff": 2.7755575615628914e-17
+    },
+    {
+      "history": "20261040",
+      "where": "request payload call-000032",
+      "max_abs_diff": 2.7755575615628914e-17
+    },
+    {
+      "history": "20261040",
+      "where": "request payload call-000033",
+      "max_abs_diff": 2.7755575615628914e-17
+    },
+    {
+      "history": "20261040",
+      "where": "request payload call-000034",
+      "max_abs_diff": 2.7755575615628914e-17
+    },
+    {
+      "history": "20261040",
+      "where": "request payload call-000035",
+      "max_abs_diff": 2.7755575615628914e-17
+    },
+    {
+      "history": "20261040",
+      "where": "request payload call-000036",
+      "max_abs_diff": 2.7755575615628914e-17
+    },
+    {
+      "history": "20261040",
+      "where": "request payload call-000037",
+      "max_abs_diff": 2.7755575615628914e-17
+    },
+    {
+      "history": "20261040",
+      "where": "request payload call-000038",
+      "max_abs_diff": 2.7755575615628914e-17
+    },
+    {
+      "history": "20261040",
+      "where": "request payload call-000039",
+      "max_abs_diff": 2.7755575615628914e-17
+    },
+    {
+      "history": "20261040",
+      "where": "request payload call-000040",
+      "max_abs_diff": 2.7755575615628914e-17
+    },
+    {
+      "history": "20261040",
+      "where": "request payload call-000041",
+      "max_abs_diff": 2.7755575615628914e-17
+    },
+    {
+      "history": "20261040",
+      "where": "request payload call-000042",
+      "max_abs_diff": 2.7755575615628914e-17
+    },
+    {
+      "history": "20261040",
+      "where": "request payload call-000043",
+      "max_abs_diff": 2.7755575615628914e-17
+    },
+    {
+      "history": "20261040",
+      "where": "request payload call-000044",
+      "max_abs_diff": 2.7755575615628914e-17
+    },
+    {
+      "history": "20261040",
+      "where": "request payload call-000045",
+      "max_abs_diff": 2.7755575615628914e-17
+    },
+    {
+      "history": "20261040",
+      "where": "request payload call-000046",
+      "max_abs_diff": 2.7755575615628914e-17
+    },
+    {
+      "history": "20261040",
+      "where": "request payload call-000047",
+      "max_abs_diff": 2.7755575615628914e-17
+    },
+    {
+      "history": "20261040",
+      "where": "request payload call-000048",
+      "max_abs_diff": 2.7755575615628914e-17
+    },
+    {
+      "history": "20261040",
+      "where": "request payload call-000049",
+      "max_abs_diff": 2.7755575615628914e-17
+    },
+    {
+      "history": "20261040",
+      "where": "request payload call-000050",
+      "max_abs_diff": 2.7755575615628914e-17
+    },
+    {
+      "history": "20261040",
+      "where": "request payload call-000051",
+      "max_abs_diff": 2.7755575615628914e-17
+    },
+    {
+      "history": "20261040",
+      "where": "request payload call-000052",
+      "max_abs_diff": 2.7755575615628914e-17
+    },
+    {
+      "history": "20261040",
+      "where": "request payload call-000053",
+      "max_abs_diff": 2.7755575615628914e-17
+    },
+    {
+      "history": "20261040",
+      "where": "request payload call-000054",
+      "max_abs_diff": 2.7755575615628914e-17
+    },
+    {
+      "history": "20261040",
+      "where": "request payload call-000055",
+      "max_abs_diff": 2.7755575615628914e-17
+    },
+    {
+      "history": "20261040",
+      "where": "request payload call-000056",
+      "max_abs_diff": 2.7755575615628914e-17
+    },
+    {
+      "history": "20261040",
+      "where": "request payload call-000057",
+      "max_abs_diff": 2.7755575615628914e-17
+    },
+    {
+      "history": "20261040",
+      "where": "request payload call-000058",
+      "max_abs_diff": 2.7755575615628914e-17
+    },
+    {
+      "history": "20261040",
+      "where": "request payload call-000059",
+      "max_abs_diff": 2.7755575615628914e-17
+    },
+    {
+      "history": "20261040",
+      "where": "request payload call-000060",
+      "max_abs_diff": 2.7755575615628914e-17
+    },
+    {
+      "history": "20261040",
+      "where": "request payload call-000061",
+      "max_abs_diff": 2.7755575615628914e-17
+    },
+    {
+      "history": "20261040",
+      "where": "request payload call-000062",
+      "max_abs_diff": 2.7755575615628914e-17
+    },
+    {
+      "history": "20261040",
+      "where": "request payload call-000063",
+      "max_abs_diff": 2.7755575615628914e-17
+    },
+    {
+      "history": "20261040",
+      "where": "request payload call-000064",
+      "max_abs_diff": 2.7755575615628914e-17
+    },
+    {
+      "history": "20261040",
+      "where": "request payload call-000065",
+      "max_abs_diff": 2.7755575615628914e-17
+    },
+    {
+      "history": "20261040",
+      "where": "request payload call-000066",
+      "max_abs_diff": 2.7755575615628914e-17
+    },
+    {
+      "history": "20261040",
+      "where": "request payload call-000067",
+      "max_abs_diff": 2.7755575615628914e-17
+    },
+    {
+      "history": "20261040",
+      "where": "request payload call-000068",
+      "max_abs_diff": 2.7755575615628914e-17
+    },
+    {
+      "history": "20261040",
+      "where": "request payload call-000069",
+      "max_abs_diff": 2.7755575615628914e-17
+    },
+    {
+      "history": "20261040",
+      "where": "request payload call-000070",
+      "max_abs_diff": 2.7755575615628914e-17
+    },
+    {
+      "history": "20261040",
+      "where": "request payload call-000071",
+      "max_abs_diff": 2.7755575615628914e-17
+    },
+    {
+      "history": "20261040",
+      "where": "request payload call-000072",
+      "max_abs_diff": 2.7755575615628914e-17
+    },
+    {
+      "history": "20261040",
+      "where": "request payload call-000073",
+      "max_abs_diff": 2.7755575615628914e-17
+    },
+    {
+      "history": "20261040",
+      "where": "request payload call-000074",
+      "max_abs_diff": 2.7755575615628914e-17
+    },
+    {
+      "history": "20261040",
+      "where": "request payload call-000075",
+      "max_abs_diff": 2.7755575615628914e-17
+    },
+    {
+      "history": "20261040",
+      "where": "request payload call-000076",
+      "max_abs_diff": 2.7755575615628914e-17
+    },
+    {
+      "history": "20261040",
+      "where": "request payload call-000077",
+      "max_abs_diff": 2.7755575615628914e-17
+    },
+    {
+      "history": "20261040",
+      "where": "request payload call-000078",
+      "max_abs_diff": 2.7755575615628914e-17
+    },
+    {
+      "history": "20261040",
+      "where": "request payload call-000079",
+      "max_abs_diff": 2.7755575615628914e-17
+    },
+    {
+      "history": "20261040",
+      "where": "request payload call-000080",
+      "max_abs_diff": 2.7755575615628914e-17
+    },
+    {
+      "history": "20261040",
+      "where": "request payload call-000081",
+      "max_abs_diff": 2.7755575615628914e-17
+    },
+    {
+      "history": "20261040",
+      "where": "request payload call-000082",
+      "max_abs_diff": 2.7755575615628914e-17
+    },
+    {
+      "history": "20261040",
+      "where": "request payload call-000083",
+      "max_abs_diff": 2.7755575615628914e-17
+    },
+    {
+      "history": "20261040",
+      "where": "request payload call-000084",
+      "max_abs_diff": 2.7755575615628914e-17
+    },
+    {
+      "history": "20261040",
+      "where": "request payload call-000085",
+      "max_abs_diff": 2.7755575615628914e-17
+    },
+    {
+      "history": "20261040",
+      "where": "request payload call-000086",
+      "max_abs_diff": 2.7755575615628914e-17
+    },
+    {
+      "history": "20261040",
+      "where": "request payload call-000087",
+      "max_abs_diff": 2.7755575615628914e-17
+    },
+    {
+      "history": "20261040",
+      "where": "request payload call-000088",
+      "max_abs_diff": 2.7755575615628914e-17
+    },
+    {
+      "history": "20261040",
+      "where": "request payload call-000089",
+      "max_abs_diff": 2.7755575615628914e-17
+    },
+    {
+      "history": "20261040",
+      "where": "request payload call-000090",
+      "max_abs_diff": 2.7755575615628914e-17
+    },
+    {
+      "history": "20261040",
+      "where": "request payload call-000091",
+      "max_abs_diff": 2.7755575615628914e-17
+    },
+    {
+      "history": "20261040",
+      "where": "request payload call-000092",
+      "max_abs_diff": 2.7755575615628914e-17
+    },
+    {
+      "history": "20261040",
+      "where": "request payload call-000093",
+      "max_abs_diff": 2.7755575615628914e-17
+    },
+    {
+      "history": "20261040",
+      "where": "request payload call-000094",
+      "max_abs_diff": 2.7755575615628914e-17
+    },
+    {
+      "history": "20261040",
+      "where": "request payload call-000095",
+      "max_abs_diff": 2.7755575615628914e-17
+    },
+    {
+      "history": "20261040",
+      "where": "request payload call-000096",
+      "max_abs_diff": 2.7755575615628914e-17
+    },
+    {
+      "history": "20261040",
+      "where": "request payload call-000097",
+      "max_abs_diff": 2.7755575615628914e-17
+    },
+    {
+      "history": "20261040",
+      "where": "request payload call-000098",
+      "max_abs_diff": 2.7755575615628914e-17
+    },
+    {
+      "history": "20261040",
+      "where": "request payload call-000099",
+      "max_abs_diff": 2.7755575615628914e-17
+    },
+    {
+      "history": "20261040",
+      "where": "request payload call-000100",
+      "max_abs_diff": 2.7755575615628914e-17
+    },
+    {
+      "history": "20261040",
+      "where": "request payload call-000101",
+      "max_abs_diff": 2.7755575615628914e-17
+    },
+    {
+      "history": "20261040",
+      "where": "request payload call-000102",
+      "max_abs_diff": 2.7755575615628914e-17
+    },
+    {
+      "history": "20261040",
+      "where": "request payload call-000103",
+      "max_abs_diff": 2.7755575615628914e-17
+    },
+    {
+      "history": "20261040",
+      "where": "request payload call-000104",
+      "max_abs_diff": 2.7755575615628914e-17
+    },
+    {
+      "history": "20261040",
+      "where": "request payload call-000105",
+      "max_abs_diff": 2.7755575615628914e-17
+    },
+    {
+      "history": "20261040",
+      "where": "request payload call-000106",
+      "max_abs_diff": 2.7755575615628914e-17
+    },
+    {
+      "history": "20261040",
+      "where": "request payload call-000107",
+      "max_abs_diff": 2.7755575615628914e-17
+    },
+    {
+      "history": "20261040",
+      "where": "request payload call-000108",
+      "max_abs_diff": 2.7755575615628914e-17
+    },
+    {
+      "history": "20261040",
+      "where": "request payload call-000109",
+      "max_abs_diff": 2.7755575615628914e-17
+    },
+    {
+      "history": "20261040",
+      "where": "request payload call-000110",
+      "max_abs_diff": 2.7755575615628914e-17
+    },
+    {
+      "history": "20261040",
+      "where": "request payload call-000111",
+      "max_abs_diff": 2.7755575615628914e-17
+    },
+    {
+      "history": "20261040",
+      "where": "request payload call-000112",
+      "max_abs_diff": 2.7755575615628914e-17
+    },
+    {
+      "history": "20261040",
+      "where": "request payload call-000113",
+      "max_abs_diff": 2.7755575615628914e-17
+    },
+    {
+      "history": "20261040",
+      "where": "request payload call-000114",
+      "max_abs_diff": 2.7755575615628914e-17
+    },
+    {
+      "history": "20261040",
+      "where": "request payload call-000115",
+      "max_abs_diff": 2.7755575615628914e-17
+    },
+    {
+      "history": "20261040",
+      "where": "request payload call-000116",
+      "max_abs_diff": 2.7755575615628914e-17
+    },
+    {
+      "history": "20261040",
+      "where": "request payload call-000117",
+      "max_abs_diff": 2.7755575615628914e-17
+    },
+    {
+      "history": "20261040",
+      "where": "request payload call-000118",
+      "max_abs_diff": 2.7755575615628914e-17
+    },
+    {
+      "history": "20261040",
+      "where": "request payload call-000119",
+      "max_abs_diff": 2.7755575615628914e-17
+    },
+    {
+      "history": "20261040",
+      "where": "request payload call-000120",
+      "max_abs_diff": 2.7755575615628914e-17
+    },
+    {
+      "history": "20261044",
+      "where": "branches",
+      "max_abs_diff": 8.673617379884035e-19
+    },
+    {
+      "history": "20261098",
+      "where": "branches",
+      "max_abs_diff": 3.469446951953614e-18
+    }
+  ],
+  "replay_exactness": "within_float_tolerance",
+  "scope": "Independent recorded-exposure/count/scoring checks plus shared-engine semantic reconstruction; no model calls or inference."
+}

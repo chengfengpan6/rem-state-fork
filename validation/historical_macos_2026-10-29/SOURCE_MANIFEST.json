@@ -1,0 +1,17 @@
+{
+  "source": "supplied 29 October macOS receipts",
+  "files": [
+    {
+      "file": "verify_strict_macos.json",
+      "sha256": "e554cda02ffdd9522013e3b8d334237c4c1e6b1a3ad271c717c41580cb502d89"
+    },
+    {
+      "file": "verify_tol1e-12_macos.json",
+      "sha256": "6d3a5f85b5413923df882a3ba885315e7722856b8fca77ecb229f1678e667104"
+    },
+    {
+      "file": "log3.txt",
+      "sha256": "ee2799f17977c1596397ed01717da93c1c7b1684a6ab57b6e0dc877ae34f7199"
+    }
+  ]
+}

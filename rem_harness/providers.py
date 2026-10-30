@@ -226,7 +226,10 @@ class ReplayProvider:
     requested_model = "recorded-gpt-5.6-luna"
     is_live = False
 
-    def __init__(self, events_file):
+    def __init__(self, events_file, float_tolerance=0.0):
+        from .replay_validation import validate_tolerance
+        self.float_tolerance = validate_tolerance(float_tolerance)
+        self.score_differences = []
         events = [json.loads(s) for s in Path(events_file).read_text(encoding="utf-8").splitlines() if s.strip()]
         call_rows = [e for e in events if e.get("event", "").startswith("call_")]
         for i, row in enumerate(call_rows):
@@ -237,17 +240,26 @@ class ReplayProvider:
         self.requests = [e for e in events if e.get("event") == "call_request"]
         if len(self.responses) != len(self.requests) or any(r.get("call_id") != s.get("call_id") for r, s in zip(self.requests, self.responses)):
             raise ValueError("Replay requires a complete ordered one-to-one request/response recording")
+        if self.requests and "requested_model" in self.requests[0]:
+            self.requested_model = self.requests[0]["requested_model"]
         self.index = 0
         self.last_trace = {}
 
     def complete(self, kind, payload, schema):
+        from .replay_validation import compare
         if self.index >= len(self.responses):
             raise RuntimeError("Recorded responses exhausted")
         request, event = self.requests[self.index], self.responses[self.index]
-        if request["kind"] != kind or digest(request["payload"]) != digest(payload) or digest(request["schema"]) != digest(schema):
-            raise RuntimeError(f"Replay request mismatch at index {self.index}; no approximate replay permitted")
+        comparison = compare(request["payload"], payload, tolerance=self.float_tolerance,
+                             scope="payload", prefix=f"request[{self.index}].payload")
+        if request["kind"] != kind or not comparison["equal"] or digest(request["schema"]) != digest(schema):
+            raise RuntimeError(f"Replay request mismatch at index {self.index}; only explicitly bounded score differences are permitted")
+        self.score_differences.extend(comparison["score_differences"])
         self.index += 1
         self.last_trace = {"replay_index": self.index, "source_call_id": request.get("call_id")}
+        if self.float_tolerance:
+            self.last_trace["replay_score_tolerance"] = self.float_tolerance
+            self.last_trace["replay_score_differences"] = comparison["score_differences"]
         return event["response"]
 
 

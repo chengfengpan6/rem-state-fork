@@ -1,0 +1,10 @@
+{
+  "status": "verified_complete",
+  "protocol_version": "rem-prototype-0.2-targeted-Y-v1",
+  "checks_total": 12968,
+  "checks_failed": 0,
+  "failures": [],
+  "planned_histories": 30,
+  "expected_calls": 3600,
+  "scope": "Independent recorded-exposure/count/scoring checks plus shared-engine semantic reconstruction; no model calls or inference."
+}

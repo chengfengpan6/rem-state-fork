@@ -1,3 +1,5 @@
+> Historical document. For the current three-route diagnostic and offline review instructions, start with [the repository README](../README.md) and [the 30 October release notes](release_2026-10-30.md). The historical design and results below are retained; they are not instructions for a new live run.
+
 # V2 execution and verification, 25 October 2026
 
 ## Actual model use

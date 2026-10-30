@@ -1,0 +1,12 @@
+{
+  "config_hash": "6bbb44cc56f2bed28f15490786d94ec22b745f2e9e0f86dd1c0c8f7dc387d607",
+  "attempts_by_branch": {
+    "20261053:formation": 30,
+    "20261053:team_R0": 18,
+    "20261053:team_H": 18,
+    "20261053:team_E": 18,
+    "20261053:team_R0rep": 18,
+    "20261053:team_P": 19
+  },
+  "basis": "Conservative cumulative transport reservations, persisted before dispatch; includes prior failures."
+}

@@ -186,11 +186,14 @@ class Engine:
         safe_keys = {"system_prompt", "system_template", "user_prompt", "prompt", "raw_response", "parsed_response",
                      "usage", "model", "requested_model", "finish_reason", "backend", "transport", "provider",
                      "cli_version", "auth", "reasoning_effort", "schema_sha256", "elapsed_seconds", "events",
-                     "returncode", "transport_note", "replay_index", "source_call_id"}
+                     "returncode", "transport_note", "replay_index", "source_call_id",
+                     "replay_score_tolerance", "replay_score_differences"}
         if self.v2:
             safe_keys.update({"served_model_id", "model_identity_status", "raw_cli_events_hash",
                               "effective_config", "host_context_scope", "resumed_from_call_id", "resume_source",
-                              "physical_dispatch", "cumulative_physical_attempts"})
+                              "physical_dispatch", "cumulative_physical_attempts",
+                              "response_id", "transport_attempts", "length_resamples", "stop_reason",
+                              "effort", "api_schema_note", "api_schema_sha256"})
         return {k: deepcopy(v) for k, v in trace.items() if k in safe_keys}
 
     def _payload(self, state, architecture, actor, current, profiles=None):

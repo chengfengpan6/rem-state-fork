@@ -1,3 +1,5 @@
+> Historical document. For the current three-route diagnostic and offline review instructions, start with [the repository README](../README.md) and [the 30 October release notes](release_2026-10-30.md). The historical design and results below are retained; they are not instructions for a new live run.
+
 # Technical appendix for the REM research instrument
 
 *Submission-facing review draft, 25 October 2026. Implementation reference: commit `0af0368`, protocol `rem-prototype-0.2-iid-planted-split-audit`. The bounded live run completed 219 responses and passed its recorded checks. This appendix accompanies the Stage-1 proposal and distinguishes implemented operations, this noninferential engineering execution, and the later scientific study.*

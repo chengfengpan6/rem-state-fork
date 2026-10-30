@@ -2,7 +2,9 @@
 
 # REM: shared interpretation with a common factual record
 
-**Current OS revision: 25 October 2026.**
+**Historical bounded revision: 25 October 2026.**
+
+See the [current repository README](../README.md) for the completed targeted diagnostic and later replications.
 
 [Readable artifact overview](index.html) · [Scientific question and task](scenario_and_identification.md) · [V2 technical appendix](technical_appendix_v2.md) · [Validation and limits](validation_v2.md)
 

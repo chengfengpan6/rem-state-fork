@@ -1,4 +1,4 @@
-> Historical v1 document. For the current OS revision, read [the v2 appendix](technical_appendix_v2.md), [scientific design](scenario_and_identification.md), and [actual validation](validation_v2.md). Earlier primary contrasts and budgets are not current-run instructions.
+> Historical document. For the current three-route diagnostic and offline review instructions, start with [the repository README](../README.md) and [the 30 October release notes](release_2026-10-30.md). The historical design and results below are retained; they are not instructions for a new live run.
 
 # Scientific protocol and implementation choices
 

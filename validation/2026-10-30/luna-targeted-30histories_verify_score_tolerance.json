@@ -1,0 +1,290 @@
+{
+  "status": "verified_complete",
+  "protocol_version": "rem-prototype-0.2-targeted-Y-v1",
+  "checks_total": 38288,
+  "checks_failed": 0,
+  "failures": [],
+  "planned_histories": 30,
+  "expected_calls": 3600,
+  "float_tolerance": 1e-12,
+  "replay_exactness": "exact",
+  "replay_by_history": {
+    "20261029": {
+      "float_tolerance": 1e-12,
+      "replay_exactness": "exact",
+      "score_differences": [],
+      "proven_state_hash_differences": [],
+      "failures": [],
+      "physical_dispatches_this_execution": 0
+    },
+    "20261030": {
+      "float_tolerance": 1e-12,
+      "replay_exactness": "exact",
+      "score_differences": [],
+      "proven_state_hash_differences": [],
+      "failures": [],
+      "physical_dispatches_this_execution": 0
+    },
+    "20261035": {
+      "float_tolerance": 1e-12,
+      "replay_exactness": "exact",
+      "score_differences": [],
+      "proven_state_hash_differences": [],
+      "failures": [],
+      "physical_dispatches_this_execution": 0
+    },
+    "20261039": {
+      "float_tolerance": 1e-12,
+      "replay_exactness": "exact",
+      "score_differences": [],
+      "proven_state_hash_differences": [],
+      "failures": [],
+      "physical_dispatches_this_execution": 0
+    },
+    "20261040": {
+      "float_tolerance": 1e-12,
+      "replay_exactness": "exact",
+      "score_differences": [],
+      "proven_state_hash_differences": [],
+      "failures": [],
+      "physical_dispatches_this_execution": 0
+    },
+    "20261044": {
+      "float_tolerance": 1e-12,
+      "replay_exactness": "exact",
+      "score_differences": [],
+      "proven_state_hash_differences": [],
+      "failures": [],
+      "physical_dispatches_this_execution": 0
+    },
+    "20261047": {
+      "float_tolerance": 1e-12,
+      "replay_exactness": "exact",
+      "score_differences": [],
+      "proven_state_hash_differences": [],
+      "failures": [],
+      "physical_dispatches_this_execution": 0
+    },
+    "20261051": {
+      "float_tolerance": 1e-12,
+      "replay_exactness": "exact",
+      "score_differences": [],
+      "proven_state_hash_differences": [],
+      "failures": [],
+      "physical_dispatches_this_execution": 0
+    },
+    "20261053": {
+      "float_tolerance": 1e-12,
+      "replay_exactness": "exact",
+      "score_differences": [],
+      "proven_state_hash_differences": [],
+      "failures": [],
+      "physical_dispatches_this_execution": 0
+    },
+    "20261054": {
+      "float_tolerance": 1e-12,
+      "replay_exactness": "exact",
+      "score_differences": [],
+      "proven_state_hash_differences": [],
+      "failures": [],
+      "physical_dispatches_this_execution": 0
+    },
+    "20261056": {
+      "float_tolerance": 1e-12,
+      "replay_exactness": "exact",
+      "score_differences": [],
+      "proven_state_hash_differences": [],
+      "failures": [],
+      "physical_dispatches_this_execution": 0
+    },
+    "20261057": {
+      "float_tolerance": 1e-12,
+      "replay_exactness": "exact",
+      "score_differences": [],
+      "proven_state_hash_differences": [],
+      "failures": [],
+      "physical_dispatches_this_execution": 0
+    },
+    "20261061": {
+      "float_tolerance": 1e-12,
+      "replay_exactness": "exact",
+      "score_differences": [],
+      "proven_state_hash_differences": [],
+      "failures": [],
+      "physical_dispatches_this_execution": 0
+    },
+    "20261062": {
+      "float_tolerance": 1e-12,
+      "replay_exactness": "exact",
+      "score_differences": [],
+      "proven_state_hash_differences": [],
+      "failures": [],
+      "physical_dispatches_this_execution": 0
+    },
+    "20261065": {
+      "float_tolerance": 1e-12,
+      "replay_exactness": "exact",
+      "score_differences": [],
+      "proven_state_hash_differences": [],
+      "failures": [],
+      "physical_dispatches_this_execution": 0
+    },
+    "20261066": {
+      "float_tolerance": 1e-12,
+      "replay_exactness": "exact",
+      "score_differences": [],
+      "proven_state_hash_differences": [],
+      "failures": [],
+      "physical_dispatches_this_execution": 0
+    },
+    "20261070": {
+      "float_tolerance": 1e-12,
+      "replay_exactness": "exact",
+      "score_differences": [],
+      "proven_state_hash_differences": [],
+      "failures": [],
+      "physical_dispatches_this_execution": 0
+    },
+    "20261074": {
+      "float_tolerance": 1e-12,
+      "replay_exactness": "exact",
+      "score_differences": [],
+      "proven_state_hash_differences": [],
+      "failures": [],
+      "physical_dispatches_this_execution": 0
+    },
+    "20261076": {
+      "float_tolerance": 1e-12,
+      "replay_exactness": "exact",
+      "score_differences": [],
+      "proven_state_hash_differences": [],
+      "failures": [],
+      "physical_dispatches_this_execution": 0
+    },
+    "20261077": {
+      "float_tolerance": 1e-12,
+      "replay_exactness": "exact",
+      "score_differences": [],
+      "proven_state_hash_differences": [],
+      "failures": [],
+      "physical_dispatches_this_execution": 0
+    },
+    "20261080": {
+      "float_tolerance": 1e-12,
+      "replay_exactness": "exact",
+      "score_differences": [],
+      "proven_state_hash_differences": [],
+      "failures": [],
+      "physical_dispatches_this_execution": 0
+    },
+    "20261084": {
+      "float_tolerance": 1e-12,
+      "replay_exactness": "exact",
+      "score_differences": [],
+      "proven_state_hash_differences": [],
+      "failures": [],
+      "physical_dispatches_this_execution": 0
+    },
+    "20261088": {
+      "float_tolerance": 1e-12,
+      "replay_exactness": "exact",
+      "score_differences": [],
+      "proven_state_hash_differences": [],
+      "failures": [],
+      "physical_dispatches_this_execution": 0
+    },
+    "20261091": {
+      "float_tolerance": 1e-12,
+      "replay_exactness": "exact",
+      "score_differences": [],
+      "proven_state_hash_differences": [],
+      "failures": [],
+      "physical_dispatches_this_execution": 0
+    },
+    "20261092": {
+      "float_tolerance": 1e-12,
+      "replay_exactness": "exact",
+      "score_differences": [],
+      "proven_state_hash_differences": [],
+      "failures": [],
+      "physical_dispatches_this_execution": 0
+    },
+    "20261093": {
+      "float_tolerance": 1e-12,
+      "replay_exactness": "exact",
+      "score_differences": [],
+      "proven_state_hash_differences": [],
+      "failures": [],
+      "physical_dispatches_this_execution": 0
+    },
+    "20261094": {
+      "float_tolerance": 1e-12,
+      "replay_exactness": "exact",
+      "score_differences": [],
+      "proven_state_hash_differences": [],
+      "failures": [],
+      "physical_dispatches_this_execution": 0
+    },
+    "20261098": {
+      "float_tolerance": 1e-12,
+      "replay_exactness": "exact",
+      "score_differences": [],
+      "proven_state_hash_differences": [],
+      "failures": [],
+      "physical_dispatches_this_execution": 0
+    },
+    "20261100": {
+      "float_tolerance": 1e-12,
+      "replay_exactness": "exact",
+      "score_differences": [],
+      "proven_state_hash_differences": [],
+      "failures": [],
+      "physical_dispatches_this_execution": 0
+    },
+    "20261101": {
+      "float_tolerance": 1e-12,
+      "replay_exactness": "exact",
+      "score_differences": [],
+      "proven_state_hash_differences": [],
+      "failures": [],
+      "physical_dispatches_this_execution": 0
+    }
+  },
+  "independent_score_differences": [],
+  "actual_prompt_checks_by_history": {
+    "20261029": 120,
+    "20261030": 120,
+    "20261035": 120,
+    "20261039": 120,
+    "20261040": 120,
+    "20261044": 120,
+    "20261047": 120,
+    "20261051": 120,
+    "20261053": 120,
+    "20261054": 120,
+    "20261056": 120,
+    "20261057": 120,
+    "20261061": 120,
+    "20261062": 120,
+    "20261065": 120,
+    "20261066": 120,
+    "20261070": 120,
+    "20261074": 120,
+    "20261076": 120,
+    "20261077": 120,
+    "20261080": 120,
+    "20261084": 120,
+    "20261088": 120,
+    "20261091": 120,
+    "20261092": 120,
+    "20261093": 120,
+    "20261094": 120,
+    "20261098": 120,
+    "20261100": 120,
+    "20261101": 120
+  },
+  "physical_dispatches_this_execution": 0,
+  "tolerance_policy": "Only recomputed LB/Pi Brier and cBR/mean_cBR float fields, absolute tolerance <=1e-12; all predictions, signals, maps, types, schemas and archived hashes exact. Changed replay hashes require an explicit score-only state proof.",
+  "transport_provenance_limit": "Verification does not recover unrecorded API retries, discarded responses, hidden service context or missing served-model identifiers. Historical is_live/physical_dispatch flags are preserved, not treated as proof of no API execution.",
+  "scope": "Independent recorded-exposure/count/scoring checks plus shared-engine semantic reconstruction; no model calls or inference."
+}

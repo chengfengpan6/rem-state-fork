@@ -1,0 +1,53 @@
+{
+  "status": "invalid",
+  "protocol_version": "rem-prototype-0.2-targeted-Y-v1",
+  "checks_total": 16568,
+  "checks_failed": 8,
+  "failures": [
+    "semantic_replay:20261029",
+    "replay_branches:20261029",
+    "replay_checkpoint:20261029",
+    "semantic_replay:20261040",
+    "replay_branches:20261040",
+    "replay_checkpoint:20261040",
+    "replay_branches:20261044",
+    "replay_branches:20261098"
+  ],
+  "planned_histories": 30,
+  "expected_calls": 3600,
+  "float_tolerance": 0.0,
+  "float_tolerance_report": [
+    {
+      "history": "20261029",
+      "where": "branches",
+      "max_abs_diff": Infinity
+    },
+    {
+      "history": "20261029",
+      "where": "checkpoint",
+      "max_abs_diff": Infinity
+    },
+    {
+      "history": "20261040",
+      "where": "branches",
+      "max_abs_diff": Infinity
+    },
+    {
+      "history": "20261040",
+      "where": "checkpoint",
+      "max_abs_diff": Infinity
+    },
+    {
+      "history": "20261044",
+      "where": "branches",
+      "max_abs_diff": 8.673617379884035e-19
+    },
+    {
+      "history": "20261098",
+      "where": "branches",
+      "max_abs_diff": 8.673617379884035e-19
+    }
+  ],
+  "replay_exactness": "within_float_tolerance",
+  "scope": "Independent recorded-exposure/count/scoring checks plus shared-engine semantic reconstruction; no model calls or inference."
+}

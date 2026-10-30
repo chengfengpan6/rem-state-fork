@@ -1,0 +1,1409 @@
+{
+  "schema": "rem-supplied-replication-archive-1",
+  "assembled_utc": "2026-10-30T22:32:19.814840+00:00",
+  "scope": "Byte-preserved supplied recording and original analysis/verification/log files. No model calls or retroactive record repair.",
+  "original_files_modified": false,
+  "new_model_calls": 0,
+  "files_copied": 233,
+  "files": [
+    {
+      "original_path": "recordings/gemini38flash_low_30seeds/histories/20261029/attempt_001/calls.jsonl",
+      "archived_path": "histories/20261029/attempt_001/calls.jsonl",
+      "bytes": 1058913,
+      "sha256": "3bf57730376b7fae44f8c33bbebc1322ab65585d9ced1fb8e98994197ac0ccef"
+    },
+    {
+      "original_path": "recordings/gemini38flash_low_30seeds/histories/20261029/attempt_001/checkpoint.json",
+      "archived_path": "histories/20261029/attempt_001/checkpoint.json",
+      "bytes": 56578,
+      "sha256": "32e003a7756774bf1108b6ee7e7e5d6a20e21c78530de6ced2793052c0dc15ab"
+    },
+    {
+      "original_path": "recordings/gemini38flash_low_30seeds/histories/20261029/attempt_001/events.jsonl",
+      "archived_path": "histories/20261029/attempt_001/events.jsonl",
+      "bytes": 1071456,
+      "sha256": "f88dd036dfec05e9cd884cc46f725fb965099d4fbcd8684f6acf2725710afb51"
+    },
+    {
+      "original_path": "recordings/gemini38flash_low_30seeds/histories/20261029/attempt_001/formation_tape.json",
+      "archived_path": "histories/20261029/attempt_001/formation_tape.json",
+      "bytes": 395,
+      "sha256": "b76f314f4b2d9df79ca629dcf5b75c156eef69f18d1e1e36eb968913fdb676b2"
+    },
+    {
+      "original_path": "recordings/gemini38flash_low_30seeds/histories/20261029/attempt_001/manifest.json",
+      "archived_path": "histories/20261029/attempt_001/manifest.json",
+      "bytes": 398490,
+      "sha256": "1d0d69c0f8e9b60d47056d58e2f61152bb35a9bbf1d49afa002bd448cac8d7d1"
+    },
+    {
+      "original_path": "recordings/gemini38flash_low_30seeds/histories/20261029/attempt_001/profiles.json",
+      "archived_path": "histories/20261029/attempt_001/profiles.json",
+      "bytes": 224,
+      "sha256": "4779b1371d1e58ddb55a2a96df0431a7f598e2f9a2250034359bdfc0c6ba57fb"
+    },
+    {
+      "original_path": "recordings/gemini38flash_low_30seeds/histories/20261029/attempt_001/summary.json",
+      "archived_path": "histories/20261029/attempt_001/summary.json",
+      "bytes": 10482,
+      "sha256": "c74684ec08798093fcedfd10bd76cbc8fee72c489f1154e3718926f8dfb4914f"
+    },
+    {
+      "original_path": "recordings/gemini38flash_low_30seeds/histories/20261030/attempt_001/calls.jsonl",
+      "archived_path": "histories/20261030/attempt_001/calls.jsonl",
+      "bytes": 1061990,
+      "sha256": "dac3557b5017c37e28c20a140c9f6803c65f075a40203c094cd38beb2f9d1325"
+    },
+    {
+      "original_path": "recordings/gemini38flash_low_30seeds/histories/20261030/attempt_001/checkpoint.json",
+      "archived_path": "histories/20261030/attempt_001/checkpoint.json",
+      "bytes": 56476,
+      "sha256": "baaeb699f9e58f9e740ff759e20a362e8851a539c78a13e0c1229cd4c411cf23"
+    },
+    {
+      "original_path": "recordings/gemini38flash_low_30seeds/histories/20261030/attempt_001/events.jsonl",
+      "archived_path": "histories/20261030/attempt_001/events.jsonl",
+      "bytes": 1074607,
+      "sha256": "ada259467100ab9b03ee0a68aa3ab0919d535671143930f4d21a2539a77d78b3"
+    },
+    {
+      "original_path": "recordings/gemini38flash_low_30seeds/histories/20261030/attempt_001/formation_tape.json",
+      "archived_path": "histories/20261030/attempt_001/formation_tape.json",
+      "bytes": 395,
+      "sha256": "3cb8c329c2351fb91ac622ee4e49515c2e444482fb0d6ba04ddef2fe87ad9ec7"
+    },
+    {
+      "original_path": "recordings/gemini38flash_low_30seeds/histories/20261030/attempt_001/manifest.json",
+      "archived_path": "histories/20261030/attempt_001/manifest.json",
+      "bytes": 398490,
+      "sha256": "8297bfd3b089a97263e0c4fab20a106b35c7487d6ca1963697852ecd029ed4c5"
+    },
+    {
+      "original_path": "recordings/gemini38flash_low_30seeds/histories/20261030/attempt_001/profiles.json",
+      "archived_path": "histories/20261030/attempt_001/profiles.json",
+      "bytes": 224,
+      "sha256": "4779b1371d1e58ddb55a2a96df0431a7f598e2f9a2250034359bdfc0c6ba57fb"
+    },
+    {
+      "original_path": "recordings/gemini38flash_low_30seeds/histories/20261030/attempt_001/summary.json",
+      "archived_path": "histories/20261030/attempt_001/summary.json",
+      "bytes": 10544,
+      "sha256": "cb0b99c2dc41ae434b8012f0c26bb1f58e902c2330ff1ae1b24a56596253e940"
+    },
+    {
+      "original_path": "recordings/gemini38flash_low_30seeds/histories/20261035/attempt_001/calls.jsonl",
+      "archived_path": "histories/20261035/attempt_001/calls.jsonl",
+      "bytes": 1069386,
+      "sha256": "fbcdbd1f1d81d96a09412386c9464a8b3ab4cfc9ed4f4abb5d091c179d5f6ff2"
+    },
+    {
+      "original_path": "recordings/gemini38flash_low_30seeds/histories/20261035/attempt_001/checkpoint.json",
+      "archived_path": "histories/20261035/attempt_001/checkpoint.json",
+      "bytes": 56845,
+      "sha256": "e50c8447d1e1300e4bd9832a290b287a6a110441f2cbbde399a34e7cff62ccb0"
+    },
+    {
+      "original_path": "recordings/gemini38flash_low_30seeds/histories/20261035/attempt_001/events.jsonl",
+      "archived_path": "histories/20261035/attempt_001/events.jsonl",
+      "bytes": 1082023,
+      "sha256": "96eb60c4bbf8c6c56979808e24b5865f878ba6b22689ba0499107c0695b52f11"
+    },
+    {
+      "original_path": "recordings/gemini38flash_low_30seeds/histories/20261035/attempt_001/formation_tape.json",
+      "archived_path": "histories/20261035/attempt_001/formation_tape.json",
+      "bytes": 395,
+      "sha256": "c2815952c7a42d10868304140e9920e92efd5ef0074e2082f66143dfbc3149c6"
+    },
+    {
+      "original_path": "recordings/gemini38flash_low_30seeds/histories/20261035/attempt_001/manifest.json",
+      "archived_path": "histories/20261035/attempt_001/manifest.json",
+      "bytes": 398490,
+      "sha256": "03374d8e54cca56bd46111b06d943f09e067617d67e9915e7c5e19ad40be66ec"
+    },
+    {
+      "original_path": "recordings/gemini38flash_low_30seeds/histories/20261035/attempt_001/profiles.json",
+      "archived_path": "histories/20261035/attempt_001/profiles.json",
+      "bytes": 224,
+      "sha256": "4779b1371d1e58ddb55a2a96df0431a7f598e2f9a2250034359bdfc0c6ba57fb"
+    },
+    {
+      "original_path": "recordings/gemini38flash_low_30seeds/histories/20261035/attempt_001/summary.json",
+      "archived_path": "histories/20261035/attempt_001/summary.json",
+      "bytes": 10556,
+      "sha256": "c2157baa07c0bc3aebd078afca0e9207aae324eba68867d04f4a96553b30a4ba"
+    },
+    {
+      "original_path": "recordings/gemini38flash_low_30seeds/histories/20261039/attempt_001/calls.jsonl",
+      "archived_path": "histories/20261039/attempt_001/calls.jsonl",
+      "bytes": 1059657,
+      "sha256": "f4d2c4049e465944c4e986cf2f0fdf1df423a1f27288a7f48652ba1190f022d6"
+    },
+    {
+      "original_path": "recordings/gemini38flash_low_30seeds/histories/20261039/attempt_001/checkpoint.json",
+      "archived_path": "histories/20261039/attempt_001/checkpoint.json",
+      "bytes": 56352,
+      "sha256": "ec313fc4c0fa29570678fc644b64773a869dede321cbb05ca136c0d70960f9ac"
+    },
+    {
+      "original_path": "recordings/gemini38flash_low_30seeds/histories/20261039/attempt_001/events.jsonl",
+      "archived_path": "histories/20261039/attempt_001/events.jsonl",
+      "bytes": 1072229,
+      "sha256": "545d720ae9a500b1b4604c6c3c59d8db9389db60966bb98c896535720b368efd"
+    },
+    {
+      "original_path": "recordings/gemini38flash_low_30seeds/histories/20261039/attempt_001/formation_tape.json",
+      "archived_path": "histories/20261039/attempt_001/formation_tape.json",
+      "bytes": 395,
+      "sha256": "ef1d08eff8af5d0eade12cf500be538c533af9e90c87d4444fc746b168299c97"
+    },
+    {
+      "original_path": "recordings/gemini38flash_low_30seeds/histories/20261039/attempt_001/manifest.json",
+      "archived_path": "histories/20261039/attempt_001/manifest.json",
+      "bytes": 398490,
+      "sha256": "2f859f048c2f17bca7aa9484e34e5d96f760072626b7fcf9d9a80433e7232152"
+    },
+    {
+      "original_path": "recordings/gemini38flash_low_30seeds/histories/20261039/attempt_001/profiles.json",
+      "archived_path": "histories/20261039/attempt_001/profiles.json",
+      "bytes": 224,
+      "sha256": "4779b1371d1e58ddb55a2a96df0431a7f598e2f9a2250034359bdfc0c6ba57fb"
+    },
+    {
+      "original_path": "recordings/gemini38flash_low_30seeds/histories/20261039/attempt_001/summary.json",
+      "archived_path": "histories/20261039/attempt_001/summary.json",
+      "bytes": 10510,
+      "sha256": "93102153c63405868a271c1192aad4ed0371658b471e8743fcd6c9c484c8f242"
+    },
+    {
+      "original_path": "recordings/gemini38flash_low_30seeds/histories/20261040/attempt_001/calls.jsonl",
+      "archived_path": "histories/20261040/attempt_001/calls.jsonl",
+      "bytes": 1082475,
+      "sha256": "f2e3a851216b519365312122cd72da67f0dece2d3e0c55bc3ae4090d4df648cc"
+    },
+    {
+      "original_path": "recordings/gemini38flash_low_30seeds/histories/20261040/attempt_001/checkpoint.json",
+      "archived_path": "histories/20261040/attempt_001/checkpoint.json",
+      "bytes": 56996,
+      "sha256": "de094c0936e9047d028d51f29d467747555cedcfd1331064f867f9cdf0c38154"
+    },
+    {
+      "original_path": "recordings/gemini38flash_low_30seeds/histories/20261040/attempt_001/events.jsonl",
+      "archived_path": "histories/20261040/attempt_001/events.jsonl",
+      "bytes": 1095160,
+      "sha256": "2bd40a2a34a5e553904b6105394dd9c773a15451882ed0df9564b3e7e6089e24"
+    },
+    {
+      "original_path": "recordings/gemini38flash_low_30seeds/histories/20261040/attempt_001/formation_tape.json",
+      "archived_path": "histories/20261040/attempt_001/formation_tape.json",
+      "bytes": 395,
+      "sha256": "c34893c12a6e5dbe7c063c252997656347ab5203f772341866591b22f43e68af"
+    },
+    {
+      "original_path": "recordings/gemini38flash_low_30seeds/histories/20261040/attempt_001/manifest.json",
+      "archived_path": "histories/20261040/attempt_001/manifest.json",
+      "bytes": 398490,
+      "sha256": "dcecd2f47bde05918ac69c67cfdce16a682be5b98ea48eecc31a67f10b4089dc"
+    },
+    {
+      "original_path": "recordings/gemini38flash_low_30seeds/histories/20261040/attempt_001/profiles.json",
+      "archived_path": "histories/20261040/attempt_001/profiles.json",
+      "bytes": 224,
+      "sha256": "4779b1371d1e58ddb55a2a96df0431a7f598e2f9a2250034359bdfc0c6ba57fb"
+    },
+    {
+      "original_path": "recordings/gemini38flash_low_30seeds/histories/20261040/attempt_001/summary.json",
+      "archived_path": "histories/20261040/attempt_001/summary.json",
+      "bytes": 10586,
+      "sha256": "d28b91705618b3b1019a199f7d6ec2f2d57aff100c3b90418eef279b7c3d2aa9"
+    },
+    {
+      "original_path": "recordings/gemini38flash_low_30seeds/histories/20261044/attempt_001/calls.jsonl",
+      "archived_path": "histories/20261044/attempt_001/calls.jsonl",
+      "bytes": 1040768,
+      "sha256": "29bb4e1aab7222fbefa32f7d3d4da501a6e8d1533eba064c2b22b1a3778d1264"
+    },
+    {
+      "original_path": "recordings/gemini38flash_low_30seeds/histories/20261044/attempt_001/checkpoint.json",
+      "archived_path": "histories/20261044/attempt_001/checkpoint.json",
+      "bytes": 56135,
+      "sha256": "b5fcc6eb6ddc59d0ec027fe23d43412d70b4a5b1dad66c45e9923795ac8b2392"
+    },
+    {
+      "original_path": "recordings/gemini38flash_low_30seeds/histories/20261044/attempt_001/events.jsonl",
+      "archived_path": "histories/20261044/attempt_001/events.jsonl",
+      "bytes": 1053249,
+      "sha256": "fe73d68f5e51a6f08e0d7afe3cbda19e0f1af0ceb559b41304431d4cc138120f"
+    },
+    {
+      "original_path": "recordings/gemini38flash_low_30seeds/histories/20261044/attempt_001/formation_tape.json",
+      "archived_path": "histories/20261044/attempt_001/formation_tape.json",
+      "bytes": 395,
+      "sha256": "c54237301d0a92a6ce36e212f38b601c18327b5165ee25e3c693314851e805d8"
+    },
+    {
+      "original_path": "recordings/gemini38flash_low_30seeds/histories/20261044/attempt_001/manifest.json",
+      "archived_path": "histories/20261044/attempt_001/manifest.json",
+      "bytes": 398490,
+      "sha256": "e466950610bcaa96204d602b394551385193e273c37a29d84cf352dacd6f8306"
+    },
+    {
+      "original_path": "recordings/gemini38flash_low_30seeds/histories/20261044/attempt_001/profiles.json",
+      "archived_path": "histories/20261044/attempt_001/profiles.json",
+      "bytes": 224,
+      "sha256": "4779b1371d1e58ddb55a2a96df0431a7f598e2f9a2250034359bdfc0c6ba57fb"
+    },
+    {
+      "original_path": "recordings/gemini38flash_low_30seeds/histories/20261044/attempt_001/summary.json",
+      "archived_path": "histories/20261044/attempt_001/summary.json",
+      "bytes": 10418,
+      "sha256": "61937da19686c20a076a3dfbf11ebe463b8533de90c544a2738185c71d6066ca"
+    },
+    {
+      "original_path": "recordings/gemini38flash_low_30seeds/histories/20261047/attempt_001/calls.jsonl",
+      "archived_path": "histories/20261047/attempt_001/calls.jsonl",
+      "bytes": 1071698,
+      "sha256": "abde0ff42c82b57276ffbe9abfb849667f619919a8877600608bf17b29bb722f"
+    },
+    {
+      "original_path": "recordings/gemini38flash_low_30seeds/histories/20261047/attempt_001/checkpoint.json",
+      "archived_path": "histories/20261047/attempt_001/checkpoint.json",
+      "bytes": 56866,
+      "sha256": "c5a82ccc0f0ee5848ed5bc10382d1d3f76bb240df22fda1a278be0cf9101bb83"
+    },
+    {
+      "original_path": "recordings/gemini38flash_low_30seeds/histories/20261047/attempt_001/events.jsonl",
+      "archived_path": "histories/20261047/attempt_001/events.jsonl",
+      "bytes": 1084275,
+      "sha256": "2c86836708a0cf3b51265f84deee78724e25999be112c62f9365e68d607895a6"
+    },
+    {
+      "original_path": "recordings/gemini38flash_low_30seeds/histories/20261047/attempt_001/formation_tape.json",
+      "archived_path": "histories/20261047/attempt_001/formation_tape.json",
+      "bytes": 395,
+      "sha256": "cb8b278cb47d6631f7036228ccaea4f2033faaece4c02ce868675326aa238c03"
+    },
+    {
+      "original_path": "recordings/gemini38flash_low_30seeds/histories/20261047/attempt_001/manifest.json",
+      "archived_path": "histories/20261047/attempt_001/manifest.json",
+      "bytes": 398490,
+      "sha256": "e540ecc9114510b7e3c784dfcc17688599298835033416e5ac14c64e66ad6080"
+    },
+    {
+      "original_path": "recordings/gemini38flash_low_30seeds/histories/20261047/attempt_001/profiles.json",
+      "archived_path": "histories/20261047/attempt_001/profiles.json",
+      "bytes": 224,
+      "sha256": "4779b1371d1e58ddb55a2a96df0431a7f598e2f9a2250034359bdfc0c6ba57fb"
+    },
+    {
+      "original_path": "recordings/gemini38flash_low_30seeds/histories/20261047/attempt_001/summary.json",
+      "archived_path": "histories/20261047/attempt_001/summary.json",
+      "bytes": 10466,
+      "sha256": "6a26a901f8d2e65ff998cd3680acc1f6106c9b16072830740b4a4a09f1d4c693"
+    },
+    {
+      "original_path": "recordings/gemini38flash_low_30seeds/histories/20261051/attempt_001/calls.jsonl",
+      "archived_path": "histories/20261051/attempt_001/calls.jsonl",
+      "bytes": 1059379,
+      "sha256": "d57a09878b3c11750a1f03d70d0840fe06afd97e76f1c73d31a43757e0450f57"
+    },
+    {
+      "original_path": "recordings/gemini38flash_low_30seeds/histories/20261051/attempt_001/checkpoint.json",
+      "archived_path": "histories/20261051/attempt_001/checkpoint.json",
+      "bytes": 56430,
+      "sha256": "7ed9ac6ca007e8e908ba5ddba3ca944f58c716425f62b556624e7f2323f47169"
+    },
+    {
+      "original_path": "recordings/gemini38flash_low_30seeds/histories/20261051/attempt_001/events.jsonl",
+      "archived_path": "histories/20261051/attempt_001/events.jsonl",
+      "bytes": 1071958,
+      "sha256": "7193784b664e164ed5a69dc85016dcd7b9f8efeec50ed62ac847ffae417b0c71"
+    },
+    {
+      "original_path": "recordings/gemini38flash_low_30seeds/histories/20261051/attempt_001/formation_tape.json",
+      "archived_path": "histories/20261051/attempt_001/formation_tape.json",
+      "bytes": 395,
+      "sha256": "0af75eb94a7d5e74f6d3dc64b514167799d014c5f3fd07a51da5f396c3d8241f"
+    },
+    {
+      "original_path": "recordings/gemini38flash_low_30seeds/histories/20261051/attempt_001/manifest.json",
+      "archived_path": "histories/20261051/attempt_001/manifest.json",
+      "bytes": 398490,
+      "sha256": "7e191bbd9d895a7338f641584ba8688ccdc8b2898706317e0aaf1f4c8e95dd6a"
+    },
+    {
+      "original_path": "recordings/gemini38flash_low_30seeds/histories/20261051/attempt_001/profiles.json",
+      "archived_path": "histories/20261051/attempt_001/profiles.json",
+      "bytes": 224,
+      "sha256": "4779b1371d1e58ddb55a2a96df0431a7f598e2f9a2250034359bdfc0c6ba57fb"
+    },
+    {
+      "original_path": "recordings/gemini38flash_low_30seeds/histories/20261051/attempt_001/summary.json",
+      "archived_path": "histories/20261051/attempt_001/summary.json",
+      "bytes": 10494,
+      "sha256": "39e52b597ceec67a5fcba1d6c5806a918cf3c8cd881f2811ddc30cbf7c0179d4"
+    },
+    {
+      "original_path": "recordings/gemini38flash_low_30seeds/histories/20261053/attempt_001/calls.jsonl",
+      "archived_path": "histories/20261053/attempt_001/calls.jsonl",
+      "bytes": 625515,
+      "sha256": "41e480c3453ccf6c6d0796758484534c15c8a2385493ab88395afb44129f11a8"
+    },
+    {
+      "original_path": "recordings/gemini38flash_low_30seeds/histories/20261053/attempt_001/checkpoint.json",
+      "archived_path": "histories/20261053/attempt_001/checkpoint.json",
+      "bytes": 56277,
+      "sha256": "7338c472e13b0a7012546b6847bc171a61046a6306afd6cceb5d72d250b20bd1"
+    },
+    {
+      "original_path": "recordings/gemini38flash_low_30seeds/histories/20261053/attempt_001/events.jsonl",
+      "archived_path": "histories/20261053/attempt_001/events.jsonl",
+      "bytes": 634921,
+      "sha256": "d533c92e3b7933f14e6c5e33d89df322b1bbc1fd762ed633a7200d4939b453e3"
+    },
+    {
+      "original_path": "recordings/gemini38flash_low_30seeds/histories/20261053/attempt_001/formation_tape.json",
+      "archived_path": "histories/20261053/attempt_001/formation_tape.json",
+      "bytes": 395,
+      "sha256": "977502f79a5015b26ec53b85b53dd9dfc06768496c13d08bf5cab074092eb576"
+    },
+    {
+      "original_path": "recordings/gemini38flash_low_30seeds/histories/20261053/attempt_001/manifest.json",
+      "archived_path": "histories/20261053/attempt_001/manifest.json",
+      "bytes": 398691,
+      "sha256": "9e8d7a6de74b7023943d12cc31da16bf87124fa0f526c51cb3684234c9a97fff"
+    },
+    {
+      "original_path": "recordings/gemini38flash_low_30seeds/histories/20261053/attempt_001/profiles.json",
+      "archived_path": "histories/20261053/attempt_001/profiles.json",
+      "bytes": 224,
+      "sha256": "4779b1371d1e58ddb55a2a96df0431a7f598e2f9a2250034359bdfc0c6ba57fb"
+    },
+    {
+      "original_path": "recordings/gemini38flash_low_30seeds/histories/20261053/attempt_001/summary.json",
+      "archived_path": "histories/20261053/attempt_001/summary.json",
+      "bytes": 6385,
+      "sha256": "94e60562a90447f6fe574d6f2d1727d80fc6ea73a5e3545c5144cc9d15daff76"
+    },
+    {
+      "original_path": "recordings/gemini38flash_low_30seeds/histories/20261053/attempt_002/calls.jsonl",
+      "archived_path": "histories/20261053/attempt_002/calls.jsonl",
+      "bytes": 1066455,
+      "sha256": "2a5acab6d9b1a7d11aaf48f2985e67ffe87d71ea7937aadac6e9276b00ab4b1b"
+    },
+    {
+      "original_path": "recordings/gemini38flash_low_30seeds/histories/20261053/attempt_002/checkpoint.json",
+      "archived_path": "histories/20261053/attempt_002/checkpoint.json",
+      "bytes": 56277,
+      "sha256": "9d9bcc7965ecf2d7cc0d7397ab60bfe16c07f2e0b54a61d6dc1662581ac8cc36"
+    },
+    {
+      "original_path": "recordings/gemini38flash_low_30seeds/histories/20261053/attempt_002/events.jsonl",
+      "archived_path": "histories/20261053/attempt_002/events.jsonl",
+      "bytes": 1079000,
+      "sha256": "f209b374e3dd3b5041e58a2449a72f7e0ed661dc26852c4d41ada1859abf4468"
+    },
+    {
+      "original_path": "recordings/gemini38flash_low_30seeds/histories/20261053/attempt_002/formation_tape.json",
+      "archived_path": "histories/20261053/attempt_002/formation_tape.json",
+      "bytes": 395,
+      "sha256": "977502f79a5015b26ec53b85b53dd9dfc06768496c13d08bf5cab074092eb576"
+    },
+    {
+      "original_path": "recordings/gemini38flash_low_30seeds/histories/20261053/attempt_002/manifest.json",
+      "archived_path": "histories/20261053/attempt_002/manifest.json",
+      "bytes": 398490,
+      "sha256": "01ba3daae096bfcf0b19126496d21e39035694a5ba180d74b64c4eee85928427"
+    },
+    {
+      "original_path": "recordings/gemini38flash_low_30seeds/histories/20261053/attempt_002/physical_attempts.json",
+      "archived_path": "histories/20261053/attempt_002/physical_attempts.json",
+      "bytes": 401,
+      "sha256": "f859049a2a76f7fef6ab25e9c7a7f7d31cdaaf7692dda4b6e7187cc73ae0610f"
+    },
+    {
+      "original_path": "recordings/gemini38flash_low_30seeds/histories/20261053/attempt_002/profiles.json",
+      "archived_path": "histories/20261053/attempt_002/profiles.json",
+      "bytes": 224,
+      "sha256": "4779b1371d1e58ddb55a2a96df0431a7f598e2f9a2250034359bdfc0c6ba57fb"
+    },
+    {
+      "original_path": "recordings/gemini38flash_low_30seeds/histories/20261053/attempt_002/summary.json",
+      "archived_path": "histories/20261053/attempt_002/summary.json",
+      "bytes": 10465,
+      "sha256": "5e3210f619ff6159c71b13db2a8b7f10b14201274b998d83e81defa3617c29c5"
+    },
+    {
+      "original_path": "recordings/gemini38flash_low_30seeds/histories/20261054/attempt_001/calls.jsonl",
+      "archived_path": "histories/20261054/attempt_001/calls.jsonl",
+      "bytes": 476296,
+      "sha256": "328089bb313757935855698952857466a3790f6e22cf7a835fdc162462948426"
+    },
+    {
+      "original_path": "recordings/gemini38flash_low_30seeds/histories/20261054/attempt_001/checkpoint.json",
+      "archived_path": "histories/20261054/attempt_001/checkpoint.json",
+      "bytes": 56882,
+      "sha256": "f50111078ed923160905b19b5bf7ebe52de0dde394f90ca96e2b00d6acad0536"
+    },
+    {
+      "original_path": "recordings/gemini38flash_low_30seeds/histories/20261054/attempt_001/events.jsonl",
+      "archived_path": "histories/20261054/attempt_001/events.jsonl",
+      "bytes": 485055,
+      "sha256": "38782f64cbf84a65654290807c7bfe681f08b1a5ca8cb4a596650ef6bb8a93d5"
+    },
+    {
+      "original_path": "recordings/gemini38flash_low_30seeds/histories/20261054/attempt_001/formation_tape.json",
+      "archived_path": "histories/20261054/attempt_001/formation_tape.json",
+      "bytes": 395,
+      "sha256": "b7de12fa5a79cf56c0dad1ffbea3c8659e7ba478457e508e221e40a61d89fbd6"
+    },
+    {
+      "original_path": "recordings/gemini38flash_low_30seeds/histories/20261054/attempt_001/manifest.json",
+      "archived_path": "histories/20261054/attempt_001/manifest.json",
+      "bytes": 398556,
+      "sha256": "460d6a523e5ff1cec997f1085beeffa9bb94f6c2ffebdc465d1e8507cdeb4c6f"
+    },
+    {
+      "original_path": "recordings/gemini38flash_low_30seeds/histories/20261054/attempt_001/profiles.json",
+      "archived_path": "histories/20261054/attempt_001/profiles.json",
+      "bytes": 224,
+      "sha256": "4779b1371d1e58ddb55a2a96df0431a7f598e2f9a2250034359bdfc0c6ba57fb"
+    },
+    {
+      "original_path": "recordings/gemini38flash_low_30seeds/histories/20261054/attempt_001/summary.json",
+      "archived_path": "histories/20261054/attempt_001/summary.json",
+      "bytes": 5616,
+      "sha256": "f7142e1c84ec1b4a01f6299721e34c188f4846dc7dd044a0337a075a6f9e5c94"
+    },
+    {
+      "original_path": "recordings/gemini38flash_low_30seeds/histories/20261054/attempt_002/calls.jsonl",
+      "archived_path": "histories/20261054/attempt_002/calls.jsonl",
+      "bytes": 1092346,
+      "sha256": "90bd3b3565dcff2dd7ffcfbe65bb3c6fbfdb732f3c35632f3b685daa7a2f8d2a"
+    },
+    {
+      "original_path": "recordings/gemini38flash_low_30seeds/histories/20261054/attempt_002/checkpoint.json",
+      "archived_path": "histories/20261054/attempt_002/checkpoint.json",
+      "bytes": 56882,
+      "sha256": "2c4f9976ad867cc9cab468cc78689869ca2f4c4d2b8c4e8431a5d19ef00da18c"
+    },
+    {
+      "original_path": "recordings/gemini38flash_low_30seeds/histories/20261054/attempt_002/events.jsonl",
+      "archived_path": "histories/20261054/attempt_002/events.jsonl",
+      "bytes": 1104858,
+      "sha256": "dfb9f6275a4295e5a00a4add681c19f6d417911200a45d4b68ab129c8bf5478a"
+    },
+    {
+      "original_path": "recordings/gemini38flash_low_30seeds/histories/20261054/attempt_002/formation_tape.json",
+      "archived_path": "histories/20261054/attempt_002/formation_tape.json",
+      "bytes": 395,
+      "sha256": "b7de12fa5a79cf56c0dad1ffbea3c8659e7ba478457e508e221e40a61d89fbd6"
+    },
+    {
+      "original_path": "recordings/gemini38flash_low_30seeds/histories/20261054/attempt_002/manifest.json",
+      "archived_path": "histories/20261054/attempt_002/manifest.json",
+      "bytes": 398490,
+      "sha256": "1a01694134bbce224dd74c3212d036cb4e4ca5c451429b80a77c4660b60deb9c"
+    },
+    {
+      "original_path": "recordings/gemini38flash_low_30seeds/histories/20261054/attempt_002/physical_attempts.json",
+      "archived_path": "histories/20261054/attempt_002/physical_attempts.json",
+      "bytes": 401,
+      "sha256": "4710bc148c9d044738396bbe06db39fc9f3945fe72f4de9ded21cb7bad8d6552"
+    },
+    {
+      "original_path": "recordings/gemini38flash_low_30seeds/histories/20261054/attempt_002/profiles.json",
+      "archived_path": "histories/20261054/attempt_002/profiles.json",
+      "bytes": 224,
+      "sha256": "4779b1371d1e58ddb55a2a96df0431a7f598e2f9a2250034359bdfc0c6ba57fb"
+    },
+    {
+      "original_path": "recordings/gemini38flash_low_30seeds/histories/20261054/attempt_002/summary.json",
+      "archived_path": "histories/20261054/attempt_002/summary.json",
+      "bytes": 10428,
+      "sha256": "175ce8dce6320f0f1ce6818b9c8232196b99f506d7daf12879c8a0d98b442fe4"
+    },
+    {
+      "original_path": "recordings/gemini38flash_low_30seeds/histories/20261056/attempt_001/calls.jsonl",
+      "archived_path": "histories/20261056/attempt_001/calls.jsonl",
+      "bytes": 1058758,
+      "sha256": "b6a7e4ed737ac9bb536065d4c9f212dbf6552d88deec5caa38959b771b81b5ac"
+    },
+    {
+      "original_path": "recordings/gemini38flash_low_30seeds/histories/20261056/attempt_001/checkpoint.json",
+      "archived_path": "histories/20261056/attempt_001/checkpoint.json",
+      "bytes": 56425,
+      "sha256": "0d8f3354377b91f2573416cc736901d0a59201675157c3faec0b83ef72467293"
+    },
+    {
+      "original_path": "recordings/gemini38flash_low_30seeds/histories/20261056/attempt_001/events.jsonl",
+      "archived_path": "histories/20261056/attempt_001/events.jsonl",
+      "bytes": 1071335,
+      "sha256": "5f92ad23e839a5fa2f14944c399ae975ca9fe551be8e7fbae7fb342ffceac13a"
+    },
+    {
+      "original_path": "recordings/gemini38flash_low_30seeds/histories/20261056/attempt_001/formation_tape.json",
+      "archived_path": "histories/20261056/attempt_001/formation_tape.json",
+      "bytes": 395,
+      "sha256": "7760ca9441a104bd09e27a83819c1dd30ab6e7c757ef3ad6b5a36c62104d9311"
+    },
+    {
+      "original_path": "recordings/gemini38flash_low_30seeds/histories/20261056/attempt_001/manifest.json",
+      "archived_path": "histories/20261056/attempt_001/manifest.json",
+      "bytes": 398490,
+      "sha256": "071e1e164ec199400382a18a43830655b9309b58dfdead1065032be13e68c0ba"
+    },
+    {
+      "original_path": "recordings/gemini38flash_low_30seeds/histories/20261056/attempt_001/profiles.json",
+      "archived_path": "histories/20261056/attempt_001/profiles.json",
+      "bytes": 224,
+      "sha256": "4779b1371d1e58ddb55a2a96df0431a7f598e2f9a2250034359bdfc0c6ba57fb"
+    },
+    {
+      "original_path": "recordings/gemini38flash_low_30seeds/histories/20261056/attempt_001/summary.json",
+      "archived_path": "histories/20261056/attempt_001/summary.json",
+      "bytes": 10507,
+      "sha256": "e9c4718a5403d37b978b0a8b4c1046829fea0b4a9a9af57097996e17e71bf419"
+    },
+    {
+      "original_path": "recordings/gemini38flash_low_30seeds/histories/20261057/attempt_001/calls.jsonl",
+      "archived_path": "histories/20261057/attempt_001/calls.jsonl",
+      "bytes": 1049394,
+      "sha256": "919f7c1ebafa963d237adfb2ad2add90e75dda46b73aae8f4a6e55018a436d93"
+    },
+    {
+      "original_path": "recordings/gemini38flash_low_30seeds/histories/20261057/attempt_001/checkpoint.json",
+      "archived_path": "histories/20261057/attempt_001/checkpoint.json",
+      "bytes": 56110,
+      "sha256": "061528dc433df1e8794088e6d4d01dcbd791500631cd40f2211185bf3b57f778"
+    },
+    {
+      "original_path": "recordings/gemini38flash_low_30seeds/histories/20261057/attempt_001/events.jsonl",
+      "archived_path": "histories/20261057/attempt_001/events.jsonl",
+      "bytes": 1061902,
+      "sha256": "44e42abba666b1eb61c0935a601b5087d6166bed3f2e64fa099a7611900c6516"
+    },
+    {
+      "original_path": "recordings/gemini38flash_low_30seeds/histories/20261057/attempt_001/formation_tape.json",
+      "archived_path": "histories/20261057/attempt_001/formation_tape.json",
+      "bytes": 395,
+      "sha256": "4fb25e9e91c31ac9232a3541ef7f68c68618a71032df9593e054fac57f261eae"
+    },
+    {
+      "original_path": "recordings/gemini38flash_low_30seeds/histories/20261057/attempt_001/manifest.json",
+      "archived_path": "histories/20261057/attempt_001/manifest.json",
+      "bytes": 398490,
+      "sha256": "de16a219eccdabe24edeb0c6e4d9d2d76a7cddddd28ff8352bb1878dd8275c5d"
+    },
+    {
+      "original_path": "recordings/gemini38flash_low_30seeds/histories/20261057/attempt_001/profiles.json",
+      "archived_path": "histories/20261057/attempt_001/profiles.json",
+      "bytes": 224,
+      "sha256": "4779b1371d1e58ddb55a2a96df0431a7f598e2f9a2250034359bdfc0c6ba57fb"
+    },
+    {
+      "original_path": "recordings/gemini38flash_low_30seeds/histories/20261057/attempt_001/summary.json",
+      "archived_path": "histories/20261057/attempt_001/summary.json",
+      "bytes": 10470,
+      "sha256": "51596d38df6aebc5bf3d37c26b50b7484050d3e8d4f6409cac22039134d517bf"
+    },
+    {
+      "original_path": "recordings/gemini38flash_low_30seeds/histories/20261061/attempt_001/calls.jsonl",
+      "archived_path": "histories/20261061/attempt_001/calls.jsonl",
+      "bytes": 1055602,
+      "sha256": "7102b941a21743ee0bf79ecec39b0f5d2acda35249ec3079cb3576bbb98e7ce8"
+    },
+    {
+      "original_path": "recordings/gemini38flash_low_30seeds/histories/20261061/attempt_001/checkpoint.json",
+      "archived_path": "histories/20261061/attempt_001/checkpoint.json",
+      "bytes": 56526,
+      "sha256": "56e6d0e3e248db0db1b552ca0dbabb92c6a612b09d44457088c7998b7c3e7ddc"
+    },
+    {
+      "original_path": "recordings/gemini38flash_low_30seeds/histories/20261061/attempt_001/events.jsonl",
+      "archived_path": "histories/20261061/attempt_001/events.jsonl",
+      "bytes": 1068158,
+      "sha256": "f9ad7ce220e16248348c55d0b298e3f8b1529db309b4216ce196b2f491782760"
+    },
+    {
+      "original_path": "recordings/gemini38flash_low_30seeds/histories/20261061/attempt_001/formation_tape.json",
+      "archived_path": "histories/20261061/attempt_001/formation_tape.json",
+      "bytes": 395,
+      "sha256": "61decf273049a61a62422405f50bf98e24289d8a1d933bc33b0bfddaae50d952"
+    },
+    {
+      "original_path": "recordings/gemini38flash_low_30seeds/histories/20261061/attempt_001/manifest.json",
+      "archived_path": "histories/20261061/attempt_001/manifest.json",
+      "bytes": 398490,
+      "sha256": "b1afce76dee5d5301efb4ac411719e51e05893dab07982012f8172b99117536f"
+    },
+    {
+      "original_path": "recordings/gemini38flash_low_30seeds/histories/20261061/attempt_001/profiles.json",
+      "archived_path": "histories/20261061/attempt_001/profiles.json",
+      "bytes": 224,
+      "sha256": "4779b1371d1e58ddb55a2a96df0431a7f598e2f9a2250034359bdfc0c6ba57fb"
+    },
+    {
+      "original_path": "recordings/gemini38flash_low_30seeds/histories/20261061/attempt_001/summary.json",
+      "archived_path": "histories/20261061/attempt_001/summary.json",
+      "bytes": 10467,
+      "sha256": "3379a6a570ab778d2b568876fa0bdd6e04a22be6d5a042f916b44f1191942a07"
+    },
+    {
+      "original_path": "recordings/gemini38flash_low_30seeds/histories/20261062/attempt_001/calls.jsonl",
+      "archived_path": "histories/20261062/attempt_001/calls.jsonl",
+      "bytes": 1077486,
+      "sha256": "7e8601a29cbca56024fe047fca91f890fa3ef4500449764d0de58eee683587e6"
+    },
+    {
+      "original_path": "recordings/gemini38flash_low_30seeds/histories/20261062/attempt_001/checkpoint.json",
+      "archived_path": "histories/20261062/attempt_001/checkpoint.json",
+      "bytes": 57079,
+      "sha256": "bc2b9c6bd5865ceb9b248617fa8f9c74a18cf54e45024398713eca1866e9a733"
+    },
+    {
+      "original_path": "recordings/gemini38flash_low_30seeds/histories/20261062/attempt_001/events.jsonl",
+      "archived_path": "histories/20261062/attempt_001/events.jsonl",
+      "bytes": 1090086,
+      "sha256": "1c5cb6ba6d4be6bbee8643933ca2a689224245dd6a6d8b3b9614b5d8079a110d"
+    },
+    {
+      "original_path": "recordings/gemini38flash_low_30seeds/histories/20261062/attempt_001/formation_tape.json",
+      "archived_path": "histories/20261062/attempt_001/formation_tape.json",
+      "bytes": 395,
+      "sha256": "95e21669d92f353ddd1170ef710baa0d1d29c120cdad3e88823091fb4b8c7076"
+    },
+    {
+      "original_path": "recordings/gemini38flash_low_30seeds/histories/20261062/attempt_001/manifest.json",
+      "archived_path": "histories/20261062/attempt_001/manifest.json",
+      "bytes": 398490,
+      "sha256": "c5f56b579fed86d842d7b98a4024abaf81a4ac75b2e3eeea11615987526a6837"
+    },
+    {
+      "original_path": "recordings/gemini38flash_low_30seeds/histories/20261062/attempt_001/profiles.json",
+      "archived_path": "histories/20261062/attempt_001/profiles.json",
+      "bytes": 224,
+      "sha256": "4779b1371d1e58ddb55a2a96df0431a7f598e2f9a2250034359bdfc0c6ba57fb"
+    },
+    {
+      "original_path": "recordings/gemini38flash_low_30seeds/histories/20261062/attempt_001/summary.json",
+      "archived_path": "histories/20261062/attempt_001/summary.json",
+      "bytes": 10507,
+      "sha256": "be8c158e29079a7a9656b9bde5b1ef8b8ee309a84e33b28cfe5c0a38209b8d77"
+    },
+    {
+      "original_path": "recordings/gemini38flash_low_30seeds/histories/20261065/attempt_001/calls.jsonl",
+      "archived_path": "histories/20261065/attempt_001/calls.jsonl",
+      "bytes": 1062241,
+      "sha256": "b5bc6ff7e1ad93db46d5f04c10fc669c3813319a5ba87f73224bd23ddc22a6c3"
+    },
+    {
+      "original_path": "recordings/gemini38flash_low_30seeds/histories/20261065/attempt_001/checkpoint.json",
+      "archived_path": "histories/20261065/attempt_001/checkpoint.json",
+      "bytes": 56796,
+      "sha256": "38f743fa313317ccfa77a89c4c1f251b6a9f7f5b35f1e6f01c7d4d3e6c232213"
+    },
+    {
+      "original_path": "recordings/gemini38flash_low_30seeds/histories/20261065/attempt_001/events.jsonl",
+      "archived_path": "histories/20261065/attempt_001/events.jsonl",
+      "bytes": 1074840,
+      "sha256": "3a8360d6467f0263ecd673b78ac603e8cd01a9e397371e94accc687dc71180c7"
+    },
+    {
+      "original_path": "recordings/gemini38flash_low_30seeds/histories/20261065/attempt_001/formation_tape.json",
+      "archived_path": "histories/20261065/attempt_001/formation_tape.json",
+      "bytes": 395,
+      "sha256": "f02c052fcf20b74e828782d601f3fb13fae6fad68cc9d84a1690c02a07adfcda"
+    },
+    {
+      "original_path": "recordings/gemini38flash_low_30seeds/histories/20261065/attempt_001/manifest.json",
+      "archived_path": "histories/20261065/attempt_001/manifest.json",
+      "bytes": 398490,
+      "sha256": "777cb289ed010e9262f57d97b84b1fba744c57d132e491b2826a3cfabe4c69a4"
+    },
+    {
+      "original_path": "recordings/gemini38flash_low_30seeds/histories/20261065/attempt_001/profiles.json",
+      "archived_path": "histories/20261065/attempt_001/profiles.json",
+      "bytes": 224,
+      "sha256": "4779b1371d1e58ddb55a2a96df0431a7f598e2f9a2250034359bdfc0c6ba57fb"
+    },
+    {
+      "original_path": "recordings/gemini38flash_low_30seeds/histories/20261065/attempt_001/summary.json",
+      "archived_path": "histories/20261065/attempt_001/summary.json",
+      "bytes": 10524,
+      "sha256": "94b8f06a289134ba421dcfa339457c15aecc5369ff9693c962a1ba79573da59b"
+    },
+    {
+      "original_path": "recordings/gemini38flash_low_30seeds/histories/20261066/attempt_001/calls.jsonl",
+      "archived_path": "histories/20261066/attempt_001/calls.jsonl",
+      "bytes": 1049003,
+      "sha256": "161b69849c673814c2229670ea81a8984ac835b538c3321396675674f1af12c9"
+    },
+    {
+      "original_path": "recordings/gemini38flash_low_30seeds/histories/20261066/attempt_001/checkpoint.json",
+      "archived_path": "histories/20261066/attempt_001/checkpoint.json",
+      "bytes": 56235,
+      "sha256": "8aa4df529ff0b18f66dca0110912d43adc6ec60d1339ab24ab6c1637a1ee0ab9"
+    },
+    {
+      "original_path": "recordings/gemini38flash_low_30seeds/histories/20261066/attempt_001/events.jsonl",
+      "archived_path": "histories/20261066/attempt_001/events.jsonl",
+      "bytes": 1061501,
+      "sha256": "604313684c6edfe6d34fe57f0d86f23ba25f054f6259774e17695ab57cc50ffa"
+    },
+    {
+      "original_path": "recordings/gemini38flash_low_30seeds/histories/20261066/attempt_001/formation_tape.json",
+      "archived_path": "histories/20261066/attempt_001/formation_tape.json",
+      "bytes": 395,
+      "sha256": "206dbc4ea6ff99f11086449b63b0d28e5ee19b87376e798bda7c76b1bb91272a"
+    },
+    {
+      "original_path": "recordings/gemini38flash_low_30seeds/histories/20261066/attempt_001/manifest.json",
+      "archived_path": "histories/20261066/attempt_001/manifest.json",
+      "bytes": 398490,
+      "sha256": "e8598cb147a60c9345be6c4e966ba7fb8ab9d5a30f27ad1d8dbe723cd5b53074"
+    },
+    {
+      "original_path": "recordings/gemini38flash_low_30seeds/histories/20261066/attempt_001/profiles.json",
+      "archived_path": "histories/20261066/attempt_001/profiles.json",
+      "bytes": 224,
+      "sha256": "4779b1371d1e58ddb55a2a96df0431a7f598e2f9a2250034359bdfc0c6ba57fb"
+    },
+    {
+      "original_path": "recordings/gemini38flash_low_30seeds/histories/20261066/attempt_001/summary.json",
+      "archived_path": "histories/20261066/attempt_001/summary.json",
+      "bytes": 10452,
+      "sha256": "660db0deea4c62223bc9f24f7ac5e76228cf1a67b01793c1f19f70cdfd65999a"
+    },
+    {
+      "original_path": "recordings/gemini38flash_low_30seeds/histories/20261070/attempt_001/calls.jsonl",
+      "archived_path": "histories/20261070/attempt_001/calls.jsonl",
+      "bytes": 1062308,
+      "sha256": "569c5ebea0ed87bfd3d16f578270d20f8006c4de49266e68565e26bc10f5099c"
+    },
+    {
+      "original_path": "recordings/gemini38flash_low_30seeds/histories/20261070/attempt_001/checkpoint.json",
+      "archived_path": "histories/20261070/attempt_001/checkpoint.json",
+      "bytes": 56591,
+      "sha256": "5777b99307fc7c5611bcb757316619287158c95f14f3a541c85dbddb3c399ad1"
+    },
+    {
+      "original_path": "recordings/gemini38flash_low_30seeds/histories/20261070/attempt_001/events.jsonl",
+      "archived_path": "histories/20261070/attempt_001/events.jsonl",
+      "bytes": 1074963,
+      "sha256": "1e8af4f03fb18d2d9ab4ef265c79b02bd4f4adeb3e21e7ebbb317c87f3d09bf4"
+    },
+    {
+      "original_path": "recordings/gemini38flash_low_30seeds/histories/20261070/attempt_001/formation_tape.json",
+      "archived_path": "histories/20261070/attempt_001/formation_tape.json",
+      "bytes": 395,
+      "sha256": "426e8d7cd26920d5053002d8fc1c8938c3c336069fa504984250c4c906a3bea6"
+    },
+    {
+      "original_path": "recordings/gemini38flash_low_30seeds/histories/20261070/attempt_001/manifest.json",
+      "archived_path": "histories/20261070/attempt_001/manifest.json",
+      "bytes": 398490,
+      "sha256": "dd9973d2d95e86cce523206c95fd5a55bcdd2a683ecd671856c75db13bc7ea92"
+    },
+    {
+      "original_path": "recordings/gemini38flash_low_30seeds/histories/20261070/attempt_001/profiles.json",
+      "archived_path": "histories/20261070/attempt_001/profiles.json",
+      "bytes": 224,
+      "sha256": "4779b1371d1e58ddb55a2a96df0431a7f598e2f9a2250034359bdfc0c6ba57fb"
+    },
+    {
+      "original_path": "recordings/gemini38flash_low_30seeds/histories/20261070/attempt_001/summary.json",
+      "archived_path": "histories/20261070/attempt_001/summary.json",
+      "bytes": 10573,
+      "sha256": "12933f90954fe2fad33b1f4d70940330c04413341f780820938880cc6c401494"
+    },
+    {
+      "original_path": "recordings/gemini38flash_low_30seeds/histories/20261074/attempt_001/calls.jsonl",
+      "archived_path": "histories/20261074/attempt_001/calls.jsonl",
+      "bytes": 1061526,
+      "sha256": "aa4e2e67eb32760dd151b6d6f119b62d60505fb8d75d9858ab3cd6fa660ab089"
+    },
+    {
+      "original_path": "recordings/gemini38flash_low_30seeds/histories/20261074/attempt_001/checkpoint.json",
+      "archived_path": "histories/20261074/attempt_001/checkpoint.json",
+      "bytes": 56349,
+      "sha256": "d9eb2e68ba43496fccbc75498ca02fbf2f3232b39a93002024552afb0c17a7ca"
+    },
+    {
+      "original_path": "recordings/gemini38flash_low_30seeds/histories/20261074/attempt_001/events.jsonl",
+      "archived_path": "histories/20261074/attempt_001/events.jsonl",
+      "bytes": 1074077,
+      "sha256": "36d886ab6ed3f9725070b49d357e7141146cc761e6dad7eb07136a60f4014ae2"
+    },
+    {
+      "original_path": "recordings/gemini38flash_low_30seeds/histories/20261074/attempt_001/formation_tape.json",
+      "archived_path": "histories/20261074/attempt_001/formation_tape.json",
+      "bytes": 395,
+      "sha256": "29434a3513f3792fc9c6b2c2e1bd4c9335933c7a1b4f66bbcfc42b57c299c4ba"
+    },
+    {
+      "original_path": "recordings/gemini38flash_low_30seeds/histories/20261074/attempt_001/manifest.json",
+      "archived_path": "histories/20261074/attempt_001/manifest.json",
+      "bytes": 398490,
+      "sha256": "c9e2b63c923726eda9d666f52cf2461c14ad0877686440c598dcbaf1ba80e30a"
+    },
+    {
+      "original_path": "recordings/gemini38flash_low_30seeds/histories/20261074/attempt_001/profiles.json",
+      "archived_path": "histories/20261074/attempt_001/profiles.json",
+      "bytes": 224,
+      "sha256": "4779b1371d1e58ddb55a2a96df0431a7f598e2f9a2250034359bdfc0c6ba57fb"
+    },
+    {
+      "original_path": "recordings/gemini38flash_low_30seeds/histories/20261074/attempt_001/summary.json",
+      "archived_path": "histories/20261074/attempt_001/summary.json",
+      "bytes": 10456,
+      "sha256": "19feefe931642dd4ff67014289ef06a74276f224ae7a778d83efe36323fb1bfa"
+    },
+    {
+      "original_path": "recordings/gemini38flash_low_30seeds/histories/20261076/attempt_001/calls.jsonl",
+      "archived_path": "histories/20261076/attempt_001/calls.jsonl",
+      "bytes": 1052363,
+      "sha256": "34fb304f124a8e40c0bdfd5924d2794050ff08430d820c37af9c7633616dfc76"
+    },
+    {
+      "original_path": "recordings/gemini38flash_low_30seeds/histories/20261076/attempt_001/checkpoint.json",
+      "archived_path": "histories/20261076/attempt_001/checkpoint.json",
+      "bytes": 56008,
+      "sha256": "f59f3decfbfb80e8590d3d1636a3a948e4c505fb2ebe4b20ac134b17052779cf"
+    },
+    {
+      "original_path": "recordings/gemini38flash_low_30seeds/histories/20261076/attempt_001/events.jsonl",
+      "archived_path": "histories/20261076/attempt_001/events.jsonl",
+      "bytes": 1064935,
+      "sha256": "ac7139544330c39f20c9d8d34894e01c52fb7c5074be386b52499071aaa92000"
+    },
+    {
+      "original_path": "recordings/gemini38flash_low_30seeds/histories/20261076/attempt_001/formation_tape.json",
+      "archived_path": "histories/20261076/attempt_001/formation_tape.json",
+      "bytes": 395,
+      "sha256": "1596370f5641a233af51a844b150fdbdaad81224b3df99ba7a206292294d0b2c"
+    },
+    {
+      "original_path": "recordings/gemini38flash_low_30seeds/histories/20261076/attempt_001/manifest.json",
+      "archived_path": "histories/20261076/attempt_001/manifest.json",
+      "bytes": 398490,
+      "sha256": "3802eae1c3c36aa498e47b9cf70be1781377be4707d39c8168502e1a97873b7d"
+    },
+    {
+      "original_path": "recordings/gemini38flash_low_30seeds/histories/20261076/attempt_001/profiles.json",
+      "archived_path": "histories/20261076/attempt_001/profiles.json",
+      "bytes": 224,
+      "sha256": "4779b1371d1e58ddb55a2a96df0431a7f598e2f9a2250034359bdfc0c6ba57fb"
+    },
+    {
+      "original_path": "recordings/gemini38flash_low_30seeds/histories/20261076/attempt_001/summary.json",
+      "archived_path": "histories/20261076/attempt_001/summary.json",
+      "bytes": 10533,
+      "sha256": "19f011e4b2b071f8189b356dad58fcd51093db4a3b2e914a58b9f1f9f3f17e38"
+    },
+    {
+      "original_path": "recordings/gemini38flash_low_30seeds/histories/20261077/attempt_001/calls.jsonl",
+      "archived_path": "histories/20261077/attempt_001/calls.jsonl",
+      "bytes": 1029843,
+      "sha256": "c9d239c18830ea9529f15c6efbf4581540c6916b4d1da1742ff05bb2ae2be45b"
+    },
+    {
+      "original_path": "recordings/gemini38flash_low_30seeds/histories/20261077/attempt_001/checkpoint.json",
+      "archived_path": "histories/20261077/attempt_001/checkpoint.json",
+      "bytes": 55593,
+      "sha256": "2497efe3bf4b4997f9da6c5db2f5f8f51bf8d2593af5b3fd834bb88fee112c03"
+    },
+    {
+      "original_path": "recordings/gemini38flash_low_30seeds/histories/20261077/attempt_001/events.jsonl",
+      "archived_path": "histories/20261077/attempt_001/events.jsonl",
+      "bytes": 1042379,
+      "sha256": "7c32682ef6d8b84470a5d60292bd97c8f6b9e9ef58c30241f4fc3985f3c54524"
+    },
+    {
+      "original_path": "recordings/gemini38flash_low_30seeds/histories/20261077/attempt_001/formation_tape.json",
+      "archived_path": "histories/20261077/attempt_001/formation_tape.json",
+      "bytes": 395,
+      "sha256": "167358877c332053f7cb1a14faf3105693679a9ecbba2ade165ebd39f3511c6c"
+    },
+    {
+      "original_path": "recordings/gemini38flash_low_30seeds/histories/20261077/attempt_001/manifest.json",
+      "archived_path": "histories/20261077/attempt_001/manifest.json",
+      "bytes": 398490,
+      "sha256": "1e8a50ed5a99e1a62d0231c9a6292c052bd52ed58ce4b2603dbec4a030651cf4"
+    },
+    {
+      "original_path": "recordings/gemini38flash_low_30seeds/histories/20261077/attempt_001/profiles.json",
+      "archived_path": "histories/20261077/attempt_001/profiles.json",
+      "bytes": 224,
+      "sha256": "4779b1371d1e58ddb55a2a96df0431a7f598e2f9a2250034359bdfc0c6ba57fb"
+    },
+    {
+      "original_path": "recordings/gemini38flash_low_30seeds/histories/20261077/attempt_001/summary.json",
+      "archived_path": "histories/20261077/attempt_001/summary.json",
+      "bytes": 10502,
+      "sha256": "ecc9d358418279adc9f9f8e3e6f855bbb9e27d3fcd436026ffd4f3d7ca0254b9"
+    },
+    {
+      "original_path": "recordings/gemini38flash_low_30seeds/histories/20261080/attempt_001/calls.jsonl",
+      "archived_path": "histories/20261080/attempt_001/calls.jsonl",
+      "bytes": 1051219,
+      "sha256": "6d66e4442cb698bb7e33bce3352183f16de0f67f110d9dc8cea766ee9b526938"
+    },
+    {
+      "original_path": "recordings/gemini38flash_low_30seeds/histories/20261080/attempt_001/checkpoint.json",
+      "archived_path": "histories/20261080/attempt_001/checkpoint.json",
+      "bytes": 56424,
+      "sha256": "1826e575bfdc9e49fab58feed094cf9bc564d5c37d73995d11b9c3a4175be51a"
+    },
+    {
+      "original_path": "recordings/gemini38flash_low_30seeds/histories/20261080/attempt_001/events.jsonl",
+      "archived_path": "histories/20261080/attempt_001/events.jsonl",
+      "bytes": 1063772,
+      "sha256": "07ddfe48ac917f6a61bf8d315a317fe18717b830a23d2fd6170998345360e755"
+    },
+    {
+      "original_path": "recordings/gemini38flash_low_30seeds/histories/20261080/attempt_001/formation_tape.json",
+      "archived_path": "histories/20261080/attempt_001/formation_tape.json",
+      "bytes": 395,
+      "sha256": "00b136ae83b45c0a30b0a921baeb3fcb824ff313626e0cc5987142ee211c35e0"
+    },
+    {
+      "original_path": "recordings/gemini38flash_low_30seeds/histories/20261080/attempt_001/manifest.json",
+      "archived_path": "histories/20261080/attempt_001/manifest.json",
+      "bytes": 398490,
+      "sha256": "f6c4a8d851f3e2566aae813ef6283f13e0db0f63bdde0ec6548a35b2fb4e5917"
+    },
+    {
+      "original_path": "recordings/gemini38flash_low_30seeds/histories/20261080/attempt_001/profiles.json",
+      "archived_path": "histories/20261080/attempt_001/profiles.json",
+      "bytes": 224,
+      "sha256": "4779b1371d1e58ddb55a2a96df0431a7f598e2f9a2250034359bdfc0c6ba57fb"
+    },
+    {
+      "original_path": "recordings/gemini38flash_low_30seeds/histories/20261080/attempt_001/summary.json",
+      "archived_path": "histories/20261080/attempt_001/summary.json",
+      "bytes": 10457,
+      "sha256": "f70c90330395e5d72968b9e9c85a2cdb961d54465e3c034b2d3ed936d0b64f1d"
+    },
+    {
+      "original_path": "recordings/gemini38flash_low_30seeds/histories/20261084/attempt_001/calls.jsonl",
+      "archived_path": "histories/20261084/attempt_001/calls.jsonl",
+      "bytes": 1079582,
+      "sha256": "3630bbea58479d938faed5cf682b662abf038d8f76c3a09e5bbaea974a9f1f95"
+    },
+    {
+      "original_path": "recordings/gemini38flash_low_30seeds/histories/20261084/attempt_001/checkpoint.json",
+      "archived_path": "histories/20261084/attempt_001/checkpoint.json",
+      "bytes": 57162,
+      "sha256": "8e7e0516af68930df865385afc969cc703f903bf5f94e21fa91ab911c6f7b716"
+    },
+    {
+      "original_path": "recordings/gemini38flash_low_30seeds/histories/20261084/attempt_001/events.jsonl",
+      "archived_path": "histories/20261084/attempt_001/events.jsonl",
+      "bytes": 1092250,
+      "sha256": "f037ddd7e46acd14717d428de3d4e519d9072827adab8e2ddc818b4c88487422"
+    },
+    {
+      "original_path": "recordings/gemini38flash_low_30seeds/histories/20261084/attempt_001/formation_tape.json",
+      "archived_path": "histories/20261084/attempt_001/formation_tape.json",
+      "bytes": 395,
+      "sha256": "e8cc5c88f22c019c67544f524d0f1fb592db5e17a79c3c971e888afc17e80111"
+    },
+    {
+      "original_path": "recordings/gemini38flash_low_30seeds/histories/20261084/attempt_001/manifest.json",
+      "archived_path": "histories/20261084/attempt_001/manifest.json",
+      "bytes": 398490,
+      "sha256": "46d32438e660dac94c25796f451a0b69f6f38d4357207899b48502f19a04836a"
+    },
+    {
+      "original_path": "recordings/gemini38flash_low_30seeds/histories/20261084/attempt_001/profiles.json",
+      "archived_path": "histories/20261084/attempt_001/profiles.json",
+      "bytes": 224,
+      "sha256": "4779b1371d1e58ddb55a2a96df0431a7f598e2f9a2250034359bdfc0c6ba57fb"
+    },
+    {
+      "original_path": "recordings/gemini38flash_low_30seeds/histories/20261084/attempt_001/summary.json",
+      "archived_path": "histories/20261084/attempt_001/summary.json",
+      "bytes": 10567,
+      "sha256": "0ebf82c658c069bcf28698c807cc7846055446679c25bf368a3f9f3d6967ef81"
+    },
+    {
+      "original_path": "recordings/gemini38flash_low_30seeds/histories/20261088/attempt_001/calls.jsonl",
+      "archived_path": "histories/20261088/attempt_001/calls.jsonl",
+      "bytes": 1074407,
+      "sha256": "c71464c19347ce71f9da405f11cd7c40506834a98656aedcc625912a9ec300a7"
+    },
+    {
+      "original_path": "recordings/gemini38flash_low_30seeds/histories/20261088/attempt_001/checkpoint.json",
+      "archived_path": "histories/20261088/attempt_001/checkpoint.json",
+      "bytes": 56884,
+      "sha256": "9e16ada7486c4bb5b9c8c2cb09464e57bbaf1383fcb9e7e39865af5343710ee1"
+    },
+    {
+      "original_path": "recordings/gemini38flash_low_30seeds/histories/20261088/attempt_001/events.jsonl",
+      "archived_path": "histories/20261088/attempt_001/events.jsonl",
+      "bytes": 1087113,
+      "sha256": "42103fb0193e6dcccba655cd53a2879c9dfa0630debbddbf07dc93f2410088df"
+    },
+    {
+      "original_path": "recordings/gemini38flash_low_30seeds/histories/20261088/attempt_001/formation_tape.json",
+      "archived_path": "histories/20261088/attempt_001/formation_tape.json",
+      "bytes": 395,
+      "sha256": "274e4fd5348cd4a500a5a040db0f8f0ead6e7954a6710b5a9dd4040d0085e87c"
+    },
+    {
+      "original_path": "recordings/gemini38flash_low_30seeds/histories/20261088/attempt_001/manifest.json",
+      "archived_path": "histories/20261088/attempt_001/manifest.json",
+      "bytes": 398490,
+      "sha256": "5a6ebead2b67fdc19d0799a3d5dde52d4026e1a480c0a046057fcb82be336d9c"
+    },
+    {
+      "original_path": "recordings/gemini38flash_low_30seeds/histories/20261088/attempt_001/profiles.json",
+      "archived_path": "histories/20261088/attempt_001/profiles.json",
+      "bytes": 224,
+      "sha256": "4779b1371d1e58ddb55a2a96df0431a7f598e2f9a2250034359bdfc0c6ba57fb"
+    },
+    {
+      "original_path": "recordings/gemini38flash_low_30seeds/histories/20261088/attempt_001/summary.json",
+      "archived_path": "histories/20261088/attempt_001/summary.json",
+      "bytes": 10601,
+      "sha256": "cbf649abf9c68c1e20df3e4b6cfc5ea58a1ff7180679864a529fcf6b6ba97096"
+    },
+    {
+      "original_path": "recordings/gemini38flash_low_30seeds/histories/20261091/attempt_001/calls.jsonl",
+      "archived_path": "histories/20261091/attempt_001/calls.jsonl",
+      "bytes": 1058747,
+      "sha256": "18d1c6b16fbe25f5027269b89cb369adfe91aaac02e788f74752774cdd6386ff"
+    },
+    {
+      "original_path": "recordings/gemini38flash_low_30seeds/histories/20261091/attempt_001/checkpoint.json",
+      "archived_path": "histories/20261091/attempt_001/checkpoint.json",
+      "bytes": 56502,
+      "sha256": "62329147b478060f216afdbe63fd8ec58ec4bbda605be6d38808d79f6c73dc47"
+    },
+    {
+      "original_path": "recordings/gemini38flash_low_30seeds/histories/20261091/attempt_001/events.jsonl",
+      "archived_path": "histories/20261091/attempt_001/events.jsonl",
+      "bytes": 1071298,
+      "sha256": "d3147005d25fc20d051a6e605b71c8213c9e750ccd52e88f389b99862761e246"
+    },
+    {
+      "original_path": "recordings/gemini38flash_low_30seeds/histories/20261091/attempt_001/formation_tape.json",
+      "archived_path": "histories/20261091/attempt_001/formation_tape.json",
+      "bytes": 395,
+      "sha256": "a124461702aa0c58a9745b2d90aff52de4aed0b4affeee6a6cc6c1d83dbc1eee"
+    },
+    {
+      "original_path": "recordings/gemini38flash_low_30seeds/histories/20261091/attempt_001/manifest.json",
+      "archived_path": "histories/20261091/attempt_001/manifest.json",
+      "bytes": 398490,
+      "sha256": "99ad12fab95ba59c4dfc8dc055a6a30a53e4b5a60a3bfdab2dcfedf0fb2b2904"
+    },
+    {
+      "original_path": "recordings/gemini38flash_low_30seeds/histories/20261091/attempt_001/profiles.json",
+      "archived_path": "histories/20261091/attempt_001/profiles.json",
+      "bytes": 224,
+      "sha256": "4779b1371d1e58ddb55a2a96df0431a7f598e2f9a2250034359bdfc0c6ba57fb"
+    },
+    {
+      "original_path": "recordings/gemini38flash_low_30seeds/histories/20261091/attempt_001/summary.json",
+      "archived_path": "histories/20261091/attempt_001/summary.json",
+      "bytes": 10474,
+      "sha256": "59463ad7aab7579aa7e706285ebbf1805aec95be7ceedf173e8ed3468fdbb15f"
+    },
+    {
+      "original_path": "recordings/gemini38flash_low_30seeds/histories/20261092/attempt_001/calls.jsonl",
+      "archived_path": "histories/20261092/attempt_001/calls.jsonl",
+      "bytes": 1074997,
+      "sha256": "c967a0ff6c610941068d31b663806175b18afb1b9d244e6ee53e69125dd84841"
+    },
+    {
+      "original_path": "recordings/gemini38flash_low_30seeds/histories/20261092/attempt_001/checkpoint.json",
+      "archived_path": "histories/20261092/attempt_001/checkpoint.json",
+      "bytes": 56942,
+      "sha256": "b4356382c8c7c55b37e14d95368fea6c5633294fc477b600ba79627a50ba1c54"
+    },
+    {
+      "original_path": "recordings/gemini38flash_low_30seeds/histories/20261092/attempt_001/events.jsonl",
+      "archived_path": "histories/20261092/attempt_001/events.jsonl",
+      "bytes": 1087653,
+      "sha256": "dabebca720e45a3abcd4bdc5b062fd248af8e6328ecc154acd0d2670e308b5f9"
+    },
+    {
+      "original_path": "recordings/gemini38flash_low_30seeds/histories/20261092/attempt_001/formation_tape.json",
+      "archived_path": "histories/20261092/attempt_001/formation_tape.json",
+      "bytes": 395,
+      "sha256": "66f4a3cdf910850c9d7c6c31f8ef3a0123ea64ed11674e0d822f711e2bdc63bb"
+    },
+    {
+      "original_path": "recordings/gemini38flash_low_30seeds/histories/20261092/attempt_001/manifest.json",
+      "archived_path": "histories/20261092/attempt_001/manifest.json",
+      "bytes": 398490,
+      "sha256": "8807ce097f12477e7f043a4ceb7fab01776af9208b225ebc371795f4d130c08c"
+    },
+    {
+      "original_path": "recordings/gemini38flash_low_30seeds/histories/20261092/attempt_001/profiles.json",
+      "archived_path": "histories/20261092/attempt_001/profiles.json",
+      "bytes": 224,
+      "sha256": "4779b1371d1e58ddb55a2a96df0431a7f598e2f9a2250034359bdfc0c6ba57fb"
+    },
+    {
+      "original_path": "recordings/gemini38flash_low_30seeds/histories/20261092/attempt_001/summary.json",
+      "archived_path": "histories/20261092/attempt_001/summary.json",
+      "bytes": 10564,
+      "sha256": "33b7c8b2fdc8793e1e013dbfd0ffd6aecbb82f5970616843cd178630a323702f"
+    },
+    {
+      "original_path": "recordings/gemini38flash_low_30seeds/histories/20261093/attempt_001/calls.jsonl",
+      "archived_path": "histories/20261093/attempt_001/calls.jsonl",
+      "bytes": 1077891,
+      "sha256": "521a14cdb207fbebe4db48e448f08e7ab89aebe01353adcabc8cc0d9c7e60169"
+    },
+    {
+      "original_path": "recordings/gemini38flash_low_30seeds/histories/20261093/attempt_001/checkpoint.json",
+      "archived_path": "histories/20261093/attempt_001/checkpoint.json",
+      "bytes": 56932,
+      "sha256": "fe8ed8d83a59e88259bc5e7d648dfb45e1dee2a29e79620f5fed51d8f6b17517"
+    },
+    {
+      "original_path": "recordings/gemini38flash_low_30seeds/histories/20261093/attempt_001/events.jsonl",
+      "archived_path": "histories/20261093/attempt_001/events.jsonl",
+      "bytes": 1090418,
+      "sha256": "eb89bbdd7182169a448d934f6622c82c35007b73e8a3d06ca3a0065830f7e646"
+    },
+    {
+      "original_path": "recordings/gemini38flash_low_30seeds/histories/20261093/attempt_001/formation_tape.json",
+      "archived_path": "histories/20261093/attempt_001/formation_tape.json",
+      "bytes": 395,
+      "sha256": "ff72f56f72e8ba09ca8f8243025a37b4e525d561c4c128d787d03ba2c4789c10"
+    },
+    {
+      "original_path": "recordings/gemini38flash_low_30seeds/histories/20261093/attempt_001/manifest.json",
+      "archived_path": "histories/20261093/attempt_001/manifest.json",
+      "bytes": 398490,
+      "sha256": "26a62455a1f1091a5c705a80940c6134f4a087950e9cc98a21a24bf69d2fc30f"
+    },
+    {
+      "original_path": "recordings/gemini38flash_low_30seeds/histories/20261093/attempt_001/profiles.json",
+      "archived_path": "histories/20261093/attempt_001/profiles.json",
+      "bytes": 224,
+      "sha256": "4779b1371d1e58ddb55a2a96df0431a7f598e2f9a2250034359bdfc0c6ba57fb"
+    },
+    {
+      "original_path": "recordings/gemini38flash_low_30seeds/histories/20261093/attempt_001/summary.json",
+      "archived_path": "histories/20261093/attempt_001/summary.json",
+      "bytes": 10451,
+      "sha256": "ec06299f7731ee99ff95a59aea322f3d37dfd2fd23cb756dc1367e921e6a83c5"
+    },
+    {
+      "original_path": "recordings/gemini38flash_low_30seeds/histories/20261094/attempt_001/calls.jsonl",
+      "archived_path": "histories/20261094/attempt_001/calls.jsonl",
+      "bytes": 1041984,
+      "sha256": "462983df27993bac1e76c6f7dd4446428617be3e620aac8174a8665d2f2b4e73"
+    },
+    {
+      "original_path": "recordings/gemini38flash_low_30seeds/histories/20261094/attempt_001/checkpoint.json",
+      "archived_path": "histories/20261094/attempt_001/checkpoint.json",
+      "bytes": 55912,
+      "sha256": "fe3d4cfb883bcf3d8c51100548119d9b3e30edd72940b39169b6f758ccc80cdd"
+    },
+    {
+      "original_path": "recordings/gemini38flash_low_30seeds/histories/20261094/attempt_001/events.jsonl",
+      "archived_path": "histories/20261094/attempt_001/events.jsonl",
+      "bytes": 1054576,
+      "sha256": "18cb0440e02faf954296f90756df5218f245db8c9d528fe1291b9f7222083944"
+    },
+    {
+      "original_path": "recordings/gemini38flash_low_30seeds/histories/20261094/attempt_001/formation_tape.json",
+      "archived_path": "histories/20261094/attempt_001/formation_tape.json",
+      "bytes": 395,
+      "sha256": "b5dad9fe279c3fcef651f0ba9f947703f2f45813eacc8d617f2a9565be9f13a0"
+    },
+    {
+      "original_path": "recordings/gemini38flash_low_30seeds/histories/20261094/attempt_001/manifest.json",
+      "archived_path": "histories/20261094/attempt_001/manifest.json",
+      "bytes": 398490,
+      "sha256": "183888e4ad61f23dbb0ccfd11fe1c7e0c91e2d38d0d5d8f5a3a9fc0b1fc3a998"
+    },
+    {
+      "original_path": "recordings/gemini38flash_low_30seeds/histories/20261094/attempt_001/profiles.json",
+      "archived_path": "histories/20261094/attempt_001/profiles.json",
+      "bytes": 224,
+      "sha256": "4779b1371d1e58ddb55a2a96df0431a7f598e2f9a2250034359bdfc0c6ba57fb"
+    },
+    {
+      "original_path": "recordings/gemini38flash_low_30seeds/histories/20261094/attempt_001/summary.json",
+      "archived_path": "histories/20261094/attempt_001/summary.json",
+      "bytes": 10539,
+      "sha256": "084c44805b8bdf7a2aef590260d2ca7d36c6098f7ff6978521d57acd241a1c00"
+    },
+    {
+      "original_path": "recordings/gemini38flash_low_30seeds/histories/20261098/attempt_001/calls.jsonl",
+      "archived_path": "histories/20261098/attempt_001/calls.jsonl",
+      "bytes": 1039731,
+      "sha256": "aaff54eaa69208ba438bec6c9a25fd7189f2073215c55d1b9d34535c19ef9fc8"
+    },
+    {
+      "original_path": "recordings/gemini38flash_low_30seeds/histories/20261098/attempt_001/checkpoint.json",
+      "archived_path": "histories/20261098/attempt_001/checkpoint.json",
+      "bytes": 55598,
+      "sha256": "f1bcd592c0ed020a37c726c6d5f6d73b86143dcd6ba718d80ed736114c643895"
+    },
+    {
+      "original_path": "recordings/gemini38flash_low_30seeds/histories/20261098/attempt_001/events.jsonl",
+      "archived_path": "histories/20261098/attempt_001/events.jsonl",
+      "bytes": 1052274,
+      "sha256": "6bf68ab57ccac6de1a14184bc6a184da4a86c7d71b6d452a145a2537f6dfff5e"
+    },
+    {
+      "original_path": "recordings/gemini38flash_low_30seeds/histories/20261098/attempt_001/formation_tape.json",
+      "archived_path": "histories/20261098/attempt_001/formation_tape.json",
+      "bytes": 395,
+      "sha256": "9bb038cdcdd67da7318b1740ad4c1b9da95f0615a6e0297be6bcf73836b655fb"
+    },
+    {
+      "original_path": "recordings/gemini38flash_low_30seeds/histories/20261098/attempt_001/manifest.json",
+      "archived_path": "histories/20261098/attempt_001/manifest.json",
+      "bytes": 398490,
+      "sha256": "92947fb3a9e3a9bb773a4efd4e04c28e1db769d092fca3d8d063f50a73d1db5f"
+    },
+    {
+      "original_path": "recordings/gemini38flash_low_30seeds/histories/20261098/attempt_001/profiles.json",
+      "archived_path": "histories/20261098/attempt_001/profiles.json",
+      "bytes": 224,
+      "sha256": "4779b1371d1e58ddb55a2a96df0431a7f598e2f9a2250034359bdfc0c6ba57fb"
+    },
+    {
+      "original_path": "recordings/gemini38flash_low_30seeds/histories/20261098/attempt_001/summary.json",
+      "archived_path": "histories/20261098/attempt_001/summary.json",
+      "bytes": 10513,
+      "sha256": "94071fc76969e335d96c9126a5632adc64bafdd6d9485e31fb650445526d67ea"
+    },
+    {
+      "original_path": "recordings/gemini38flash_low_30seeds/histories/20261100/attempt_001/calls.jsonl",
+      "archived_path": "histories/20261100/attempt_001/calls.jsonl",
+      "bytes": 1060763,
+      "sha256": "9f2f93aee9b14ddf2d14d612d50dbd60390147c1b696337c1213a7a7622ff49a"
+    },
+    {
+      "original_path": "recordings/gemini38flash_low_30seeds/histories/20261100/attempt_001/checkpoint.json",
+      "archived_path": "histories/20261100/attempt_001/checkpoint.json",
+      "bytes": 56617,
+      "sha256": "2825f2050bd30cef708fe4f292a81a0db8093d1d2983be8375d55fdca4c785e4"
+    },
+    {
+      "original_path": "recordings/gemini38flash_low_30seeds/histories/20261100/attempt_001/events.jsonl",
+      "archived_path": "histories/20261100/attempt_001/events.jsonl",
+      "bytes": 1073423,
+      "sha256": "067268a7899b689780f7e80f34c4b86891aed75977b83a153e3aa17fa0205dbe"
+    },
+    {
+      "original_path": "recordings/gemini38flash_low_30seeds/histories/20261100/attempt_001/formation_tape.json",
+      "archived_path": "histories/20261100/attempt_001/formation_tape.json",
+      "bytes": 395,
+      "sha256": "707a5c42b39bc32c109f3d50080d74c17bc790fac305e423a8b4371838cd4260"
+    },
+    {
+      "original_path": "recordings/gemini38flash_low_30seeds/histories/20261100/attempt_001/manifest.json",
+      "archived_path": "histories/20261100/attempt_001/manifest.json",
+      "bytes": 398490,
+      "sha256": "b1623fb2706179e1844ea0f7719ee3c42f8f3bcf1394ac30e2f21fdc8e64866b"
+    },
+    {
+      "original_path": "recordings/gemini38flash_low_30seeds/histories/20261100/attempt_001/profiles.json",
+      "archived_path": "histories/20261100/attempt_001/profiles.json",
+      "bytes": 224,
+      "sha256": "4779b1371d1e58ddb55a2a96df0431a7f598e2f9a2250034359bdfc0c6ba57fb"
+    },
+    {
+      "original_path": "recordings/gemini38flash_low_30seeds/histories/20261100/attempt_001/summary.json",
+      "archived_path": "histories/20261100/attempt_001/summary.json",
+      "bytes": 10585,
+      "sha256": "23c3c903cae4434940b1036c0e61d913c843dd67e8f1c9ad635a1c141b26f53d"
+    },
+    {
+      "original_path": "recordings/gemini38flash_low_30seeds/histories/20261101/attempt_001/calls.jsonl",
+      "archived_path": "histories/20261101/attempt_001/calls.jsonl",
+      "bytes": 1054074,
+      "sha256": "32d8bf64d54e01e4e3b8bc3eb50d84c0cfd996be19ee5cf10ab643196124265c"
+    },
+    {
+      "original_path": "recordings/gemini38flash_low_30seeds/histories/20261101/attempt_001/checkpoint.json",
+      "archived_path": "histories/20261101/attempt_001/checkpoint.json",
+      "bytes": 56065,
+      "sha256": "9e0ce28d1edb77f29833445a7da09adfd08e7db3554f416ac9ad5c046ccd04d2"
+    },
+    {
+      "original_path": "recordings/gemini38flash_low_30seeds/histories/20261101/attempt_001/events.jsonl",
+      "archived_path": "histories/20261101/attempt_001/events.jsonl",
+      "bytes": 1066680,
+      "sha256": "2e442810b876ae71917d0d69ef999acba88ba4930bb0318ed9be8bac6197380c"
+    },
+    {
+      "original_path": "recordings/gemini38flash_low_30seeds/histories/20261101/attempt_001/formation_tape.json",
+      "archived_path": "histories/20261101/attempt_001/formation_tape.json",
+      "bytes": 395,
+      "sha256": "1e6b9762f43ecdf496bde4a10ffb36471d8bb5fbbad0f91507f789b8a1efeab9"
+    },
+    {
+      "original_path": "recordings/gemini38flash_low_30seeds/histories/20261101/attempt_001/manifest.json",
+      "archived_path": "histories/20261101/attempt_001/manifest.json",
+      "bytes": 398490,
+      "sha256": "f9e69b564c3f1e02b87e53d2a1424cd148c3834bb8b5ea53e59df1b4992085bf"
+    },
+    {
+      "original_path": "recordings/gemini38flash_low_30seeds/histories/20261101/attempt_001/profiles.json",
+      "archived_path": "histories/20261101/attempt_001/profiles.json",
+      "bytes": 224,
+      "sha256": "4779b1371d1e58ddb55a2a96df0431a7f598e2f9a2250034359bdfc0c6ba57fb"
+    },
+    {
+      "original_path": "recordings/gemini38flash_low_30seeds/histories/20261101/attempt_001/summary.json",
+      "archived_path": "histories/20261101/attempt_001/summary.json",
+      "bytes": 10527,
+      "sha256": "1702e55310d62023f2856b8f14e2b977e6c2331d01aae72beb5c4e0ed5f5a0da"
+    },
+    {
+      "original_path": "recordings/gemini38flash_low_30seeds/manifest.json",
+      "archived_path": "manifest.json",
+      "bytes": 398506,
+      "sha256": "47a1719fcfc70f336f044c3917f09da5838c9d487b951d0b54cfd3d0764cd4d8"
+    },
+    {
+      "original_path": "recordings/gemini38flash_low_30seeds/physical_attempts.json",
+      "archived_path": "physical_attempts.json",
+      "bytes": 5396,
+      "sha256": "b9b712643cd600665dd19a0c9dbafd4fcf60244d4456d4f6ba17b82f561577f3"
+    },
+    {
+      "original_path": "recordings/gemini38flash_low_30seeds/standin_usage.json",
+      "archived_path": "standin_usage.json",
+      "bytes": 764,
+      "sha256": "6aa1a4e7850910876ebf81e6664b892f168cbaaaf2022f77c068754a8ddcaf5d"
+    },
+    {
+      "original_path": "recordings/gemini38flash_low_30seeds/summary.json",
+      "archived_path": "summary.json",
+      "bytes": 361402,
+      "sha256": "b98f772ba09edad778a1c3b20c74be64cc91fc7b4e9ebe99ae52157d21e64332"
+    },
+    {
+      "original_path": "recordings/gemini38flash_low_30seeds_analysis.json",
+      "archived_path": "analysis.json",
+      "bytes": 161403,
+      "sha256": "1a3544c23a30740519acc573bb57d512dcff5a0c40743f85fd1f3a2f95bfdb2b"
+    },
+    {
+      "original_path": "recordings/gemini38flash_low_30seeds_verification.json",
+      "archived_path": "verification_supplied.json",
+      "bytes": 349,
+      "sha256": "695a640a3af66162adf9d6968898104f4c505334cfbf139d9bf967c08d440cbc"
+    },
+    {
+      "original_path": "recordings/gemini38flash_low_30seeds.log",
+      "archived_path": "execution.log",
+      "bytes": 612,
+      "sha256": "635e5e5e3baa6ccf4110316d99a8ffa05283df920b2ec9e8d381bcc3ed63ee02"
+    }
+  ],
+  "renaming": "Original root analysis/verification/log files are named analysis.json, verification_supplied.json, execution.log; JSON contents retain original run names."
+}

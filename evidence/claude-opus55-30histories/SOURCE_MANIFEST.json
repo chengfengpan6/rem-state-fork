@@ -1,0 +1,1313 @@
+{
+  "schema": "rem-supplied-replication-archive-1",
+  "assembled_utc": "2026-10-30T22:32:19.812841+00:00",
+  "scope": "Byte-preserved supplied recording and original analysis/verification/log files. No model calls or retroactive record repair.",
+  "original_files_modified": false,
+  "new_model_calls": 0,
+  "files_copied": 217,
+  "files": [
+    {
+      "original_path": "recordings/opus55_low_30seeds/histories/20261029/attempt_001/calls.jsonl",
+      "archived_path": "histories/20261029/attempt_001/calls.jsonl",
+      "bytes": 1091554,
+      "sha256": "c66a7be372178ae9d9382f64a6a5be96e01b38b7fcab7c78bfac41ae16359e2c"
+    },
+    {
+      "original_path": "recordings/opus55_low_30seeds/histories/20261029/attempt_001/checkpoint.json",
+      "archived_path": "histories/20261029/attempt_001/checkpoint.json",
+      "bytes": 55654,
+      "sha256": "f24da5ab5fe6bd3311fa5aae77ac61452596297204faed7f186265b741746c9a"
+    },
+    {
+      "original_path": "recordings/opus55_low_30seeds/histories/20261029/attempt_001/events.jsonl",
+      "archived_path": "histories/20261029/attempt_001/events.jsonl",
+      "bytes": 1104090,
+      "sha256": "770f38d4153403cd84aebacfff9486ea57615da209ccf24411bf967de31478d0"
+    },
+    {
+      "original_path": "recordings/opus55_low_30seeds/histories/20261029/attempt_001/formation_tape.json",
+      "archived_path": "histories/20261029/attempt_001/formation_tape.json",
+      "bytes": 395,
+      "sha256": "b76f314f4b2d9df79ca629dcf5b75c156eef69f18d1e1e36eb968913fdb676b2"
+    },
+    {
+      "original_path": "recordings/opus55_low_30seeds/histories/20261029/attempt_001/manifest.json",
+      "archived_path": "histories/20261029/attempt_001/manifest.json",
+      "bytes": 398491,
+      "sha256": "95349d7ec590b05229825b0e606ab5ee845e609128a56c3b8c3f9a0ae6ea0300"
+    },
+    {
+      "original_path": "recordings/opus55_low_30seeds/histories/20261029/attempt_001/profiles.json",
+      "archived_path": "histories/20261029/attempt_001/profiles.json",
+      "bytes": 224,
+      "sha256": "4779b1371d1e58ddb55a2a96df0431a7f598e2f9a2250034359bdfc0c6ba57fb"
+    },
+    {
+      "original_path": "recordings/opus55_low_30seeds/histories/20261029/attempt_001/summary.json",
+      "archived_path": "histories/20261029/attempt_001/summary.json",
+      "bytes": 10480,
+      "sha256": "7293843bcf3342cf3b8c135177bf3569725e283890934dfe4c8107e5eef3c398"
+    },
+    {
+      "original_path": "recordings/opus55_low_30seeds/histories/20261030/attempt_001/calls.jsonl",
+      "archived_path": "histories/20261030/attempt_001/calls.jsonl",
+      "bytes": 1092547,
+      "sha256": "d71e870d072281c9625b4e59fdf819adbe539054ab69659c48a83f3d03b1e16b"
+    },
+    {
+      "original_path": "recordings/opus55_low_30seeds/histories/20261030/attempt_001/checkpoint.json",
+      "archived_path": "histories/20261030/attempt_001/checkpoint.json",
+      "bytes": 55884,
+      "sha256": "7c9af7c4d58aa9bd46bdce5285256e24aa847972919044b14c76dbc717d8e65f"
+    },
+    {
+      "original_path": "recordings/opus55_low_30seeds/histories/20261030/attempt_001/events.jsonl",
+      "archived_path": "histories/20261030/attempt_001/events.jsonl",
+      "bytes": 1105115,
+      "sha256": "aae8691fdc8ce2b10435bc8eeafdeb7055e044d546ac5673223fc9dbed88e854"
+    },
+    {
+      "original_path": "recordings/opus55_low_30seeds/histories/20261030/attempt_001/formation_tape.json",
+      "archived_path": "histories/20261030/attempt_001/formation_tape.json",
+      "bytes": 395,
+      "sha256": "3cb8c329c2351fb91ac622ee4e49515c2e444482fb0d6ba04ddef2fe87ad9ec7"
+    },
+    {
+      "original_path": "recordings/opus55_low_30seeds/histories/20261030/attempt_001/manifest.json",
+      "archived_path": "histories/20261030/attempt_001/manifest.json",
+      "bytes": 398491,
+      "sha256": "2d673d44c20e632199a1a2a762bd3f6fc5e3f1751e3cbc9e2bd6b61fe4493e6f"
+    },
+    {
+      "original_path": "recordings/opus55_low_30seeds/histories/20261030/attempt_001/profiles.json",
+      "archived_path": "histories/20261030/attempt_001/profiles.json",
+      "bytes": 224,
+      "sha256": "4779b1371d1e58ddb55a2a96df0431a7f598e2f9a2250034359bdfc0c6ba57fb"
+    },
+    {
+      "original_path": "recordings/opus55_low_30seeds/histories/20261030/attempt_001/summary.json",
+      "archived_path": "histories/20261030/attempt_001/summary.json",
+      "bytes": 10527,
+      "sha256": "7515b66c5b2d532a966de8dbb0ad460c3972ef227d3417855879cca76c4dc32d"
+    },
+    {
+      "original_path": "recordings/opus55_low_30seeds/histories/20261035/attempt_001/calls.jsonl",
+      "archived_path": "histories/20261035/attempt_001/calls.jsonl",
+      "bytes": 1113253,
+      "sha256": "9c15b4249d71d9d587d3b1744ed86e8b5348ed52e839379a74ca9b9904105798"
+    },
+    {
+      "original_path": "recordings/opus55_low_30seeds/histories/20261035/attempt_001/checkpoint.json",
+      "archived_path": "histories/20261035/attempt_001/checkpoint.json",
+      "bytes": 56491,
+      "sha256": "eea65a1fc4830dcb45516996b5645c9d1cf40c0e2aa9b2e9996b2140b6f05cee"
+    },
+    {
+      "original_path": "recordings/opus55_low_30seeds/histories/20261035/attempt_001/events.jsonl",
+      "archived_path": "histories/20261035/attempt_001/events.jsonl",
+      "bytes": 1125864,
+      "sha256": "9e57647aa3c61e7d10767e331c555f645a3bb41d7349ebda4ace85a6555ed154"
+    },
+    {
+      "original_path": "recordings/opus55_low_30seeds/histories/20261035/attempt_001/formation_tape.json",
+      "archived_path": "histories/20261035/attempt_001/formation_tape.json",
+      "bytes": 395,
+      "sha256": "c2815952c7a42d10868304140e9920e92efd5ef0074e2082f66143dfbc3149c6"
+    },
+    {
+      "original_path": "recordings/opus55_low_30seeds/histories/20261035/attempt_001/manifest.json",
+      "archived_path": "histories/20261035/attempt_001/manifest.json",
+      "bytes": 398491,
+      "sha256": "a960150bd7cc7f26463a6151c8f930034e156db0dfc6e524c93faa19ea15bd73"
+    },
+    {
+      "original_path": "recordings/opus55_low_30seeds/histories/20261035/attempt_001/profiles.json",
+      "archived_path": "histories/20261035/attempt_001/profiles.json",
+      "bytes": 224,
+      "sha256": "4779b1371d1e58ddb55a2a96df0431a7f598e2f9a2250034359bdfc0c6ba57fb"
+    },
+    {
+      "original_path": "recordings/opus55_low_30seeds/histories/20261035/attempt_001/summary.json",
+      "archived_path": "histories/20261035/attempt_001/summary.json",
+      "bytes": 10517,
+      "sha256": "3c14c8a61f765e5bdb9cc9986b42da02362e2f6258cebe4ac847a2a5e71bc14a"
+    },
+    {
+      "original_path": "recordings/opus55_low_30seeds/histories/20261039/attempt_001/calls.jsonl",
+      "archived_path": "histories/20261039/attempt_001/calls.jsonl",
+      "bytes": 1110354,
+      "sha256": "239b3d702d6d55f2e1c6d5d2bb92ff93c6d56d2519b98fe2077de2d61199fd49"
+    },
+    {
+      "original_path": "recordings/opus55_low_30seeds/histories/20261039/attempt_001/checkpoint.json",
+      "archived_path": "histories/20261039/attempt_001/checkpoint.json",
+      "bytes": 56681,
+      "sha256": "090b5ff2826aa14b41a0cc85d3d0e5ba93faee2a017616ee398ec99706c6902d"
+    },
+    {
+      "original_path": "recordings/opus55_low_30seeds/histories/20261039/attempt_001/events.jsonl",
+      "archived_path": "histories/20261039/attempt_001/events.jsonl",
+      "bytes": 1122935,
+      "sha256": "d0450fc5a1eeb95899cb916ab01df298f1337d8d4aa163337dfcb7a0abc8f2fc"
+    },
+    {
+      "original_path": "recordings/opus55_low_30seeds/histories/20261039/attempt_001/formation_tape.json",
+      "archived_path": "histories/20261039/attempt_001/formation_tape.json",
+      "bytes": 395,
+      "sha256": "ef1d08eff8af5d0eade12cf500be538c533af9e90c87d4444fc746b168299c97"
+    },
+    {
+      "original_path": "recordings/opus55_low_30seeds/histories/20261039/attempt_001/manifest.json",
+      "archived_path": "histories/20261039/attempt_001/manifest.json",
+      "bytes": 398491,
+      "sha256": "2d018865c111f60197b32646a6e9572eca392fa68fe5ec91d735d60ec447b34c"
+    },
+    {
+      "original_path": "recordings/opus55_low_30seeds/histories/20261039/attempt_001/profiles.json",
+      "archived_path": "histories/20261039/attempt_001/profiles.json",
+      "bytes": 224,
+      "sha256": "4779b1371d1e58ddb55a2a96df0431a7f598e2f9a2250034359bdfc0c6ba57fb"
+    },
+    {
+      "original_path": "recordings/opus55_low_30seeds/histories/20261039/attempt_001/summary.json",
+      "archived_path": "histories/20261039/attempt_001/summary.json",
+      "bytes": 10504,
+      "sha256": "a1ea1665cefd75087dd7d27d8e792a436bd329568735a6525e89a48c6d440fd3"
+    },
+    {
+      "original_path": "recordings/opus55_low_30seeds/histories/20261040/attempt_001/calls.jsonl",
+      "archived_path": "histories/20261040/attempt_001/calls.jsonl",
+      "bytes": 1108724,
+      "sha256": "fb67160ed2c5166523aa53053d77e350cded534e05be08ab0546eb6a20e91bd5"
+    },
+    {
+      "original_path": "recordings/opus55_low_30seeds/histories/20261040/attempt_001/checkpoint.json",
+      "archived_path": "histories/20261040/attempt_001/checkpoint.json",
+      "bytes": 56537,
+      "sha256": "2d278e80d26c708976dd7d1616a563afb1802d2a4d1b586a3196c011917aaf0b"
+    },
+    {
+      "original_path": "recordings/opus55_low_30seeds/histories/20261040/attempt_001/events.jsonl",
+      "archived_path": "histories/20261040/attempt_001/events.jsonl",
+      "bytes": 1121359,
+      "sha256": "befc11e01378e3543125d9055ea8eeac6f6f933229cab22022dd5164fe1835bb"
+    },
+    {
+      "original_path": "recordings/opus55_low_30seeds/histories/20261040/attempt_001/formation_tape.json",
+      "archived_path": "histories/20261040/attempt_001/formation_tape.json",
+      "bytes": 395,
+      "sha256": "c34893c12a6e5dbe7c063c252997656347ab5203f772341866591b22f43e68af"
+    },
+    {
+      "original_path": "recordings/opus55_low_30seeds/histories/20261040/attempt_001/manifest.json",
+      "archived_path": "histories/20261040/attempt_001/manifest.json",
+      "bytes": 398491,
+      "sha256": "1c35aae3440e09f45f1fb81cb313b68f17e1a9a10d4377c27c8f5a5eaaa13c88"
+    },
+    {
+      "original_path": "recordings/opus55_low_30seeds/histories/20261040/attempt_001/profiles.json",
+      "archived_path": "histories/20261040/attempt_001/profiles.json",
+      "bytes": 224,
+      "sha256": "4779b1371d1e58ddb55a2a96df0431a7f598e2f9a2250034359bdfc0c6ba57fb"
+    },
+    {
+      "original_path": "recordings/opus55_low_30seeds/histories/20261040/attempt_001/summary.json",
+      "archived_path": "histories/20261040/attempt_001/summary.json",
+      "bytes": 10543,
+      "sha256": "4d05159ffd6e07e10fa032137bb99490c7b78d59df4a1d8a1dccaf524a5455a2"
+    },
+    {
+      "original_path": "recordings/opus55_low_30seeds/histories/20261044/attempt_001/calls.jsonl",
+      "archived_path": "histories/20261044/attempt_001/calls.jsonl",
+      "bytes": 1092138,
+      "sha256": "1e9f3dd3f855d977ce095a9e0dc6b1daef91f4300e7de455ba0bac01ad8c6e2d"
+    },
+    {
+      "original_path": "recordings/opus55_low_30seeds/histories/20261044/attempt_001/checkpoint.json",
+      "archived_path": "histories/20261044/attempt_001/checkpoint.json",
+      "bytes": 55931,
+      "sha256": "dc8e875f7f5623b49c0d372174eb89afc1d76524885498fec018389f7d86d45b"
+    },
+    {
+      "original_path": "recordings/opus55_low_30seeds/histories/20261044/attempt_001/events.jsonl",
+      "archived_path": "histories/20261044/attempt_001/events.jsonl",
+      "bytes": 1104705,
+      "sha256": "bb981cf834153481e3ab6ff15fe2e7b5c42e109b661d2db1cc41aaf18d72b697"
+    },
+    {
+      "original_path": "recordings/opus55_low_30seeds/histories/20261044/attempt_001/formation_tape.json",
+      "archived_path": "histories/20261044/attempt_001/formation_tape.json",
+      "bytes": 395,
+      "sha256": "c54237301d0a92a6ce36e212f38b601c18327b5165ee25e3c693314851e805d8"
+    },
+    {
+      "original_path": "recordings/opus55_low_30seeds/histories/20261044/attempt_001/manifest.json",
+      "archived_path": "histories/20261044/attempt_001/manifest.json",
+      "bytes": 398491,
+      "sha256": "a8b2315db4cdb3ed18d5bf2c90db23a5ac3ccb99b0a17a008c292ed29e2c3fe7"
+    },
+    {
+      "original_path": "recordings/opus55_low_30seeds/histories/20261044/attempt_001/profiles.json",
+      "archived_path": "histories/20261044/attempt_001/profiles.json",
+      "bytes": 224,
+      "sha256": "4779b1371d1e58ddb55a2a96df0431a7f598e2f9a2250034359bdfc0c6ba57fb"
+    },
+    {
+      "original_path": "recordings/opus55_low_30seeds/histories/20261044/attempt_001/summary.json",
+      "archived_path": "histories/20261044/attempt_001/summary.json",
+      "bytes": 10492,
+      "sha256": "63a4319ad996dbc88b3cc5c21272007e9999745151800790272f4ddea77f594e"
+    },
+    {
+      "original_path": "recordings/opus55_low_30seeds/histories/20261047/attempt_001/calls.jsonl",
+      "archived_path": "histories/20261047/attempt_001/calls.jsonl",
+      "bytes": 1094125,
+      "sha256": "857d0998973d407b35d6f9a5df8ca5cdecd73c0ef66536a30203bfd60f63dcfa"
+    },
+    {
+      "original_path": "recordings/opus55_low_30seeds/histories/20261047/attempt_001/checkpoint.json",
+      "archived_path": "histories/20261047/attempt_001/checkpoint.json",
+      "bytes": 56032,
+      "sha256": "8714e114ca108c2919c0d9cf20fb7ac763dd9fe40ee3ce4030647d3fccc1dd5a"
+    },
+    {
+      "original_path": "recordings/opus55_low_30seeds/histories/20261047/attempt_001/events.jsonl",
+      "archived_path": "histories/20261047/attempt_001/events.jsonl",
+      "bytes": 1106692,
+      "sha256": "9a3627373c31ea1f0effa576820593e48021519801ea06ca3408243cb6701504"
+    },
+    {
+      "original_path": "recordings/opus55_low_30seeds/histories/20261047/attempt_001/formation_tape.json",
+      "archived_path": "histories/20261047/attempt_001/formation_tape.json",
+      "bytes": 395,
+      "sha256": "cb8b278cb47d6631f7036228ccaea4f2033faaece4c02ce868675326aa238c03"
+    },
+    {
+      "original_path": "recordings/opus55_low_30seeds/histories/20261047/attempt_001/manifest.json",
+      "archived_path": "histories/20261047/attempt_001/manifest.json",
+      "bytes": 398491,
+      "sha256": "5de930e4ce995f10e2ff96d3ca5838c4c475cfe3ec394e6b30c25c4c4b8eb911"
+    },
+    {
+      "original_path": "recordings/opus55_low_30seeds/histories/20261047/attempt_001/profiles.json",
+      "archived_path": "histories/20261047/attempt_001/profiles.json",
+      "bytes": 224,
+      "sha256": "4779b1371d1e58ddb55a2a96df0431a7f598e2f9a2250034359bdfc0c6ba57fb"
+    },
+    {
+      "original_path": "recordings/opus55_low_30seeds/histories/20261047/attempt_001/summary.json",
+      "archived_path": "histories/20261047/attempt_001/summary.json",
+      "bytes": 10496,
+      "sha256": "46037daa3abdffc5ce6f5f6344ff8dff628f6729f23066b997e2bcff585ca7f7"
+    },
+    {
+      "original_path": "recordings/opus55_low_30seeds/histories/20261051/attempt_001/calls.jsonl",
+      "archived_path": "histories/20261051/attempt_001/calls.jsonl",
+      "bytes": 1108234,
+      "sha256": "699e72ec003db763a9912888596bda56fe91a751de7f66bba742edf1a57710b9"
+    },
+    {
+      "original_path": "recordings/opus55_low_30seeds/histories/20261051/attempt_001/checkpoint.json",
+      "archived_path": "histories/20261051/attempt_001/checkpoint.json",
+      "bytes": 56518,
+      "sha256": "36564392f43d7c955fbd84f13f2960184a0348a01fd73496309ac1ebeac120a4"
+    },
+    {
+      "original_path": "recordings/opus55_low_30seeds/histories/20261051/attempt_001/events.jsonl",
+      "archived_path": "histories/20261051/attempt_001/events.jsonl",
+      "bytes": 1120831,
+      "sha256": "3e328804d6b78a99fe43644698e78e4363a18ff486013b5a9f9989dd69ea0949"
+    },
+    {
+      "original_path": "recordings/opus55_low_30seeds/histories/20261051/attempt_001/formation_tape.json",
+      "archived_path": "histories/20261051/attempt_001/formation_tape.json",
+      "bytes": 395,
+      "sha256": "0af75eb94a7d5e74f6d3dc64b514167799d014c5f3fd07a51da5f396c3d8241f"
+    },
+    {
+      "original_path": "recordings/opus55_low_30seeds/histories/20261051/attempt_001/manifest.json",
+      "archived_path": "histories/20261051/attempt_001/manifest.json",
+      "bytes": 398491,
+      "sha256": "fb19a42431086969e13d218f9090ad4f7e574eb912a718a73774dd127007b21d"
+    },
+    {
+      "original_path": "recordings/opus55_low_30seeds/histories/20261051/attempt_001/profiles.json",
+      "archived_path": "histories/20261051/attempt_001/profiles.json",
+      "bytes": 224,
+      "sha256": "4779b1371d1e58ddb55a2a96df0431a7f598e2f9a2250034359bdfc0c6ba57fb"
+    },
+    {
+      "original_path": "recordings/opus55_low_30seeds/histories/20261051/attempt_001/summary.json",
+      "archived_path": "histories/20261051/attempt_001/summary.json",
+      "bytes": 10525,
+      "sha256": "fa34b33ac2d8a582d0a8ed40c07eb5d8c46bdf378c1dc91214a60cf9554347cd"
+    },
+    {
+      "original_path": "recordings/opus55_low_30seeds/histories/20261053/attempt_001/calls.jsonl",
+      "archived_path": "histories/20261053/attempt_001/calls.jsonl",
+      "bytes": 1083263,
+      "sha256": "7ffd1806d3f5dd8b54882a268d0e5438680240cff762d19862f3cbfc13bb9f78"
+    },
+    {
+      "original_path": "recordings/opus55_low_30seeds/histories/20261053/attempt_001/checkpoint.json",
+      "archived_path": "histories/20261053/attempt_001/checkpoint.json",
+      "bytes": 55352,
+      "sha256": "32b9b7ba10a9f839662751936fc29ab9d0109075ad171df07ba8818240eb25d3"
+    },
+    {
+      "original_path": "recordings/opus55_low_30seeds/histories/20261053/attempt_001/events.jsonl",
+      "archived_path": "histories/20261053/attempt_001/events.jsonl",
+      "bytes": 1095781,
+      "sha256": "35358054020937b2274b02a4fa0a8bb415d7dce21f7c1686edbe9d3d893cce41"
+    },
+    {
+      "original_path": "recordings/opus55_low_30seeds/histories/20261053/attempt_001/formation_tape.json",
+      "archived_path": "histories/20261053/attempt_001/formation_tape.json",
+      "bytes": 395,
+      "sha256": "977502f79a5015b26ec53b85b53dd9dfc06768496c13d08bf5cab074092eb576"
+    },
+    {
+      "original_path": "recordings/opus55_low_30seeds/histories/20261053/attempt_001/manifest.json",
+      "archived_path": "histories/20261053/attempt_001/manifest.json",
+      "bytes": 398491,
+      "sha256": "ea86349f528f3f9640f53cecddd09551390c2e11f713d023f695075dc08d9430"
+    },
+    {
+      "original_path": "recordings/opus55_low_30seeds/histories/20261053/attempt_001/profiles.json",
+      "archived_path": "histories/20261053/attempt_001/profiles.json",
+      "bytes": 224,
+      "sha256": "4779b1371d1e58ddb55a2a96df0431a7f598e2f9a2250034359bdfc0c6ba57fb"
+    },
+    {
+      "original_path": "recordings/opus55_low_30seeds/histories/20261053/attempt_001/summary.json",
+      "archived_path": "histories/20261053/attempt_001/summary.json",
+      "bytes": 10468,
+      "sha256": "3052808793e85762cbf2baf64bcc5832d1cebe0c9725b3a3b6169f6af3b28fc1"
+    },
+    {
+      "original_path": "recordings/opus55_low_30seeds/histories/20261054/attempt_001/calls.jsonl",
+      "archived_path": "histories/20261054/attempt_001/calls.jsonl",
+      "bytes": 1095481,
+      "sha256": "6b5f21459c8b0bb5e8a7ea7c334e427cb2a33387f26c7d9e12b9a74d55cc1a68"
+    },
+    {
+      "original_path": "recordings/opus55_low_30seeds/histories/20261054/attempt_001/checkpoint.json",
+      "archived_path": "histories/20261054/attempt_001/checkpoint.json",
+      "bytes": 56100,
+      "sha256": "5659d6f26b627b4d1492649ef34d1587ff68339f6dc70ceab1cd2b7b1e9ec91e"
+    },
+    {
+      "original_path": "recordings/opus55_low_30seeds/histories/20261054/attempt_001/events.jsonl",
+      "archived_path": "histories/20261054/attempt_001/events.jsonl",
+      "bytes": 1108046,
+      "sha256": "e436cc58691f6c30eb27854b872537dc5d9ecb6e41c67ea608312efcfd3ad053"
+    },
+    {
+      "original_path": "recordings/opus55_low_30seeds/histories/20261054/attempt_001/formation_tape.json",
+      "archived_path": "histories/20261054/attempt_001/formation_tape.json",
+      "bytes": 395,
+      "sha256": "b7de12fa5a79cf56c0dad1ffbea3c8659e7ba478457e508e221e40a61d89fbd6"
+    },
+    {
+      "original_path": "recordings/opus55_low_30seeds/histories/20261054/attempt_001/manifest.json",
+      "archived_path": "histories/20261054/attempt_001/manifest.json",
+      "bytes": 398491,
+      "sha256": "b22834fc30366da0b5cb270e424e1ad6b9db1be9fbf970a36be2a3bdb5fb0cae"
+    },
+    {
+      "original_path": "recordings/opus55_low_30seeds/histories/20261054/attempt_001/profiles.json",
+      "archived_path": "histories/20261054/attempt_001/profiles.json",
+      "bytes": 224,
+      "sha256": "4779b1371d1e58ddb55a2a96df0431a7f598e2f9a2250034359bdfc0c6ba57fb"
+    },
+    {
+      "original_path": "recordings/opus55_low_30seeds/histories/20261054/attempt_001/summary.json",
+      "archived_path": "histories/20261054/attempt_001/summary.json",
+      "bytes": 10494,
+      "sha256": "8fa655ef4a8e43c8bb40cadb9f4a687d5ab61f92b639f781f0124e655741b29f"
+    },
+    {
+      "original_path": "recordings/opus55_low_30seeds/histories/20261056/attempt_001/calls.jsonl",
+      "archived_path": "histories/20261056/attempt_001/calls.jsonl",
+      "bytes": 1115569,
+      "sha256": "eb6e46d701e694fc6416022ce1f285aeb403bc450f00af6902e197f6416446e8"
+    },
+    {
+      "original_path": "recordings/opus55_low_30seeds/histories/20261056/attempt_001/checkpoint.json",
+      "archived_path": "histories/20261056/attempt_001/checkpoint.json",
+      "bytes": 56938,
+      "sha256": "431ee5f57e62594a3eda264c3c88d482a4bb58cdf6a8175f95df858d309c189c"
+    },
+    {
+      "original_path": "recordings/opus55_low_30seeds/histories/20261056/attempt_001/events.jsonl",
+      "archived_path": "histories/20261056/attempt_001/events.jsonl",
+      "bytes": 1128212,
+      "sha256": "eb836fe1bebe81d1a2c64a47ca077f9ad07d3d429e568b64a2929395b2761ebc"
+    },
+    {
+      "original_path": "recordings/opus55_low_30seeds/histories/20261056/attempt_001/formation_tape.json",
+      "archived_path": "histories/20261056/attempt_001/formation_tape.json",
+      "bytes": 395,
+      "sha256": "7760ca9441a104bd09e27a83819c1dd30ab6e7c757ef3ad6b5a36c62104d9311"
+    },
+    {
+      "original_path": "recordings/opus55_low_30seeds/histories/20261056/attempt_001/manifest.json",
+      "archived_path": "histories/20261056/attempt_001/manifest.json",
+      "bytes": 398491,
+      "sha256": "146867e505a6e6b6c3a684334edef792371e6409204f9020cba66ab70d597d86"
+    },
+    {
+      "original_path": "recordings/opus55_low_30seeds/histories/20261056/attempt_001/profiles.json",
+      "archived_path": "histories/20261056/attempt_001/profiles.json",
+      "bytes": 224,
+      "sha256": "4779b1371d1e58ddb55a2a96df0431a7f598e2f9a2250034359bdfc0c6ba57fb"
+    },
+    {
+      "original_path": "recordings/opus55_low_30seeds/histories/20261056/attempt_001/summary.json",
+      "archived_path": "histories/20261056/attempt_001/summary.json",
+      "bytes": 10558,
+      "sha256": "d13bdb0319148b21f62aceae49d0817f744721a3bfe7e249ce1932bd0c07789f"
+    },
+    {
+      "original_path": "recordings/opus55_low_30seeds/histories/20261057/attempt_001/calls.jsonl",
+      "archived_path": "histories/20261057/attempt_001/calls.jsonl",
+      "bytes": 1103826,
+      "sha256": "360be9872abc773160b04f141086165686ec858a9e678656b568fab7b7accc30"
+    },
+    {
+      "original_path": "recordings/opus55_low_30seeds/histories/20261057/attempt_001/checkpoint.json",
+      "archived_path": "histories/20261057/attempt_001/checkpoint.json",
+      "bytes": 56167,
+      "sha256": "6b7b1df9eabd74a398ff518e0831475a91f3222daed534a605f3d0393cdb59f8"
+    },
+    {
+      "original_path": "recordings/opus55_low_30seeds/histories/20261057/attempt_001/events.jsonl",
+      "archived_path": "histories/20261057/attempt_001/events.jsonl",
+      "bytes": 1116421,
+      "sha256": "c816270ea800bc175a22a0911e01ece9523b7fd97433d6c585bb29b0977c2f4e"
+    },
+    {
+      "original_path": "recordings/opus55_low_30seeds/histories/20261057/attempt_001/formation_tape.json",
+      "archived_path": "histories/20261057/attempt_001/formation_tape.json",
+      "bytes": 395,
+      "sha256": "4fb25e9e91c31ac9232a3541ef7f68c68618a71032df9593e054fac57f261eae"
+    },
+    {
+      "original_path": "recordings/opus55_low_30seeds/histories/20261057/attempt_001/manifest.json",
+      "archived_path": "histories/20261057/attempt_001/manifest.json",
+      "bytes": 398491,
+      "sha256": "46182f37b3d5b26fd2524dd3e9cabf19f55f5c853e9a8e9f00b6c1479c35ba90"
+    },
+    {
+      "original_path": "recordings/opus55_low_30seeds/histories/20261057/attempt_001/profiles.json",
+      "archived_path": "histories/20261057/attempt_001/profiles.json",
+      "bytes": 224,
+      "sha256": "4779b1371d1e58ddb55a2a96df0431a7f598e2f9a2250034359bdfc0c6ba57fb"
+    },
+    {
+      "original_path": "recordings/opus55_low_30seeds/histories/20261057/attempt_001/summary.json",
+      "archived_path": "histories/20261057/attempt_001/summary.json",
+      "bytes": 10491,
+      "sha256": "92b39fdf0970af01e93e67138f90ab3a2dde7f6bd357961079f0941b2783da98"
+    },
+    {
+      "original_path": "recordings/opus55_low_30seeds/histories/20261061/attempt_001/calls.jsonl",
+      "archived_path": "histories/20261061/attempt_001/calls.jsonl",
+      "bytes": 1103842,
+      "sha256": "2a319e0d158074e186b787f2bc7ad58d28ccf31ebc9c034870e83b240e52b81d"
+    },
+    {
+      "original_path": "recordings/opus55_low_30seeds/histories/20261061/attempt_001/checkpoint.json",
+      "archived_path": "histories/20261061/attempt_001/checkpoint.json",
+      "bytes": 56457,
+      "sha256": "b5071a3ab8e8d659bc5d45a21460cdfec475f7de902818360945c16dd5c76a67"
+    },
+    {
+      "original_path": "recordings/opus55_low_30seeds/histories/20261061/attempt_001/events.jsonl",
+      "archived_path": "histories/20261061/attempt_001/events.jsonl",
+      "bytes": 1116461,
+      "sha256": "57b2dbfee39d329997884b216fe1fef59aecaab49c0ac72ae32a7222571dfcc4"
+    },
+    {
+      "original_path": "recordings/opus55_low_30seeds/histories/20261061/attempt_001/formation_tape.json",
+      "archived_path": "histories/20261061/attempt_001/formation_tape.json",
+      "bytes": 395,
+      "sha256": "61decf273049a61a62422405f50bf98e24289d8a1d933bc33b0bfddaae50d952"
+    },
+    {
+      "original_path": "recordings/opus55_low_30seeds/histories/20261061/attempt_001/manifest.json",
+      "archived_path": "histories/20261061/attempt_001/manifest.json",
+      "bytes": 398491,
+      "sha256": "25c93335b5f27cd2166a36248a01ea76164a2ccfbc3b3c70a1df4514fb3defa2"
+    },
+    {
+      "original_path": "recordings/opus55_low_30seeds/histories/20261061/attempt_001/profiles.json",
+      "archived_path": "histories/20261061/attempt_001/profiles.json",
+      "bytes": 224,
+      "sha256": "4779b1371d1e58ddb55a2a96df0431a7f598e2f9a2250034359bdfc0c6ba57fb"
+    },
+    {
+      "original_path": "recordings/opus55_low_30seeds/histories/20261061/attempt_001/summary.json",
+      "archived_path": "histories/20261061/attempt_001/summary.json",
+      "bytes": 10525,
+      "sha256": "e0865c9928e52c6fbac71ab0bedf8f8d207791d47fedcd0b6c1a032d2bc7745a"
+    },
+    {
+      "original_path": "recordings/opus55_low_30seeds/histories/20261062/attempt_001/calls.jsonl",
+      "archived_path": "histories/20261062/attempt_001/calls.jsonl",
+      "bytes": 1108157,
+      "sha256": "7dc8676568e13c622a5318a5635ba09d96cdca335e17469d3c059caa2aebbdde"
+    },
+    {
+      "original_path": "recordings/opus55_low_30seeds/histories/20261062/attempt_001/checkpoint.json",
+      "archived_path": "histories/20261062/attempt_001/checkpoint.json",
+      "bytes": 56512,
+      "sha256": "c7e0b5d8c47ec5dd2f17465bf167fe816daae8c55c04482a5da700b81f36bbff"
+    },
+    {
+      "original_path": "recordings/opus55_low_30seeds/histories/20261062/attempt_001/events.jsonl",
+      "archived_path": "histories/20261062/attempt_001/events.jsonl",
+      "bytes": 1120708,
+      "sha256": "9aeddac2f12fe26e988c0db8e0563bfab284607d9868f11d2743a88950ffa6cc"
+    },
+    {
+      "original_path": "recordings/opus55_low_30seeds/histories/20261062/attempt_001/formation_tape.json",
+      "archived_path": "histories/20261062/attempt_001/formation_tape.json",
+      "bytes": 395,
+      "sha256": "95e21669d92f353ddd1170ef710baa0d1d29c120cdad3e88823091fb4b8c7076"
+    },
+    {
+      "original_path": "recordings/opus55_low_30seeds/histories/20261062/attempt_001/manifest.json",
+      "archived_path": "histories/20261062/attempt_001/manifest.json",
+      "bytes": 398491,
+      "sha256": "b281184ddad6c41251554fcdfd1f257ec4d437fc7c31d6091fc29d753bdc6a19"
+    },
+    {
+      "original_path": "recordings/opus55_low_30seeds/histories/20261062/attempt_001/profiles.json",
+      "archived_path": "histories/20261062/attempt_001/profiles.json",
+      "bytes": 224,
+      "sha256": "4779b1371d1e58ddb55a2a96df0431a7f598e2f9a2250034359bdfc0c6ba57fb"
+    },
+    {
+      "original_path": "recordings/opus55_low_30seeds/histories/20261062/attempt_001/summary.json",
+      "archived_path": "histories/20261062/attempt_001/summary.json",
+      "bytes": 10471,
+      "sha256": "c8bda672c81068a8f85d5e9da71c8362d8e619b2cd1e3b88184084db3a2d9383"
+    },
+    {
+      "original_path": "recordings/opus55_low_30seeds/histories/20261065/attempt_001/calls.jsonl",
+      "archived_path": "histories/20261065/attempt_001/calls.jsonl",
+      "bytes": 1106793,
+      "sha256": "a145c036b4d964c0e275d9cc27332571617b6c347c0e3f2a78a93c66205160c1"
+    },
+    {
+      "original_path": "recordings/opus55_low_30seeds/histories/20261065/attempt_001/checkpoint.json",
+      "archived_path": "histories/20261065/attempt_001/checkpoint.json",
+      "bytes": 56403,
+      "sha256": "6558c6541a10f39faf10badcd862893732f607674bd484669735a164e3bb9315"
+    },
+    {
+      "original_path": "recordings/opus55_low_30seeds/histories/20261065/attempt_001/events.jsonl",
+      "archived_path": "histories/20261065/attempt_001/events.jsonl",
+      "bytes": 1119355,
+      "sha256": "fddda0ea43509c95af6cc5502e673ec8f035f505247e26bad11c0abf36e0b24f"
+    },
+    {
+      "original_path": "recordings/opus55_low_30seeds/histories/20261065/attempt_001/formation_tape.json",
+      "archived_path": "histories/20261065/attempt_001/formation_tape.json",
+      "bytes": 395,
+      "sha256": "f02c052fcf20b74e828782d601f3fb13fae6fad68cc9d84a1690c02a07adfcda"
+    },
+    {
+      "original_path": "recordings/opus55_low_30seeds/histories/20261065/attempt_001/manifest.json",
+      "archived_path": "histories/20261065/attempt_001/manifest.json",
+      "bytes": 398491,
+      "sha256": "a6041a1d165086e3ca80921e5f2b03eb2a398b50a17b8f090c02c4430cd66868"
+    },
+    {
+      "original_path": "recordings/opus55_low_30seeds/histories/20261065/attempt_001/profiles.json",
+      "archived_path": "histories/20261065/attempt_001/profiles.json",
+      "bytes": 224,
+      "sha256": "4779b1371d1e58ddb55a2a96df0431a7f598e2f9a2250034359bdfc0c6ba57fb"
+    },
+    {
+      "original_path": "recordings/opus55_low_30seeds/histories/20261065/attempt_001/summary.json",
+      "archived_path": "histories/20261065/attempt_001/summary.json",
+      "bytes": 10452,
+      "sha256": "08803024312f0e2a7fecd565b1f8747d294a498bddbf52bf4d71ed6f22572ef0"
+    },
+    {
+      "original_path": "recordings/opus55_low_30seeds/histories/20261066/attempt_001/calls.jsonl",
+      "archived_path": "histories/20261066/attempt_001/calls.jsonl",
+      "bytes": 1086033,
+      "sha256": "e3a32866e144964c6aa7988170712be1f9156d5aee6f359bd1af886d0382761e"
+    },
+    {
+      "original_path": "recordings/opus55_low_30seeds/histories/20261066/attempt_001/checkpoint.json",
+      "archived_path": "histories/20261066/attempt_001/checkpoint.json",
+      "bytes": 55854,
+      "sha256": "cf530385a55036836e0369bd14029af40ffdcf8c9f30ab44c59409f0df4acf1c"
+    },
+    {
+      "original_path": "recordings/opus55_low_30seeds/histories/20261066/attempt_001/events.jsonl",
+      "archived_path": "histories/20261066/attempt_001/events.jsonl",
+      "bytes": 1098593,
+      "sha256": "492e4cf17fa2ecff44cdab539ef7724eee9f953faa141fedc3b18b9f1db6b5ac"
+    },
+    {
+      "original_path": "recordings/opus55_low_30seeds/histories/20261066/attempt_001/formation_tape.json",
+      "archived_path": "histories/20261066/attempt_001/formation_tape.json",
+      "bytes": 395,
+      "sha256": "206dbc4ea6ff99f11086449b63b0d28e5ee19b87376e798bda7c76b1bb91272a"
+    },
+    {
+      "original_path": "recordings/opus55_low_30seeds/histories/20261066/attempt_001/manifest.json",
+      "archived_path": "histories/20261066/attempt_001/manifest.json",
+      "bytes": 398491,
+      "sha256": "5559c6ed178aa51223a27bc066f7d2010388440c2ecf04c429aa9f49e14cebc7"
+    },
+    {
+      "original_path": "recordings/opus55_low_30seeds/histories/20261066/attempt_001/profiles.json",
+      "archived_path": "histories/20261066/attempt_001/profiles.json",
+      "bytes": 224,
+      "sha256": "4779b1371d1e58ddb55a2a96df0431a7f598e2f9a2250034359bdfc0c6ba57fb"
+    },
+    {
+      "original_path": "recordings/opus55_low_30seeds/histories/20261066/attempt_001/summary.json",
+      "archived_path": "histories/20261066/attempt_001/summary.json",
+      "bytes": 10495,
+      "sha256": "03ab1f18ff1650ced6e6b044065b1be59156e300716fa7afa46ab15a771b6032"
+    },
+    {
+      "original_path": "recordings/opus55_low_30seeds/histories/20261070/attempt_001/calls.jsonl",
+      "archived_path": "histories/20261070/attempt_001/calls.jsonl",
+      "bytes": 1092393,
+      "sha256": "267b6b5da09757e11e40afb1ffe7b6b6145310fa7c79250ff05a40f64572f9ac"
+    },
+    {
+      "original_path": "recordings/opus55_low_30seeds/histories/20261070/attempt_001/checkpoint.json",
+      "archived_path": "histories/20261070/attempt_001/checkpoint.json",
+      "bytes": 55643,
+      "sha256": "ae6c4d8382fd8c94fa1f80b926d7b7aa8ab781f254490c465cfe81266b15d888"
+    },
+    {
+      "original_path": "recordings/opus55_low_30seeds/histories/20261070/attempt_001/events.jsonl",
+      "archived_path": "histories/20261070/attempt_001/events.jsonl",
+      "bytes": 1105066,
+      "sha256": "206ad512ee5f854196e10722119813f61341d2677a1c790562ff891550452c9c"
+    },
+    {
+      "original_path": "recordings/opus55_low_30seeds/histories/20261070/attempt_001/formation_tape.json",
+      "archived_path": "histories/20261070/attempt_001/formation_tape.json",
+      "bytes": 395,
+      "sha256": "426e8d7cd26920d5053002d8fc1c8938c3c336069fa504984250c4c906a3bea6"
+    },
+    {
+      "original_path": "recordings/opus55_low_30seeds/histories/20261070/attempt_001/manifest.json",
+      "archived_path": "histories/20261070/attempt_001/manifest.json",
+      "bytes": 398491,
+      "sha256": "11966594d804783f7525ac414cb966b831a9b6c8bc6a0f57a039ba51af3b0960"
+    },
+    {
+      "original_path": "recordings/opus55_low_30seeds/histories/20261070/attempt_001/profiles.json",
+      "archived_path": "histories/20261070/attempt_001/profiles.json",
+      "bytes": 224,
+      "sha256": "4779b1371d1e58ddb55a2a96df0431a7f598e2f9a2250034359bdfc0c6ba57fb"
+    },
+    {
+      "original_path": "recordings/opus55_low_30seeds/histories/20261070/attempt_001/summary.json",
+      "archived_path": "histories/20261070/attempt_001/summary.json",
+      "bytes": 10590,
+      "sha256": "521bffcc9dfc04cd9fd90c9f37f17af662c160a2b6de3bbd9d33985287068ba7"
+    },
+    {
+      "original_path": "recordings/opus55_low_30seeds/histories/20261074/attempt_001/calls.jsonl",
+      "archived_path": "histories/20261074/attempt_001/calls.jsonl",
+      "bytes": 1101435,
+      "sha256": "677797a18e38a646900db4586e23e0840401e95342dcff72e3985d5173616c2f"
+    },
+    {
+      "original_path": "recordings/opus55_low_30seeds/histories/20261074/attempt_001/checkpoint.json",
+      "archived_path": "histories/20261074/attempt_001/checkpoint.json",
+      "bytes": 56097,
+      "sha256": "825d56e4a55289dc64fc13a878677e1f1102bdef8b462255141adcf7226a43b4"
+    },
+    {
+      "original_path": "recordings/opus55_low_30seeds/histories/20261074/attempt_001/events.jsonl",
+      "archived_path": "histories/20261074/attempt_001/events.jsonl",
+      "bytes": 1113953,
+      "sha256": "aac51a2216636cabc2f3389acb0374e83b8ef5cbd0d9947923a72362857f2209"
+    },
+    {
+      "original_path": "recordings/opus55_low_30seeds/histories/20261074/attempt_001/formation_tape.json",
+      "archived_path": "histories/20261074/attempt_001/formation_tape.json",
+      "bytes": 395,
+      "sha256": "29434a3513f3792fc9c6b2c2e1bd4c9335933c7a1b4f66bbcfc42b57c299c4ba"
+    },
+    {
+      "original_path": "recordings/opus55_low_30seeds/histories/20261074/attempt_001/manifest.json",
+      "archived_path": "histories/20261074/attempt_001/manifest.json",
+      "bytes": 398491,
+      "sha256": "16d27fa70eae70bdd98ae9ee6f4c4bc500fde7491374acfdda92c896eeaac60e"
+    },
+    {
+      "original_path": "recordings/opus55_low_30seeds/histories/20261074/attempt_001/profiles.json",
+      "archived_path": "histories/20261074/attempt_001/profiles.json",
+      "bytes": 224,
+      "sha256": "4779b1371d1e58ddb55a2a96df0431a7f598e2f9a2250034359bdfc0c6ba57fb"
+    },
+    {
+      "original_path": "recordings/opus55_low_30seeds/histories/20261074/attempt_001/summary.json",
+      "archived_path": "histories/20261074/attempt_001/summary.json",
+      "bytes": 10443,
+      "sha256": "2de85c2afdccf836e6cb237109585c6aa764afb7a2f9c69d4df622f7e9763f61"
+    },
+    {
+      "original_path": "recordings/opus55_low_30seeds/histories/20261076/attempt_001/calls.jsonl",
+      "archived_path": "histories/20261076/attempt_001/calls.jsonl",
+      "bytes": 1101552,
+      "sha256": "0aef8f9b2ed9860013bb9a37b7ec5201ad833b56e70b8c0cfc97b22765a9f2c8"
+    },
+    {
+      "original_path": "recordings/opus55_low_30seeds/histories/20261076/attempt_001/checkpoint.json",
+      "archived_path": "histories/20261076/attempt_001/checkpoint.json",
+      "bytes": 56113,
+      "sha256": "2f10cc2e29c9738ea6fe06b89b268d36e1a4139d9b3a0c2f16408b018d7b4be5"
+    },
+    {
+      "original_path": "recordings/opus55_low_30seeds/histories/20261076/attempt_001/events.jsonl",
+      "archived_path": "histories/20261076/attempt_001/events.jsonl",
+      "bytes": 1114173,
+      "sha256": "36689c8c310505bac50f503bbb8a65dcd4510008700b9a7b0cc1820001e25228"
+    },
+    {
+      "original_path": "recordings/opus55_low_30seeds/histories/20261076/attempt_001/formation_tape.json",
+      "archived_path": "histories/20261076/attempt_001/formation_tape.json",
+      "bytes": 395,
+      "sha256": "1596370f5641a233af51a844b150fdbdaad81224b3df99ba7a206292294d0b2c"
+    },
+    {
+      "original_path": "recordings/opus55_low_30seeds/histories/20261076/attempt_001/manifest.json",
+      "archived_path": "histories/20261076/attempt_001/manifest.json",
+      "bytes": 398491,
+      "sha256": "fd93bca6cfa13996ac7fb165322b26c376dd0fb7c601f07cdfa486f1ab179e91"
+    },
+    {
+      "original_path": "recordings/opus55_low_30seeds/histories/20261076/attempt_001/profiles.json",
+      "archived_path": "histories/20261076/attempt_001/profiles.json",
+      "bytes": 224,
+      "sha256": "4779b1371d1e58ddb55a2a96df0431a7f598e2f9a2250034359bdfc0c6ba57fb"
+    },
+    {
+      "original_path": "recordings/opus55_low_30seeds/histories/20261076/attempt_001/summary.json",
+      "archived_path": "histories/20261076/attempt_001/summary.json",
+      "bytes": 10550,
+      "sha256": "3d10464451af85a0cd5b33550dd35f4317d8208895bc08122ef00bcb9d88bede"
+    },
+    {
+      "original_path": "recordings/opus55_low_30seeds/histories/20261077/attempt_001/calls.jsonl",
+      "archived_path": "histories/20261077/attempt_001/calls.jsonl",
+      "bytes": 1087559,
+      "sha256": "a24139c9c1f277bdeace2bb1ef9b9528c38fe8783851dc399845614e5bd9d880"
+    },
+    {
+      "original_path": "recordings/opus55_low_30seeds/histories/20261077/attempt_001/checkpoint.json",
+      "archived_path": "histories/20261077/attempt_001/checkpoint.json",
+      "bytes": 55808,
+      "sha256": "29f4d7eaa368b8cd4aa5bdf3c6e237e618c053ff8b0671b991575b84c3adb369"
+    },
+    {
+      "original_path": "recordings/opus55_low_30seeds/histories/20261077/attempt_001/events.jsonl",
+      "archived_path": "histories/20261077/attempt_001/events.jsonl",
+      "bytes": 1100163,
+      "sha256": "d5dabf8f722770ae0bac4e14072b4734e9d48d06aba3318e407bab06cbe4a466"
+    },
+    {
+      "original_path": "recordings/opus55_low_30seeds/histories/20261077/attempt_001/formation_tape.json",
+      "archived_path": "histories/20261077/attempt_001/formation_tape.json",
+      "bytes": 395,
+      "sha256": "167358877c332053f7cb1a14faf3105693679a9ecbba2ade165ebd39f3511c6c"
+    },
+    {
+      "original_path": "recordings/opus55_low_30seeds/histories/20261077/attempt_001/manifest.json",
+      "archived_path": "histories/20261077/attempt_001/manifest.json",
+      "bytes": 398491,
+      "sha256": "fdb832f76e52a845e61b7e116b36ef77687eeba527bc9904075fb547eebd08f5"
+    },
+    {
+      "original_path": "recordings/opus55_low_30seeds/histories/20261077/attempt_001/profiles.json",
+      "archived_path": "histories/20261077/attempt_001/profiles.json",
+      "bytes": 224,
+      "sha256": "4779b1371d1e58ddb55a2a96df0431a7f598e2f9a2250034359bdfc0c6ba57fb"
+    },
+    {
+      "original_path": "recordings/opus55_low_30seeds/histories/20261077/attempt_001/summary.json",
+      "archived_path": "histories/20261077/attempt_001/summary.json",
+      "bytes": 10549,
+      "sha256": "988f123ca542a608e3f9b3ca4dd4a269a79abbc3f45e2576a2990c43ced53012"
+    },
+    {
+      "original_path": "recordings/opus55_low_30seeds/histories/20261080/attempt_001/calls.jsonl",
+      "archived_path": "histories/20261080/attempt_001/calls.jsonl",
+      "bytes": 1111818,
+      "sha256": "8a4af847d2fede6c716dbe3b7cc24b8e3c87378d1c7dab69036e27e5c25fc044"
+    },
+    {
+      "original_path": "recordings/opus55_low_30seeds/histories/20261080/attempt_001/checkpoint.json",
+      "archived_path": "histories/20261080/attempt_001/checkpoint.json",
+      "bytes": 56746,
+      "sha256": "8cb8cbc7923b579e47d450a9d3d37e3c92e0982e632ceda2df74a77099d9493a"
+    },
+    {
+      "original_path": "recordings/opus55_low_30seeds/histories/20261080/attempt_001/events.jsonl",
+      "archived_path": "histories/20261080/attempt_001/events.jsonl",
+      "bytes": 1124368,
+      "sha256": "4278627bed7d9347d289eaa75cf9506c5e3f8cddd92557acc9bbe98044113c25"
+    },
+    {
+      "original_path": "recordings/opus55_low_30seeds/histories/20261080/attempt_001/formation_tape.json",
+      "archived_path": "histories/20261080/attempt_001/formation_tape.json",
+      "bytes": 395,
+      "sha256": "00b136ae83b45c0a30b0a921baeb3fcb824ff313626e0cc5987142ee211c35e0"
+    },
+    {
+      "original_path": "recordings/opus55_low_30seeds/histories/20261080/attempt_001/manifest.json",
+      "archived_path": "histories/20261080/attempt_001/manifest.json",
+      "bytes": 398491,
+      "sha256": "2468c394d5e1b4ee8eb392d451d36127572a12f529ea7a1fdb719282f48884b1"
+    },
+    {
+      "original_path": "recordings/opus55_low_30seeds/histories/20261080/attempt_001/profiles.json",
+      "archived_path": "histories/20261080/attempt_001/profiles.json",
+      "bytes": 224,
+      "sha256": "4779b1371d1e58ddb55a2a96df0431a7f598e2f9a2250034359bdfc0c6ba57fb"
+    },
+    {
+      "original_path": "recordings/opus55_low_30seeds/histories/20261080/attempt_001/summary.json",
+      "archived_path": "histories/20261080/attempt_001/summary.json",
+      "bytes": 10465,
+      "sha256": "02ae1fb36b46bd7b151467d9f9f63e88df17045938fe852505da2b407250a088"
+    },
+    {
+      "original_path": "recordings/opus55_low_30seeds/histories/20261084/attempt_001/calls.jsonl",
+      "archived_path": "histories/20261084/attempt_001/calls.jsonl",
+      "bytes": 1118583,
+      "sha256": "c4b6db709840f6742839391df1d767bd5db0edd329e9ce255394689c503a0e2c"
+    },
+    {
+      "original_path": "recordings/opus55_low_30seeds/histories/20261084/attempt_001/checkpoint.json",
+      "archived_path": "histories/20261084/attempt_001/checkpoint.json",
+      "bytes": 56884,
+      "sha256": "3a88689651174edf4f6b37567d63700184b3ed9a14e9f1dcca386bdbb0d8f445"
+    },
+    {
+      "original_path": "recordings/opus55_low_30seeds/histories/20261084/attempt_001/events.jsonl",
+      "archived_path": "histories/20261084/attempt_001/events.jsonl",
+      "bytes": 1131282,
+      "sha256": "f6087f627550523ad9d85ee2da506b6cf371d2a8d76b784309cd05f3772734b5"
+    },
+    {
+      "original_path": "recordings/opus55_low_30seeds/histories/20261084/attempt_001/formation_tape.json",
+      "archived_path": "histories/20261084/attempt_001/formation_tape.json",
+      "bytes": 395,
+      "sha256": "e8cc5c88f22c019c67544f524d0f1fb592db5e17a79c3c971e888afc17e80111"
+    },
+    {
+      "original_path": "recordings/opus55_low_30seeds/histories/20261084/attempt_001/manifest.json",
+      "archived_path": "histories/20261084/attempt_001/manifest.json",
+      "bytes": 398491,
+      "sha256": "9631e8ca601577e115ed88582f7e66eda71dbdedfd9086c0f601a3d944f62a23"
+    },
+    {
+      "original_path": "recordings/opus55_low_30seeds/histories/20261084/attempt_001/profiles.json",
+      "archived_path": "histories/20261084/attempt_001/profiles.json",
+      "bytes": 224,
+      "sha256": "4779b1371d1e58ddb55a2a96df0431a7f598e2f9a2250034359bdfc0c6ba57fb"
+    },
+    {
+      "original_path": "recordings/opus55_low_30seeds/histories/20261084/attempt_001/summary.json",
+      "archived_path": "histories/20261084/attempt_001/summary.json",
+      "bytes": 10591,
+      "sha256": "0e89b0c539cd680ecf093c01bdc2713b8220e968fa4448771789fce142ee7ef8"
+    },
+    {
+      "original_path": "recordings/opus55_low_30seeds/histories/20261088/attempt_001/calls.jsonl",
+      "archived_path": "histories/20261088/attempt_001/calls.jsonl",
+      "bytes": 1103105,
+      "sha256": "db9ad56289284e4267394e406652533f78f9e74c373feae351adcdca9dc075cb"
+    },
+    {
+      "original_path": "recordings/opus55_low_30seeds/histories/20261088/attempt_001/checkpoint.json",
+      "archived_path": "histories/20261088/attempt_001/checkpoint.json",
+      "bytes": 56408,
+      "sha256": "89fabe5a8530d9ac373f4d135c56519af50b8120cbb079f59a6c015eaa005168"
+    },
+    {
+      "original_path": "recordings/opus55_low_30seeds/histories/20261088/attempt_001/events.jsonl",
+      "archived_path": "histories/20261088/attempt_001/events.jsonl",
+      "bytes": 1115728,
+      "sha256": "da27dbff356b90b3ad088d674cd6db447c28757365e1bc9f3667840183e23036"
+    },
+    {
+      "original_path": "recordings/opus55_low_30seeds/histories/20261088/attempt_001/formation_tape.json",
+      "archived_path": "histories/20261088/attempt_001/formation_tape.json",
+      "bytes": 395,
+      "sha256": "274e4fd5348cd4a500a5a040db0f8f0ead6e7954a6710b5a9dd4040d0085e87c"
+    },
+    {
+      "original_path": "recordings/opus55_low_30seeds/histories/20261088/attempt_001/manifest.json",
+      "archived_path": "histories/20261088/attempt_001/manifest.json",
+      "bytes": 398491,
+      "sha256": "68393279bede6e956420dab5e5a2cd5d2e176749f96e43b043cf182cc40fe0d0"
+    },
+    {
+      "original_path": "recordings/opus55_low_30seeds/histories/20261088/attempt_001/profiles.json",
+      "archived_path": "histories/20261088/attempt_001/profiles.json",
+      "bytes": 224,
+      "sha256": "4779b1371d1e58ddb55a2a96df0431a7f598e2f9a2250034359bdfc0c6ba57fb"
+    },
+    {
+      "original_path": "recordings/opus55_low_30seeds/histories/20261088/attempt_001/summary.json",
+      "archived_path": "histories/20261088/attempt_001/summary.json",
+      "bytes": 10553,
+      "sha256": "34881b57df3606d3f8157015696b5337854e2f6791438986d892426e5b15bcf5"
+    },
+    {
+      "original_path": "recordings/opus55_low_30seeds/histories/20261091/attempt_001/calls.jsonl",
+      "archived_path": "histories/20261091/attempt_001/calls.jsonl",
+      "bytes": 1097377,
+      "sha256": "40447f19e6048fdf0f323e1bfef27543e6fc89fe56bddff524f54d85525e9bb8"
+    },
+    {
+      "original_path": "recordings/opus55_low_30seeds/histories/20261091/attempt_001/checkpoint.json",
+      "archived_path": "histories/20261091/attempt_001/checkpoint.json",
+      "bytes": 56163,
+      "sha256": "27696d58a5edce73d96a7786272f86c8c173d7c4fb0294f4b8246d477dcd01f8"
+    },
+    {
+      "original_path": "recordings/opus55_low_30seeds/histories/20261091/attempt_001/events.jsonl",
+      "archived_path": "histories/20261091/attempt_001/events.jsonl",
+      "bytes": 1109955,
+      "sha256": "df06a4a953311c61c531223aac73c019cc72e39ef2d8d13dab493f6fb675660d"
+    },
+    {
+      "original_path": "recordings/opus55_low_30seeds/histories/20261091/attempt_001/formation_tape.json",
+      "archived_path": "histories/20261091/attempt_001/formation_tape.json",
+      "bytes": 395,
+      "sha256": "a124461702aa0c58a9745b2d90aff52de4aed0b4affeee6a6cc6c1d83dbc1eee"
+    },
+    {
+      "original_path": "recordings/opus55_low_30seeds/histories/20261091/attempt_001/manifest.json",
+      "archived_path": "histories/20261091/attempt_001/manifest.json",
+      "bytes": 398491,
+      "sha256": "0996bf9ea760291d6a60006ed6e0234021e41156e398690c475bf062f800754c"
+    },
+    {
+      "original_path": "recordings/opus55_low_30seeds/histories/20261091/attempt_001/profiles.json",
+      "archived_path": "histories/20261091/attempt_001/profiles.json",
+      "bytes": 224,
+      "sha256": "4779b1371d1e58ddb55a2a96df0431a7f598e2f9a2250034359bdfc0c6ba57fb"
+    },
+    {
+      "original_path": "recordings/opus55_low_30seeds/histories/20261091/attempt_001/summary.json",
+      "archived_path": "histories/20261091/attempt_001/summary.json",
+      "bytes": 10513,
+      "sha256": "dde5cba0d1a8d1c426ceb5470846ad5f29e51ba3edb6f580593b23891d4c5b0e"
+    },
+    {
+      "original_path": "recordings/opus55_low_30seeds/histories/20261092/attempt_001/calls.jsonl",
+      "archived_path": "histories/20261092/attempt_001/calls.jsonl",
+      "bytes": 1101994,
+      "sha256": "d1fc7ad1d0f709af10001e376743e5fc931d43947a9959a13eed0620ba2b7b68"
+    },
+    {
+      "original_path": "recordings/opus55_low_30seeds/histories/20261092/attempt_001/checkpoint.json",
+      "archived_path": "histories/20261092/attempt_001/checkpoint.json",
+      "bytes": 56468,
+      "sha256": "876afae4b084983d185309a43bf3e56bd7f694200572c66b09727d21208ebe44"
+    },
+    {
+      "original_path": "recordings/opus55_low_30seeds/histories/20261092/attempt_001/events.jsonl",
+      "archived_path": "histories/20261092/attempt_001/events.jsonl",
+      "bytes": 1114610,
+      "sha256": "30c7f0dba693307df30f952352735341624ace62744f7d8f20a67ebc6626ddba"
+    },
+    {
+      "original_path": "recordings/opus55_low_30seeds/histories/20261092/attempt_001/formation_tape.json",
+      "archived_path": "histories/20261092/attempt_001/formation_tape.json",
+      "bytes": 395,
+      "sha256": "66f4a3cdf910850c9d7c6c31f8ef3a0123ea64ed11674e0d822f711e2bdc63bb"
+    },
+    {
+      "original_path": "recordings/opus55_low_30seeds/histories/20261092/attempt_001/manifest.json",
+      "archived_path": "histories/20261092/attempt_001/manifest.json",
+      "bytes": 398491,
+      "sha256": "1b65f62a27463f987fd924d91b52c4a693c9f150634d561e6ec6002a98b3f06e"
+    },
+    {
+      "original_path": "recordings/opus55_low_30seeds/histories/20261092/attempt_001/profiles.json",
+      "archived_path": "histories/20261092/attempt_001/profiles.json",
+      "bytes": 224,
+      "sha256": "4779b1371d1e58ddb55a2a96df0431a7f598e2f9a2250034359bdfc0c6ba57fb"
+    },
+    {
+      "original_path": "recordings/opus55_low_30seeds/histories/20261092/attempt_001/summary.json",
+      "archived_path": "histories/20261092/attempt_001/summary.json",
+      "bytes": 10535,
+      "sha256": "1fd221933624695717b1a2b18a3a4187973ca28b7370e21e6661f3b542e5d04f"
+    },
+    {
+      "original_path": "recordings/opus55_low_30seeds/histories/20261093/attempt_001/calls.jsonl",
+      "archived_path": "histories/20261093/attempt_001/calls.jsonl",
+      "bytes": 1107093,
+      "sha256": "41fc7ff6c630acae8d2552f39bbdbd37820b93c45ddff7bee8f47ad98c639172"
+    },
+    {
+      "original_path": "recordings/opus55_low_30seeds/histories/20261093/attempt_001/checkpoint.json",
+      "archived_path": "histories/20261093/attempt_001/checkpoint.json",
+      "bytes": 56406,
+      "sha256": "b47afb503701771ac6e3d17772312aacf411ef9b3c6199599464ce3903f4f4a0"
+    },
+    {
+      "original_path": "recordings/opus55_low_30seeds/histories/20261093/attempt_001/events.jsonl",
+      "archived_path": "histories/20261093/attempt_001/events.jsonl",
+      "bytes": 1119659,
+      "sha256": "47dc87cf302c40721a578c3a4d744575cda6dbe48f78725310d21993863b31ce"
+    },
+    {
+      "original_path": "recordings/opus55_low_30seeds/histories/20261093/attempt_001/formation_tape.json",
+      "archived_path": "histories/20261093/attempt_001/formation_tape.json",
+      "bytes": 395,
+      "sha256": "ff72f56f72e8ba09ca8f8243025a37b4e525d561c4c128d787d03ba2c4789c10"
+    },
+    {
+      "original_path": "recordings/opus55_low_30seeds/histories/20261093/attempt_001/manifest.json",
+      "archived_path": "histories/20261093/attempt_001/manifest.json",
+      "bytes": 398491,
+      "sha256": "9f7025749f061f89193409c894d00978f9234ae75958d4b382ee4f650195cc9f"
+    },
+    {
+      "original_path": "recordings/opus55_low_30seeds/histories/20261093/attempt_001/profiles.json",
+      "archived_path": "histories/20261093/attempt_001/profiles.json",
+      "bytes": 224,
+      "sha256": "4779b1371d1e58ddb55a2a96df0431a7f598e2f9a2250034359bdfc0c6ba57fb"
+    },
+    {
+      "original_path": "recordings/opus55_low_30seeds/histories/20261093/attempt_001/summary.json",
+      "archived_path": "histories/20261093/attempt_001/summary.json",
+      "bytes": 10493,
+      "sha256": "4614897361d26101d245d6f6ad3eea74d70cf88d5332580bef54d6486b001875"
+    },
+    {
+      "original_path": "recordings/opus55_low_30seeds/histories/20261094/attempt_001/calls.jsonl",
+      "archived_path": "histories/20261094/attempt_001/calls.jsonl",
+      "bytes": 1094548,
+      "sha256": "97825a57b254150b812c08be29564a62f52a5173b2ea6a070234249253621f1e"
+    },
+    {
+      "original_path": "recordings/opus55_low_30seeds/histories/20261094/attempt_001/checkpoint.json",
+      "archived_path": "histories/20261094/attempt_001/checkpoint.json",
+      "bytes": 55918,
+      "sha256": "04f080b6725608031cbb85c65bac05beb6071675233a3e740d4db1a27727b9c2"
+    },
+    {
+      "original_path": "recordings/opus55_low_30seeds/histories/20261094/attempt_001/events.jsonl",
+      "archived_path": "histories/20261094/attempt_001/events.jsonl",
+      "bytes": 1107121,
+      "sha256": "18130dea99ee81899cd79171981bafa057e84eca0f9634fb8951054aec1e183a"
+    },
+    {
+      "original_path": "recordings/opus55_low_30seeds/histories/20261094/attempt_001/formation_tape.json",
+      "archived_path": "histories/20261094/attempt_001/formation_tape.json",
+      "bytes": 395,
+      "sha256": "b5dad9fe279c3fcef651f0ba9f947703f2f45813eacc8d617f2a9565be9f13a0"
+    },
+    {
+      "original_path": "recordings/opus55_low_30seeds/histories/20261094/attempt_001/manifest.json",
+      "archived_path": "histories/20261094/attempt_001/manifest.json",
+      "bytes": 398491,
+      "sha256": "4c88c169c545a6b29f1e55743c7f9f818ab2e67605aa3e7756772ee61ee153ab"
+    },
+    {
+      "original_path": "recordings/opus55_low_30seeds/histories/20261094/attempt_001/profiles.json",
+      "archived_path": "histories/20261094/attempt_001/profiles.json",
+      "bytes": 224,
+      "sha256": "4779b1371d1e58ddb55a2a96df0431a7f598e2f9a2250034359bdfc0c6ba57fb"
+    },
+    {
+      "original_path": "recordings/opus55_low_30seeds/histories/20261094/attempt_001/summary.json",
+      "archived_path": "histories/20261094/attempt_001/summary.json",
+      "bytes": 10490,
+      "sha256": "d4a5806d95941bb0c308de6e4e7adf7bc3fa22b9a76a98add236893eba7dd048"
+    },
+    {
+      "original_path": "recordings/opus55_low_30seeds/histories/20261098/attempt_001/calls.jsonl",
+      "archived_path": "histories/20261098/attempt_001/calls.jsonl",
+      "bytes": 1095163,
+      "sha256": "d4dc3904eb933194560c9dbb6f41b40832243df8c6d1f93f5e1b58d908ced671"
+    },
+    {
+      "original_path": "recordings/opus55_low_30seeds/histories/20261098/attempt_001/checkpoint.json",
+      "archived_path": "histories/20261098/attempt_001/checkpoint.json",
+      "bytes": 56211,
+      "sha256": "28e2c34e402a322ee4e6f352144d1a909bb6f9c68cd4b7e0bc43f98391e638b8"
+    },
+    {
+      "original_path": "recordings/opus55_low_30seeds/histories/20261098/attempt_001/events.jsonl",
+      "archived_path": "histories/20261098/attempt_001/events.jsonl",
+      "bytes": 1107833,
+      "sha256": "142d364961572a0c09294db0b8cc00d12da4af29d291f673839b1bddc943bf03"
+    },
+    {
+      "original_path": "recordings/opus55_low_30seeds/histories/20261098/attempt_001/formation_tape.json",
+      "archived_path": "histories/20261098/attempt_001/formation_tape.json",
+      "bytes": 395,
+      "sha256": "9bb038cdcdd67da7318b1740ad4c1b9da95f0615a6e0297be6bcf73836b655fb"
+    },
+    {
+      "original_path": "recordings/opus55_low_30seeds/histories/20261098/attempt_001/manifest.json",
+      "archived_path": "histories/20261098/attempt_001/manifest.json",
+      "bytes": 398491,
+      "sha256": "0c64acdf427b88087007c2a59315d35945a87e172fafd47e71d324b426e42505"
+    },
+    {
+      "original_path": "recordings/opus55_low_30seeds/histories/20261098/attempt_001/profiles.json",
+      "archived_path": "histories/20261098/attempt_001/profiles.json",
+      "bytes": 224,
+      "sha256": "4779b1371d1e58ddb55a2a96df0431a7f598e2f9a2250034359bdfc0c6ba57fb"
+    },
+    {
+      "original_path": "recordings/opus55_low_30seeds/histories/20261098/attempt_001/summary.json",
+      "archived_path": "histories/20261098/attempt_001/summary.json",
+      "bytes": 10603,
+      "sha256": "9b8f2f61909c69283b98523079861cb66d859c08ab2ce448b5d4400053a53600"
+    },
+    {
+      "original_path": "recordings/opus55_low_30seeds/histories/20261100/attempt_001/calls.jsonl",
+      "archived_path": "histories/20261100/attempt_001/calls.jsonl",
+      "bytes": 1092442,
+      "sha256": "1bea38ade2f99d86dc25638f157c312045315d5fc737d1fc29ca33d1cbecdc30"
+    },
+    {
+      "original_path": "recordings/opus55_low_30seeds/histories/20261100/attempt_001/checkpoint.json",
+      "archived_path": "histories/20261100/attempt_001/checkpoint.json",
+      "bytes": 55959,
+      "sha256": "7e06b9052461e4b294002244f06fd836c5b08f56d40d89969e98e4ed821a6e1a"
+    },
+    {
+      "original_path": "recordings/opus55_low_30seeds/histories/20261100/attempt_001/events.jsonl",
+      "archived_path": "histories/20261100/attempt_001/events.jsonl",
+      "bytes": 1105063,
+      "sha256": "a6aa0c1cd657bf9d1b1b282cdf8442df31d0a55f0b5c2ffc805339096d6935c5"
+    },
+    {
+      "original_path": "recordings/opus55_low_30seeds/histories/20261100/attempt_001/formation_tape.json",
+      "archived_path": "histories/20261100/attempt_001/formation_tape.json",
+      "bytes": 395,
+      "sha256": "707a5c42b39bc32c109f3d50080d74c17bc790fac305e423a8b4371838cd4260"
+    },
+    {
+      "original_path": "recordings/opus55_low_30seeds/histories/20261100/attempt_001/manifest.json",
+      "archived_path": "histories/20261100/attempt_001/manifest.json",
+      "bytes": 398491,
+      "sha256": "3e129dc520ba19826d8d76f7876b734eeb488305ca9107255d7d33df27a640fb"
+    },
+    {
+      "original_path": "recordings/opus55_low_30seeds/histories/20261100/attempt_001/profiles.json",
+      "archived_path": "histories/20261100/attempt_001/profiles.json",
+      "bytes": 224,
+      "sha256": "4779b1371d1e58ddb55a2a96df0431a7f598e2f9a2250034359bdfc0c6ba57fb"
+    },
+    {
+      "original_path": "recordings/opus55_low_30seeds/histories/20261100/attempt_001/summary.json",
+      "archived_path": "histories/20261100/attempt_001/summary.json",
+      "bytes": 10551,
+      "sha256": "f7d476960ae0b616eef06c4d6210819b76230a8842f023b670d9cc4ce592ae86"
+    },
+    {
+      "original_path": "recordings/opus55_low_30seeds/histories/20261101/attempt_001/calls.jsonl",
+      "archived_path": "histories/20261101/attempt_001/calls.jsonl",
+      "bytes": 1097309,
+      "sha256": "4970ff401e61dffb5847dc5b5abfb9577fc33c9896c8389ae86bc1e7a12a870c"
+    },
+    {
+      "original_path": "recordings/opus55_low_30seeds/histories/20261101/attempt_001/checkpoint.json",
+      "archived_path": "histories/20261101/attempt_001/checkpoint.json",
+      "bytes": 56089,
+      "sha256": "b9f8959c44e33a179f3be6e71c5fecd951174bc92abfb8d72389b9bc79f20157"
+    },
+    {
+      "original_path": "recordings/opus55_low_30seeds/histories/20261101/attempt_001/events.jsonl",
+      "archived_path": "histories/20261101/attempt_001/events.jsonl",
+      "bytes": 1109858,
+      "sha256": "abfac4ca78c3768b42980cf9b61ced9121a3f67ab8d16471d85fc2d92798c838"
+    },
+    {
+      "original_path": "recordings/opus55_low_30seeds/histories/20261101/attempt_001/formation_tape.json",
+      "archived_path": "histories/20261101/attempt_001/formation_tape.json",
+      "bytes": 395,
+      "sha256": "1e6b9762f43ecdf496bde4a10ffb36471d8bb5fbbad0f91507f789b8a1efeab9"
+    },
+    {
+      "original_path": "recordings/opus55_low_30seeds/histories/20261101/attempt_001/manifest.json",
+      "archived_path": "histories/20261101/attempt_001/manifest.json",
+      "bytes": 398491,
+      "sha256": "b5cfdfe0b4dd4843880fa11cff427cfebc0334bbdaf70a700f607252eb4257ad"
+    },
+    {
+      "original_path": "recordings/opus55_low_30seeds/histories/20261101/attempt_001/profiles.json",
+      "archived_path": "histories/20261101/attempt_001/profiles.json",
+      "bytes": 224,
+      "sha256": "4779b1371d1e58ddb55a2a96df0431a7f598e2f9a2250034359bdfc0c6ba57fb"
+    },
+    {
+      "original_path": "recordings/opus55_low_30seeds/histories/20261101/attempt_001/summary.json",
+      "archived_path": "histories/20261101/attempt_001/summary.json",
+      "bytes": 10467,
+      "sha256": "e4279870292c64353dfd749dcf394d93bb73ad26096f4cccea7fea2e437877e6"
+    },
+    {
+      "original_path": "recordings/opus55_low_30seeds/manifest.json",
+      "archived_path": "manifest.json",
+      "bytes": 398466,
+      "sha256": "c7120c533a71823764e19e649813d96c7e71fae3645707af5377783a0e9a8e27"
+    },
+    {
+      "original_path": "recordings/opus55_low_30seeds/physical_attempts.json",
+      "archived_path": "physical_attempts.json",
+      "bytes": 5396,
+      "sha256": "c182f709a5c332602155c5f41b7af922676180f29be3be2b41771d5263c55a6a"
+    },
+    {
+      "original_path": "recordings/opus55_low_30seeds/standin_usage.json",
+      "archived_path": "standin_usage.json",
+      "bytes": 762,
+      "sha256": "3345367b591972184cf7f119aeb51b4b375ad721656df5bb295d362fbc5c3dfa"
+    },
+    {
+      "original_path": "recordings/opus55_low_30seeds/summary.json",
+      "archived_path": "summary.json",
+      "bytes": 361615,
+      "sha256": "e9881330aca1986fda432f4c8f41a907dbdd0c24e032842a8e6ba577df005b9b"
+    },
+    {
+      "original_path": "recordings/opus55_low_30seeds_analysis.json",
+      "archived_path": "analysis.json",
+      "bytes": 162500,
+      "sha256": "c01e8c23115b2c4276f788cf447a45b8c454d251c06c2835fa24ff1c2a2ed9e7"
+    },
+    {
+      "original_path": "recordings/opus55_low_30seeds_verification.json",
+      "archived_path": "verification_supplied.json",
+      "bytes": 349,
+      "sha256": "3eedad499f25a23b17314af760f72a84044f692a0a99a2f761d5859e75ff0851"
+    },
+    {
+      "original_path": "recordings/opus55_low_30seeds.log",
+      "archived_path": "execution.log",
+      "bytes": 610,
+      "sha256": "1f6cabd3b6e893fe1989eb15d44eee2e307f6a9d3e7e50a99771bae6e4d3f65f"
+    }
+  ],
+  "renaming": "Original root analysis/verification/log files are named analysis.json, verification_supplied.json, execution.log; JSON contents retain original run names."
+}

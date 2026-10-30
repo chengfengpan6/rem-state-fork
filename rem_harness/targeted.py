@@ -27,6 +27,7 @@ from .engine import Engine, BudgetExceeded, RunCancelled, safe_error, utc_now
 from .models import default_v2_config, digest, median_map
 from .providers import PrefixResumeProvider, ReplayProvider, build_prompt
 from .schemas import MAP_SCHEMA, PROBABILITY_SCHEMA, message_schema, validate_response
+from .replay_validation import compare, request_state, validate_tolerance
 
 VERSION = "rem-prototype-0.2-targeted-Y-v1"
 ARM_CONDITIONS = {"team_P": "P", "team_E": "E", "team_H": "H", "team_R0": "R0", "team_R0rep": "R0"}
@@ -570,7 +571,70 @@ def run_plan(plan, output_dir, provider_factory, workers=1, resume_from=None):
     return result
 
 
-def replay_plan(recording, output_dir):
+def _read_calls(folder):
+    return [json.loads(x) for x in (Path(folder) / "calls.jsonl").read_text(encoding="utf-8").splitlines() if x.strip()]
+
+
+def _history_replay_comparison(source, destination, original, result, provider, tolerance):
+    """Bind score-only differences to exact archived/replayed states and hashes."""
+    old_cp, new_cp = read_json(source / "checkpoint.json"), read_json(destination / "checkpoint.json")
+    differences, failures, hash_differences = list(provider.score_differences), [], []
+    cp_comparison = compare(old_cp, new_cp, tolerance=tolerance, scope="checkpoint", prefix="checkpoint")
+    differences.extend(cp_comparison["score_differences"])
+    failures.extend(cp_comparison["failures"])
+    normalized = deepcopy(original["branches"])
+    for branch, item in normalized.items():
+        old_state, new_state = old_cp["forks"][branch], new_cp["forks"][branch]
+        state_comparison = compare(old_state, new_state, tolerance=tolerance, scope="state")
+        old_hash, new_hash = digest(old_state), digest(new_state)
+        for index, row in enumerate(item["profiles"]):
+            actual = result["branches"][branch]["profiles"][index]
+            for field in ("fork_state_hash", "state_hash_after"):
+                path = f"branches.{branch}.profiles[{index}].{field}"
+                if row[field] != old_hash or actual[field] != new_hash:
+                    failures.append({"path": path, "reason": "hash_not_bound_to_its_state"})
+                elif old_hash != new_hash:
+                    if state_comparison["equal"] and state_comparison["score_differences"]:
+                        hash_differences.append({"path": path, "recorded": old_hash, "recomputed": new_hash,
+                                                 "state_path": f"checkpoint.forks.{branch}",
+                                                 "reason": "digest_of_state_with_only_allowlisted_score_differences"})
+                        row[field] = new_hash
+                    else:
+                        failures.append({"path": path, "reason": "unproven_hash_difference"})
+    branches = compare(normalized, result["branches"], tolerance=tolerance, scope="branches", prefix="branches")
+    differences.extend(branches["score_differences"])
+    failures.extend(branches["failures"])
+    old_requests = [r for r in _read_calls(source) if r["event"] == "call_request"]
+    new_requests = [r for r in _read_calls(destination) if r["event"] == "call_request"]
+    if len(old_requests) != len(new_requests):
+        failures.append({"path": "calls", "reason": "request_count_differs"})
+    for old, new in zip(old_requests, new_requests):
+        label = old["call_id"]
+        for field in ("call_id", "branch", "seed", "kind", "diagnostic_profile_id", "schema"):
+            if not compare(old.get(field), new.get(field))["equal"]:
+                failures.append({"path": f"{label}.{field}", "reason": "exact_metadata_required"})
+        a, b = request_state(old_cp, old), request_state(new_cp, new)
+        bound = compare(a, b, tolerance=tolerance, scope="state")
+        for field, old_value, new_value in (("state_hash", a, b),
+                                            ("visible_state_hash", old["payload"]["slots"], new["payload"]["slots"])):
+            if old.get(field) != digest(old_value) or new.get(field) != digest(new_value):
+                failures.append({"path": f"{label}.{field}", "reason": "hash_not_bound_to_its_state"})
+            elif old[field] != new[field]:
+                if bound["equal"] and bound["score_differences"]:
+                    hash_differences.append({"path": f"{label}.{field}", "recorded": old[field], "recomputed": new[field],
+                                             "state_path": "checkpoint.formation" if old["branch"] == "formation" else f"checkpoint.forks.{old['branch']}",
+                                             "reason": "digest_of_state_with_only_allowlisted_score_differences"})
+                else:
+                    failures.append({"path": f"{label}.{field}", "reason": "unproven_hash_difference"})
+    return {"float_tolerance": tolerance,
+            "replay_exactness": "failed" if failures else "within_score_tolerance" if differences else "exact",
+            "score_differences": differences, "proven_state_hash_differences": hash_differences,
+            "failures": failures, "physical_dispatches_this_execution": 0}
+
+
+def replay_plan(recording, output_dir, float_tolerance=0.0):
+    float_tolerance = validate_tolerance(float_tolerance)
+    started = utc_now()
     recording, output = Path(recording), Path(output_dir)
     manifest, original = read_json(recording / "manifest.json"), read_json(recording / "summary.json")
     plan = validate_plan(manifest["config"])
@@ -583,24 +647,48 @@ def replay_plan(recording, output_dir):
     for seed in plan["seeds"]:
         source = recording / original["history_paths"][str(seed)]
         destination = output / "histories" / str(seed) / "attempt_001"
-        provider = ReplayProvider(source / "calls.jsonl")
+        provider = ReplayProvider(source / "calls.jsonl", float_tolerance=float_tolerance)
         result = TargetedEngine(provider, plan, seed, destination).run()
-        if result["status"] != "completed" or provider.index != 120:
-            raise ValueError(f"Exact targeted replay failed for history {seed}: {result.get('error')}")
+        if result["status"] == "completed" and provider.index == 120:
+            receipt = _history_replay_comparison(source, destination, original["history_results"][str(seed)], result, provider, float_tolerance)
+        else:
+            receipt = {"float_tolerance": float_tolerance, "replay_exactness": "failed", "score_differences": provider.score_differences,
+                       "proven_state_hash_differences": [], "failures": [{"path": "execution", "reason": "replay_incomplete", "error": result.get("error")}],
+                       "physical_dispatches_this_execution": 0}
+        result["replay_validation"] = receipt
+        if receipt["failures"]:
+            result["status"] = "error"
+            result["error"] = result.get("error") or {"type": "ReplayValidationError", "message": "Archived and reconstructed scientific artifacts differ"}
+        atomic_json(destination / "summary.json", result)
+        hm = read_json(destination / "manifest.json")
+        hm.update(status=result["status"], error=result["error"], replay_validation=receipt)
+        atomic_json(destination / "manifest.json", hm)
         results[str(seed)], paths[str(seed)] = result, destination.relative_to(output).as_posix()
-    summary = {"status": "completed", "expected_calls": plan["expected_calls"], "history_results": results,
+        if result["status"] != "completed":
+            break
+    exactness = "failed" if any(h["status"] != "completed" for h in results.values()) else "within_score_tolerance" if any(h["replay_validation"]["replay_exactness"] != "exact" for h in results.values()) else "exact"
+    status = "error" if exactness == "failed" else "completed"
+    summary = {"status": status, "expected_calls": plan["expected_calls"], "history_results": results,
+               "float_tolerance": float_tolerance, "replay_exactness": exactness,
                "history_paths": paths, "physical_dispatches_this_execution": 0}
     atomic_json(output / "summary.json", summary)
-    atomic_json(output / "manifest.json", {**manifest, "status": "completed", "replay_only": True, "source_recording": recording.name})
+    atomic_json(output / "manifest.json", {**manifest, "status": status, "replay_only": True, "source_recording": recording.name,
+                                           "source_manifest_sha256": sha256((recording / "manifest.json").read_bytes()).hexdigest(),
+                                           "original_package_sources": manifest.get("package_sources"),
+                                           "package_sources": package_sources(), "started_utc": started, "ended_utc": utc_now(),
+                                           "workers": 1, "scope": "Offline recorded-response replay; zero model or transport dispatches.",
+                                           "float_tolerance": float_tolerance, "replay_exactness": exactness})
     return summary
 
 
-def verify_plan(recording):
-    """Independent exposure/count/scoring checks plus exact engine reconstruction."""
+def verify_plan(recording, float_tolerance=0.0):
+    """Exact evidence checks; optional bounded recomputed-score tolerance only."""
+    float_tolerance = validate_tolerance(float_tolerance)
     root = Path(recording)
     manifest, summary = read_json(root / "manifest.json"), read_json(root / "summary.json")
     plan = validate_plan(manifest["config"])
     failures, checks = [], 0
+    replay_reports, score_differences, prompt_coverage = {}, [], {}
     def check(name, passed):
         nonlocal checks
         checks += 1
@@ -609,6 +697,13 @@ def verify_plan(recording):
     check("config_hash", digest(plan) == manifest["config_hash"])
     check("exact_planned_history_set", set(summary["history_results"]) == {str(s) for s in plan["seeds"]})
     complete = manifest["status"] == summary["status"] == "completed"
+    if manifest.get("replay_only"):
+        check("replay_root_tolerance_metadata", compare(manifest.get("float_tolerance"), summary.get("float_tolerance"))["equal"])
+        check("replay_root_exactness_metadata", manifest.get("replay_exactness") == summary.get("replay_exactness"))
+        expected_exactness = ("failed" if any(h["status"] != "completed" for h in summary["history_results"].values()) else
+                              "within_score_tolerance" if any(h.get("replay_validation", {}).get("replay_exactness") == "within_score_tolerance" for h in summary["history_results"].values()) else "exact")
+        check("replay_root_history_exactness", summary.get("replay_exactness") == expected_exactness)
+        check("replay_zero_dispatches", type(summary.get("physical_dispatches_this_execution")) is int and summary["physical_dispatches_this_execution"] == 0)
     if not manifest.get("replay_only"):
         ledger = read_json(root / "physical_attempts.json")
         check("budget_ledger_config", ledger["config_hash"] == digest(plan))
@@ -642,6 +737,19 @@ def verify_plan(recording):
         if not isinstance(path, str):
             continue
         folder = root / path
+        hm = read_json(folder / "manifest.json")
+        local_summary = read_json(folder / "summary.json")
+        check(f"root_history_summary_identity:{seed}", compare(local_summary, history)["equal"])
+        check(f"history_manifest_status:{seed}", hm["status"] == history["status"])
+        check(f"history_manifest_config_hash:{seed}", digest(hm["config"]) == hm["config_hash"])
+        check(f"history_manifest_seed:{seed}", type(hm["seed"]) is int and hm["seed"] == seed)
+        if manifest.get("replay_only"):
+            check(f"history_replay_metadata:{seed}", compare(hm.get("replay_validation"), history.get("replay_validation"))["equal"])
+            check(f"history_replay_tolerance:{seed}", compare(history.get("replay_validation", {}).get("float_tolerance"), manifest.get("float_tolerance"))["equal"])
+            receipt = history.get("replay_validation", {})
+            receipt_label = "failed" if receipt.get("failures") else "within_score_tolerance" if receipt.get("score_differences") else "exact"
+            check(f"history_replay_label:{seed}", receipt.get("replay_exactness") == receipt_label
+                  and (history["status"] != "completed" or receipt_label != "failed"))
         cp, tape = read_json(folder / "checkpoint.json"), read_json(folder / "formation_tape.json")
         rows = [json.loads(x) for x in (folder / "calls.jsonl").read_text(encoding="utf-8").splitlines() if x.strip()]
         events = [json.loads(x) for x in (folder / "events.jsonl").read_text(encoding="utf-8").splitlines() if x.strip()]
@@ -650,9 +758,10 @@ def verify_plan(recording):
         check(f"count120:{seed}", len(req) == len(response) == 120)
         check(f"call_order:{seed}", all(r["event"] == ("call_request" if i % 2 == 0 else "call_response")
               and r["call_id"] == f"call-{i // 2 + 1:06d}" for i, r in enumerate(rows)))
-        check(f"call_event_mirror:{seed}", rows == [r for r in events if r["event"].startswith("call_")])
-        check(f"formation_length:{seed}", len(tape) == 3 and cp["formation"]["LE"] == tape)
-        check(f"seed_tape:{seed}", tape == [e.observed_record() for e in generate_tape(seed, 3, 3)[:3]])
+        check(f"call_event_mirror:{seed}", compare(rows, [r for r in events if r["event"].startswith("call_")])["equal"])
+        check(f"formation_length:{seed}", len(tape) == 3 and compare(cp["formation"]["LE"], tape)["equal"])
+        check(f"seed_tape:{seed}", compare(tape, [e.observed_record() for e in generate_tape(seed, 3, 3)[:3]])["equal"])
+        check(f"formation_tape_hash:{seed}", hm.get("formation_tape_hash") == digest(tape))
         for branch in ("formation", *ARM_CONDITIONS):
             check(f"logical_count:{seed}:{branch}", sum(r["branch"] == branch for r in req) == (30 if branch == "formation" else 18))
         for request in req:
@@ -664,20 +773,37 @@ def verify_plan(recording):
             except Exception:
                 valid = False
             check("schema:" + ident, valid)
+            payload = request["payload"]
+            archived_state = request_state(cp, request)
+            actor = payload["actor"]["id"]
+            expected_slots = {"LE": archived_state["LE"], "LB": archived_state["LB"],
+                              "Pi": archived_state["Pi"][actor], "H": render_map(archived_state["H"][actor])}
+            check("archived_state_hash:" + ident, request.get("state_hash") == digest(archived_state))
+            check("visible_state_hash:" + ident, request.get("visible_state_hash") == digest(payload["slots"]))
+            check("archived_exposure:" + ident, compare(payload["slots"], expected_slots)["equal"])
             if request["branch"] != "formation":
-                payload = request["payload"]
-                fork = cp["forks"][request["branch"]]
-                actor = payload["actor"]["id"]
-                expected_slots = {"LE": fork["LE"], "LB": fork["LB"], "Pi": fork["Pi"][actor], "H": render_map(fork["H"][actor])}
-                check("frozen_profile_exposure:" + ident, payload["slots"] == expected_slots)
+                check("frozen_profile_exposure:" + ident, compare(payload["slots"], expected_slots)["equal"])
                 check("no_map_directive:" + ident, "map_instruction" not in payload["task"])
                 check("no_profile_feedback:" + ident, payload["current"]["round_index"] == 4 and len(payload["slots"]["LE"]) == 3)
             trace = response.get(request["call_id"], {}).get("provider_trace", {})
-            hm = read_json(folder / "manifest.json")
-            if hm["provider"]["is_live"]:
+            # Legacy API adapters falsely set is_live=False. Prompt integrity is
+            # independent of that flag; replay/explicit offline fixtures have no
+            # newly dispatched actual prompt and are labeled separately.
+            offline = hm["provider"]["name"] == "recorded_response_replay" or hm["provider"]["requested_model"] in ("none", "scripted")
+            has_prompt = "system_template" in trace or "user_prompt" in trace
+            if not offline or has_prompt:
                 system, user = build_prompt(request["kind"], request["payload"], request["schema"])
                 check("actual_prompt:" + ident, trace.get("system_template") == system and trace.get("user_prompt") == user
                       and trace.get("schema_sha256") == digest(request["schema"]))
+                prompt_coverage[str(seed)] = prompt_coverage.get(str(seed), 0) + 1
+            check("request_model_metadata:" + ident, request.get("requested_model") == hm["provider"]["requested_model"])
+            if not offline:
+                check("trace_model_metadata:" + ident, trace.get("requested_model") == request.get("requested_model"))
+                if "raw_response" in trace:
+                    check("raw_parsed_response:" + ident, compare(trace["raw_response"], answer)["equal"])
+                served = trace.get("served_model_id")
+                if trace.get("model_identity_status") in ("returned_by_provider", "returned_metadata_not_weight_attestation"):
+                    check("returned_model_present:" + ident, isinstance(served, str) and bool(served.strip()))
         check(f"exact_branch_set:{seed}", set(history["branches"]) == set(ARM_CONDITIONS))
         for branch, branch_result in history["branches"].items():
             check(f"two_profiles:{seed}:{branch}", {r["profile_id"] for r in branch_result["profiles"]} == {p["id"] for p in plan["profiles"]})
@@ -692,25 +818,48 @@ def verify_plan(recording):
                         mass *= reliability if signal == truth else 1 - reliability
                     masses.append(mass)
                 q = masses[1] / sum(masses)
-                p = sum(row["actor_forecasts"].values()) / 3
+                p = mean(row["actor_forecasts"].values())
                 score = (p - q) ** 2
                 scores.append(score)
+                score_check = compare(row["cBR"], score, tolerance=float_tolerance, scope="score",
+                                      prefix=f"history[{seed}].{branch}.{profile['id']}.cBR")
+                score_differences.extend(score_check["score_differences"])
                 check(f"score:{seed}:{branch}:{profile['id']}", set(row["actor_forecasts"]) == set(SOURCES)
-                      and abs(p - row["probability"]) < 1e-12 and abs(q - row["oracle_probability"]) < 1e-12
-                      and abs(score - row["cBR"]) < 1e-12 and row["signals"] == profile["signals"]
-                      and not row["outcome_feedback"] and not row["writeback"]
+                      and compare(row["probability"], p)["equal"] and compare(row["oracle_probability"], q)["equal"]
+                      and score_check["equal"] and compare(row["signals"], profile["signals"])["equal"]
+                      and row["outcome_feedback"] is False and row["writeback"] is False
                       and row["fork_state_hash"] == row["state_hash_after"] == digest(cp["forks"][branch]))
-            check(f"mean_score:{seed}:{branch}", abs(mean(scores) - branch_result["mean_cBR"]) < 1e-12)
+            score_check = compare(branch_result["mean_cBR"], mean(scores), tolerance=float_tolerance, scope="score",
+                                  prefix=f"history[{seed}].{branch}.mean_cBR")
+            score_differences.extend(score_check["score_differences"])
+            check(f"mean_score:{seed}:{branch}", score_check["equal"])
         try:
             with tempfile.TemporaryDirectory(prefix="rem-targeted-verify-") as temporary:
-                provider = ReplayProvider(folder / "calls.jsonl")
-                replay = TargetedEngine(provider, plan, seed, Path(temporary) / "replay").run()
+                provider = ReplayProvider(folder / "calls.jsonl", float_tolerance=float_tolerance)
+                destination = Path(temporary) / "replay"
+                replay = TargetedEngine(provider, plan, seed, destination).run()
                 check(f"semantic_replay:{seed}", replay["status"] == "completed" and provider.index == 120)
-                check(f"replay_branches:{seed}", replay["branches"] == history["branches"])
-                check(f"replay_checkpoint:{seed}", read_json(Path(temporary) / "replay/checkpoint.json") == cp)
-        except Exception:
+                if replay["status"] == "completed" and provider.index == 120:
+                    receipt = _history_replay_comparison(folder, destination, history, replay, provider, float_tolerance)
+                else:
+                    receipt = {"replay_exactness": "failed", "float_tolerance": float_tolerance,
+                               "score_differences": provider.score_differences, "proven_state_hash_differences": [],
+                               "failures": [{"path": "execution", "reason": "replay_incomplete", "error": replay.get("error")}]}
+                replay_reports[str(seed)] = receipt
+                check(f"replay_checkpoint_and_branches:{seed}", not receipt["failures"])
+        except Exception as error:
             check(f"semantic_replay:{seed}", False)
+            replay_reports[str(seed)] = {"replay_exactness": "failed", "float_tolerance": float_tolerance,
+                                        "score_differences": [], "proven_state_hash_differences": [],
+                                        "failures": [{"path": "execution", "reason": "exception", "error": safe_error(error)}]}
     return {"status": "invalid" if failures else "verified_complete" if complete else "incomplete",
             "protocol_version": VERSION, "checks_total": checks, "checks_failed": len(failures), "failures": failures,
             "planned_histories": len(plan["seeds"]), "expected_calls": plan["expected_calls"],
+            "float_tolerance": float_tolerance,
+            "replay_exactness": "failed" if failures else "within_score_tolerance" if score_differences or any(r["score_differences"] for r in replay_reports.values()) else "exact" if complete else "not_complete",
+            "replay_by_history": replay_reports, "independent_score_differences": score_differences,
+            "actual_prompt_checks_by_history": prompt_coverage,
+            "physical_dispatches_this_execution": 0,
+            "tolerance_policy": "Only recomputed LB/Pi Brier and cBR/mean_cBR float fields, absolute tolerance <=1e-12; all predictions, signals, maps, types, schemas and archived hashes exact. Changed replay hashes require an explicit score-only state proof.",
+            "transport_provenance_limit": "Verification does not recover unrecorded API retries, discarded responses, hidden service context or missing served-model identifiers. Historical is_live/physical_dispatch flags are preserved, not treated as proof of no API execution.",
             "scope": "Independent recorded-exposure/count/scoring checks plus shared-engine semantic reconstruction; no model calls or inference."}
